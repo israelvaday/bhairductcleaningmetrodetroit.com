@@ -1,0 +1,272 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { Clock, ShieldCheck, MapPin, ArrowRight, Sparkles, Compass, Wrench, Tag } from "lucide-react";
+import { AREAS, AREAS_BY_SLUG, nearbyAreas } from "@/lib/areas";
+import { SERVICES } from "@/content/services";
+import { BIZ } from "@/lib/business";
+import { ContactCTA } from "@/components/site/ContactCTA";
+import { ServiceMap } from "@/components/site/ServiceMap";
+import { DispatchTracker } from "@/components/site/DispatchTracker";
+import { LongFormFaq } from "@/components/site/LongFormFaq";
+import { serviceHero } from "@/lib/photos";
+import insightsJson from "@/content/area-insights.json";
+
+type Insight = {
+  tagline?: string;
+  landmarks?: string[];
+  common_calls?: string[];
+  neighborhood_notes?: string;
+  keywords?: string[];
+};
+const INSIGHTS = insightsJson as Record<string, Insight>;
+
+export function generateStaticParams() {
+  return AREAS.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const a = AREAS_BY_SLUG[slug];
+  if (!a) return {};
+  const info = INSIGHTS[slug];
+  const desc = info?.tagline
+    ? `${info.tagline} 24/7 BSIS #${BIZ.bsis} locksmith dispatch with 15–30 min ETA.`
+    : `24/7 BSIS-licensed locksmith serving ${a.name}, Orange County. Residential, commercial, automotive, smart locks, safes.`;
+  return {
+    title: `Locksmith in ${a.name}, CA`,
+    description: desc,
+    keywords: info?.keywords,
+    alternates: { canonical: `/service-areas/${a.slug}` },
+  };
+}
+
+export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const a = AREAS_BY_SLUG[slug];
+  if (!a) return notFound();
+  const nearby = nearbyAreas(a, 6);
+  const hero = serviceHero("emergency") ?? serviceHero("residential");
+  const info: Insight = INSIGHTS[slug] ?? {};
+
+  return (
+    <>
+      <section className="relative overflow-hidden border-b border-ink-800 bg-ink-950">
+        {hero && (
+          <>
+            <Image
+              src={hero.src}
+              alt={hero.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="absolute inset-0 z-0 object-cover opacity-40"
+            />
+            <div className="absolute inset-0 z-0 bg-gradient-to-t from-ink-950 via-ink-950/85 to-ink-950/50" />
+          </>
+        )}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-[1fr_minmax(360px,440px)]">
+            <div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-ink-950/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brass-300 backdrop-blur">
+                  <ShieldCheck className="h-3.5 w-3.5" /> BSIS #{BIZ.bsis}
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur">
+                  <Clock className="h-3.5 w-3.5" /> Open 24 / 7
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-950/60 px-3 py-1.5 text-xs font-semibold text-ink-200 backdrop-blur">
+                  <MapPin className="h-3.5 w-3.5 text-brass-400" /> {a.kind === "city" ? "City" : "Neighborhood"}
+                </span>
+              </div>
+              <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
+                Locksmith in <span className="text-brass-gradient">{a.name}</span>, CA
+              </h1>
+              {info.tagline && (
+                <p className="mt-3 text-lg font-medium text-brass-200 md:text-xl">{info.tagline}</p>
+              )}
+              {info.neighborhood_notes && (
+                <p className="mt-4 max-w-2xl text-base text-ink-200 md:text-lg">
+                  {info.neighborhood_notes}
+                </p>
+              )}
+              <div className="mt-7">
+                <ContactCTA size="lg" />
+              </div>
+            </div>
+            <DispatchTracker areaName={a.name} areaSlug={a.slug} />
+          </div>
+        </div>
+      </section>
+
+      {/* Hyper-local strip */}
+      {(info.landmarks?.length || info.common_calls?.length) && (
+        <section className="border-b border-ink-800 bg-ink-950/60 py-12">
+          <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-2 md:px-6">
+            {info.landmarks && info.landmarks.length > 0 && (
+              <div className="rounded-2xl border border-ink-800 bg-ink-900/50 p-5">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brass-300">
+                  <Compass className="h-4 w-4" /> Known spots in {a.name}
+                </div>
+                <ul className="mt-3 space-y-2">
+                  {info.landmarks.map((l) => (
+                    <li key={l} className="flex items-start gap-2 text-sm text-ink-100">
+                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
+                      <span>{l}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {info.common_calls && info.common_calls.length > 0 && (
+              <div className="rounded-2xl border border-ink-800 bg-ink-900/50 p-5">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brass-300">
+                  <Wrench className="h-4 w-4" /> What we get called for here
+                </div>
+                <ul className="mt-3 space-y-2">
+                  {info.common_calls.map((c) => (
+                    <li key={c} className="flex items-start gap-2 text-sm text-ink-100">
+                      <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      <section className="border-t border-ink-800 py-16">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">{a.name} map</p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-4xl">
+              Exact coverage centered on {a.name}
+            </h2>
+            <p className="mt-2 text-sm text-ink-300">
+              Live dispatch radius — {a.lat.toFixed(3)}°, {a.lng.toFixed(3)}°
+            </p>
+          </div>
+          <ServiceMap
+            lat={a.lat}
+            lng={a.lng}
+            zoom={a.kind === "city" ? 13 : 14}
+            title={`${a.name}, CA`}
+            height={460}
+          />
+        </div>
+      </section>
+
+      <section className="border-t border-ink-800 py-16">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">Full service menu</p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-4xl">
+              Every locksmith service — dispatched to {a.name}.
+            </h2>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((s) => {
+              const Icon = s.icon;
+              return (
+                <Link
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="group flex items-start gap-3 rounded-2xl border border-ink-800 bg-ink-900/50 p-4 transition-all hover:-translate-y-0.5 hover:border-brass-500/50"
+                >
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brass-500/10 text-brass-400">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-ink-100">{s.shortName} in {a.name}</h3>
+                    <p className="mt-1 text-sm text-ink-300 line-clamp-2">{s.tagline}</p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-ink-500 transition-all group-hover:translate-x-1 group-hover:text-brass-400" />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {info.keywords && info.keywords.length > 0 && (
+        <section className="border-t border-ink-800 py-12">
+          <div className="mx-auto max-w-7xl px-4 md:px-6">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brass-300">
+              <Tag className="h-4 w-4" /> What people search for in {a.name}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {info.keywords.map((k) => (
+                <span
+                  key={k}
+                  className="rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1.5 text-xs text-ink-200"
+                >
+                  {k}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {nearby.length > 0 && (
+        <section className="border-t border-ink-800 py-16">
+          <div className="mx-auto max-w-7xl px-4 md:px-6">
+            <h2 className="font-display text-2xl font-bold md:text-3xl">Nearby areas we serve</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {nearby.map((n) => (
+                <Link
+                  key={n.slug}
+                  href={`/service-areas/${n.slug}`}
+                  className="group flex items-center justify-between rounded-2xl border border-ink-800 bg-ink-900/50 p-4 hover:border-brass-500/40"
+                >
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-4 w-4 text-brass-400" />
+                    <span className="font-semibold">{n.name}</span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-ink-500 group-hover:text-brass-400" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="border-t border-ink-800 py-16">
+        <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-ink-200 md:px-6 md:text-base">
+          <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
+            What working as a locksmith in {a.name} actually looks like
+          </h2>
+          <p>
+            {a.name} sits inside our standard 24/7 dispatch zone, which means a real OH Lock &amp; Key technician — not a call-center contractor — can be at the door, the car, or the storefront, typically within 15 to 30 minutes. Every job is performed by a California BSIS-licensed locksmith (license #{BIZ.bsis}), with a written quote agreed in advance and a non-destructive entry method whenever the lock cooperates.
+          </p>
+          <p>
+            The mix of work in {a.name} is what you&apos;d expect from this part of Orange County. On the residential side it&apos;s house and condo lockouts, rekeys after a move-in or roommate change, deadbolt and smart-lock upgrades (August, Yale, Schlage, Kwikset, Level, Aqara), high-security cylinders for front doors, mailbox locks, and garage side-door hardware. On the commercial side it&apos;s glass-door storefront patches, panic and exit-device service, master-key system design for offices and retail, electronic access control and prox-card readers, and after-hours emergency openings for managers who got locked out mid-close.
+          </p>
+          <p>
+            Automotive work in {a.name} is steady year-round — fob replacements and proximity-key programming for late-model Toyotas, Hondas, Fords, BMWs and Teslas, transponder cloning, ignition repairs, and emergency car lockouts in driveways, lots, and on the side of the road. We also handle the less-glamorous-but-critical jobs: safe lockouts, combination changes for floor and gun safes, file-cabinet keys, and specialty hardware for restaurants, dental offices, and short-term rentals.
+          </p>
+          <p>
+            Pricing in {a.name} is flat-rate for the common jobs (lockouts, rekeys, standard smart-lock installs) and clearly itemized for the rest, with no trip-fee bait-and-switch. If you&apos;re comparing quotes against an unlicensed locksmith, ask for the BSIS number and a written estimate before the truck rolls — that single step eliminates the majority of locksmith scams reported across Southern California. Our BSIS number is on every page of this site, on every invoice, and on the side of every truck.
+          </p>
+        </div>
+      </section>
+
+      <LongFormFaq subject={a.name} kind="area" />
+
+      <section className="border-t border-ink-800 bg-aurora py-16 text-center">
+        <div className="mx-auto max-w-3xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-extrabold md:text-4xl">
+            Need a locksmith in {a.name} now?
+          </h2>
+          <p className="mt-3 text-ink-200">One tap reaches a real BSIS-licensed locksmith.</p>
+          <div className="mt-6 flex justify-center">
+            <ContactCTA size="lg" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

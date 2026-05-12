@@ -1,0 +1,41 @@
+// Single source of truth for NAP, hours, license, links.
+export const BIZ = {
+  name: "OH Lock & Key Solutions",
+  legalName: "OH Lock & Key Solutions",
+  tagline: "Licensed Orange County Locksmith — Free Quotes, Fast Response",
+  phone: "714-757-7574",
+  phoneE164: "+17147577574",
+  phoneHref: "tel:+17147577574",
+  whatsappHref: "https://wa.me/17147577574",
+  email: "service@ohlockandkey.com",
+  emailHref: "mailto:service@ohlockandkey.com",
+  bsis: "8663",
+  url: "https://ohlockandkey.com",
+  address: {
+    street: "100 S Zoo Ln",
+    locality: "Santa Ana",
+    region: "CA",
+    postalCode: "92701",
+    country: "US",
+    full: "100 S Zoo Ln, Santa Ana, CA 92701",
+  },
+  geo: { lat: 33.7455, lng: -117.8677 },
+  // 24/7 emergency dispatch
+  hours247: true,
+  hours: [
+    { day: 0, open: "00:00", close: "23:59", label: "Sunday" },
+    { day: 1, open: "00:00", close: "23:59", label: "Monday" },
+    { day: 2, open: "00:00", close: "23:59", label: "Tuesday" },
+    { day: 3, open: "00:00", close: "23:59", label: "Wednesday" },
+    { day: 4, open: "00:00", close: "23:59", label: "Thursday" },
+    { day: 5, open: "00:00", close: "23:59", label: "Friday" },
+    { day: 6, open: "00:00", close: "23:59", label: "Saturday" },
+  ] as const,
+  social: {
+    google:    "",
+    yelp:      "",
+    facebook:  "",
+    instagram: "https://www.instagram.com/ohlockkey",
+    tiktok:    "",
+  },
+};

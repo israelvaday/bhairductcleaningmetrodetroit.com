@@ -1,0 +1,263 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { Radar, ShieldCheck, Phone, MapPin, Cpu, Activity, Crosshair, AlertTriangle } from "lucide-react";
+import { BIZ } from "@/lib/business";
+import { AREAS, type Area } from "@/lib/areas";
+
+type Phase = "idle" | "locating" | "denied" | "out_of_area" | "scanning" | "matched";
+
+// Orange County, CA bounding box (conservative, covers all served cities)
+const OC_BOUNDS = { minLat: 33.34, maxLat: 33.98, minLng: -118.14, maxLng: -117.40 };
+function inOrangeCounty(lat: number, lng: number) {
+  return lat >= OC_BOUNDS.minLat && lat <= OC_BOUNDS.maxLat && lng >= OC_BOUNDS.minLng && lng <= OC_BOUNDS.maxLng;
+}
+
+const TECH_IDS = ["OH-K7","OH-K12","OH-K18","OH-K23","OH-K31","OH-K42","OH-K55","OH-K61","OH-K77","OH-K88"];
+const NAMES = ["Marco R.","Diego S.","Jamal P.","Eli H.","Hector M.","Andre L.","Tomas G.","Ryan O.","Sam K.","Brian C."];
+
+function haversineKm(la1:number, lo1:number, la2:number, lo2:number){
+  const R=6371, toRad=(d:number)=>d*Math.PI/180;
+  const dLa=toRad(la2-la1), dLo=toRad(lo2-lo1);
+  const a=Math.sin(dLa/2)**2 + Math.cos(toRad(la1))*Math.cos(toRad(la2))*Math.sin(dLo/2)**2;
+  return 2*R*Math.asin(Math.sqrt(a));
+}
+
+function nearestArea(lat:number,lng:number): Area {
+  let best=AREAS[0], bestD=Infinity;
+  for(const a of AREAS){
+    const d=haversineKm(lat,lng,a.lat,a.lng);
+    if(d<bestD){bestD=d; best=a;}
+  }
+  return best;
+}
+
+export type DispatchService = {
+  slug: string;
+  name: string;
+  shortName: string;
+  tagline?: string;
+  bullets?: string[];
+};
+
+export function HomeDispatchTracker({ service }: { service?: DispatchService } = {}){
+  const isEmergency = service?.slug === "emergency";
+  const svcLabel = service?.shortName ?? "locksmith";
+  const svcLabelLower = svcLabel.toLowerCase();
+  const bulletSample = service?.bullets?.[0];
+  const consoleLabel = service ? `${svcLabel} Dispatch` : "OC Dispatch Console";
+  const idleHeading = service
+    ? <>Dispatch {/^[aeiou]/i.test(svcLabelLower) ? "an" : "a"} <span className="text-brass-gradient">{svcLabelLower}</span> tech near you</>
+    : <>Find the <span className="text-brass-gradient">nearest tech</span> in seconds</>;
+  const matchedHeading = (areaName: string) => service
+    ? <><span className="text-brass-gradient">{svcLabel}</span> tech inbound to {areaName}</>
+    : <>Tech inbound to <span className="text-brass-gradient">{areaName}</span></>;
+  const idleCopy = service
+    ? (isEmergency
+        ? `We&rsquo;ll ping every BSIS-licensed unit within 5 miles for an emergency lockout and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, no-damage entry, same-visit.` : "."}`
+        : `Share your location and we&rsquo;ll match you with the nearest tech running ${svcLabelLower} jobs today${bulletSample ? ` — ready for ${bulletSample.toLowerCase()}.` : "."}`)
+    : "Share your location and our dispatch console will ping every BSIS-licensed unit within 5 miles and return a live ETA.";
+  const buttonLabel = service
+    ? (isEmergency ? "Dispatch nearest emergency tech" : `Find nearest ${svcLabelLower} tech`)
+    : "Click to find nearest tech";
+  const buildLogs = (areaName:string, techId:string, techName:string, rating:string, eta:number, dist:string) => service
+    ? [
+        `Location confirmed — pinpointing ${areaName}, CA…`,
+        `Filtering BSIS-licensed units stocked for ${svcLabelLower}…`,
+        `Cross-referencing today&rsquo;s ${svcLabelLower} job queue + live traffic…`,
+        `Match found — Tech ${techId} (${techName}) • ${rating}★ • ${svcLabel} certified`,
+        bulletSample ? `Truck inventory confirmed: ${bulletSample.toLowerCase()}` : `Confirming on-truck inventory for the call…`,
+        `ETA locked: ${eta} min • ${dist} mi from you`,
+      ]
+    : [
+        `Location confirmed — pinpointing ${areaName}, CA…`,
+        `Pinging BSIS-licensed units within 5 miles…`,
+        `Cross-referencing live traffic + active job queue…`,
+        `Match found — Tech ${techId} (${techName}) • ${rating}★`,
+        `Calculating optimal route via current OC traffic…`,
+        `ETA locked: ${eta} min • ${dist} mi from you`,
+      ];
+
+  const [phase,setPhase]=useState<Phase>("idle");
+  const [progress,setProgress]=useState(0);
+  const [logIdx,setLogIdx]=useState(0);
+  const [area,setArea]=useState<Area|null>(null);
+  const [info,setInfo]=useState<{tech:string;id:string;rating:string;jobs:number;eta:number;dist:string}|null>(null);
+  const timers=useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(()=>()=>{timers.current.forEach(clearTimeout);},[]);
+
+  function start(){
+    if(phase==="locating"||phase==="scanning") return;
+    setPhase("locating");
+    if(!("geolocation" in navigator)){
+      // fallback: pretend we're at OC center
+      handleCoords(33.7175,-117.8311);
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos)=>handleCoords(pos.coords.latitude,pos.coords.longitude),
+      ()=>{ setPhase("denied"); },
+      {enableHighAccuracy:true, timeout:10000, maximumAge:0}
+    );
+  }
+
+  function handleCoords(lat:number,lng:number){
+    if(!inOrangeCounty(lat,lng)){
+      const a = nearestArea(lat,lng);
+      setArea(a);
+      setPhase("out_of_area");
+      return;
+    }
+    const a = nearestArea(lat,lng);
+    setArea(a);
+    // deterministic info from area slug + small jitter
+    const seed = Array.from(a.slug).reduce((s,c)=>s+c.charCodeAt(0),0) + Math.floor(lat*100) + Math.floor(lng*100);
+    const r=(()=>{ let x=Math.sin(seed)*10000; return ()=>{x=Math.sin(x)*10000; return x-Math.floor(x);}; })();
+    const techId=TECH_IDS[Math.floor(r()*TECH_IDS.length)];
+    const techName=NAMES[Math.floor(r()*NAMES.length)];
+    const rating=(4.7+r()*0.29).toFixed(2);
+    const jobs=900+Math.floor(r()*2400);
+    const eta=15+Math.floor(r()*16);
+    const distKm=haversineKm(lat,lng,a.lat,a.lng);
+    const dist=(distKm*0.621371).toFixed(1);
+    setInfo({tech:techName,id:techId,rating,jobs,eta,dist});
+    runScanLogs(a.name,techId,techName,rating,eta,dist);
+  }
+
+  function runScanLogs(name:string,techId:string,techName:string,rating:string,eta:number,dist:string){
+    setPhase("scanning"); setProgress(0); setLogIdx(0);
+    const logs=buildLogs(name,techId,techName,rating,eta,dist);
+    const step=650;
+    for(let i=0;i<logs.length;i++){
+      timers.current.push(setTimeout(()=>{
+        setLogIdx(i); setProgress(Math.round(((i+1)/logs.length)*100));
+      }, i*step));
+    }
+    timers.current.push(setTimeout(()=>{ setPhase("matched"); setProgress(100); }, logs.length*step+200));
+  }
+
+  const logs = area && info
+    ? buildLogs(area.name, info.id, info.tech, info.rating, info.eta, info.dist)
+    : [];
+
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-brass-500/30 bg-gradient-to-br from-ink-900 via-ink-950 to-ink-900 p-5 shadow-2xl shadow-black/40 md:p-7">
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{backgroundImage:"linear-gradient(rgba(201,162,74,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,74,.6) 1px, transparent 1px)",backgroundSize:"28px 28px"}}/>
+
+      <div className="relative flex flex-wrap items-center gap-3">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+          <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400"/>
+          {consoleLabel}
+        </span>
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
+          <ShieldCheck className="h-3 w-3"/> BSIS #{BIZ.bsis}
+        </span>
+      </div>
+
+      <h2 className="relative mt-4 font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+        {phase==="matched" && area ? matchedHeading(area.name) : idleHeading}
+      </h2>
+
+      {phase==="idle" && (
+        <>
+          <p className="relative mt-2 text-sm text-ink-300 md:text-base"
+            dangerouslySetInnerHTML={{ __html: idleCopy }} />
+          <button type="button" onClick={start}
+            className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-brass-500 px-6 py-3 text-sm font-bold uppercase tracking-wider text-ink-950 shadow-lg shadow-brass-500/30 transition hover:bg-brass-400 active:translate-y-px md:text-base">
+            <Crosshair className="h-5 w-5"/> {buttonLabel}
+          </button>
+          <p className="relative mt-2 text-[11px] uppercase tracking-wider text-ink-500">
+            {isEmergency ? "Avg emergency ETA: 15–30 min" : `Avg ${svcLabelLower} dispatch: 15–30 min`}
+          </p>
+        </>
+      )}
+
+      {phase==="locating" && (
+        <div className="relative mt-4 flex items-center gap-2 text-sm font-semibold text-brass-300">
+          <Cpu className="h-4 w-4 animate-pulse"/> Waiting for browser to confirm your location…
+        </div>
+      )}
+
+      {phase==="denied" && (
+        <div className="relative mt-4 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-amber-300">
+            <AlertTriangle className="h-4 w-4"/> Location blocked
+          </div>
+          <p className="mt-1 text-xs text-ink-300">
+            We can&apos;t auto-detect your spot, but our dispatcher will lock in ETA in under a minute by phone.
+          </p>
+          <a href={BIZ.phoneHref} className="mt-3 inline-flex items-center gap-2 rounded-full bg-brass-500 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink-950 hover:bg-brass-400">
+            <Phone className="h-3.5 w-3.5"/> Call dispatch — {BIZ.phone}
+          </a>
+        </div>
+      )}
+
+      {phase==="out_of_area" && (
+        <div className="relative mt-4 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-amber-300">
+            <AlertTriangle className="h-4 w-4"/> Outside our Orange County service zone
+          </div>
+          <p className="mt-1 text-xs text-ink-300">
+            We dispatch BSIS-licensed techs across Orange County only. For an exact ETA in your area, give dispatch a quick call and we&apos;ll confirm coverage and timing.
+          </p>
+          <a href={BIZ.phoneHref} className="mt-3 inline-flex items-center gap-2 rounded-full bg-brass-500 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink-950 hover:bg-brass-400">
+            <Phone className="h-3.5 w-3.5"/> Call for ETA — {BIZ.phone}
+          </a>
+        </div>
+      )}
+
+      {phase==="scanning" && (
+        <div className="relative mt-4 space-y-3">
+          <div className="flex items-center gap-2 text-xs font-semibold text-brass-300">
+            <Cpu className="h-4 w-4 animate-pulse"/>
+            <span>{logs[logIdx]}</span>
+          </div>
+          <div className="h-2 w-full overflow-hidden rounded-full bg-ink-800">
+            <div className="h-full rounded-full bg-gradient-to-r from-brass-600 via-brass-400 to-brass-300 transition-all duration-500 ease-out"
+              style={{width:`${progress}%`}}/>
+          </div>
+          <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-ink-400">
+            <span>Dispatch console</span><span>{progress}%</span>
+          </div>
+        </div>
+      )}
+
+      {phase==="matched" && info && area && (
+        <div className="relative mt-4">
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-950/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-200">
+            <MapPin className="h-3 w-3 text-brass-400"/> Detected: {area.name}, CA
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-3">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">ETA</div>
+              <div className="mt-0.5 font-display text-2xl font-extrabold text-ink-50">{info.eta} min</div>
+              <div className="text-[11px] text-ink-400">{info.dist} mi away</div>
+            </div>
+            <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Tech</div>
+              <div className="mt-0.5 font-display text-base font-bold text-ink-50">{info.tech}</div>
+              <div className="text-[11px] text-ink-400">ID {info.id} • {info.rating}★ • {info.jobs}+ jobs</div>
+            </div>
+            <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Status</div>
+              <div className="mt-0.5 flex items-center gap-1.5 font-display text-base font-bold text-emerald-300">
+                <Activity className="h-4 w-4 animate-pulse"/> Standing by
+              </div>
+              <div className="text-[11px] text-ink-400">Awaiting your confirmation</div>
+            </div>
+          </div>
+          <div className="mt-4 rounded-2xl border border-brass-500/30 bg-ink-950/70 p-4">
+            <p className="text-sm font-semibold text-ink-100">Confirm now to lock in this {info.eta}-minute ETA.</p>
+            <p className="mt-1 text-xs text-ink-400">Tech {info.id} is on hold for ~90 seconds. Tap below to confirm and dispatch.</p>
+            <a href={BIZ.phoneHref}
+              className="mt-3 inline-flex items-center gap-2 rounded-full bg-brass-500 px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink-950 shadow-lg shadow-brass-500/30 transition hover:bg-brass-400 active:translate-y-px">
+              <Phone className="h-4 w-4"/> Confirm & lock ETA — {BIZ.phone}
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

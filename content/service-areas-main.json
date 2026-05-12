@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "anaheim",
+    "name": "Anaheim",
+    "city": "Anaheim",
+    "kind": "city",
+    "lat": 33.8366,
+    "lng": -117.9143,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "costa-mesa",
+    "name": "Costa Mesa",
+    "city": "Costa Mesa",
+    "kind": "city",
+    "lat": 33.6411,
+    "lng": -117.9187,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "fullerton",
+    "name": "Fullerton",
+    "city": "Fullerton",
+    "kind": "city",
+    "lat": 33.8704,
+    "lng": -117.9242,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "garden-grove",
+    "name": "Garden Grove",
+    "city": "Garden Grove",
+    "kind": "city",
+    "lat": 33.7739,
+    "lng": -117.9414,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "huntington-beach",
+    "name": "Huntington Beach",
+    "city": "Huntington Beach",
+    "kind": "city",
+    "lat": 33.6595,
+    "lng": -117.9988,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "irvine",
+    "name": "Irvine",
+    "city": "Irvine",
+    "kind": "city",
+    "lat": 33.6846,
+    "lng": -117.8265,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "mission-viejo",
+    "name": "Mission Viejo",
+    "city": "Mission Viejo",
+    "kind": "city",
+    "lat": 33.6,
+    "lng": -117.672,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "newport-beach",
+    "name": "Newport Beach",
+    "city": "Newport Beach",
+    "kind": "city",
+    "lat": 33.6189,
+    "lng": -117.9298,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "orange",
+    "name": "Orange",
+    "city": "Orange",
+    "kind": "city",
+    "lat": 33.7878,
+    "lng": -117.8531,
+    "parent": null,
+    "main": true
+  },
+  {
+    "slug": "santa-ana",
+    "name": "Santa Ana",
+    "city": "Santa Ana",
+    "kind": "city",
+    "lat": 33.7455,
+    "lng": -117.8677,
+    "parent": null,
+    "main": true
+  }
+]
