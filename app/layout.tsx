@@ -20,14 +20,14 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 export const metadata: Metadata = {
   metadataBase: new URL(BIZ.url),
   title: {
-    default: `${BIZ.name} — Orange County Locksmith (BSIS #${BIZ.bsis})`,
+    default: `${BIZ.name} — Garage Door Installation & Repair (${BIZ.bsis})`,
     template: `%s — ${BIZ.name}`,
   },
   description:
-    "Licensed Orange County locksmith. Residential, commercial, automotive, smart locks, access control, safes. Free quote — call 714-757-7574. BSIS #8663.",
+    `Metro Detroit garage door installation & repair. Broken springs, openers, cables, panels, new doors, commercial overhead doors. Free quote — call ${BIZ.phone}. ${BIZ.bsis}.`,
   keywords: [
-    "locksmith Orange County", "locksmith Santa Ana", "locksmith Irvine",
-    "rekey locks", "smart lock install", "auto locksmith", "BSIS 8663",
+    "garage door repair Metro Detroit", "garage door installation Detroit", "garage door repair Warren",
+    "broken garage door spring", "garage door opener install", "commercial overhead door", "garage door company Michigan",
   ],
   openGraph: {
     type: "website",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BIZ.name} — Orange County Locksmith`,
-    description: "Licensed OC locksmith. 24/7 dispatch. BSIS #8663.",
+    title: `${BIZ.name} — Garage Door Installation & Repair`,
+    description: `Metro Detroit garage door installation & repair. ${BIZ.bsis}.`,
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },

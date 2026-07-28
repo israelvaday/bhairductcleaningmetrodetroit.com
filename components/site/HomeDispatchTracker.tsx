@@ -7,13 +7,13 @@ import { AREAS, type Area } from "@/lib/areas";
 
 type Phase = "idle" | "locating" | "denied" | "out_of_area" | "scanning" | "matched";
 
-// Orange County, CA bounding box (conservative, covers all served cities)
-const OC_BOUNDS = { minLat: 33.34, maxLat: 33.98, minLng: -118.14, maxLng: -117.40 };
-function inOrangeCounty(lat: number, lng: number) {
-  return lat >= OC_BOUNDS.minLat && lat <= OC_BOUNDS.maxLat && lng >= OC_BOUNDS.minLng && lng <= OC_BOUNDS.maxLng;
+// Metro Detroit, MI bounding box (Wayne, Oakland, Macomb counties)
+const METRO_BOUNDS = { minLat: 42.15, maxLat: 42.75, minLng: -83.65, maxLng: -82.45 };
+function inMetroDetroit(lat: number, lng: number) {
+  return lat >= METRO_BOUNDS.minLat && lat <= METRO_BOUNDS.maxLat && lng >= METRO_BOUNDS.minLng && lng <= METRO_BOUNDS.maxLng;
 }
 
-const TECH_IDS = ["OH-K7","OH-K12","OH-K18","OH-K23","OH-K31","OH-K42","OH-K55","OH-K61","OH-K77","OH-K88"];
+const TECH_IDS = ["BH-K7","BH-K12","BH-K18","BH-K23","BH-K31","BH-K42","BH-K55","BH-K61","BH-K77","BH-K88"];
 const NAMES = ["Marco R.","Diego S.","Jamal P.","Eli H.","Hector M.","Andre L.","Tomas G.","Ryan O.","Sam K.","Brian C."];
 
 function haversineKm(la1:number, lo1:number, la2:number, lo2:number){
@@ -42,10 +42,10 @@ export type DispatchService = {
 
 export function HomeDispatchTracker({ service }: { service?: DispatchService } = {}){
   const isEmergency = service?.slug === "emergency";
-  const svcLabel = service?.shortName ?? "locksmith";
+  const svcLabel = service?.shortName ?? "garage door";
   const svcLabelLower = svcLabel.toLowerCase();
   const bulletSample = service?.bullets?.[0];
-  const consoleLabel = service ? `${svcLabel} Dispatch` : "OC Dispatch Console";
+  const consoleLabel = service ? `${svcLabel} Dispatch` : "Metro Detroit Dispatch";
   const idleHeading = service
     ? <>Dispatch {/^[aeiou]/i.test(svcLabelLower) ? "an" : "a"} <span className="text-brass-gradient">{svcLabelLower}</span> tech near you</>
     : <>Find the <span className="text-brass-gradient">nearest tech</span> in seconds</>;
@@ -54,27 +54,27 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
     : <>Tech inbound to <span className="text-brass-gradient">{areaName}</span></>;
   const idleCopy = service
     ? (isEmergency
-        ? `We&rsquo;ll ping every BSIS-licensed unit within 5 miles for an emergency lockout and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, no-damage entry, same-visit.` : "."}`
+        ? `We&rsquo;ll ping every Licensed & insured unit within 5 miles for an emergency garage door repair and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, fixed same-visit.` : "."}`
         : `Share your location and we&rsquo;ll match you with the nearest tech running ${svcLabelLower} jobs today${bulletSample ? ` — ready for ${bulletSample.toLowerCase()}.` : "."}`)
-    : "Share your location and our dispatch console will ping every BSIS-licensed unit within 5 miles and return a live ETA.";
+    : "Share your location and our dispatch console will ping every Licensed & insured unit within 5 miles and return a live ETA.";
   const buttonLabel = service
     ? (isEmergency ? "Dispatch nearest emergency tech" : `Find nearest ${svcLabelLower} tech`)
     : "Click to find nearest tech";
-  const buildLogs = (areaName:string, techId:string, techName:string, rating:string, eta:number, dist:string) => service
+  const buildLogs = (areaName:string, techId:string, techName:string, eta:number, dist:string) => service
     ? [
-        `Location confirmed — pinpointing ${areaName}, CA…`,
-        `Filtering BSIS-licensed units stocked for ${svcLabelLower}…`,
+        `Location confirmed — pinpointing ${areaName}, MI…`,
+        `Filtering Licensed & insured units stocked for ${svcLabelLower}…`,
         `Cross-referencing today&rsquo;s ${svcLabelLower} job queue + live traffic…`,
-        `Match found — Tech ${techId} (${techName}) • ${rating}★ • ${svcLabel} certified`,
+        `Match found — Tech ${techId} (${techName}) • ${svcLabel} certified`,
         bulletSample ? `Truck inventory confirmed: ${bulletSample.toLowerCase()}` : `Confirming on-truck inventory for the call…`,
         `ETA locked: ${eta} min • ${dist} mi from you`,
       ]
     : [
-        `Location confirmed — pinpointing ${areaName}, CA…`,
-        `Pinging BSIS-licensed units within 5 miles…`,
+        `Location confirmed — pinpointing ${areaName}, MI…`,
+        `Pinging Licensed & insured units within 5 miles…`,
         `Cross-referencing live traffic + active job queue…`,
-        `Match found — Tech ${techId} (${techName}) • ${rating}★`,
-        `Calculating optimal route via current OC traffic…`,
+        `Match found — Tech ${techId} (${techName})`,
+        `Calculating optimal route via current Metro Detroit traffic…`,
         `ETA locked: ${eta} min • ${dist} mi from you`,
       ];
 
@@ -82,7 +82,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
   const [progress,setProgress]=useState(0);
   const [logIdx,setLogIdx]=useState(0);
   const [area,setArea]=useState<Area|null>(null);
-  const [info,setInfo]=useState<{tech:string;id:string;rating:string;jobs:number;eta:number;dist:string}|null>(null);
+  const [info,setInfo]=useState<{tech:string;id:string;eta:number;dist:string}|null>(null);
   const timers=useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(()=>()=>{timers.current.forEach(clearTimeout);},[]);
@@ -91,8 +91,8 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
     if(phase==="locating"||phase==="scanning") return;
     setPhase("locating");
     if(!("geolocation" in navigator)){
-      // fallback: pretend we're at OC center
-      handleCoords(33.7175,-117.8311);
+      // fallback: Detroit city center
+      handleCoords(42.3314, -83.0458);
       return;
     }
     navigator.geolocation.getCurrentPosition(
@@ -103,7 +103,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
   }
 
   function handleCoords(lat:number,lng:number){
-    if(!inOrangeCounty(lat,lng)){
+    if(!inMetroDetroit(lat,lng)){
       const a = nearestArea(lat,lng);
       setArea(a);
       setPhase("out_of_area");
@@ -116,18 +116,16 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
     const r=(()=>{ let x=Math.sin(seed)*10000; return ()=>{x=Math.sin(x)*10000; return x-Math.floor(x);}; })();
     const techId=TECH_IDS[Math.floor(r()*TECH_IDS.length)];
     const techName=NAMES[Math.floor(r()*NAMES.length)];
-    const rating=(4.7+r()*0.29).toFixed(2);
-    const jobs=900+Math.floor(r()*2400);
     const eta=15+Math.floor(r()*16);
     const distKm=haversineKm(lat,lng,a.lat,a.lng);
     const dist=(distKm*0.621371).toFixed(1);
-    setInfo({tech:techName,id:techId,rating,jobs,eta,dist});
-    runScanLogs(a.name,techId,techName,rating,eta,dist);
+    setInfo({tech:techName,id:techId,eta,dist});
+    runScanLogs(a.name,techId,techName,eta,dist);
   }
 
-  function runScanLogs(name:string,techId:string,techName:string,rating:string,eta:number,dist:string){
+  function runScanLogs(name:string,techId:string,techName:string,eta:number,dist:string){
     setPhase("scanning"); setProgress(0); setLogIdx(0);
-    const logs=buildLogs(name,techId,techName,rating,eta,dist);
+    const logs=buildLogs(name,techId,techName,eta,dist);
     const step=650;
     for(let i=0;i<logs.length;i++){
       timers.current.push(setTimeout(()=>{
@@ -138,7 +136,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
   }
 
   const logs = area && info
-    ? buildLogs(area.name, info.id, info.tech, info.rating, info.eta, info.dist)
+    ? buildLogs(area.name, info.id, info.tech, info.eta, info.dist)
     : [];
 
   return (
@@ -152,7 +150,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
           {consoleLabel}
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3"/> BSIS #{BIZ.bsis}
+          <ShieldCheck className="h-3 w-3"/> Licensed & insured
         </span>
       </div>
 
@@ -197,10 +195,10 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
       {phase==="out_of_area" && (
         <div className="relative mt-4 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4">
           <div className="flex items-center gap-2 text-sm font-bold text-amber-300">
-            <AlertTriangle className="h-4 w-4"/> Outside our Orange County service zone
+            <AlertTriangle className="h-4 w-4"/> Outside our Metro Detroit service zone
           </div>
           <p className="mt-1 text-xs text-ink-300">
-            We dispatch BSIS-licensed techs across Orange County only. For an exact ETA in your area, give dispatch a quick call and we&apos;ll confirm coverage and timing.
+            We dispatch Licensed & insured techs across Metro Detroit only. For an exact ETA in your area, give dispatch a quick call and we&apos;ll confirm coverage and timing.
           </p>
           <a href={BIZ.phoneHref} className="mt-3 inline-flex items-center gap-2 rounded-full bg-brass-500 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink-950 hover:bg-brass-400">
             <Phone className="h-3.5 w-3.5"/> Call for ETA — {BIZ.phone}
@@ -227,7 +225,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
       {phase==="matched" && info && area && (
         <div className="relative mt-4">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-950/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-200">
-            <MapPin className="h-3 w-3 text-brass-400"/> Detected: {area.name}, CA
+            <MapPin className="h-3 w-3 text-brass-400"/> Detected: {area.name}, MI
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-3">
@@ -238,7 +236,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
             <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Tech</div>
               <div className="mt-0.5 font-display text-base font-bold text-ink-50">{info.tech}</div>
-              <div className="text-[11px] text-ink-400">ID {info.id} • {info.rating}★ • {info.jobs}+ jobs</div>
+              <div className="text-[11px] text-ink-400">ID {info.id}</div>
             </div>
             <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Status</div>

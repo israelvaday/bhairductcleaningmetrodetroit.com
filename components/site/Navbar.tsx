@@ -14,7 +14,6 @@ const NAV = [
   { href: "/gallery",        label: "Gallery" },
   { href: "/blog",           label: "Blog" },
   { href: "/faq",            label: "FAQ" },
-  { href: "/reviews",        label: "Reviews" },
   { href: "/about",          label: "About" },
   { href: "/contact",        label: "Contact" },
 ];
@@ -37,6 +36,7 @@ export function Navbar() {
             <Link
               key={n.href}
               href={n.href}
+              prefetch={false}
               className="rounded-lg px-3 py-2 text-sm text-ink-200 transition-colors hover:bg-ink-800/60 hover:text-white"
             >
               {n.label}
@@ -68,15 +68,18 @@ export function Navbar() {
       </div>
       <div
         className={cn(
-          "lg:hidden overflow-hidden border-t border-ink-800 transition-all duration-300",
-          open ? "max-h-[32rem]" : "max-h-0"
+          "lg:hidden border-t border-ink-800 transition-[max-height] duration-300",
+          open
+            ? "max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain"
+            : "max-h-0 overflow-hidden"
         )}
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
+        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 pb-[max(env(safe-area-inset-bottom),5rem)]">
           {NAV.map((n) => (
             <Link
               key={n.href}
               href={n.href}
+              prefetch={false}
               onClick={() => setOpen(false)}
               className="rounded-lg px-3 py-3 text-base text-ink-200 hover:bg-ink-800/60 hover:text-white"
             >
@@ -93,7 +96,7 @@ export function Navbar() {
                 aria-label="Instagram"
                 className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300"
               >
-                <Instagram className="h-3.5 w-3.5" /> @ohlockkey
+                <Instagram className="h-3.5 w-3.5" /> @bhgaragedoormetrodetroit
               </a>
             )}
           </div>

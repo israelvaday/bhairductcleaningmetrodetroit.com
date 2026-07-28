@@ -9,7 +9,7 @@ export type FAQSection = {
 };
 
 export const FAQ_HERO_IMAGE = "/faq/faq-hero.png";
-export const FAQ_HERO_ALT = "Locksmith technician answering questions for a customer in a sunny Orange County driveway";
+export const FAQ_HERO_ALT = "Garage door technician answering questions for a homeowner in a sunny Metro Detroit driveway";
 
 export const FAQ_SECTIONS: FAQSection[] = [
   {
@@ -19,24 +19,24 @@ export const FAQ_SECTIONS: FAQSection[] = [
     description: "Who we are and how we work.",
     items: [
       {
-        q: "Are you a real locksmith or a call center?",
-        a: "We're a real, BSIS-licensed (#8663) Orange County locksmith based in Santa Ana. You speak with the same dispatcher every time, and the technician who shows up is on our payroll — no subcontractors, no anonymous call centers.",
+        q: "Are you a real local garage door company or a call center?",
+        a: "We're a real, licensed & insured garage door company based in Detroit. You speak with the same dispatcher every time, and the technician who shows up is on our payroll — no subcontractors, no anonymous national call centers reselling your job.",
       },
       {
-        q: "What areas of Orange County do you serve?",
-        a: "All of OC — Santa Ana, Anaheim, Irvine, Newport Beach, Costa Mesa, Huntington Beach, Mission Viejo, Lake Forest, Yorba Linda, Fullerton, Garden Grove, Tustin, and every city and neighborhood in between. See our full service-area map.",
+        q: "What areas of Metro Detroit do you serve?",
+        a: "All of Metro Detroit — Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties. See our full service-area map.",
       },
       {
-        q: "Are you really open 24/7?",
-        a: "Yes. Lockouts, break-ins, and emergencies don't wait for business hours. Our dispatcher answers calls 24/7, 365 days a year, and we keep techs on rotation overnight and weekends.",
+        q: "What are your hours?",
+        a: "We're open 24 hours Sunday through Thursday (Eastern Time). Friday we close at 6:00 PM. Saturday we're closed. During open hours a real dispatcher answers — no call center, no robocall.",
       },
       {
         q: "How fast can you get to me?",
-        a: "Typical ETA in central OC (Santa Ana, Anaheim, Irvine, Tustin) is 15–30 minutes. South County and beach cities are usually 20–40 minutes. We give you a real ETA when you call — not a vague 'on the way'.",
+        a: "Typical ETA in central Metro Detroit (Detroit, Dearborn, Warren, Troy) is 15–30 minutes for emergency calls. Outer suburbs are usually 20–40 minutes. We give you a real ETA when you call — not a vague 'on the way'.",
       },
       {
         q: "What payment methods do you accept?",
-        a: "Visa, Mastercard, Amex, Discover, Apple Pay, Google Pay, Tap to Pay, and cash. We email you a digital invoice with our BSIS license number on every job.",
+        a: "Visa, Mastercard, Amex, Discover, Apple Pay, Google Pay, Tap to Pay, and cash. We email you a digital invoice on every job — handy for insurance claims and home-sale records.",
       },
     ],
   },
@@ -44,147 +44,155 @@ export const FAQ_SECTIONS: FAQSection[] = [
     id: "pricing",
     title: "Pricing",
     emoji: "💰",
-    description: "Honest, flat-rate quotes — no porch surprises.",
+    description: "Honest, flat-rate quotes — no driveway surprises.",
     items: [
       {
         q: "Do you charge a service-call fee?",
-        a: "Yes — a standard service call is $45 during business hours and $75 after hours. The service call covers the drive and the diagnostic. The full job price is quoted before any work starts, and it's a flat rate, not hourly.",
+        a: "Yes — a standard service call is $45 during business hours and $75 after hours. The service call covers the drive and a full diagnostic of the door and opener. The full job price is quoted before any work starts, and it's a flat rate, not hourly.",
       },
       {
-        q: "How much is a typical residential lockout?",
-        a: "A standard residential lockout in OC runs $89–$149 all-in during business hours, $129–$199 after hours. We tell you the exact flat-rate number on the phone before we dispatch.",
+        q: "How much does a garage door spring replacement cost?",
+        a: "In Metro Detroit, a single torsion spring replacement typically runs $180–$280 all-in; a double-spring (two-car door) job runs $260–$400. High-cycle spring upgrades add $50–$90 per spring but last 3–4x longer. We quote the exact flat rate on the phone before we dispatch.",
       },
       {
-        q: "How much does it cost to rekey a house?",
-        a: "Rekeying costs about $19–$25 per cylinder plus the service call. A typical 3-door home is $90–$140 total. All your doors can be keyed alike (one key for everything) at no extra charge.",
+        q: "How much does a new garage door cost in Michigan?",
+        a: "A quality insulated steel two-car door installed usually runs $1,400–$2,800 depending on insulation level and style. Carriage-house and wood-look doors run $2,500–$5,000+, and modern full-view glass doors start around $4,500. Every install quote is free, written, and includes haul-away of the old door.",
       },
       {
-        q: "How much for a car key replacement?",
-        a: "Depends on the year, make, model, and whether you have a working key. Mechanical keys: $35–$80. Transponder keys: $90–$180. Remote head keys: $150–$280. Smart / proximity keys: $230–$520. We quote the exact number on the phone before we roll.",
+        q: "How much is a new garage door opener installed?",
+        a: "Chain-drive openers installed run $350–$500, belt-drive (quieter, better for attached garages) $450–$650, and wall-mount jackshaft units with battery backup $750–$1,000. All installs include rails, safety sensors, one keypad, two remotes, and programming.",
       },
       {
         q: "Are there hidden fees?",
-        a: "No. If the price changes between the phone quote and the work, we tell you before doing anything and you can decline. The only common adjustment is when a customer asks for additional services on-site (e.g. 'while you're here, can you rekey the back door too?').",
+        a: "No. If the price changes between the phone quote and the work, we tell you before doing anything and you can decline. The only common adjustment is when a customer adds services on-site (e.g. 'while you're here, can you swap the rollers too?').",
       },
     ],
   },
   {
-    id: "lockouts",
-    title: "Lockouts",
-    emoji: "🚪",
-    description: "What to expect when you're locked out.",
+    id: "emergency",
+    title: "Emergency Repairs",
+    emoji: "🚨",
+    description: "What to expect when your door fails.",
     items: [
       {
-        q: "Will you damage my lock to get in?",
-        a: "No, in 99% of residential and commercial lockouts we use non-destructive entry — picking, bumping, or single-pin opening. Drilling is a last resort and only happens after we've explained why and gotten your verbal OK.",
+        q: "My garage door won't close and I have to leave — what do I do?",
+        a: "First check the photo-eye sensors near the floor: if one is blinking, clear any obstruction and gently realign it. If that doesn't work, most openers let you hold the wall button down to force-close the door. If the door still won't close, call us — a door stuck open is a security risk and we prioritize those calls.",
       },
       {
-        q: "Do I need to be there when you arrive?",
-        a: "Yes. We need a photo ID matching the address on the lease, mortgage, utility bill, or vehicle registration before we open any lock. This protects you from someone using our service to break into your place.",
+        q: "My spring snapped. Can I still open the door?",
+        a: "Do not try. A door with a broken spring can weigh 150–300 lbs with no counterbalance — openers can't lift it safely, and lifting by hand risks serious injury and a dropped door. Leave the door closed, keep vehicles inside for now, and call us; most spring jobs are same-day.",
       },
       {
-        q: "I'm locked out of my car at a parking lot — can you come?",
-        a: "Yes. We service every public lot in OC — South Coast Plaza, Disneyland, Knott's, John Wayne Airport, the Spectrum, beach lots, and every grocery store and office park. Just send us your location pin.",
+        q: "My door came off the track. Is that dangerous?",
+        a: "Yes — an off-track door can fall. Stop operating it immediately, don't pull the red release cord while the door is up, and keep people and cars away. We reset off-track doors, replace bent track, and inspect the rollers and cables that caused it, usually in a single visit.",
       },
       {
-        q: "What if I left my keys in my running car?",
-        a: "Call us immediately and tell dispatch — we'll prioritize the call because of the fire / safety risk and idle running. ETA is typically 15–20 minutes for this kind of emergency.",
+        q: "My car is trapped inside and the opener is dead. Can you get it out?",
+        a: "Yes. If there's no power, the red emergency release cord disengages the opener so the door can be lifted manually — but only if the springs are intact. If the release doesn't work or the door is too heavy, call us and we'll get you out quickly and safely.",
       },
     ],
   },
   {
-    id: "smart-locks",
-    title: "Smart Locks",
+    id: "springs",
+    title: "Springs & Hardware",
+    emoji: "🔩",
+    description: "Torsion springs, cables, and rollers explained.",
+    items: [
+      {
+        q: "How long do garage door springs last?",
+        a: "Standard springs are rated for about 10,000 cycles — roughly 7–10 years at 3–4 uses per day. Michigan's temperature swings shorten that: cold makes steel brittle and most spring failures here happen in winter. High-cycle springs (25,000+) typically last 15–20 years.",
+      },
+      {
+        q: "Should I replace both springs if only one broke?",
+        a: "On a two-spring door, yes. Both springs have the same mileage, so the survivor usually fails within months — and you'd pay a second service call. Replacing both restores an even balance and we discount the second spring on the same visit.",
+      },
+      {
+        q: "Why is my garage door so loud?",
+        a: "Nine times out of ten it's worn steel rollers rattling in the track, dry hinges, or a stretched chain drive. Upgrading to sealed-bearing nylon rollers and doing a full lubrication makes a dramatic difference — often the door becomes quieter than it was new.",
+      },
+      {
+        q: "Can I replace a garage door spring myself?",
+        a: "We strongly advise against it. Torsion springs store enormous energy and are wound under load with special bars; every year DIYers are seriously injured by slipped winding bars and unwound cones. This is the one garage door job that's genuinely dangerous without training and the right tools.",
+      },
+    ],
+  },
+  {
+    id: "openers",
+    title: "Openers & Smart Tech",
     emoji: "📱",
-    description: "Smart-home, Wi-Fi, and Matter installs.",
+    description: "Belt drives, Wi-Fi openers, keypads, and remotes.",
     items: [
       {
-        q: "Which smart locks do you install?",
-        a: "Schlage Encode, Yale Assure, Level Lock+, August (Yale), Kwikset Halo, Aqara U200/U300, Lockly, Eufy, Ultraloq, and most Apple Home Key models. We can also retrofit your existing deadbolt with August or Level Bolt if you don't want to change the look outside.",
+        q: "Which garage door opener brands do you install?",
+        a: "LiftMaster (our go-to for reliability), Chamberlain, and Genie. For attached garages with bedrooms above, we recommend belt-drive or wall-mount jackshaft units for noise. Everything we install includes myQ or Aladdin Connect Wi-Fi so you can control it from your phone.",
       },
       {
-        q: "Will a smart lock work with Apple HomeKit / Google / Alexa?",
-        a: "Most modern smart locks support at least one ecosystem; many now support Matter, which works with all three. We make sure to ask what you have before recommending hardware, so you don't end up with a lock that doesn't talk to your home.",
+        q: "Can you make my existing opener 'smart' without replacing it?",
+        a: "Usually yes. Retrofit hubs like the myQ Smart Garage Hub work with most openers made after 1993. We mount the hub, pair the door sensor, and set up the app — typically a 30–45 minute visit.",
       },
       {
-        q: "Will the smart lock still work if Wi-Fi is down?",
-        a: "Yes — every smart lock we install has a local keypad or physical key as a backup. If Wi-Fi or power is out, you can still unlock the door manually.",
+        q: "Why does my door reverse before it hits the floor?",
+        a: "Either the photo-eye sensors are misaligned or dirty, the travel limit is set short, or the door binds in the track and trips the force sensor. All three are quick fixes for a tech — and the safety-reverse system should never be disabled to 'solve' it.",
       },
       {
-        q: "Can you set up multiple PIN codes for Airbnb guests?",
-        a: "Yes. We set up code-per-guest workflows and integrate with hosting platforms like Hostfully, OwnerRez, Hospitable, and Guesty so codes auto-create and auto-expire with each reservation.",
+        q: "My remote works but the keypad doesn't (or vice versa). Why?",
+        a: "Keypads and remotes pair separately to the opener's logic board. Usually the keypad's battery is dead or it lost its pairing after a power surge. We reprogram keypads and remotes on any visit, and can add in-car HomeLink pairing too.",
+      },
+      {
+        q: "Will my opener work when the power is out?",
+        a: "Every opener has a manual release cord that lets you lift the door by hand (if the springs are healthy). If outages are common in your area, we install openers with integrated battery backup that give you dozens of open/close cycles per outage.",
       },
     ],
   },
   {
-    id: "auto",
-    title: "Automotive",
-    emoji: "🚗",
-    description: "Car keys, fobs, ignition, and lockouts.",
+    id: "installation",
+    title: "New Doors",
+    emoji: "🏠",
+    description: "Choosing and installing a new garage door.",
     items: [
       {
-        q: "Do I need to tow my car to the dealer for a new key?",
-        a: "Usually no. We do mobile programming for most makes — Toyota, Lexus, Honda, Acura, Ford, Chevy, GMC, Nissan, Hyundai, Kia, Mazda, Subaru, Mitsubishi, and most older BMW / Mercedes / VW / Audi. We'll tell you on the phone if your specific car needs the dealer.",
+        q: "Is an insulated garage door worth it in Michigan?",
+        a: "Almost always. An insulated door (R-9 to R-18) keeps an attached garage 10–20°F warmer in winter, protects anything stored inside, cuts street noise, and is stiffer and more dent-resistant. For heated garages or rooms above the garage it pays for itself.",
       },
       {
-        q: "I lost ALL my car keys. Can you still help?",
-        a: "Yes — but it's a bigger job than copying a spare. We have to add the new key to the immobilizer from scratch, which takes longer and costs more. Bring up 'all keys lost' on the phone so we send the right tools.",
+        q: "How long does a garage door installation take?",
+        a: "A standard single or two-car sectional replacement takes 3–5 hours including old-door removal, new track and spring hardware, opener reconnection, and balance testing. Custom sizes or structural framing changes can add a second visit.",
       },
       {
-        q: "My key fob still works but the buttons died. Can you fix it?",
-        a: "Often, yes. Many fobs just need a battery, a new shell, or a button-pad replacement — that's $20–$80 instead of a full new fob. We carry shells and batteries for the common makes on every truck.",
+        q: "Do you haul away my old door?",
+        a: "Yes — removal and disposal of the old door, track, and springs is included in every installation quote. We leave the garage broom-clean.",
       },
       {
-        q: "Can you cut a key from the VIN if I lost everything?",
-        a: "Yes, for most makes. We pull your key code from the VIN (you'll need the title or registration), cut a working blade, and program the transponder. Avoids the tow to the dealer.",
-      },
-    ],
-  },
-  {
-    id: "commercial",
-    title: "Commercial",
-    emoji: "🏢",
-    description: "Storefronts, offices, and master keys.",
-    items: [
-      {
-        q: "Can you make a master key system for my office?",
-        a: "Yes. We design and install 2–4 tier master systems for OC small businesses — restaurants, retail, offices, medical, distribution. We do a free walk-through, draft a hierarchy chart, and bid the job up front.",
+        q: "Which garage door brands do you install?",
+        a: "We install Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor doors — steel, insulated steel, carriage-house, and full-view aluminum/glass. Our quotes show like-for-like options across at least two brands so you can compare real prices.",
       },
       {
-        q: "Do you service Adams-Rite, Von Duprin, and Detex commercial hardware?",
-        a: "Yes — Adams-Rite mortise cylinders, Von Duprin panic bars, Detex push bars, LCN closers, and Falcon hardware are on every commercial truck.",
-      },
-      {
-        q: "Can you put us on a maintenance retainer?",
-        a: "Yes. For OC restaurants, retailers, and property managers, we offer annual retainers that include priority dispatch, on-site inspection, and flat after-hours rates.",
-      },
-      {
-        q: "Can you handle a multi-tenant office building?",
-        a: "Yes. We work with property managers on access plans, key control, suite turnovers, and integration with electronic access (HID, Schlage AD, Brivo).",
+        q: "Will a new garage door increase my home's value?",
+        a: "Garage door replacement is consistently the #1 ROI exterior remodeling project in national cost-versus-value studies, typically recouping well over 100% of its cost at resale — plus instant curb appeal while you live there.",
       },
     ],
   },
   {
     id: "trust",
-    title: "Trust & License",
+    title: "Trust & Warranty",
     emoji: "✅",
-    description: "How to verify we're a legitimate locksmith.",
+    description: "How to verify we're legitimate — and how we stand behind work.",
     items: [
       {
-        q: "What's your BSIS license number?",
-        a: "OH Lock & Key Solutions holds California BSIS Locksmith Company License #8663. You can verify it at search.dca.ca.gov — select 'Bureau of Security and Investigative Services' and search by license number or company name.",
+        q: "Are you licensed and insured?",
+        a: "Yes — BH Garage Door Metro Detroit is licensed & insured for residential and commercial garage door work in Michigan. We carry general liability and workers' comp insurance, and provide a certificate of insurance on request for commercial clients.",
       },
       {
         q: "Are your technicians background-checked?",
-        a: "Yes. Every BSIS-licensed locksmith employee passes a DOJ and FBI fingerprint background check as part of the licensing process. We also do internal reference checks before issuing a uniform.",
+        a: "Yes. Every technician passes a background check before joining the team and arrives in uniform in a marked van. We also do internal reference checks before anyone works in a customer's home.",
       },
       {
-        q: "Are you insured?",
-        a: "Yes — we carry general liability and workers' comp insurance. If we damage your door, frame, or property during a job, our insurance covers the repair, no questions asked. We provide a certificate of insurance on request for commercial clients.",
+        q: "What warranty do you offer?",
+        a: "Labor is warrantied for 1 year on every job. Parts carry the manufacturer's warranty — typically 3–10 years on springs depending on cycle rating, 1–3 years on openers (LiftMaster belt drives carry a lifetime motor and belt warranty), and up to lifetime on door sections from brands like Clopay.",
       },
       {
         q: "Will I get a receipt?",
-        a: "Yes. Every job ends with a digital invoice emailed to you, including our company name, BSIS license number, tech name, work performed, and parts used. Save it for insurance, taxes, or warranty.",
+        a: "Yes. Every job ends with a digital invoice emailed to you, including our company name, the tech's name, work performed, and parts used. Save it for insurance, home-sale disclosures, or warranty claims.",
       },
     ],
   },

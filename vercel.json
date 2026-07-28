@@ -2,14 +2,14 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.ohlockandkey.com" }],
-      "destination": "https://ohlockandkey.com/",
+      "has": [{ "type": "host", "value": "www.bhgaragedoormetrodetroit.com" }],
+      "destination": "https://bhgaragedoormetrodetroit.com/",
       "permanent": true
     },
     {
       "source": "/:path+",
-      "has": [{ "type": "host", "value": "www.ohlockandkey.com" }],
-      "destination": "https://ohlockandkey.com/:path+",
+      "has": [{ "type": "host", "value": "www.bhgaragedoormetrodetroit.com" }],
+      "destination": "https://bhgaragedoormetrodetroit.com/:path+",
       "permanent": true
     }
   ]

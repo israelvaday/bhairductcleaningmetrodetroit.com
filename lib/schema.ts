@@ -5,10 +5,11 @@ import { SERVICES } from "@/content/services";
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Locksmith",
+    "@type": "HomeAndConstructionBusiness",
+    additionalType: "https://en.wikipedia.org/wiki/Garage_door",
     "@id": `${BIZ.url}/#business`,
     name: BIZ.name,
-    image: `${BIZ.url}/og-default.jpg`,
+    image: `${BIZ.url}/opengraph-image.png`,
     logo: `${BIZ.url}/logo.png`,
     telephone: BIZ.phoneE164,
     email: BIZ.email,
@@ -30,27 +31,26 @@ export function localBusinessJsonLd() {
     areaServed: AREAS.map((a) => ({
       "@type": "City",
       name: a.name,
-      ...(a.zip ? { postalCode: a.zip[0] } : {}),
     })),
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-        opens: "06:00",
+        opens: "00:00",
         closes: "23:59",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Friday",
-        opens: "06:00",
+        opens: "00:00",
         closes: "18:00",
       },
     ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "California BSIS Locksmith License",
-      identifier: BIZ.bsis,
+      name: "Michigan Licensed & Insured Garage Door Contractor",
+      identifier: BIZ.licenseId,
     },
     sameAs: Object.values(BIZ.social).filter(Boolean),
   };
@@ -65,7 +65,7 @@ export function serviceJsonLd(slug: string) {
     serviceType: s.name,
     description: s.description,
     provider: { "@id": `${BIZ.url}/#business` },
-    areaServed: { "@type": "AdministrativeArea", name: "Orange County, CA" },
+    areaServed: { "@type": "AdministrativeArea", name: "Metro Detroit, MI" },
     url: `${BIZ.url}/services/${s.slug}`,
   };
 }

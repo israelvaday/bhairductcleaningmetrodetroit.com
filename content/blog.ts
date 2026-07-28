@@ -1,4 +1,4 @@
-// Blog post data + body content. Hand-written by the OH Lock & Key team for SEO + customer value.
+// Blog post data + body content. Generated for BH Garage Door Metro Detroit — Metro Detroit, MI.
 // Bodies use a very small markdown-ish dialect: lines starting with `## ` are H2, `### ` are H3,
 // lines starting with `- ` are list items, blank lines split paragraphs.
 
@@ -7,7 +7,7 @@ export type BlogPost = {
   title: string;
   metaTitle?: string;
   excerpt: string;
-  category: "Lockouts" | "Smart Locks" | "Commercial" | "Auto" | "Safety" | "Security";
+  category: "Repair" | "Springs" | "Openers" | "Installation" | "Maintenance" | "Safety" | "Buying Guides";
   readMinutes: number;
   date: string; // ISO
   heroImage: string;      // /blog/<slug>-hero.png
@@ -19,623 +19,530 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "locked-out-house-7-things-to-try",
-    title: "Locked Out of Your House? 7 Things to Try Before Calling a Locksmith",
-    metaTitle: "Locked Out at Home? 7 Things to Try First",
+    slug: "garage-door-wont-open-troubleshooting",
+    title: "Garage Door Won't Open? 8 Things to Check Before Calling a Pro",
+    metaTitle: "Garage Door Won't Open? 8 DIY Checks Before Calling for Repair",
     excerpt:
-      "Before you panic — or worse, kick in a door — run through these 7 quick checks. Most home lockouts in Orange County resolve in under 5 minutes with the right approach.",
-    category: "Lockouts",
-    readMinutes: 6,
+      "Stuck in your Metro Detroit driveway with a door that won't budge? Before you assume the worst, run through these eight quick checks. Several of them fix the problem in under five minutes.",
+    category: "Repair",
+    readMinutes: 8,
     date: "2026-03-04",
-    heroImage: "/blog/locked-out-house-7-things-to-try-hero.png",
-    heroAlt: "Frustrated person standing on a Southern California front porch checking pockets for keys",
-    secondaryImage: "/blog/locked-out-house-7-things-to-try-secondary.png",
-    secondaryAlt: "Close-up of a residential deadbolt being opened with locksmith pick tools, no damage",
+    heroImage: "/blog/garage-door-wont-open-troubleshooting-hero.png",
+    heroAlt: "Homeowner pressing a garage door remote at a Michigan home while the door sits stuck half open.",
+    secondaryImage: "/blog/garage-door-wont-open-troubleshooting-secondary.png",
+    secondaryAlt: "Technician inspecting a garage door opener trolley and rail with a flashlight.",
     body: `
-Getting locked out of your own house is one of the most stressful five minutes of your week. Take a breath — we handle dozens of these calls every day across Orange County, and the truth is most lockouts have a fast, non-destructive solution.
+It's 7:40 AM, you're already late, and the garage door just hums at you — or worse, does nothing at all. Before you panic and start rearranging your day, know this: a good share of "dead" garage doors in Metro Detroit are fixed by the homeowner in under five minutes. Run through this checklist in order, and if you land on one of the serious items at the end, BH Garage Door Metro Detroit can usually be there same-day.
 
-Here are the seven things our techs ask you to try **before** dispatching a truck.
+## 1. Check the Wall Button First, Not the Remote
 
-## 1. Check the obvious spots — twice
+If the wall button opens the door but the remote doesn't, the door is fine — your remote battery is dead or the remote lost its pairing. Swap the coin cell (usually a CR2032) before anything else. If neither works, keep reading.
 
-Sounds silly, but 1 in 5 lockout calls end before we arrive because the homeowner finally found the keys in a jacket pocket, the diaper bag, or the front seat of the car. Check:
+## 2. Is the Opener Even Getting Power?
 
-- Every pocket on you (not just the one you usually use).
-- The car cup holder, console, and floor mat.
-- The mailbox, planter, and door mat (you'd be surprised).
+Openers plug into a ceiling outlet that's often on the same circuit as garage receptacles. If the opener's light won't come on at all, check the breaker panel and, in older Detroit and Dearborn homes, the GFCI outlet the opener may be daisy-chained through. Press "reset" on any tripped GFCI in the garage or nearby laundry area.
 
-## 2. Try every door, not just the front
+## 3. Look for the Blinking Photo-Eye Sensor
 
-Sliding glass doors, side gates, garage service doors, and second-story balconies are forgotten constantly. Walk the whole perimeter once before doing anything else.
+The two small sensors near the floor on either side of the door are the most common culprit when a door opens fine but *won't close*. If one is blinking, the beam is blocked or misaligned. Move the snow shovel, kick the leaves away, and gently nudge the sensor brackets until both LEDs are solid. Michigan winters are hard on these — road salt film on the lens is enough to break the beam, so give both lenses a wipe.
 
-## 3. Call the person you live with
+## 4. Was the Emergency Release Pulled?
 
-If you share the house with a spouse, roommate, parent, or kid — call them. ETA on a locksmith is 15–30 minutes; ETA on a roommate might be 4.
+That red cord hanging from the opener rail disengages the door from the motor. If someone pulled it (kids are famous for this), the opener will run but the door won't move. With the door fully CLOSED, pull the cord toward the door to re-engage, then run the opener — the trolley will click back in.
 
-## 4. Check your phone's smart-home app
+## 5. Check the Lock Mode on Your Wall Console
 
-If you have a smart lock — August, Schlage Encode, Yale Assure, Kwikset Halo, Level Lock — open the app. You can unlock from your phone anywhere with signal. Same goes for some Ring and Nest doorbell systems linked to a smart deadbolt.
+Multi-function wall consoles from LiftMaster and Chamberlain have a "lock" button that disables all remotes (a vacation feature). If remotes died all at once but the wall button works, hold the lock button for a few seconds to toggle it off.
 
-## 5. Ask your landlord or property manager
+## 6. Listen: Does It Hum, Grind, or Click?
 
-For renters, your property manager is legally required (in California) to provide reasonable access. They usually have a master key and can be cheaper than emergency dispatch.
+- A hum with no movement often means a failed capacitor or a stripped main gear — very common on older chain-drive units.
+- Grinding usually means the trolley is jammed or the gear is chewed up.
+- A single click with nothing else often points to the logic board.
 
-## 6. Skip YouTube "credit card" tricks
+None of these are DIY-friendly, but knowing the sound helps our dispatcher quote you accurately on the phone.
 
-Please don't. They almost never work on modern deadbolts, and you'll just bend up a card. Worse, scraping the latch can damage the strike plate, which means a real repair bill on top of the lockout fee.
+## 7. Look at the Springs Above the Door
 
-## 7. Call a **licensed** locksmith — not the first ad on Google
+Look at the shaft above the door (torsion system). If you see a clean two-inch gap in the coil, the spring has snapped — and this changes everything. Do NOT keep hitting the opener button, and do not try to lift the door by hand. A two-car steel door with a broken spring can weigh over 200 lbs. This is the most common serious failure we see across Metro Detroit, especially during the first hard freeze of the year.
 
-This is the big one. Most "$15 locksmith" ads at the top of Google are unlicensed call centers that quote $15, show up, and charge $400–$800 with damage to your door. In California, every legitimate locksmith carries a [BSIS license](/license).
+## 8. Is the Door Frozen to the Slab?
 
-When you call us, we tell you the flat-rate price on the phone, send a licensed technician (BSIS #8663), and use non-destructive entry tools that pop most residential locks in under 2 minutes.
+A genuinely Michigan problem: meltwater refreezes overnight and glues the bottom seal to the concrete. The opener strains, then gives up (newer units detect the resistance and stop). Break the ice seal along the bottom edge with gentle pressure — never chip at the rubber with a screwdriver — and pour warm (not boiling) water along the seal if needed.
 
-## When to skip steps 1–6 and call right away
+## When It's Time to Call
 
-- It's after 10pm.
-- You have a child, pet, or stove turned on inside.
-- It's raining or you're in an unsafe area.
-- The lock is high-security (Medeco, Mul-T-Lock, Abloy) and a manager can't help.
+If you've reached this point and the door still won't move — or you found a snapped spring, frayed cable, or the door is crooked in its tracks — it's a job for a technician. Call BH Garage Door Metro Detroit at (313) 236-4558. We serve every city in Wayne, Oakland, and Macomb counties with same-day repair, we quote a flat rate before we dispatch, and our trucks carry springs, cables, rollers, and opener parts so nearly every repair is finished in one visit.
 
-In those cases, just [dial dispatch](/contact). We're 24/7, OC-wide, and we'll give you an honest ETA and a flat quote before the truck rolls.
+For a fast written estimate, you can also [request a free quote](/quote) online.
 `,
   },
 
   {
-    slug: "rekey-vs-replace-after-moving-in",
-    title: "Should You Rekey or Replace Your Locks After Moving Into a New Home?",
-    metaTitle: "Rekey vs. Replace Locks After Moving In",
+    slug: "broken-garage-door-spring-what-to-do",
+    title: "Broken Garage Door Spring: What It Looks Like, Why It's Dangerous, and What To Do",
+    metaTitle: "Broken Garage Door Spring? What To Do (and Not Do) | Metro Detroit",
     excerpt:
-      "Rekeying is faster, cheaper, and uses the same hardware — replacement gives you new finishes and security features. Here's how to decide for your new OC home.",
-    category: "Security",
-    readMinutes: 7,
-    date: "2026-03-11",
-    heroImage: "/blog/rekey-vs-replace-after-moving-in-hero.png",
-    heroAlt: "Smiling young couple receiving new house keys from a locksmith in front of a sunny Orange County home",
-    secondaryImage: "/blog/rekey-vs-replace-after-moving-in-secondary.png",
-    secondaryAlt: "Locksmith hands pinning a Schlage residential lock cylinder on a clean workbench",
-    body: `
-You just closed on a house in Tustin, Irvine, or Anaheim. Congratulations! Now — who else has a key?
-
-The previous owners. Their cleaners. The realtor. The contractor who rebuilt the deck three years ago. Anyone they ever gave a key to and forgot about.
-
-This is the single most important locksmith call you'll make as a new homeowner. The only question is whether you **rekey** or **replace**.
-
-## What's the difference?
-
-**Rekeying** keeps your existing lock and door hardware in place. We remove the cylinder, swap the internal pins to match a brand-new key, and hand you fresh keys. The old keys no longer work. Cost: usually $19–$25 per cylinder plus a service call.
-
-**Replacement** takes out the entire lock — knob, deadbolt, or both — and installs brand-new hardware. Cost: the price of the new hardware plus install labor.
-
-## When rekeying is the right choice
-
-- The existing locks are quality hardware (Schlage, Kwikset SmartKey, Baldwin, Emtek, Yale).
-- They look good, match the door, and operate smoothly.
-- You just want the previous owners' keys to stop working.
-- You want all your doors (front, back, side, garage entry) keyed alike — one key for everything.
-
-For a typical 3-cylinder OC home, a rekey runs $90–$140 all-in. That's the right answer for 70% of move-ins.
-
-## When replacement is the right choice
-
-- The hardware is corroded, sticking, or visibly cheap (think: builder-grade brass).
-- The deadbolt is single-cylinder and you want a thumb-turn upgrade.
-- You want to upgrade to a [smart lock](/services/smart-locks) so you can let cleaners and Airbnb guests in remotely.
-- The finish doesn't match your new front-door paint or hardware refresh.
-- The lock fails an ANSI Grade-1 inspection (anything less than Grade 2 should go on an exterior door).
-
-## The hybrid approach we recommend
-
-For most OC move-ins, we do this:
-
-1. **Rekey** the back, side, and garage doors (cheap, keep existing hardware).
-2. **Replace** the front-door deadbolt with a smart lock or ANSI Grade-1 unit.
-3. **Match the key** so the same physical key still opens every door (smart lock has its own keypad PIN).
-
-Total: about $250–$400 depending on smart-lock choice. New homeowners sleep better, the front door looks great, and you control access from your phone.
-
-## What about a single key for everything?
-
-Yes — this is called **keyed alike** and it's free with a rekey. We just pin every cylinder to the same key bitting. One key for the front door, garage entry, back patio, and gate. Beats the giant keyring most people inherit from a closing.
-
-## Should I do this on the day of close?
-
-Yes. Don't sleep in the house until the locks are yours. We routinely show up the morning of move-in day in Newport Beach, Mission Viejo, Yorba Linda, and Anaheim Hills — call dispatch and we'll work around the movers.
-`,
-  },
-
-  {
-    slug: "smart-locks-2026-best-for-oc-homes",
-    title: "Smart Locks 101: The Best Smart Locks for Orange County Homes in 2026",
-    metaTitle: "Best Smart Locks for OC Homes in 2026",
-    excerpt:
-      "Schlage Encode, Yale Assure, Level Bolt, Aqara U200 — we install and service all of them. Here's what actually works for OC homes, Airbnbs, and short-term rentals.",
-    category: "Smart Locks",
+      "That gunshot bang from the garage was probably your torsion spring letting go. Here's how to confirm it, why you should never open the door, and what a proper replacement involves in Metro Detroit.",
+    category: "Springs",
     readMinutes: 9,
+    date: "2026-03-11",
+    heroImage: "/blog/broken-garage-door-spring-what-to-do-hero.png",
+    heroAlt: "Close-up of a snapped garage door torsion spring with a visible gap in the coil.",
+    secondaryImage: "/blog/broken-garage-door-spring-what-to-do-secondary.png",
+    secondaryAlt: "Technician winding a new torsion spring with winding bars above a garage door.",
+    body: `
+Most Metro Detroit homeowners meet their garage door spring for the first time on the day it breaks. Usually there's a story: a bang from the garage loud enough that neighbors ask about it, or a door that suddenly weighs a ton. Here's everything you need to know in the aftermath — including the mistakes that send people to the ER every winter.
+
+## How to Confirm the Spring Is Broken
+
+Look above the closed door. On most doors you'll see a steel shaft running across the header with one or two tightly wound springs on it. A healthy torsion spring is one continuous coil. A broken one has an unmistakable **two-inch gap** where the steel separated. Other tell-tale signs:
+
+- The opener strains, lifts the door six inches, and gives up.
+- The top section bends inward when the opener tries to lift.
+- Lift cables on both sides suddenly look loose or have jumped off their drums.
+- The door slams shut much faster than normal (if the break happened mid-travel).
+
+## Why Springs Break — Especially in Michigan Winters
+
+Springs are the counterweight of the whole system: they store the energy needed to lift a 150–300 lb door so the opener only has to do a fraction of the work. Every open/close is one "cycle," and standard springs are rated for about 10,000 cycles — roughly 7–10 years of average use.
+
+Cold weather is the accelerant. Steel gets more brittle as temperatures drop, which is why our spring-replacement calls in Warren, Sterling Heights, and Livonia spike during the first hard freeze and every polar-vortex snap. If your door is 8+ years old and shrieking or straining on cold mornings, the spring is telling you something.
+
+## What NOT To Do With a Broken Spring
+
+- **Do not keep pressing the opener button.** The opener isn't designed to lift the door's full weight; you'll strip the gear or bend the top section, turning a spring job into a spring-plus-opener-plus-panel job.
+- **Do not pull the red release cord and lift the door by hand** unless it's a genuine emergency. Without the counterbalance the door is dead weight, and if it slips it will not stop until it hits the floor — or whatever is under it.
+- **Do not attempt a DIY replacement.** Torsion springs are wound under extreme tension with winding bars. A slipped bar delivers the force of a swung baseball bat. Every garage door pro has stories; the ERs in Metro Detroit see these injuries every year.
+
+## One Spring Broke — Should You Replace Both?
+
+On a two-spring door: yes, almost always. Both springs have identical mileage. When one lets go, the other is living on borrowed time — typically it fails within months, and you pay a second service call for the same job. Replacing the pair restores an even balance and costs far less than two separate visits. We discount the second spring on every double replacement.
+
+## What a Professional Replacement Involves
+
+A proper spring job is more than swapping the coil. When BH Garage Door Metro Detroit replaces springs, the tech will:
+
+- Measure the old spring (wire size, diameter, length) and weigh the door to spec the correct replacement — not just "close enough."
+- Install galvanized, high-cycle springs matched to your door's exact weight.
+- Inspect and usually replace the center bearing, and check the end-bearing plates.
+- Check lift cables for fraying (they usually go next) and reset them on the drums.
+- Rebalance the door so it floats at mid-height, and recalibrate the opener's force settings.
+
+Most jobs take 45–60 minutes. In Metro Detroit, expect $180–$280 for a single spring and $260–$400 for a pair, quoted flat-rate on the phone before we roll a truck.
+
+## Consider a High-Cycle Upgrade
+
+If you use the garage as your front door (like most of Metro Detroit does), you're putting 6–10 cycles a day on your springs, which burns through a standard 10,000-cycle set in 3–4 years. High-cycle springs (25,000–50,000 cycles) cost $50–$90 more per spring and routinely last 15–20 years. Best money you can spend on a garage door.
+
+## Same-Day Spring Replacement Across Metro Detroit
+
+A broken spring effectively disables your garage — and if your car is inside, your morning. We stock the full range of residential spring sizes on every truck and replace springs same-day across Detroit, Dearborn, Troy, Royal Oak, Farmington Hills, Canton, and the rest of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [request a quote](/quote) and we'll give you a flat price before we dispatch.
+`,
+  },
+
+  {
+    slug: "garage-door-opener-buying-guide",
+    title: "Garage Door Opener Buying Guide: Belt vs. Chain vs. Wall-Mount (2026)",
+    metaTitle: "Garage Door Opener Buying Guide 2026: Belt vs Chain vs Jackshaft",
+    excerpt:
+      "Replacing your opener? Here's the honest breakdown of belt drives, chain drives, and wall-mount jackshaft units — plus horsepower, Wi-Fi, and battery backup — from techs who install them every day in Metro Detroit.",
+    category: "Buying Guides",
+    readMinutes: 10,
     date: "2026-03-18",
-    heroImage: "/blog/smart-locks-2026-best-for-oc-homes-hero.png",
-    heroAlt: "Modern keypad smart lock installed on a craftsman-style front door, golden hour California light",
-    secondaryImage: "/blog/smart-locks-2026-best-for-oc-homes-secondary.png",
-    secondaryAlt: "Homeowner unlocking a smart deadbolt with a phone, smart home app visible on screen",
+    heroImage: "/blog/garage-door-opener-buying-guide-hero.png",
+    heroAlt: "New belt-drive garage door opener mounted on the ceiling of a modern two-car garage.",
+    secondaryImage: "/blog/garage-door-opener-buying-guide-secondary.png",
+    secondaryAlt: "Garage door opener wall console and wireless keypad beside an interior door.",
     body: `
-Smart locks are no longer a novelty. In 2026, more than half the homes we work on in Irvine, Newport Coast, and Costa Mesa have at least one connected lock — and Airbnb hosts run smart locks on every door.
+Openers used to be a commodity: a motor, a chain, a lightbulb. Today the differences between a $220 big-box unit and a properly specced installation are real — noise, lifespan, security, and whether your door still opens when a storm knocks the power out in Macomb County. Here's the guide we wish every customer read before buying.
 
-But there are 30+ models on the market and they are not all created equal. Here's our 2026 buyer's guide, written from the trenches — these are the locks we actually install, service, and recover for OC clients.
+## The Three Drive Types, Honestly Compared
 
-## Tier 1 — The ones we recommend without reservation
+### Chain Drive — The Workhorse
 
-### Schlage Encode (Plus)
+A metal chain drives the trolley. It's the cheapest, most tolerant of heavy doors, and lasts forever with occasional lubrication. The tradeoff is noise — a metallic rattle you'll hear through the floor. Right choice for: detached garages, rental properties, budget replacements. Installed cost in Metro Detroit: roughly $350–$500.
 
-The workhorse. ANSI Grade 1, Wi-Fi built in, no hub required. Works with Alexa, Google, and Apple Home (the **Plus** model adds Apple Home Key tap-to-unlock with iPhone or Apple Watch).
+### Belt Drive — The Right Answer for Most Homes
 
-- Best for: Owner-occupied homes, long-term rentals.
-- Battery: 4× AA, 6–12 months.
-- OC install: $189–$229 hardware + $89 install.
+A steel-reinforced rubber belt replaces the chain. It's dramatically quieter — the loudest thing becomes the door itself — and modern belts carry lifetime warranties from LiftMaster. If your garage is attached, or there's a bedroom above it, this is what we recommend, full stop. Installed: roughly $450–$650.
 
-### Yale Assure SL 2 (with Z-Wave or Matter)
+### Wall-Mount (Jackshaft) — The Premium Pick
 
-Slimmer, key-free, gorgeous on a flat front door. The Matter version pairs cleanly with Apple Home, Google Home, and SmartThings.
+Instead of a ceiling rail, the unit mounts on the wall beside the door and turns the torsion shaft directly. Zero ceiling vibration, frees the ceiling for storage racks, and most models bundle battery backup and a deadbolt-style automatic lock. It needs a torsion-spring door with usable side clearance. Installed: roughly $750–$1,000.
 
-- Best for: Modern homes, condos, no-key purists.
-- Battery: 4× AA, 9–12 months.
-- Watch out: No physical key — if batteries die, you'll need 9V contact unlock.
+## Horsepower: Don't Overthink It
 
-### Level Lock+ (Touch / Home Key)
+- **1/2 HP** — fine for a single steel door.
+- **3/4 HP (or DC equivalent)** — the sweet spot for insulated two-car doors, which is most of Metro Detroit.
+- **1+ HP** — oversized wood doors and full-view glass doors.
 
-Hidden inside the door — looks like a regular deadbolt from the outside. Tap your iPhone to unlock. The favorite of Newport Beach designer homes.
+A note from the field: an opener straining isn't usually a horsepower problem — it's a door balance problem. If your door is heavy because a spring is fatigued, a bigger motor just masks it until something breaks. We always balance-test the door before an opener install.
 
-- Best for: Aesthetic-first installs, smart home integrations.
-- Battery: CR123A, 1 year.
-- OC install: $329 hardware + $89 install.
+## Wi-Fi Is No Longer Optional
 
-## Tier 2 — Great for short-term rentals
+Every opener we install includes smartphone control (myQ on LiftMaster/Chamberlain, Aladdin Connect on Genie). This isn't a gimmick:
 
-### Schlage Encode (commercial keypad)
+- Get an alert if the door is open after 10 PM.
+- Close it from your desk in downtown Detroit when you can't remember.
+- Grant one-time access for a delivery or a contractor.
+- Check the door's history — every open and close, timestamped.
 
-When you need to issue 50 codes a year and never look at it, this is the lock. Dashboard auto-syncs with Hostfully, Hospitable, OwnerRez, and Guesty.
+If your existing opener works fine, a retrofit hub adds all of this for a fraction of the cost of replacement. We install those too.
 
-### Yale Assure Lever (for interior locking doors on big homes)
+## Battery Backup: Worth It in Michigan
 
-If your Airbnb has multiple lockable bedrooms, this is the lever version of the Assure.
+Southeast Michigan's storm outages are legendary — and an outage is exactly when you need the car. Battery-backup models give you 20+ cycles during an outage and are standard on the wall-mount units we install. If anyone in the house can't lift a door manually, treat backup power as essential, not optional.
 
-## Tier 3 — Avoid or proceed with caution
+## Security Features Worth Having
 
-- **No-name Amazon smart locks under $80.** Batteries die in 6 weeks, app gets pulled, security questionable.
-- **Original August (pre-Yale acquisition).** Service is winding down.
-- **Anything that requires only a proprietary app with no Matter / HomeKit support.** You're locked into a dying ecosystem.
+- **Rolling-code remotes** are standard on everything modern — the code changes with every press, so code-grabbing is a non-issue.
+- **Automatic locks** (on wall-mount models) throw a physical bolt into the track every time the door closes. Fishing attacks and forced lifts simply don't work.
+- **Motion-activated lighting** and integrated LED rings have effectively replaced the burned-out opener bulb problem.
 
-## What about Aqara U200 and U300?
+## What a Professional Install Includes (Ours, Anyway)
 
-The U200 (retrofit) and U300 (full replacement) are excellent — Matter-over-Thread, fingerprint, Apple Home Key. We've installed dozens this year. If you're deep in the Aqara/Apple ecosystem, this is our newest favorite.
+- Removal and disposal of the old unit.
+- New rail, properly reinforced header bracket, and a balance check of the door itself.
+- Safety sensor installation at the correct height, with tested auto-reverse.
+- Force and travel-limit calibration.
+- Two remotes, one wireless keypad, HomeLink pairing in your cars, and app setup on your phones.
 
-## Do you need a smart lock if you're not in tech?
+## The Bottom Line
 
-If you have a cleaner, a dog walker, an Airbnb, college kids, or aging parents — yes. The ability to issue a one-time PIN at 9am that expires at noon is a quality-of-life upgrade.
+For most Metro Detroit homes: a 3/4 HP-class belt drive with Wi-Fi and battery backup is the right buy. Detached garage on a budget: chain drive, no shame in it. Premium build or ceiling storage plans: wall-mount jackshaft.
 
-## Installation in Orange County
-
-We install smart locks across all of OC, usually same-day. Includes:
-
-- Hardware purchase (or BYO).
-- Door prep (most doors need a strike-plate tuneup).
-- Wi-Fi / Matter / HomeKit pairing.
-- Walkthrough with you on the app.
-- 90-day install warranty.
-
-[Book a smart-lock install →](/services/smart-locks)
+Want a flat-rate installed price? Call BH Garage Door Metro Detroit at (313) 236-4558 or [request a quote](/quote) — we'll quote LiftMaster, Chamberlain, and Genie options side by side.
 `,
   },
 
   {
-    slug: "storefront-lockouts-24-7-locksmith-business",
-    title: "Storefront Lockouts: Why Your OC Business Needs a 24/7 Locksmith On Call",
-    metaTitle: "24/7 Storefront Lockout Locksmith in OC",
+    slug: "new-garage-door-cost-michigan",
+    title: "What Does a New Garage Door Cost in Michigan? (Real 2026 Numbers)",
+    metaTitle: "New Garage Door Cost in Michigan 2026 — Real Installed Prices",
     excerpt:
-      "Every hour a storefront is locked out is revenue on the floor. Here's how OC restaurants, retailers, and offices avoid the lockout panic — and what to do if you're already in it.",
-    category: "Commercial",
-    readMinutes: 7,
+      "From builder-grade steel to full-view glass: real installed prices for new garage doors in Metro Detroit, what drives the cost up or down, and why it's the best-ROI exterior project you can do.",
+    category: "Installation",
+    readMinutes: 9,
     date: "2026-03-25",
-    heroImage: "/blog/storefront-lockouts-24-7-locksmith-business-hero.png",
-    heroAlt: "Orange County restaurant storefront at dawn, owner unlocking the glass door with a locksmith helping",
-    secondaryImage: "/blog/storefront-lockouts-24-7-locksmith-business-secondary.png",
-    secondaryAlt: "Adams-Rite commercial mortise lock with stainless trim on a glass storefront door",
+    heroImage: "/blog/new-garage-door-cost-michigan-hero.png",
+    heroAlt: "New carriage-style insulated garage doors on a brick Michigan colonial home.",
+    secondaryImage: "/blog/new-garage-door-cost-michigan-secondary.png",
+    secondaryAlt: "Installer leveling a new insulated garage door section on the tracks.",
     body: `
-A commercial lockout is not the same animal as a residential one. When a Lake Forest restaurant can't get in at 5am, every minute the doors stay locked is prep time lost and a dinner service at risk. When a Costa Mesa retailer is locked out at noon, customers walk.
+"What's a new garage door cost?" is the question we answer most at BH Garage Door Metro Detroit — and the internet's answers are usually national averages that don't survive contact with a Michigan winter or a Metro Detroit quote sheet. Here are the real numbers we install at, and what actually moves them.
 
-We run a dedicated commercial dispatch line — here's what we've learned in a thousand storefront calls.
+## Installed Prices in Metro Detroit (2026)
 
-## The three common storefront lockout causes
+- **Non-insulated steel, single-layer** — $850–$1,300 installed (two-car). Fine for detached garages; we rarely recommend it for attached ones.
+- **Insulated steel sandwich, R-9 to R-13** — $1,400–$2,200 installed. The Metro Detroit workhorse. Quieter, stiffer, warmer, more dent-resistant.
+- **Premium insulated, R-16 to R-18** — $2,000–$2,800 installed. For heated garages, workshops, and bedrooms-over-garage floor plans.
+- **Carriage-house / wood-look steel** — $2,500–$5,000 installed. The curb-appeal category: embossed wood grain, decorative hardware, window options.
+- **Full-view aluminum & glass** — $4,500–$8,000+ installed. The modern statement door. Frosted, clear, or tinted panels in anodized frames.
 
-### 1. Aluminum storefront / Adams-Rite cylinder failure
+Single-car doors run roughly 60–70% of the two-car price. All our installation quotes include haul-away of the old door, new track and springs, and reconnecting/calibrating your opener.
 
-The most common cause in OC. The little mortise cylinder that drives the deadlatch fails after 8–12 years of daily use. Symptoms: key turns but the bolt doesn't move, or the cylinder spins freely. We carry replacement Adams-Rite cylinders on every truck.
+## What Actually Drives the Price
 
-### 2. Lost or broken key in a high-cycle environment
+### Insulation (and Why It Matters Here)
 
-Restaurants and retail spaces cycle keys constantly between owners, managers, and night cleaners. Keys get lost, copied, or worn down. By the time a key snaps in the cylinder, it's been on its last legs for months.
+Michigan is a two-layer-minimum state, in our opinion. An insulated door keeps an attached garage 10–20°F warmer in January, which your water heater, your car battery, and the room above the garage all notice. Insulated doors are also structurally stiffer — they dent less and stay quieter over their life.
 
-### 3. Push-bar / panic device misfire
+### Springs: Cycle Rating
 
-Von Duprin, Detex, and Falcon panic bars eventually wear out. The dogging mechanism freezes, or the latch fails to retract. Often happens at the worst time — closing on a Saturday night.
+Every new door includes new springs. Standard 10,000-cycle springs are included in the prices above; upgrading to 25,000-cycle springs adds $100–$180 and is the single best line-item upgrade on the sheet if you cycle the door daily.
 
-## What it costs
+### Windows
 
-For a typical OC commercial lockout — non-destructive entry, no replacement parts:
+A row of top-section windows adds $200–$600 depending on glass and grille style. Worth it for natural light; choose frosted or high placement if the garage stores anything valuable.
 
-- Business hours (Mon–Fri 8am–6pm): **$89 service call**.
-- After hours / weekend: **$129 service call**.
-- Cylinder replacement (if needed): **$45–$95 per cylinder**.
-- Panic bar repair: **$120 + parts**.
+### Sizing and Framing
 
-## The smarter play — get on a maintenance plan
+Standard sizes (8x7, 9x7, 16x7) install fastest. Odd-size openings in older Detroit, Ferndale, and Grosse Pointe garages may need custom ordering or light framing work — usually $150–$400 extra, quoted upfront after we measure.
 
-For restaurants, retailers, medical offices, and property managers, we offer **commercial maintenance retainers**:
+## The ROI Case (It's Not Even Close)
 
-- Priority dispatch (we move you to the top of the queue).
-- Annual on-site inspection of every cylinder, hinge, closer, and panic bar.
-- Loaner hardware while parts ship.
-- Flat-rate emergency call after hours.
+Cost-versus-value studies have ranked garage door replacement the **#1 ROI exterior remodeling project in America** for years running — typically recouping 100%+ of its cost at resale. No kitchen, bath, or deck project comes close. A dated, dented door drags an entire facade; a new one modernizes the whole front of the house for a four-figure spend.
 
-Roughly the cost of one emergency call per year. Worth it for any business with more than two exterior doors.
+## Repair or Replace? Our Honest Rule of Thumb
 
-## What about master key systems?
+- **Repair** if the door is under ~12 years old with one problem: a broken spring, a dented panel, worn rollers. Panel replacement in particular can save a door that's cosmetically wounded but structurally fine.
+- **Replace** if the door is 15+ years old and showing multiple issues, is a non-insulated door on an attached garage, has rusting sections or delaminating skins, or predates modern safety standards. Pouring repair money into a door from the '90s rarely pencils out.
 
-Most of our OC commercial clients run a 3-tier master key system:
+We'll tell you which side of the line you're on — even when the answer is the cheaper one. It's why our reviews look the way they do.
 
-1. **Owner / GM** — opens everything.
-2. **Shift manager** — opens public areas + back of house + office.
-3. **Line staff / cleaners** — opens only what they need.
+## How the Process Works With Us
 
-This means a lost key from a line cook doesn't compromise the office or the safe. Setting up a master system is a 1-day job we can scope for free.
+- **Free on-site measure and written quote** — we measure the opening, headroom, and side clearance, and check your opener's compatibility.
+- **Side-by-side options** — like-for-like quotes across at least two brands (we install Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor).
+- **Install day** — typically 3–5 hours: old door and track out, new door, track, and springs in, opener reconnected and calibrated, jobsite broom-clean.
 
-## Already locked out right now?
-
-Call dispatch. Tell us the door type (aluminum storefront, wood, glass with mortise lock, hollow metal) and we'll roll the right truck with the right cylinders pre-staged. Most commercial lockouts in central OC are 15–30 minutes door-to-key.
-
-[Commercial 24/7 line →](/services/commercial)
+Ready for real numbers on your house? Call (313) 236-4558 or [request your free quote](/quote) — we serve every city in Wayne, Oakland, and Macomb counties.
 `,
   },
 
   {
-    slug: "car-key-replacement-orange-county",
-    title: "Car Key Replacement in Orange County: Fobs, Transponders & What It Actually Costs",
-    metaTitle: "Car Key Replacement in Orange County",
+    slug: "winter-garage-door-maintenance-michigan",
+    title: "The Michigan Winter Garage Door Survival Guide: 10-Point Maintenance Checklist",
+    metaTitle: "Winter Garage Door Maintenance Checklist for Michigan Homes",
     excerpt:
-      "The dealer quoted you $700 for a replacement key. We can do most cars for $180–$350, mobile, in your driveway. Here's how it works and what your car needs.",
-    category: "Auto",
+      "Cold snaps break more springs, freeze more seals, and kill more openers than anything else we see. This 10-point checklist gets your door through a Metro Detroit winter without a 6 AM emergency call.",
+    category: "Maintenance",
     readMinutes: 8,
     date: "2026-04-01",
-    heroImage: "/blog/car-key-replacement-orange-county-hero.png",
-    heroAlt: "Locksmith programming a car key fob with a diagnostic tool inside an SUV in a sunny OC driveway",
-    secondaryImage: "/blog/car-key-replacement-orange-county-secondary.png",
-    secondaryAlt: "Close-up of a cut and chipped automotive transponder key next to a remote head fob on a workbench",
+    heroImage: "/blog/winter-garage-door-maintenance-michigan-hero.png",
+    heroAlt: "Snow-covered Michigan driveway leading to a frost-dusted garage door on a winter morning.",
+    secondaryImage: "/blog/winter-garage-door-maintenance-michigan-secondary.png",
+    secondaryAlt: "Technician lubricating garage door rollers and hinges on a sectional door track.",
     body: `
-You lost your car key. The dealer quoted $650 + tow + a 5-day wait for parts. Don't panic — most cars on the road today can be done mobile, in your driveway, the same afternoon, for half that.
+Every January, the first polar-vortex morning fills our dispatch board before sunrise: snapped springs in Sterling Heights, doors frozen to slabs in Livonia, openers straining in Troy. Cold is the single hardest thing on a garage door — steel gets brittle, grease thickens, rubber stiffens. The good news: an hour of fall maintenance prevents almost all of it. Here's the checklist our techs use.
 
-Here's a no-BS breakdown of what every kind of car key actually costs to replace in Orange County in 2026.
+## 1. Lubricate Everything That Moves (With the Right Stuff)
 
-## Step 1 — Identify what kind of key you have
+Use a lithium- or silicone-based garage door lubricant — never WD-40, which is a solvent that strips what little grease is left. Hit the spring coils (a light coat dampens corrosion and quiets winding noise), every hinge pivot, the roller bearings, and the opener's chain or screw per its manual. Wipe the excess. Twice a year: fall and spring.
 
-There are four main families:
+## 2. Test the Door's Balance
 
-### Mechanical keys (pre-1996, plus some classics)
+Pull the red release cord with the door closed, then lift the door halfway by hand and let go. A balanced door floats in place. If it slams down or shoots up, spring tension is off — and an unbalanced door forces the opener to do work it wasn't built for all winter. Spring adjustment is a technician job (see our [spring guide](/blog/broken-garage-door-spring-what-to-do)).
 
-A flat steel key, no chip, no fob. Cuts on a key machine for $15–$35. Done in 5 minutes.
+## 3. Inspect Springs for Rust and Gaps
 
-### Transponder keys (most 1996–2015 cars)
+Rust pits create the stress points where cold snaps finish the job. Look for orange bloom, stretched or uneven coils, and of course any gap. If your springs are 7+ years old, budget for replacement on your terms — a scheduled morning appointment beats a 6 AM emergency with the car trapped inside.
 
-A plastic-headed key with a chip inside. Has to be **cut** and **programmed** to your car's immobilizer. Cost: typically $90–$180.
+## 4. Check the Cables (Look, Don't Touch)
 
-### Remote head keys ("RHK", 2005–present)
+Frayed strands at the bottom brackets mean the cable is dying. Cables are under the same tension as the springs, so never adjust them yourself — but a 10-second visual check twice a year catches nearly every failure before it happens.
 
-The all-in-one key with buttons. Cut + transponder programming + remote pairing. Cost: $150–$280.
+## 5. Replace the Bottom Seal Before It Freezes to the Floor
 
-### Smart / proximity keys ("push-to-start", 2010–present)
+A cracked, stiff bottom seal does two bad things in winter: it lets in snow, salt, and rodents, and it freezes to the slab overnight. If yours is stiff or visibly gapped, replace it in the fall ($80–$150 installed, including the retainer if needed). Pro tip for icy mornings: a strip of silicone spray along the rubber keeps it from bonding to the concrete.
 
-The fob that lives in your pocket. Pricier — encrypted, multi-stage programming. Cost: **$230–$520** depending on make.
+## 6. Seal the Perimeter
 
-## What we can do mobile in OC
+Check the vinyl weatherstop along the sides and top of the door. Gaps here are why your garage has snowdrifts inside the door on a windy day, and they matter double if the garage is heated or has living space above.
 
-Pretty much everything except a few outliers. Our auto-locksmith trucks carry:
+## 7. Test the Photo-Eye Sensors
 
-- Silca and JMA key blanks for 200+ makes.
-- Smart Pro, MVP, and Autel programmers.
-- A 12V profiler for cutting in-driveway.
+Wipe both lenses (salt film is a repeat offender here), confirm both LEDs are solid, and test: start the door closing and wave a broom through the beam. The door must reverse instantly. This is the system that protects kids, pets, and bumpers — don't skip it.
 
-Brands we routinely program on-site:
+## 8. Test the Auto-Reverse Force Setting
 
-- **Toyota / Lexus** — almost all, including Smart Key.
-- **Honda / Acura** — almost all.
-- **Ford / Lincoln** — most, including PATS and Tibbe.
-- **GM / Chevy / Cadillac / GMC** — most, including PEPS.
-- **Hyundai / Kia** — most non-2022+ proximity keys.
-- **Nissan / Infiniti** — most, including I-Key.
-- **VW / Audi (pre-2018)** — most.
-- **Mazda, Subaru, Mitsubishi** — most.
+Lay a 2x4 flat on the floor under the door and close it. The door must reverse when it touches the board. Cold thickens the opener's grease and stiffens the door, so a force setting that was fine in September can be dangerous — or cause phantom reversals — in January.
 
-## The cars that still need the dealer
+## 9. Tighten the Hardware
 
-A few makes have hard-locked their security in recent years. We'll tell you on the phone if your car is one of them — we don't waste your time:
+A door cycles 1,000+ times a year and vibration loosens everything. Snug (don't gorilla) the hinge screws, track brackets, and the opener's header and ceiling bracket bolts with a socket wrench.
 
-- Most 2017+ BMW with CAS4+.
-- Most 2018+ Mercedes-Benz with FBS4.
-- Some 2022+ Hyundai/Kia proximity keys.
-- All Tesla (their parts, their app — but we can still help with mechanical access).
+## 10. Listen to Your Door for 30 Seconds
 
-## What we need from you
+Run a full open/close and just listen. Grinding = dry or worn rollers. Popping = loose hinges or sections binding. Squealing = the springs want lubricant. Rattling = loose hardware or a stretched chain. Every winter failure we see announced itself weeks earlier in sound.
 
-To quote your job in under 60 seconds on the phone we need:
+## Or Let Us Do All Ten
 
-1. Year, make, model.
-2. Trim (sometimes determines key type).
-3. Do you have **all** keys lost, or one working key?
+Our 25-point tune-up covers everything above plus spring balance adjustment, opener force calibration, roller inspection, and a written condition report — typically 45 minutes, and cheap insurance against a February emergency. It's the same inspection we run on commercial maintenance contracts, applied to your house.
 
-The third one matters a lot. If you have one working key, programming a spare is fast and cheap (often 30 minutes, $150 ish). If **all** keys are lost, we have to add the car to the immobilizer from scratch — extra step, extra cost.
-
-## Mobile means in your driveway, parking lot, or office lot
-
-We come to you anywhere in OC. Common scenes:
-
-- South Coast Plaza valet level.
-- Disneyland and Anaheim hotel lots.
-- John Wayne Airport long-term parking.
-- Any home driveway from San Clemente to La Habra.
-
-[Call our auto line →](/services/automotive)
+Book a fall tune-up anywhere in Metro Detroit: (313) 236-4558, or [request it online](/quote). Sun–Thu 24 hours, Friday until 6 PM.
 `,
   },
 
   {
-    slug: "how-to-spot-locksmith-scam-southern-california",
-    title: "How to Spot a Locksmith Scam in Southern California (and What a Legit Quote Looks Like)",
-    metaTitle: "How to Spot a Locksmith Scam in SoCal",
+    slug: "insulated-vs-non-insulated-garage-doors",
+    title: "Insulated vs. Non-Insulated Garage Doors: What Michigan Homeowners Should Know",
+    metaTitle: "Insulated vs Non-Insulated Garage Doors in Michigan — Full Comparison",
     excerpt:
-      "Locksmith scams cost SoCal homeowners millions every year. Here's how to recognize a fake $15 ad, what questions to ask, and how to verify a real BSIS license.",
-    category: "Safety",
+      "R-values, single vs. triple-layer construction, and real Michigan math: when an insulated garage door pays for itself and when you can honestly skip it.",
+    category: "Buying Guides",
     readMinutes: 8,
     date: "2026-04-08",
-    heroImage: "/blog/how-to-spot-locksmith-scam-southern-california-hero.png",
-    heroAlt: "Concerned homeowner reading a high invoice handed to her by a suspicious locksmith outside her California home",
-    secondaryImage: "/blog/how-to-spot-locksmith-scam-southern-california-secondary.png",
-    secondaryAlt: "Hand holding a California BSIS locksmith license card next to a clean work van",
+    heroImage: "/blog/insulated-vs-non-insulated-garage-doors-hero.png",
+    heroAlt: "Cutaway of an insulated steel garage door panel showing the foam core between steel skins.",
+    secondaryImage: "/blog/insulated-vs-non-insulated-garage-doors-secondary.png",
+    secondaryAlt: "Warm heated garage workshop with an insulated garage door closed against winter.",
     body: `
-The California Bureau of Security and Investigative Services (BSIS) gets thousands of complaints a year about unlicensed locksmiths. Most follow the same playbook: a $15 ad, a 2x markup at the door, and a destroyed lock.
+If you're pricing a new garage door in Metro Detroit, the first fork in the road is insulation. The price gap between a bare steel door and a well-insulated one is real — so is the difference in how your garage (and the rooms around it) feel in February. Here's the honest breakdown.
 
-Here's how to read a quote and not get burned.
+## The Three Types of Door Construction
 
-## The five red flags
+### Single-Layer (Non-Insulated)
 
-### 1. "$15" or "$19" in the ad
+One skin of steel. Light, cheap, and every sound and temperature swing passes straight through. In winter the inside face of the door will be nearly the same temperature as the outside air.
 
-There is no legitimate locksmith in California who can drive to your house and unlock it for $15. The number is bait. The real number shows up after they're already on your porch with the drill in hand.
+### Double-Layer (Vinyl-Backed Polystyrene)
 
-### 2. No company name on the phone
+A steel skin plus a rigid foam board with a vinyl backer. R-values around 6–9. A meaningful step up in stiffness and quiet for a modest price bump.
 
-A legit dispatcher answers "OH Lock & Key Solutions, this is dispatch" or similar. A scammer answers "locksmith service" — vague on purpose, because the same call center fronts 12 fake brand names.
+### Triple-Layer / Sandwich (Polystyrene or Polyurethane Core)
 
-### 3. Unmarked vehicle
+Steel–foam–steel construction. Injected polyurethane doors reach R-13 to R-18 and are dramatically stiffer, quieter, and more dent-resistant. This is what we install most in Metro Detroit, and what we put on our own houses.
 
-When the tech arrives, look at the truck. Real locksmiths drive labeled vans with the company name, phone number, and BSIS license number. An unmarked sedan with a backpack is the #1 scam signal.
+## What R-Value Actually Buys You in Michigan
 
-### 4. "We'll have to drill"
+An insulated door typically keeps an unheated attached garage **10–20°F warmer than outside** in winter. That gap is the difference between a garage that hovers near freezing and one that sits at 20°F when it's zero outside. Practical consequences:
 
-A skilled locksmith should resolve **at least 95% of residential lockouts non-destructively**. If a tech immediately says "we'll have to drill" on a standard Kwikset or Schlage residential deadbolt, walk them off the job. They're either unskilled or padding the bill.
+- **Cars start easier and batteries last longer.** Cold cranking at 0°F vs 25°F is a real difference.
+- **The rooms over and beside the garage stay warmer.** If you have a bonus room above the garage, the door is part of that room's thermal envelope whether you like it or not.
+- **Pipes and stored items are protected.** Paint, power tools with batteries, water softener salt, the fridge in the garage — all happier above freezing.
+- **Your furnace works less.** The garage acts as a thermal buffer against the house wall it shares.
 
-### 5. Price changes on the porch
+## The Noise Nobody Mentions
 
-If the price you were quoted on the phone ($79) becomes the price at the door ($380), that's the scam. A real locksmith honors the phone quote unless there's a clear, agreed-upon scope change (e.g. you also want a rekey).
+Insulated doors are quieter twice over: the foam deadens road and neighborhood noise coming through the door, and the stiffer sandwich construction doesn't rattle and boom in the track the way single-skin doors do. On a busy street in Royal Oak or Dearborn, this alone sells the upgrade.
 
-## What a legitimate California locksmith looks like
+## Durability: The Shopping-Cart Test
 
-- Has a **BSIS Locksmith Company License** — a 4 to 5-digit number. (Ours is **#8663**.)
-- Has the license number printed on the truck, business card, and invoice.
-- Tells you the **service-call fee** and **flat lockout rate** on the phone, before dispatch.
-- Carries a wallet copy of the BSIS license.
-- Carries insurance — for damage to your door, frame, or property.
+A single-layer door skin is basically a drum head — it dents if you look at it wrong, and dents in a bare skin are forever. Sandwich doors resist dents dramatically better because the skin is bonded to a solid core. Given that panel damage is one of our most common repair calls, stiffness is a maintenance argument, not just a comfort one.
 
-## How to verify a BSIS license in 30 seconds
+## When You Can Honestly Skip Insulation
 
-1. Go to [search.dca.ca.gov](https://search.dca.ca.gov).
-2. Select "Bureau of Security and Investigative Services."
-3. Type the company name or license number.
+We're not here to upsell foam you don't need:
 
-It returns the company name, status (Active / Expired / Suspended), city, and license expiration. Always verify before letting anyone drill into your door.
+- **Detached, unheated garage used purely for parking** — a single or double-layer door is a rational choice. Take the savings.
+- **Planning to sell within a year or two** — a clean new non-insulated door still delivers the curb-appeal ROI.
 
-## What to do if you've already been scammed
+But if the garage is attached, heated, houses a workshop, or has living space above it — in this climate, insulated is the answer, and polyurethane sandwich construction is worth the stretch.
 
-1. **Don't pay in cash.** Use a credit card so you have chargeback rights.
-2. **Get a written invoice** with the company name, address, BSIS number, and tech name.
-3. **File a complaint** with BSIS at bsis.ca.gov.
-4. **Report to the attorney general** at oag.ca.gov.
-5. **Leave an honest review** with the business name (Google, Yelp, BBB).
+## The Michigan Math
 
-The faster you report, the faster the call-center brand gets taken down.
+Typical Metro Detroit price gap between builder-grade non-insulated and a quality R-13 sandwich door: **$500–$900 installed**. Between easier winters on your furnace, the car battery you don't replace, the dents you don't collect, and the resale bump of a premium door, the gap closes quietly over a handful of Michigan winters — and the comfort difference starts on day one.
 
-## The OH Lock & Key Solutions guarantee
+## See and Feel the Difference
 
-When you call us, you get:
-
-- The flat-rate price on the phone, in writing if you ask.
-- A BSIS-licensed tech (#8663) in a marked truck.
-- Non-destructive entry on 99% of residential lockouts.
-- Insurance coverage for any property damage.
-- A receipt with our license number and full company info.
-
-That's the bar. Anything less and you're at risk.
-
-[See our license page →](/license)
+Spec sheets don't convey the thunk of a solid sandwich door closing versus the clatter of a single skin. We bring section samples to every [free installation quote](/quote) so you can feel it. Call BH Garage Door Metro Detroit at (313) 236-4558 — we install Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor across all of Wayne, Oakland, and Macomb counties.
 `,
   },
 
   {
-    slug: "master-key-systems-for-small-businesses",
-    title: "Master Key Systems for Small Businesses: A Practical OC Guide",
-    metaTitle: "Master Key Systems for OC Small Businesses",
+    slug: "garage-door-safety-sensor-fix",
+    title: "Garage Door Won't Close? How to Fix Safety Sensor Problems in 10 Minutes",
+    metaTitle: "Garage Door Safety Sensor Fix: Door Won't Close Troubleshooting",
     excerpt:
-      "Stop giving every employee a giant keyring. A small-business master key system gives the right access to the right people — without compromising the office or safe.",
-    category: "Commercial",
-    readMinutes: 8,
+      "If your door opens fine but refuses to close — or reverses and blinks its lights at you — the photo-eye sensors are the prime suspect. Here's the 10-minute fix, Michigan edition.",
+    category: "Safety",
+    readMinutes: 7,
     date: "2026-04-15",
-    heroImage: "/blog/master-key-systems-for-small-businesses-hero.png",
-    heroAlt: "Locksmith and small business owner reviewing a key access chart in a small modern office",
-    secondaryImage: "/blog/master-key-systems-for-small-businesses-secondary.png",
-    secondaryAlt: "Organized commercial pin kit and tagged keys on a workbench, with a master key chart on paper",
+    heroImage: "/blog/garage-door-safety-sensor-fix-hero.png",
+    heroAlt: "Close-up of a garage door photo-eye safety sensor with its indicator light glowing.",
+    secondaryImage: "/blog/garage-door-safety-sensor-fix-secondary.png",
+    secondaryAlt: "Technician aligning a pair of garage door safety sensors at the base of the tracks.",
     body: `
-If you run a 5–50 person business in Orange County — restaurant, retail, dental office, law firm, distribution warehouse — you've probably hit the "too many keys" problem. The bookkeeper has the office key. The cleaners have the back door. The manager has everything. The new hire just got handed a key with no record of what it opens.
+It's the most common "repair" call in the garage door business, and half the time the customer fixes it on the phone with our dispatcher: the door opens normally, but when you try to close it, it either refuses entirely or drops a foot and reverses while the opener light flashes. That flash is the opener telling you exactly what's wrong — the safety sensors.
 
-A master key system fixes this in one afternoon.
+## What the Sensors Do (And Why You Can't Bypass Them)
 
-## What is a master key system?
+Since 1993, every opener sold in the US has photo-eye sensors: two small units mounted about six inches off the floor on either side of the door, shooting an invisible infrared beam across the opening. Anything breaking the beam — a kid, a dog, a bumper — makes a closing door reverse instantly.
 
-It's a single pinning scheme that allows different keys to open different combinations of locks. The most common structure for small businesses:
+When the beam is interrupted or the sensors can't see each other, the opener refuses to power-close as a fail-safe. That's the behavior you're seeing. And no, they shouldn't be bypassed or unplugged — beyond the obvious safety issue, a door that closes blind will eventually meet a bumper or worse.
 
-- **Master key (MK)** — opens every lock in the building. Owner / GM only.
-- **Sub-master keys (SMK)** — open a defined zone. Examples:
-  - "Front of house" SMK: front door, retail floor, point-of-sale closet.
-  - "Back of house" SMK: kitchen, walk-in, dry storage.
-  - "Office" SMK: office, supply closet, server room.
-- **Change keys (CK)** — open a single lock. Given to whoever needs that one room.
+## The 10-Minute Fix, In Order
 
-Each employee gets exactly the access they need — no more, no less.
+### 1. Read the LEDs
 
-## When you should set this up
+Each sensor has an indicator light. Typically one is the sending unit (amber) and one is the receiving unit (green). **Solid lights on both = aligned and happy. A blinking or dark receiver = blocked, misaligned, or unpowered.** This tells you which end to work on.
 
-- You have 3+ exterior or interior doors that need key control.
-- You have a safe, server room, or controlled-substance cabinet that should not be on the same key as everything else.
-- You have rotating staff (cleaners, contractors, part-time).
-- You're tired of replacing every lock when an employee leaves.
+### 2. Clear the Beam Path
 
-## How OC locksmiths design a master system
+Obvious, but it solves a third of these calls: the snow shovel, recycling bin, shop-vac hose, or drift of leaves sitting in the beam. In Michigan, snowbanks that creep into the door opening are a classic January culprit.
 
-Here's what a real consult looks like:
+### 3. Clean the Lenses
 
-1. **Site walk-through** — we list every lockable opening and ask who needs to open what.
-2. **Hierarchy chart** — we draft a tree: MK → SMK → CK with a master-keying chart. You sign off.
-3. **Cylinder count** — we tally how many cylinders need to be pinned, and what hardware they live in. Some legacy hardware can be repinned; old or worn cylinders get replaced.
-4. **Key control** — we recommend a restricted keyway (Medeco, Mul-T-Lock, Schlage Primus, Assa Twin) so employees can't duplicate keys at the hardware store.
-5. **Install day** — usually 4–8 hours for a small office. Cylinders get pulled, repinned, reinstalled, and tested.
-6. **Documentation** — you get the master chart in a sealed envelope. Don't lose this.
+Wipe both lenses with a soft dry cloth. Road-salt film, cobwebs, and grime scatter the beam — a Metro Detroit winter coats these lenses the same way it coats your windshield. Spiders love the warm LEDs, so clear webs behind the brackets too.
 
-## What does it cost?
+### 4. Check Alignment
 
-For a typical 8–12 cylinder OC small business:
+Sensors get kicked, bumped by bikes, and knocked by trash cans. Loosen the wing nut, sight the two sensors at each other so both face squarely across the opening at the same height, and adjust gently until the receiving LED goes from blinking to **solid**. Retighten while watching the light stay steady.
 
-- Standard keyway, no new hardware: **$450–$750**.
-- Restricted keyway (recommended), no new hardware: **$700–$1,200**.
-- Restricted keyway + new high-security cylinders: **$1,500–$2,800**.
+### 5. Check the Wires
 
-We give a fixed bid after the walk-through, and the install is a flat day rate — no surprises.
+Follow the thin bell wire from each sensor up to the opener. Staples pop, wires get pinched by ladders, and rodents — a real thing in Michigan garages — chew insulation. A cut or short here shows the same symptoms as misalignment. Twist-repair a clean break temporarily; we'll rewire it properly on a service visit.
 
-## What if an employee leaves?
+### 6. Check for Sun Blindness
 
-Two options:
+A genuinely underrated cause: low winter sun shining directly into the receiving sensor around sunrise/sunset can wash out the beam. If your door only misbehaves at certain times of day and the door faces the sun, that's your clue. Sun shields (or swapping the send/receive sides) solves it.
 
-1. **Replace the lost or unreturned change key only.** Cheap, fast — but if you're paranoid, do #2.
-2. **Rekey just that branch of the master system.** The MK and other SMKs still work; the departed employee's CK is dead.
+## Still Blinking? Here's What It Means
 
-That's the whole point of a master system — you don't have to rekey the whole building when one person leaves.
+If the lenses are clean, the path is clear, alignment is true, and the wiring is intact but the sensors still won't go solid, the sensor itself or the opener's logic board has failed. Sensors are inexpensive and we carry universal-compatible and OEM sets on every truck — it's a quick swap with a proper wire re-run, usually bundled with a full safety test.
 
-## Restricted vs. standard keyways
+## The Test Every Garage Should Pass
 
-If you only take one thing from this article: **use a restricted keyway**. Standard keys (KW1, SC1, KW10) can be duplicated at any Home Depot. Restricted keys can only be cut by us, on a signed authorization, with the master chart on file. This is the difference between a master system that actually controls access and one that's security theater.
+Once the door closes normally again, take 30 seconds to verify both safety systems:
 
-## Ready to talk through your office?
+- **Beam test:** start the door closing and wave a broom handle through the beam — it must reverse instantly.
+- **Contact test:** lay a 2x4 flat under the door — the door must reverse when it touches.
 
-We do free 30-minute site walk-throughs for OC small businesses. We'll bring the master chart template, ask you the right questions, and have a bid in your inbox the same day.
-
-[Book a commercial consult →](/services/commercial)
+If either test fails, stop using the opener and call us at (313) 236-4558. BH Garage Door Metro Detroit runs same-day sensor and opener service across all of Metro Detroit — and every repair we do ends with both safety tests, every time.
 `,
   },
 
   {
-    slug: "after-a-break-in-24-hour-security-checklist",
-    title: "What To Do After a Break-In: A 24-Hour Security Checklist",
-    metaTitle: "After a Break-In: 24-Hour Security Checklist",
+    slug: "hire-garage-door-company-michigan-checklist",
+    title: "How to Hire a Garage Door Company in Michigan Without Getting Scammed",
+    metaTitle: "Hiring a Garage Door Company in Michigan: Scam-Proof Checklist",
     excerpt:
-      "If your home or business was broken into, the next 24 hours determine whether it happens again. This is the exact checklist we walk OC clients through.",
+      "The garage door industry has a scam problem — bait pricing, phantom 'lifetime' parts, and $900 spring jobs. Here's the checklist that protects Metro Detroit homeowners, from people inside the industry.",
     category: "Safety",
     readMinutes: 9,
     date: "2026-04-22",
-    heroImage: "/blog/after-a-break-in-24-hour-security-checklist-hero.png",
-    heroAlt: "Locksmith installing a new reinforced strike plate and deadbolt on a residential door after a break-in",
-    secondaryImage: "/blog/after-a-break-in-24-hour-security-checklist-secondary.png",
-    secondaryAlt: "Hand holding a new high-security deadbolt and reinforced strike plate next to a damaged door frame",
+    heroImage: "/blog/hire-garage-door-company-michigan-checklist-hero.png",
+    heroAlt: "Garage door technician reviewing a written estimate with a homeowner in a Michigan driveway.",
+    secondaryImage: "/blog/hire-garage-door-company-michigan-checklist-secondary.png",
+    secondaryAlt: "Uniformed technician servicing a garage door torsion assembly from a ladder.",
     body: `
-A break-in is a violation, and the first instinct is usually to clean up and try to forget. Don't. The most common pattern we see in Orange County is the second break-in — when nothing was changed and the same person comes back two weeks later for the rest.
+We'll say the quiet part out loud: the garage door industry has a well-earned scam problem. Search "garage door repair near me" anywhere in Metro Detroit and the results mix honest local companies with lead-reselling websites and bait-price operators. The playbook is always the same — a $39 special gets a salesman (not a tech) into your garage, and the "diagnosis" is an $800–$1,500 rebuild of parts that were fine. Here's how to not be that story.
 
-Here's the exact 24-hour checklist we walk break-in clients through.
+## The Red Flags, In Order of Reliability
 
-## Hour 0–1: Stop, secure, document
+### 1. The Too-Cheap Hook
 
-- **Don't go in alone.** If the break-in is fresh, call the police from outside. Wait for them.
-- **Photograph everything** before you touch it. Doors, frames, drawers, windows. Even if you don't think you'll need the photos, your insurance will.
-- **Get a police report number.** Insurance will not pay without it. Most OC cities will dispatch within 30 minutes for a residential break-in.
+"$29 service call! $99 any spring!" Real spring replacements involve a trained tech, a stocked truck, and quality steel — in Metro Detroit that's a $180–$400 job depending on the door. A price that can't cover costs exists to get a foot in the door, and the difference gets made up in your garage.
 
-## Hour 1–4: Secure entry points
+### 2. No Local Address or Verifiable Identity
 
-- **Replace the door / frame / hardware that was breached.** A reinforced strike plate alone is usually enough to upgrade a kicked-in door so it won't kick again — assuming the frame is intact.
-- **Rekey or replace every exterior lock.** If the intruder took keys, you cannot trust any lock they had access to. We routinely roll trucks within an hour of a 911 break-in call.
-- **Replace any compromised garage opener.** Most modern openers use rolling codes, but if a paper-clip clone of your remote was in the car they hit, replace the opener.
+Lead-gen sites clone themselves across every suburb with a different city name slapped in the title. Check: Is there a real local presence? Does the Google Business Profile have years of reviews, or 40 five-stars posted in the same month? Does the name on the truck match the name on the invoice?
 
-## Hour 4–24: Audit and upgrade
+### 3. The "Everything Is Dangerous" Diagnosis
 
-This is where the long-term security work happens.
+You called about a noisy roller; the visit ends with a warning that your springs, cables, drums, bearings, and opener are all "about to fail" and only a full rebuild will keep your family safe. Real failures are specific: a snapped spring looks snapped, a frayed cable looks frayed. Ask to be shown every problem — a legitimate tech will happily point.
 
-### 1. Hardware audit
+### 4. Verbal-Only Pricing
 
-- Every exterior deadbolt should be **ANSI Grade 1** (commercial) or **Grade 2** (residential high-end).
-- Every strike plate should be **reinforced** with 3-inch screws into the frame stud, not just the trim.
-- Every door should have a **functional dead-latch guard** (the little plunger that stops credit-card-style attacks).
+If the number lives only in the salesman's mouth, it can grow on the invoice. Flat-rate, written or texted before work begins is the standard you should demand. It's what we do on every single job.
 
-### 2. Glass and window check
+### 5. Pressure to Decide Right Now
 
-Most OC break-ins go through a side window, sliding glass door, or back patio door — not the front door.
+"This price is only good today" is a sales tactic, not how repair pricing works. Any company confident in its quote will happily let you sleep on it — springs don't get more broken overnight.
 
-- Sliding doors: install a pin lock or charley bar. Cheap and effective.
-- French doors: add flush bolts top and bottom on the inactive leaf.
-- Single-hung windows: add a window pin or sash lock.
+## The Checklist Before You Book
 
-### 3. Smart lock + camera review
+- **Verify insurance.** Michigan doesn't license garage door work as a standalone trade, which makes proof of general liability and workers' comp insurance the meaningful credential. Any legitimate company produces a certificate on request without drama.
+- **Read reviews for patterns, not stars.** Skim the 3-star reviews specifically — they're where honest customers describe pricing behavior. Look for the same tech names and specific jobs across months and years.
+- **Get the flat rate on the phone.** A competent dispatcher can price a spring replacement, opener install, or off-track reset within a tight range from your description. Vagueness on the phone predicts surprises in the driveway.
+- **Ask what's included.** A real spring quote includes the springs, labor, rebalancing the door, and inspection of cables and bearings. A real opener quote includes rails, sensors, remotes, keypad, and haul-away of the old unit.
+- **Ask about warranty in writing.** Ours: 1 year on labor, manufacturer warranty on parts (3–10 years on springs by cycle rating, up to lifetime on some opener belts and motors). "Lifetime warranty" pitches that mysteriously cover only the part — with a fat labor charge per visit — are the industry's favorite fine print.
 
-- If you have smart locks, **audit the access log** for the 30 days before the break-in. Any unfamiliar codes? Any guest codes that should have been deleted?
-- If you have cameras, **pull and save the footage** — most cloud cameras only retain 7–30 days. Save the relevant window to your phone.
+## Fair 2026 Price Ranges for Metro Detroit
 
-### 4. Safe & valuables
+Use these as your sanity check (full breakdown in our [spring guide](/blog/broken-garage-door-spring-what-to-do) and [opener guide](/blog/garage-door-opener-buying-guide)):
 
-- If a safe was attacked but not opened, get it inspected. A pry attack can damage the bolt-work even if the door held.
-- If a safe was taken, file the serial number with the police report and the manufacturer. Same for any electronics — Apple and Google can flag stolen serials.
+- Service call & diagnostic: $45–$75
+- Single torsion spring, installed: $180–$280
+- Spring pair, installed: $260–$400
+- Opener installed (belt drive): $450–$650
+- Cable pair replacement: $150–$250
+- Off-track reset with track repair: $150–$350
+- New insulated two-car door, installed: $1,400–$2,800
 
-### 5. The "second attempt" countermeasures
+If you're quoted 2–3x these ranges — or the "diagnosis" lands within minutes and totals four figures — get a second opinion before signing anything. We give free second opinions over the phone every week, even when the answer is "that quote is actually fair."
 
-- **Light up the perimeter.** Motion-activated LED floodlights on the side and back of the house. Cheap, effective.
-- **Re-trim landscaping** that creates hiding spots near windows.
-- **Schedule a vacation hold** on mail and package deliveries if the house is empty.
+## Where We Stand
 
-## What about renters?
-
-You have the same rights as a homeowner to demand a rekey from your landlord after a break-in. In California, the landlord must rekey or replace locks within a reasonable time (usually 1–3 business days). If they refuse, document the request in writing, and you can hire a locksmith yourself and deduct from rent under California Civil Code §1941.
-
-## Insurance tip
-
-Most home and business insurance policies will cover lock replacement and frame repair as part of a break-in claim — but you have to ask. Get an itemized invoice from your locksmith (we provide one with our BSIS license number on every job) and submit with the police report.
-
-## The fast version
-
-If you're reading this at 2am with a broken door, here's the 5-minute summary:
-
-1. Call police, stay outside.
-2. Photograph the damage.
-3. Call a 24/7 locksmith with BSIS license.
-4. Get the door secured tonight, the rekey done in the morning.
-5. Schedule the security audit within 7 days.
-
-[We're 24/7, OC-wide →](/contact)
+BH Garage Door Metro Detroit is licensed & insured, staffs its own background-checked techs (no subcontractors), quotes flat rates before dispatch, and puts every warranty in writing on a digital invoice. That's the standard — from us or from whoever you hire. Call (313) 236-4558 or [request a quote](/quote), and keep this checklist handy either way.
 `,
   },
 ];
 
+export const BLOG_CATEGORIES = [...new Set(BLOG_POSTS.map((p) => p.category))];
+
 export function findPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
 }
-
-export const BLOG_CATEGORIES = Array.from(new Set(BLOG_POSTS.map((p) => p.category)));

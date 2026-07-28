@@ -28,7 +28,6 @@ export const PHOTOS_BY_ID: Record<string, Photo> = Object.fromEntries(
 
 export const WORK_PHOTOS = PHOTOS.filter((p) => p.kind === "work");
 export const BRAND_PHOTOS = PHOTOS.filter((p) => p.kind === "brand");
-export const REVIEW_PHOTOS = PHOTOS.filter((p) => p.kind === "review");
 export const LICENSE_PHOTO = PHOTOS.find((p) => p.kind === "trust");
 
 export function photosForService(slug: string): Photo[] {

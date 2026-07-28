@@ -1,10 +1,12 @@
 {
-  "name": "oh-lock-and-key",
+  "name": "bh-garage-door-metro-detroit",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "node scripts/build-pages.mjs",
+    "deploy:pages": "node scripts/deploy-gh-pages.mjs",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "node scripts/inline-critical-css.mjs && node scripts/minify-html.mjs && next-sitemap"
@@ -24,6 +26,7 @@
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",

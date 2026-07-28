@@ -12,34 +12,34 @@ import { BIZ } from "@/lib/business";
 import { Button } from "@/components/ui/Button";
 
 type ServiceKey =
-  | "emergency" | "residential" | "commercial" | "storefront"
-  | "smart-locks" | "access-control" | "automotive" | "safes" | "rekey";
+  | "emergency" | "repair" | "installation" | "springs"
+  | "openers" | "cables-rollers" | "panels" | "commercial" | "maintenance";
 
-type PropertyKey = "property-home" | "property-business" | "property-vehicle" | "property-other";
+type PropertyKey = "property-home" | "property-business" | "property-detached" | "property-other";
 
 type Urgency = "now" | "today" | "this-week" | "scheduling";
 
 const SERVICES: { key: ServiceKey; label: string; sub: string }[] = [
-  { key: "emergency",      label: "Emergency lockout",   sub: "Locked out now" },
-  { key: "residential",    label: "Residential",         sub: "Home rekey / install / repair" },
-  { key: "commercial",     label: "Commercial / office", sub: "Office hardware" },
-  { key: "storefront",     label: "Storefront / glass",  sub: "Adams Rite, panic, paddle" },
-  { key: "smart-locks",    label: "Smart / keypad",      sub: "Schlage, Yale, Lockly" },
-  { key: "access-control", label: "Access control",      sub: "Maglock, REX, keypads" },
-  { key: "automotive",     label: "Automotive",          sub: "Car keys & fobs" },
-  { key: "safes",          label: "Safe service",        sub: "Open, repair, install" },
-  { key: "rekey",          label: "Rekey / master key",  sub: "Rekey or master system" },
+  { key: "emergency",      label: "Emergency repair",    sub: "Stuck open / off track now" },
+  { key: "repair",         label: "Door repair",         sub: "Noisy, crooked, slow, stuck" },
+  { key: "installation",   label: "New door install",    sub: "Replace or upgrade the door" },
+  { key: "springs",        label: "Broken spring",       sub: "Torsion / extension springs" },
+  { key: "openers",        label: "Opener",              sub: "Install, repair, remotes" },
+  { key: "cables-rollers", label: "Cables & rollers",    sub: "Frayed cable, worn rollers" },
+  { key: "panels",         label: "Panel replacement",   sub: "Dented or cracked section" },
+  { key: "commercial",     label: "Commercial door",     sub: "Rolling steel, dock doors" },
+  { key: "maintenance",    label: "Tune-up",             sub: "25-point inspection & lube" },
 ];
 
 const PROPERTIES: { key: PropertyKey; label: string; sub: string }[] = [
-  { key: "property-home",     label: "Home",     sub: "House, condo, apt" },
-  { key: "property-business", label: "Business", sub: "Office, retail, storefront" },
-  { key: "property-vehicle",  label: "Vehicle",  sub: "Car, truck, van" },
-  { key: "property-other",    label: "Other",    sub: "Safe, gate, mailbox…" },
+  { key: "property-home",     label: "Home",            sub: "Attached garage" },
+  { key: "property-business", label: "Business",        sub: "Warehouse, shop, dock" },
+  { key: "property-detached", label: "Detached garage", sub: "Standalone / alley garage" },
+  { key: "property-other",    label: "Other",           sub: "Storage, barn, HOA…" },
 ];
 
 const URGENCIES: { key: Urgency; label: string; sub: string; Icon: typeof Zap }[] = [
-  { key: "now",        label: "Right now",   sub: "I&rsquo;m locked out / need it ASAP", Icon: Zap },
+  { key: "now",        label: "Right now",   sub: "Door is stuck / car trapped", Icon: Zap },
   { key: "today",      label: "Today",       sub: "Within a few hours",      Icon: CalendarClock },
   { key: "this-week",  label: "This week",   sub: "Flexible timing",         Icon: Calendar },
   { key: "scheduling", label: "Just pricing", sub: "Quote only, no rush",    Icon: FileText },
@@ -158,7 +158,7 @@ export function QuoteWizard() {
       {/* Header / progress */}
       <div className="relative flex flex-wrap items-center gap-3">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3" /> BSIS #{BIZ.bsis}
+          <ShieldCheck className="h-3 w-3" /> Licensed & insured
         </span>
         <span className="text-[11px] font-bold uppercase tracking-wider text-ink-400">
           Step {step + 1} of {STEP_LABELS.length} — {STEP_LABELS[step]}
@@ -291,13 +291,13 @@ export function QuoteWizard() {
             {step === 3 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Anything we should know?</h2>
-                <p className="mt-1 text-sm text-ink-300">Brand of lock, door type, # of doors, gate code… optional.</p>
+                <p className="mt-1 text-sm text-ink-300">Door size, opener brand, what it&apos;s doing, gate code… optional.</p>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={6}
                   className="mt-5 w-full rounded-xl border border-ink-800 bg-ink-950 p-4 outline-none focus:border-brass-500"
-                  placeholder="e.g. Schlage deadbolt won't turn, single-family home in Tustin, need same-day rekey for 3 doors."
+                  placeholder="e.g. Two-car door in Royal Oak, loud bang last night and now the opener won't lift it — probably the spring."
                 />
               </>
             )}
@@ -305,7 +305,7 @@ export function QuoteWizard() {
             {step === 4 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Got a picture or document?</h2>
-                <p className="mt-1 text-sm text-ink-300">Upload photos of the lock, the door, or any quote / spec sheet. Optional (max {MAX_FILES} files, 8 MB each).</p>
+                <p className="mt-1 text-sm text-ink-300">Upload photos of the door, the spring shaft, the opener, or any quote / spec sheet. Optional (max {MAX_FILES} files, 8 MB each).</p>
                 <label className="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-brass-500/40 bg-ink-950/50 p-8 text-center hover:border-brass-400">
                   <Upload className="h-7 w-7 text-brass-300" />
                   <span className="font-display text-base font-bold text-ink-50">Tap to upload</span>
@@ -348,7 +348,7 @@ export function QuoteWizard() {
                   <Field label="Name" value={name} onChange={setName} required />
                   <Field label="Phone" value={phone} onChange={setPhone} required type="tel" />
                   <Field label="Email (optional)" value={email} onChange={setEmail} type="email" />
-                  <Field label="City / ZIP" value={location} onChange={setLocation} required placeholder="Santa Ana, 92701" />
+                  <Field label="City / ZIP" value={location} onChange={setLocation} required placeholder="Detroit, 48201" />
                 </div>
 
                 <div className="mt-6 rounded-2xl border border-ink-800 bg-ink-950/60 p-4">

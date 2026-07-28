@@ -1,41 +1,65 @@
 // Single source of truth for NAP, hours, license, links.
+
+export type DayHours = {
+  day: number;
+  label: string;
+  /** HH:mm in America/Detroit; null = closed */
+  open: string | null;
+  close: string | null;
+  closed?: boolean;
+};
+
 export const BIZ = {
-  name: "OH Lock & Key Solutions",
-  legalName: "OH Lock & Key Solutions",
-  tagline: "Licensed Orange County Locksmith — Free Quotes, Fast Response",
-  phone: "714-757-7574",
-  phoneE164: "+17147577574",
-  phoneHref: "tel:+17147577574",
-  whatsappHref: "https://wa.me/17147577574",
-  email: "service@ohlockandkey.com",
-  emailHref: "mailto:service@ohlockandkey.com",
-  bsis: "8663",
-  url: "https://ohlockandkey.com",
+  name: "BH Garage Door Metro Detroit",
+  legalName: "BH Garage Door Metro Detroit",
+  tagline: "Licensed & Insured Garage Door Installation & Repair — Free Quotes Across Metro Detroit",
+  phone: "(313) 236-4558",
+  phoneE164: "+13132364558",
+  phoneHref: "tel:+13132364558",
+  smsHref: "sms:+13132364558",
+  whatsappHref: "https://wa.me/13132364558",
+  email: "info@bhgaragedoormetrodetroit.com",
+  emailHref:
+    "mailto:info@bhgaragedoormetrodetroit.com?subject=Garage%20door%20quote%20request%20%E2%80%94%20BH%20Garage%20Door%20Metro%20Detroit",
+  quotesEmail: "quotes@bhgaragedoormetrodetroit.com",
+  quoteNotifyEmails: ["israelvaday97@gmail.com"],
+  /** Shown in trust badges */
+  licenseId: "Licensed & Insured",
+  /** Legacy field name used in templates */
+  bsis: "Licensed & Insured",
+  url: "https://bhgaragedoormetrodetroit.com",
   address: {
-    street: "100 S Zoo Ln",
-    locality: "Santa Ana",
-    region: "CA",
-    postalCode: "92701",
+    street: "Metro Detroit Service Area",
+    locality: "Detroit",
+    region: "MI",
+    postalCode: "48201",
     country: "US",
-    full: "100 S Zoo Ln, Santa Ana, CA 92701",
+    full: "Metro Detroit, MI",
   },
-  geo: { lat: 33.7455, lng: -117.8677 },
-  // 24/7 emergency dispatch
+  geo: { lat: 42.3314, lng: -83.0458 },
+  metroBounds: {
+    minLat: 42.15,
+    maxLat: 42.75,
+    minLng: -83.65,
+    maxLng: -82.45,
+  },
+  metroMap: { lat: 42.45, lng: -83.05, zoom: 10 },
   hours247: true,
+  hoursSummary: "Sun–Thu 24 hours · Fri until 6 PM · Sat closed",
   hours: [
-    { day: 0, open: "00:00", close: "23:59", label: "Sunday" },
-    { day: 1, open: "00:00", close: "23:59", label: "Monday" },
-    { day: 2, open: "00:00", close: "23:59", label: "Tuesday" },
-    { day: 3, open: "00:00", close: "23:59", label: "Wednesday" },
-    { day: 4, open: "00:00", close: "23:59", label: "Thursday" },
-    { day: 5, open: "00:00", close: "23:59", label: "Friday" },
-    { day: 6, open: "00:00", close: "23:59", label: "Saturday" },
-  ] as const,
+    { day: 0, open: "00:00", close: "24:00", label: "Sunday" },
+    { day: 1, open: "00:00", close: "24:00", label: "Monday" },
+    { day: 2, open: "00:00", close: "24:00", label: "Tuesday" },
+    { day: 3, open: "00:00", close: "24:00", label: "Wednesday" },
+    { day: 4, open: "00:00", close: "24:00", label: "Thursday" },
+    { day: 5, open: "00:00", close: "18:00", label: "Friday" },
+    { day: 6, open: null, close: null, label: "Saturday" },
+  ] satisfies readonly DayHours[],
   social: {
-    google:    "",
-    yelp:      "",
-    facebook:  "",
-    instagram: "https://www.instagram.com/ohlockkey",
-    tiktok:    "",
+    google: "",
+    yelp: "",
+    facebook: "",
+    instagram: "",
+    tiktok: "",
   },
 };

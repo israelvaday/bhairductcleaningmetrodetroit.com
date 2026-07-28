@@ -56,13 +56,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-ink-950/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brass-300 backdrop-blur">
               <LogoMark className="h-4 w-4" />
-              OH Lock & Key · BSIS #{BIZ.bsis}
+              BH Garage Door Metro Detroit · Licensed & insured
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur">
-              <Clock className="h-3.5 w-3.5" /> Open 24 / 7
+              <Clock className="h-3.5 w-3.5" /> Mobile dispatch
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-950/60 px-3 py-1.5 text-xs font-semibold text-ink-200 backdrop-blur">
-              <MapPin className="h-3.5 w-3.5 text-brass-400" /> All of Orange County
+              <MapPin className="h-3.5 w-3.5 text-brass-400" /> All of Metro Detroit
             </span>
           </div>
           <div className="mt-5 flex items-center gap-3">
@@ -122,7 +122,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <span className="text-sm font-semibold uppercase tracking-wider">Licensed & insured</span>
               </div>
               <p className="mt-2 text-sm text-ink-200">
-                California Bureau of Security & Investigative Services. License #{BIZ.bsis}. Every tech is background-checked.
+                Licensed &amp; insured Michigan garage door company. Every tech is background-checked.
               </p>
             </div>
             <div className="rounded-3xl border border-ink-800 bg-ink-900/50 p-5">
@@ -141,7 +141,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <Reveal>
               <h2 className="font-display text-2xl font-bold md:text-3xl">Real {s.shortName.toLowerCase()} jobs</h2>
-              <p className="mt-2 text-ink-300">Photos from real Orange County jobs by our licensed crew.</p>
+              <p className="mt-2 text-ink-300">Photos from real Metro Detroit jobs by our licensed crew.</p>
             </Reveal>
             <RevealStagger className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" stagger={0.05}>
               {allShots.map((p) => (
@@ -170,10 +170,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">Service area</p>
                 <h2 className="mt-2 font-display text-2xl font-bold md:text-3xl">
-                  {s.shortName} service across Orange County
+                  {s.shortName} service across Metro Detroit
                 </h2>
                 <p className="mt-2 max-w-2xl text-ink-300">
-                  Mobile dispatch from Santa Ana to every OC city — 24 hours a day.
+                  Mobile dispatch from Detroit to every Metro Detroit city.
                 </p>
               </div>
               <Link href="/service-areas" className="hidden text-sm font-semibold text-brass-400 hover:text-brass-300 md:inline-flex">
@@ -183,8 +183,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </Reveal>
           <Reveal delay={0.1} variant="zoom">
             <ServiceMap
-              query={`${s.name} Orange County CA`}
-              title={`${s.shortName} — Orange County, CA`}
+              query={`${s.name} Metro Detroit MI`}
+              title={`${s.shortName} — Metro Detroit, MI`}
               height={420}
             />
           </Reveal>
@@ -194,19 +194,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="border-t border-ink-800 py-16">
         <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-ink-200 md:px-6 md:text-base">
           <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
-            More about {s.shortName.toLowerCase()} in Orange County
+            More about {s.shortName.toLowerCase()} in Metro Detroit
           </h2>
           <p>
-            {s.description} Every {s.shortName.toLowerCase()} job is performed by a California BSIS-licensed locksmith (license #{BIZ.bsis}), background-checked, and dispatched from a fully equipped mobile workshop. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who works on locks for a living.
+            {s.description} Every {s.shortName.toLowerCase()} job is performed by a background-checked technician from a licensed &amp; insured local company, dispatched from a fully stocked truck. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who works on garage doors for a living.
           </p>
           <p>
-            We cover every city and neighborhood in Orange County for {s.shortName.toLowerCase()}: Santa Ana, Irvine, Anaheim, Huntington Beach, Newport Beach, Costa Mesa, Fullerton, Orange, Tustin, Garden Grove, Mission Viejo, Laguna Niguel, Laguna Beach, Lake Forest, Aliso Viejo, Rancho Santa Margarita, Yorba Linda, Brea, Placentia, Buena Park, La Habra, Cypress, Stanton, Westminster, Fountain Valley, Seal Beach, Los Alamitos, San Juan Capistrano, San Clemente, and Dana Point. Typical on-site arrival is 15 to 30 minutes depending on traffic and your distance from the nearest mobile unit.
+            We cover every city and neighborhood in Metro Detroit for {s.shortName.toLowerCase()}: Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties. Typical on-site arrival is 15 to 30 minutes depending on traffic and your distance from the nearest mobile unit.
           </p>
           <p>
-            Pricing for {s.shortName.toLowerCase()} is transparent: flat-rate where the scope is predictable and clearly itemized where it isn&apos;t. You get a written quote before any tools come out, and the number we agree on is the number you pay — no trip fees, no &quot;the lock turned out to be a different brand&quot; surprises, and no high-pressure upsells. If something genuinely changes the scope on site, we explain it, give you a new written number, and you can decline without owing a cent.
+            Pricing for {s.shortName.toLowerCase()} is transparent: flat-rate where the scope is predictable and clearly itemized where it isn&apos;t. You get a written quote before any tools come out, and the number we agree on is the number you pay — no surprise fees, no &quot;the spring turned out to be a special size&quot; games, and no high-pressure upsells. If something genuinely changes the scope on site, we explain it, give you a new written number, and you can decline without owing a cent.
           </p>
           <p>
-            We use non-destructive entry whenever the hardware allows it, prefer manufacturer-grade parts for permanent installs, and document the work so you have records for insurance, property managers, or HOA boards. When the job requires drilling or destructive entry — usually a damaged or anti-pick high-security cylinder — we tell you in advance, quote the replacement hardware, and complete both steps in a single visit. That&apos;s the difference between a real locksmith and a low-bid contractor with a magnetic sign.
+            We repair before we replace whenever the hardware allows it, use manufacturer-grade parts for permanent installs, and document the work so you have records for insurance, property managers, or HOA boards. When a job genuinely calls for replacement — a discontinued panel profile, a fatigued spring pair, an opener that predates modern safety standards — we tell you in advance, quote the hardware in writing, and complete the work in a single visit. Every repair ends with a door balance test and both federal safety checks. That&apos;s the difference between a real garage door company and a low-bid contractor with a magnetic sign.
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h2 className="font-display text-3xl font-extrabold md:text-4xl">
               Need {s.shortName.toLowerCase()} service now?
             </h2>
-            <p className="mt-3 text-ink-200">A BSIS-licensed locksmith is one tap away.</p>
+            <p className="mt-3 text-ink-200">A licensed &amp; insured garage door tech is one tap away.</p>
             <div className="mt-6 flex justify-center">
               <ContactCTA size="lg" />
             </div>

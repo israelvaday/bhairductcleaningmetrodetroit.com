@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = BIZ.url;
   const staticPages = [
     "", "/services", "/service-areas", "/about", "/license",
-    "/gallery", "/reviews", "/contact", "/hours", "/quote",
+    "/gallery", "/contact", "/hours", "/quote",
     "/blog", "/faq",
   ];
   return [

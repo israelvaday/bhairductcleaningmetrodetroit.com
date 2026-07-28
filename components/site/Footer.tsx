@@ -14,25 +14,29 @@ export function Footer() {
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
           <Logo size="md" />
           <p className="mt-4 max-w-xs text-sm text-ink-300">
-            Licensed Orange County locksmith. 24/7 mobile dispatch — residential, commercial, automotive, smart locks, and safes.
+            Metro Detroit garage door company — repair, installation, springs, openers, and commercial overhead doors. Mobile dispatch across all of Metro Detroit.
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/30 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300">
-              <ShieldCheck className="h-3.5 w-3.5" /> BSIS #{BIZ.bsis}
+              <ShieldCheck className="h-3.5 w-3.5" /> Licensed & insured
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300">
-              <Clock className="h-3.5 w-3.5" /> Open 24 / 7
-            </span>
+            <Link
+              href="/hours"
+              prefetch={false}
+              className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/70 px-3 py-1.5 text-xs font-semibold text-ink-200 transition hover:border-brass-500/40 hover:text-brass-300"
+            >
+              <Clock className="h-3.5 w-3.5" /> Hours
+            </Link>
           </div>
           {BIZ.social.instagram && (
             <a
               href={BIZ.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="@ohlockkey on Instagram"
+              aria-label="@bhgaragedoormetrodetroit on Instagram"
               className="mt-4 inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300 transition hover:border-brass-400 hover:text-brass-200"
             >
-              <Instagram className="h-4 w-4" /> @ohlockkey
+              <Instagram className="h-4 w-4" /> @bhgaragedoormetrodetroit
             </a>
           )}
         </div>
@@ -46,7 +50,7 @@ export function Footer() {
           <ul className="grid grid-cols-2 gap-x-3 gap-y-1.5 pb-4 text-sm text-ink-300 md:mt-3 md:grid-cols-1 md:pb-0">
             {SERVICES.slice(0, 8).map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="inline-block py-1.5 hover:text-brass-300">
+                <Link href={`/services/${s.slug}`} prefetch={false} className="inline-block py-1.5 hover:text-brass-300">
                   {s.shortName}
                 </Link>
               </li>
@@ -64,7 +68,7 @@ export function Footer() {
             <ul className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-sm text-ink-300">
               {MAIN_AREAS.map((a) => (
                 <li key={a.slug}>
-                  <Link href={`/service-areas/${a.slug}`} className="inline-block py-1.5 hover:text-brass-300">
+                  <Link href={`/service-areas/${a.slug}`} prefetch={false} className="inline-block py-1.5 hover:text-brass-300">
                     {a.name}
                   </Link>
                 </li>
@@ -72,6 +76,7 @@ export function Footer() {
             </ul>
             <Link
               href="/service-areas"
+              prefetch={false}
               className="mt-3 inline-block text-sm font-semibold text-brass-400 hover:text-brass-300"
             >
               All service areas →
@@ -81,9 +86,9 @@ export function Footer() {
 
         {/* CTA column */}
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          <h2 className="font-display text-sm font-semibold tracking-wide text-ink-100">Get a locksmith</h2>
+          <h2 className="font-display text-sm font-semibold tracking-wide text-ink-100">Get a technician</h2>
           <p className="mt-3 max-w-xs text-sm text-ink-300">
-            Tap a button — we&apos;ll dispatch a BSIS-licensed technician.
+            Tap a button — we&apos;ll dispatch a Licensed & insured technician.
           </p>
           <div className="mt-4">
             <ContactCTA size="sm" showLabels />
@@ -91,7 +96,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-8 max-w-7xl px-4 text-center text-xs text-ink-300 md:mt-10 md:px-6 md:text-left">
-        © {new Date().getFullYear()} {BIZ.name}. All rights reserved. BSIS #{BIZ.bsis}. Serving all of Orange County, California.
+        © {new Date().getFullYear()} {BIZ.name}. All rights reserved. Licensed & insured. Serving all of Metro Detroit, Michigan.
       </div>
     </footer>
   );

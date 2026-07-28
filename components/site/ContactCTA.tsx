@@ -26,7 +26,7 @@ export function ContactCTA({
         {showLabels && "Free Quote"}
       </LinkButton>
       {showEmail && (
-        <LinkButton href={BIZ.emailHref} variant="ghost" size={size} aria-label="Email us">
+        <LinkButton href={BIZ.emailHref} variant="secondary" size={size} aria-label={`Email ${BIZ.email}`}>
           <Mail className="h-5 w-5" />
           {showLabels && "Email"}
         </LinkButton>

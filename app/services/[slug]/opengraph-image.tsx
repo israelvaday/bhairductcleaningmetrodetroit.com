@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { BIZ } from "@/lib/business";
 import { SERVICES } from "@/content/services";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,25 +12,29 @@ export async function generateImageMetadata({ params }: { params: Promise<{ slug
   return [{ id: slug, alt: s ? `${s.name} — ${BIZ.name}` : BIZ.name, size, contentType }];
 }
 
+export function generateStaticParams() {
+  return SERVICES.map((s) => ({ slug: s.slug }));
+}
+
 const ICONS: Record<string, string> = {
   emergency: "🚨",
-  residential: "🏠",
+  repair: "🔧",
+  installation: "🏠",
+  springs: "🌀",
+  openers: "📡",
+  "cables-rollers": "⚙️",
+  panels: "🧱",
   commercial: "🏢",
-  storefront: "🏬",
-  "smart-locks": "📱",
-  "access-control": "🛡️",
-  automotive: "🚗",
-  specialty: "🔧",
-  safes: "🔐",
-  rekey: "🗝️",
+  maintenance: "🛠️",
+  "smart-openers": "📱",
 };
 
 export default async function ServiceOg({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = SERVICES.find((x) => x.slug === slug);
-  const headline = s?.name ?? "Orange County Locksmith";
-  const tagline = s?.tagline ?? "BSIS-licensed locksmith serving all of Orange County.";
-  const icon = (s && ICONS[s.slug]) ?? "🔑";
+  const headline = s?.name ?? "Metro Detroit Garage Doors";
+  const tagline = s?.tagline ?? "Licensed & insured garage door company serving all of Metro Detroit.";
+  const icon = (s && ICONS[s.slug]) ?? "🚪";
   const bullets = (s?.bullets ?? []).slice(0, 3);
 
   return new ImageResponse(
@@ -79,14 +83,14 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
                 fontSize: 36,
               }}
             >
-              🔑
+              🚪
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>
-                OH LOCK & KEY
+              <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>
+                BH GARAGE DOOR METRO DETROIT
               </div>
               <div style={{ fontSize: 15, color: "#C9A24A", marginTop: 4, letterSpacing: 2, fontWeight: 700 }}>
-                ORANGE COUNTY · BSIS #{BIZ.bsis}
+                METRO DETROIT · Licensed & insured
               </div>
             </div>
           </div>
@@ -105,7 +109,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
               letterSpacing: 1,
             }}
           >
-            {s?.intent === "emergency" ? "⚡ 24/7 EMERGENCY" : "✓ LICENSED & INSURED"}
+            {s?.intent === "emergency" ? "⚡ EMERGENCY DISPATCH" : "✓ LICENSED & INSURED"}
           </div>
         </div>
 

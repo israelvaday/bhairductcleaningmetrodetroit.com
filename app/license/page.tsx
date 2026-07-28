@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
-import { LICENSE_PHOTO } from "@/lib/photos";
+import { ShieldCheck, CheckCircle2 } from "lucide-react";
 import { BIZ } from "@/lib/business";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: `California BSIS Locksmith License #${BIZ.bsis}`,
-  description: `OH Lock & Key Solutions is a California BSIS-licensed locksmith (#${BIZ.bsis}) serving Orange County. View our verified license.`,
+  title: "Licensed & Insured — BH Garage Door Metro Detroit",
+  description: `${BIZ.name} is a licensed and insured garage door company serving Metro Detroit. Credentials, insurance, and what to ask any garage door company before you hire.`,
   alternates: { canonical: `${BIZ.url}/license` },
 };
 
@@ -19,36 +17,42 @@ export default function LicensePage() {
         <div className="relative mx-auto max-w-3xl px-4 text-center md:px-6">
           <ShieldCheck className="mx-auto h-10 w-10 text-brass-400" />
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-            California BSIS Licensed
+            Licensed & Insured
           </h1>
-          <p className="mt-3 font-mono text-brass-300">License #{BIZ.bsis}</p>
+          <p className="mt-3 font-mono text-brass-300">{BIZ.licenseId}</p>
           <p className="mx-auto mt-4 max-w-xl text-ink-200">
-            Every locksmith service we provide is performed under our active California
-            Bureau of Security & Investigative Services (BSIS) locksmith license.
-            Verify us anytime on the official BSIS license lookup.
+            Every garage door service we provide across Metro Detroit is performed by
+            background-checked technicians carrying general liability insurance and
+            proper trade credentials. We quote in writing before work begins.
           </p>
         </div>
       </section>
-      {LICENSE_PHOTO && (
-        <section className="py-12">
-          <div className="mx-auto max-w-3xl px-4 md:px-6">
-            <div className="overflow-hidden rounded-2xl border border-brass-500/30 bg-ink-900/50 p-2">
-              <Image
-                src={LICENSE_PHOTO.src}
-                alt={LICENSE_PHOTO.alt}
-                width={LICENSE_PHOTO.width}
-                height={LICENSE_PHOTO.height}
-                sizes="(max-width: 768px) 100vw, 800px"
-                className="w-full rounded-xl"
-                priority
-              />
-            </div>
-            <p className="mt-4 text-center text-sm text-ink-400">
-              Verify at <a className="text-brass-300 underline" href="https://search.dca.ca.gov/" target="_blank" rel="noopener noreferrer">search.dca.ca.gov</a>
+      <section className="py-12">
+        <div className="mx-auto max-w-3xl px-4 md:px-6">
+          <div className="rounded-2xl border border-brass-500/30 bg-ink-900/50 p-8">
+            <h2 className="font-display text-xl font-bold text-white">What we carry</h2>
+            <ul className="mt-4 space-y-3 text-ink-200">
+              {[
+                "Licensed garage door contracting in Michigan",
+                "General liability insurance for residential and commercial jobs",
+                "Background-checked technicians — no call-center middle layer",
+                "Written quotes before dispatch on standard jobs",
+                "Repair-first diagnostics — we never replace what we can fix",
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
+                  {line}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-ink-400">
+              Before you hire any garage door company in Metro Detroit, ask for proof of insurance,
+              a company name that matches the invoice, and a written estimate. Bait-pricing
+              dispatch operations are common in this trade — credentials matter.
             </p>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
       <FinalCTA />
     </>
   );

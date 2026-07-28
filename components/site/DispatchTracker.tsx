@@ -7,8 +7,8 @@ import { BIZ } from "@/lib/business";
 type Phase = "idle" | "scanning" | "matched";
 
 const TECH_IDS = [
-  "OH-K7", "OH-K12", "OH-K18", "OH-K23", "OH-K31", "OH-K42",
-  "OH-K55", "OH-K61", "OH-K77", "OH-K88", "OH-K93", "OH-K109",
+  "BH-K7", "BH-K12", "BH-K18", "BH-K23", "BH-K31", "BH-K42",
+  "BH-K55", "BH-K61", "BH-K77", "BH-K88", "BH-K93", "BH-K109",
 ];
 const NAMES = ["Marco R.", "Diego S.", "Jamal P.", "Eli H.", "Hector M.", "Andre L.", "Tomas G.", "Ryan O.", "Sam K.", "Brian C."];
 
@@ -27,8 +27,6 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
 
   const techId = TECH_IDS[Math.floor(r() * TECH_IDS.length)];
   const techName = NAMES[Math.floor(r() * NAMES.length)];
-  const rating = (4.7 + r() * 0.29).toFixed(2);
-  const jobsDone = 900 + Math.floor(r() * 2400);
   const etaMin = 15 + Math.floor(r() * 16); // 15..30
   const distance = (0.4 + r() * 4.2).toFixed(1);
 
@@ -38,11 +36,11 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const logs = [
-    `Pinging licensed technicians near ${areaName}, CA…`,
-    `Scanning BSIS-verified units within 5 miles…`,
+    `Pinging licensed technicians near ${areaName}, MI…`,
+    `Scanning Licensed & Insured-verified units within 5 miles…`,
     `Cross-referencing live traffic + active job queue…`,
-    `Match found — Tech ${techId} (${techName}) • ${rating}★`,
-    `Calculating optimal route via current OC traffic…`,
+    `Match found — Tech ${techId} (${techName})`,
+    `Calculating optimal route via current Metro Detroit traffic…`,
     `ETA locked: ${etaMin} min • ${distance} mi from you`,
   ];
 
@@ -94,10 +92,10 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
           Live Dispatch
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3" /> BSIS #{BIZ.bsis}
+          <ShieldCheck className="h-3 w-3" /> Licensed & insured
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-950/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-200">
-          <MapPin className="h-3 w-3 text-brass-400" /> {areaName}, CA
+          <MapPin className="h-3 w-3 text-brass-400" /> {areaName}, MI
         </span>
       </div>
 
@@ -116,7 +114,7 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
       {phase === "idle" && (
         <>
           <p className="relative mt-2 text-sm text-ink-300 md:text-base">
-            Tap below — our dispatch console pings every BSIS-licensed unit within
+            Tap below — our dispatch console pings every Licensed & insured unit within
             5 miles and returns a live ETA in seconds.
           </p>
           <button
@@ -163,7 +161,7 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
             <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Tech</div>
               <div className="mt-0.5 font-display text-base font-bold text-ink-50">{techName}</div>
-              <div className="text-[11px] text-ink-400">ID {techId} • {rating}★ • {jobsDone}+ jobs</div>
+              <div className="text-[11px] text-ink-400">ID {techId}</div>
             </div>
             <div className="rounded-2xl border border-ink-700 bg-ink-950/60 p-3">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brass-300">Status</div>

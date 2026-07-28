@@ -6,7 +6,7 @@ import { LongFormFaq } from "@/components/site/LongFormFaq";
 
 export const metadata: Metadata = {
   title: `Free Quote`,
-  description: "Get a free written locksmith quote from OH Lock & Key Solutions. Picture-driven step-by-step. Upload photos or documents. BSIS #8663.",
+  description: "Get a free written garage door quote from BH Garage Door Metro Detroit. Picture-driven step-by-step. Upload photos of your door or opener. Licensed & Insured.",
   alternates: { canonical: "/quote" },
 };
 
@@ -40,31 +40,31 @@ export default function QuotePage() {
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">How the quote works</h2>
             <p className="mt-3">
-              The picture-driven quote wizard above is the fastest way to get an accurate, written estimate from a real Orange County locksmith. Instead of a long form, it shows you small images and chips — you just tap what matches your situation. Most people finish in under two minutes. There&apos;s nothing to download, no account to create, and no obligation to book.
+              The picture-driven quote wizard above is the fastest way to get an accurate, written estimate from a real Metro Detroit garage door company. Instead of a long form, it shows you small images and chips — you just tap what matches your situation. Most people finish in under two minutes. There&apos;s nothing to download, no account to create, and no obligation to book.
             </p>
             <p className="mt-3">
-              You can attach photos at any step — a picture of your lock, your door, the inside of a safe, the back of a car key, or anything else. Photos let us identify the exact hardware, skip back-and-forth questions, and give you a tighter price range up front. If a photo isn&apos;t enough to be certain, we&apos;ll tell you in the reply rather than padding the quote with hedges.
+              You can attach photos at any step — a picture of your door, the spring shaft above it, the opener unit on the ceiling, or the sticker on the back of the door. Photos let us identify the exact hardware, skip back-and-forth questions, and give you a tighter price range up front. If a photo isn&apos;t enough to be certain, we&apos;ll tell you in the reply rather than padding the quote with hedges.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">What we quote</h2>
             <p className="mt-3">
-              We can quote every service we offer: 24-hour emergency lockouts (home, business, vehicle), residential rekeys and new lock installs, commercial storefront and panic hardware, master-key system design, smart and keypad lock installs (August, Yale, Schlage, Kwikset, Level, Aqara, and others), electronic access control, automotive key replacement and programming, safe lockouts and combination changes, and specialty high-security hardware. If you&apos;re not sure which category fits, pick the closest one — we&apos;ll route it internally.
+              We can quote every service we offer: 24-hour emergency repairs (stuck doors, off-track doors, snapped springs), torsion and extension spring replacement, opener installation and repair (LiftMaster, Chamberlain, Genie, and others), cable, roller, and track work, panel and section replacement, new door installation in steel, insulated, carriage-house, and glass styles, commercial rolling steel and sectional doors, preventive maintenance tune-ups, and smart opener and keypad installs. If you&apos;re not sure which category fits, pick the closest one — we&apos;ll route it internally.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">Pricing & expectations</h2>
             <p className="mt-3">
-              Our quotes are flat-rate where possible (lockouts, rekeys, common smart-lock installs) and clearly itemized where they need to be (commercial hardware, multi-door access control, complex automotive jobs). We don&apos;t use the bait-and-switch tactics of unlicensed locksmiths — the number we write down is the number you pay. If something on-site changes the scope, we tell you before we touch a tool, and you can decline and walk away.
+              Our quotes are flat-rate where possible (spring replacements, opener installs, cable and roller work, tune-ups) and clearly itemized where they need to be (new door installations, commercial doors, multi-door jobs). We don&apos;t use the bait-and-switch tactics you see in garage door ads — the number we write down is the number you pay. If something on-site changes the scope, we tell you before we touch a tool, and you can decline and walk away.
             </p>
             <p className="mt-3">
-              You can also skip the wizard entirely and just text us a photo at {BIZ.phone}. Either path reaches the same dispatcher. Real human, BSIS license #{BIZ.bsis}, 24/7.
+              You can also skip the wizard entirely and just text us a photo at {BIZ.phone}. Either path reaches the same dispatcher. Real human, {BIZ.bsis.toLowerCase()} company.
             </p>
           </div>
         </div>
       </section>
-      <LongFormFaq subject="OC Locksmith Quote" kind="service" />    </>
+      <LongFormFaq subject="Garage Door Quote" kind="service" />    </>
   );
 }

@@ -21,7 +21,6 @@
     "commercial-commercial-narrow-stile-keypad-lever",
     "commercial-commercial-rekey-high-security-key",
     "commercial-office-deadbolt-and-lever-with-new-keys",
-    "residential-broken-key-extraction-deadbolt",
     "residential-french-door-deadbolt-drill-jig-install",
     "residential-residential-brass-deadbolt-and-knob",
     "residential-residential-double-cylinder-deadbolt-set",
@@ -38,7 +37,6 @@
     "storefront-storefront-pivot-and-mortise-service"
   ],
   "residential": [
-    "residential-broken-key-extraction-deadbolt",
     "residential-french-door-deadbolt-drill-jig-install",
     "residential-residential-brass-deadbolt-and-knob",
     "residential-residential-double-cylinder-deadbolt-set",
@@ -57,7 +55,6 @@
     "specialty-hoppe-multipoint-lock-mechanisms"
   ],
   "emergency": [
-    "residential-broken-key-extraction-deadbolt",
     "residential-french-door-deadbolt-drill-jig-install",
     "residential-residential-brass-deadbolt-and-knob",
     "residential-residential-double-cylinder-deadbolt-set",
