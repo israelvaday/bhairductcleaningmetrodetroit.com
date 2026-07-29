@@ -235,7 +235,7 @@ export default async function BlogPostPage(
           {/* Inline CTA */}
           <div className="mt-12 rounded-3xl border border-brass-500/30 bg-gradient-to-br from-brass-500/10 to-ink-900/40 p-6 text-center md:p-8">
             <h3 className="font-display text-xl font-extrabold md:text-2xl">
-              Need garage door service in Metro Detroit?
+              Need air duct or dryer vent cleaning in Metro Detroit?
             </h3>
             <p className="mx-auto mt-2 max-w-xl text-sm text-ink-200 md:text-base">
               {BIZ.bsis}, every Metro Detroit city. Tap a button and a tech is on the way.
@@ -278,7 +278,7 @@ export default async function BlogPostPage(
         </section>
       )}
 
-      <LongFormFaq subject="Garage Door Articles" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning Articles" kind="service" />
 
       <FinalCTA />
     </>

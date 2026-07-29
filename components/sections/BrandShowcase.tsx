@@ -10,11 +10,11 @@ export function BrandShowcase() {
     all.find((p) => p.id.includes(suffix));
 
   const frames = [
-    { p: pick("service-van-three-quarter-front"), Icon: Truck,      label: "Garage Door Service Van" },
+    { p: pick("service-van-three-quarter-front"), Icon: Truck,      label: "Air Duct Cleaning Van" },
     { p: pick("service-van-side-magnet-daylight"), Icon: Truck,     label: "Mobile Service Fleet" },
     { p: pick("branding-map-metro"),               Icon: MapIcon,  label: "Serving All of Metro Detroit" },
     { p: pick("business-card-mockup-photo"),       Icon: CreditCard, label: "Business Card" },
-    { p: pick("social-tile-emergency-callout-real"), Icon: MailOpen, label: "Emergency Callout" },
+    { p: pick("social-tile-emergency-callout-real"), Icon: MailOpen, label: "Same-Day Callout" },
   ].filter((f) => f.p);
 
   if (frames.length === 0) return null;
@@ -25,7 +25,7 @@ export function BrandShowcase() {
         <div className="mb-10 flex flex-col items-center text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">Our Brand</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
-            A real, local garage door company — not a call-center middleman.
+            A real, local air duct cleaning company — not a call-center middleman.
           </h2>
           <p className="mt-3 max-w-2xl text-ink-300">
             Branded vans, a real Detroit base, and a licensed & insured crew you can actually meet.
@@ -55,7 +55,7 @@ export function BrandShowcase() {
                       {F.label}
                     </div>
                     <h3 className="mt-3 font-display text-2xl font-extrabold text-white md:text-3xl">
-                      Stocked garage door trucks — dispatched across Metro Detroit.
+                      Stocked duct cleaning trucks — dispatched across Metro Detroit.
                     </h3>
                   </div>
                 </>

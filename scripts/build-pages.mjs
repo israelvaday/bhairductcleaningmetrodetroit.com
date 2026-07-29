@@ -27,7 +27,7 @@ try {
     if (fs.existsSync(p)) fs.rmSync(p);
   }
   // GitHub Pages custom domain
-  fs.writeFileSync(path.join(ROOT, "out", "CNAME"), "bhgaragedoormetrodetroit.com\n");
+  fs.writeFileSync(path.join(ROOT, "out", "CNAME"), "bhairductcleaningmetrodetroit.com\n");
   // Disable Jekyll so GitHub Pages serves _next/ assets (CSS, JS)
   fs.writeFileSync(path.join(ROOT, "out", ".nojekyll"), "");
 } finally {

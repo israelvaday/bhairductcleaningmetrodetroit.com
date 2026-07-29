@@ -8,8 +8,8 @@ import { serviceHero } from "@/lib/photos";
 
 export function Hero() {
   const hero =
-    serviceHero("installation") ??
-    serviceHero("repair") ??
+    serviceHero("residential") ??
+    serviceHero("dryer-vent") ??
     serviceHero("commercial");
   const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -88,12 +88,12 @@ export function Hero() {
             style={{ opacity: videoReady ? 1 : 0 }}
           >
             <source
-              src={`${base}/video/hero-garage-mobile.mp4`}
+              src={`${base}/video/hero-air-duct-mobile.mp4`}
               type="video/mp4"
               media="(max-width: 767px)"
             />
             <source
-              src={`${base}/video/hero-garage.mp4`}
+              src={`${base}/video/hero-air-duct.mp4`}
               type="video/mp4"
             />
           </video>
@@ -121,7 +121,7 @@ export function Hero() {
       >
         <LogoMark className="h-7 w-7" />
         <div className="flex flex-col leading-tight">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brass-300">BH Garage Door Metro Detroit</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brass-300">BH Air Duct Cleaning Metro Detroit</span>
           <span className="font-mono text-[10px] text-ink-300">Licensed & insured</span>
         </div>
       </div>
@@ -159,7 +159,7 @@ export function Hero() {
           className="mt-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.4em] text-brass-300/90"
         >
           <span className="h-px w-10 bg-gradient-to-r from-transparent to-brass-500/60" />
-          BH Garage Door Metro Detroit
+          BH Air Duct Cleaning Metro Detroit
           <span className="h-px w-10 bg-gradient-to-l from-transparent to-brass-500/60" />
         </div>
 
@@ -168,22 +168,23 @@ export function Hero() {
           className="mt-4 max-w-4xl font-display text-[2.6rem] font-extrabold leading-[1.02] tracking-tight [text-shadow:0_4px_28px_rgba(0,0,0,0.7)] sm:text-5xl md:mt-5 md:text-6xl lg:text-7xl"
         >
           Metro Detroit&apos;s{" "}
-          <span className="text-brass-gradient">garage door experts</span>.
+          <span className="text-brass-gradient">air duct cleaning experts</span>.
         </h1>
 
         {/* Sub-headline */}
         <p
           className="mx-auto mt-5 max-w-2xl text-base text-ink-200 sm:text-lg md:mt-6 md:text-xl"
         >
-          Broken springs, openers, cables, new door installation, and commercial
-          overhead doors — dispatched across Wayne, Oakland, and Macomb counties.
+          Whole-home air duct cleaning, dryer vent cleaning, furnace &amp; coil
+          cleaning, and commercial HVAC — dispatched across Wayne, Oakland, and
+          Macomb counties.
         </p>
 
         {/* Service chip row */}
         <ul
           className="mt-7 flex flex-wrap justify-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-ink-300 md:mt-8 md:text-xs"
         >
-          {["Springs", "Openers", "New Doors", "Cables", "Panels", "Commercial"].map((s) => (
+          {["Air Ducts", "Dryer Vents", "Furnace & Coils", "Sanitizing", "Inspections", "Commercial"].map((s) => (
             <li
               key={s}
               className="rounded-md border border-ink-700/70 bg-ink-900/50 px-2.5 py-1 backdrop-blur"
@@ -206,7 +207,7 @@ export function Hero() {
         >
           <li className="flex items-center gap-1.5">
             <Sparkles className="h-4 w-4 text-brass-400" />
-            Same-day spring &amp; opener repair
+            Before &amp; after photos on every job
           </li>
           <li className="flex items-center gap-1.5">
             <ShieldCheck className="h-4 w-4 text-brass-400" />
@@ -214,7 +215,7 @@ export function Hero() {
           </li>
           <li className="flex items-center gap-1.5">
             <Wrench className="h-4 w-4 text-brass-400" />
-            Springs &amp; parts on every truck
+            Negative-pressure source removal
           </li>
         </ul>
 

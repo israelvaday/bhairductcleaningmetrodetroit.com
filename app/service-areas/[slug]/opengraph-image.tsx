@@ -11,7 +11,7 @@ export async function generateImageMetadata({ params }: { params: Promise<{ slug
   const a = AREAS_BY_SLUG[slug];
   return [{
     id: slug,
-    alt: a ? `${a.name} Garage Door Repair — ${BIZ.name}` : `${BIZ.name} Service Area`,
+    alt: a ? `${a.name} Air Duct Cleaning — ${BIZ.name}` : `${BIZ.name} Service Area`,
     size,
     contentType,
   }];
@@ -76,7 +76,7 @@ export default async function AreaOg({ params }: { params: Promise<{ slug: strin
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>
-              BH GARAGE DOOR METRO DETROIT
+              BH AIR DUCT CLEANING METRO DETROIT
             </div>
             <div style={{ fontSize: 15, color: "#C9A24A", marginTop: 4, letterSpacing: 2, fontWeight: 700 }}>
               Licensed & insured · METRO DETROIT
@@ -106,15 +106,15 @@ export default async function AreaOg({ params }: { params: Promise<{ slug: strin
             {name}
           </div>
           <div style={{ fontSize: 28, color: "#C8C4BB", display: "flex" }}>
-            Licensed garage door techs dispatching to {sub} · Avg ETA 15–30 min
+            Licensed air duct cleaning techs dispatching to {sub} · Same-day slots
           </div>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
           <div style={{ display: "flex", gap: 12 }}>
-            <Chip>SPRINGS</Chip>
-            <Chip>OPENERS</Chip>
-            <Chip>NEW DOORS</Chip>
+            <Chip>AIR DUCTS</Chip>
+            <Chip>DRYER VENTS</Chip>
+            <Chip>FURNACE &amp; COILS</Chip>
             <Chip>COMMERCIAL</Chip>
           </div>
           <div

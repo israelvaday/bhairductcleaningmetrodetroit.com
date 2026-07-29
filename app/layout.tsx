@@ -20,14 +20,14 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 export const metadata: Metadata = {
   metadataBase: new URL(BIZ.url),
   title: {
-    default: `${BIZ.name} — Garage Door Installation & Repair (${BIZ.bsis})`,
+    default: `${BIZ.name} — Air Duct & Dryer Vent Cleaning (${BIZ.bsis})`,
     template: `%s — ${BIZ.name}`,
   },
   description:
-    `Metro Detroit garage door installation & repair. Broken springs, openers, cables, panels, new doors, commercial overhead doors. Free quote — call ${BIZ.phone}. ${BIZ.bsis}.`,
+    `Metro Detroit air duct cleaning, dryer vent cleaning & HVAC restoration. Negative-pressure source removal, furnace & coil cleaning, sanitizing, real before/after photos. Free quote — call ${BIZ.phone}. ${BIZ.bsis}.`,
   keywords: [
-    "garage door repair Metro Detroit", "garage door installation Detroit", "garage door repair Warren",
-    "broken garage door spring", "garage door opener install", "commercial overhead door", "garage door company Michigan",
+    "air duct cleaning Metro Detroit", "air duct cleaning Detroit", "dryer vent cleaning Metro Detroit",
+    "hvac cleaning michigan", "furnace cleaning detroit", "commercial air duct cleaning", "duct cleaning company Michigan",
   ],
   openGraph: {
     type: "website",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BIZ.name} — Garage Door Installation & Repair`,
-    description: `Metro Detroit garage door installation & repair. ${BIZ.bsis}.`,
+    title: `${BIZ.name} — Air Duct & Dryer Vent Cleaning`,
+    description: `Metro Detroit air duct, dryer vent & HVAC cleaning. ${BIZ.bsis}.`,
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },

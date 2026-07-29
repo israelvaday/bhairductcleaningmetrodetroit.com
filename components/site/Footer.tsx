@@ -14,7 +14,7 @@ export function Footer() {
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
           <Logo size="md" />
           <p className="mt-4 max-w-xs text-sm text-ink-300">
-            Metro Detroit garage door company — repair, installation, springs, openers, and commercial overhead doors. Mobile dispatch across all of Metro Detroit.
+            Metro Detroit air duct cleaning company — whole-home duct cleaning, dryer vents, furnace &amp; coil cleaning, sanitizing, and commercial HVAC. Mobile dispatch across all of Metro Detroit.
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/30 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300">
@@ -33,10 +33,10 @@ export function Footer() {
               href={BIZ.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="@bhgaragedoormetrodetroit on Instagram"
+              aria-label="@bhairductcleaningmetrodetroit on Instagram"
               className="mt-4 inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300 transition hover:border-brass-400 hover:text-brass-200"
             >
-              <Instagram className="h-4 w-4" /> @bhgaragedoormetrodetroit
+              <Instagram className="h-4 w-4" /> @bhairductcleaningmetrodetroit
             </a>
           )}
         </div>

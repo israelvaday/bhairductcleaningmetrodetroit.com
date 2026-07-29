@@ -12,34 +12,35 @@ import { BIZ } from "@/lib/business";
 import { Button } from "@/components/ui/Button";
 
 type ServiceKey =
-  | "emergency" | "repair" | "installation" | "springs"
-  | "openers" | "cables-rollers" | "panels" | "commercial" | "maintenance";
+  | "residential" | "commercial" | "dryer-vent" | "hvac-restoration"
+  | "furnace-coil" | "sanitization" | "duct-inspection" | "post-construction"
+  | "maintenance" | "emergency";
 
-type PropertyKey = "property-home" | "property-business" | "property-detached" | "property-other";
+type PropertyKey = "property-home" | "property-business" | "property-condo" | "property-other";
 
 type Urgency = "now" | "today" | "this-week" | "scheduling";
 
 const SERVICES: { key: ServiceKey; label: string; sub: string }[] = [
-  { key: "emergency",      label: "Emergency repair",    sub: "Stuck open / off track now" },
-  { key: "repair",         label: "Door repair",         sub: "Noisy, crooked, slow, stuck" },
-  { key: "installation",   label: "New door install",    sub: "Replace or upgrade the door" },
-  { key: "springs",        label: "Broken spring",       sub: "Torsion / extension springs" },
-  { key: "openers",        label: "Opener",              sub: "Install, repair, remotes" },
-  { key: "cables-rollers", label: "Cables & rollers",    sub: "Frayed cable, worn rollers" },
-  { key: "panels",         label: "Panel replacement",   sub: "Dented or cracked section" },
-  { key: "commercial",     label: "Commercial door",     sub: "Rolling steel, dock doors" },
-  { key: "maintenance",    label: "Tune-up",             sub: "25-point inspection & lube" },
+  { key: "residential",       label: "Air duct cleaning",   sub: "Whole-home source removal" },
+  { key: "dryer-vent",        label: "Dryer vent cleaning", sub: "Lint removal, fire safety" },
+  { key: "commercial",        label: "Commercial HVAC",     sub: "Office, retail, industrial" },
+  { key: "furnace-coil",      label: "Furnace & coils",     sub: "Blower wheel, A-coil clean" },
+  { key: "sanitization",      label: "Sanitizing",          sub: "Odor & antimicrobial fog" },
+  { key: "duct-inspection",   label: "Camera inspection",   sub: "See inside your ducts" },
+  { key: "post-construction", label: "Post-construction",   sub: "Renovation dust removal" },
+  { key: "hvac-restoration",  label: "HVAC restoration",    sub: "Smoke, flood, deep clean" },
+  { key: "maintenance",       label: "Maintenance plan",    sub: "Scheduled cleanings" },
 ];
 
 const PROPERTIES: { key: PropertyKey; label: string; sub: string }[] = [
-  { key: "property-home",     label: "Home",            sub: "Attached garage" },
-  { key: "property-business", label: "Business",        sub: "Warehouse, shop, dock" },
-  { key: "property-detached", label: "Detached garage", sub: "Standalone / alley garage" },
-  { key: "property-other",    label: "Other",           sub: "Storage, barn, HOA…" },
+  { key: "property-home",     label: "Home",       sub: "Single-family house" },
+  { key: "property-business", label: "Business",   sub: "Office, retail, warehouse" },
+  { key: "property-condo",    label: "Condo / apt", sub: "Multi-unit, long vent runs" },
+  { key: "property-other",    label: "Other",      sub: "Rental, HOA, new build…" },
 ];
 
 const URGENCIES: { key: Urgency; label: string; sub: string; Icon: typeof Zap }[] = [
-  { key: "now",        label: "Right now",   sub: "Door is stuck / car trapped", Icon: Zap },
+  { key: "now",        label: "Right now",   sub: "Dryer overheating / no airflow", Icon: Zap },
   { key: "today",      label: "Today",       sub: "Within a few hours",      Icon: CalendarClock },
   { key: "this-week",  label: "This week",   sub: "Flexible timing",         Icon: Calendar },
   { key: "scheduling", label: "Just pricing", sub: "Quote only, no rush",    Icon: FileText },
@@ -291,13 +292,13 @@ export function QuoteWizard() {
             {step === 3 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Anything we should know?</h2>
-                <p className="mt-1 text-sm text-ink-300">Door size, opener brand, what it&apos;s doing, gate code… optional.</p>
+                <p className="mt-1 text-sm text-ink-300">Home size, number of furnaces &amp; vents, pets, last cleaning date… optional.</p>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={6}
                   className="mt-5 w-full rounded-xl border border-ink-800 bg-ink-950 p-4 outline-none focus:border-brass-500"
-                  placeholder="e.g. Two-car door in Royal Oak, loud bang last night and now the opener won't lift it — probably the spring."
+                  placeholder="e.g. 1,800 sq ft ranch in Royal Oak, one furnace, two cats — dust keeps coming back and the dryer takes two cycles."
                 />
               </>
             )}
@@ -305,7 +306,7 @@ export function QuoteWizard() {
             {step === 4 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Got a picture or document?</h2>
-                <p className="mt-1 text-sm text-ink-300">Upload photos of the door, the spring shaft, the opener, or any quote / spec sheet. Optional (max {MAX_FILES} files, 8 MB each).</p>
+                <p className="mt-1 text-sm text-ink-300">Upload photos of your registers, returns, dryer vent, or any quote / spec sheet. Optional (max {MAX_FILES} files, 8 MB each).</p>
                 <label className="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-brass-500/40 bg-ink-950/50 p-8 text-center hover:border-brass-400">
                   <Upload className="h-7 w-7 text-brass-300" />
                   <span className="font-display text-base font-bold text-ink-50">Tap to upload</span>

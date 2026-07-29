@@ -10,7 +10,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "out");
-const REMOTE = "https://github.com/israelvaday/bhgaragedoormetrodetroit.com.git";
+const REMOTE = "https://github.com/israelvaday/bhairductcleaningmetrodetroit.com.git";
 
 if (!fs.existsSync(OUT)) {
   console.error("[deploy-gh-pages] out/ missing — run: npm run build:pages");
@@ -19,7 +19,7 @@ if (!fs.existsSync(OUT)) {
 
 run("node scripts/compress-deploy-assets.mjs");
 
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "bh-garage-door-gh-pages-"));
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "bh-air-duct-gh-pages-"));
 const repo = path.join(tmp, "repo");
 
 function run(cmd, opts = {}) {
@@ -86,7 +86,7 @@ try {
   run("git diff --staged --quiet", { cwd: repo, env: gitEnv });
   console.log("[deploy-gh-pages] No changes to deploy.");
 } catch {
-  run('git commit -m "Deploy: BH Garage Door Metro Detroit"', { cwd: repo, env: gitEnv });
+  run('git commit -m "Deploy: BH Air Duct Cleaning Metro Detroit"', { cwd: repo, env: gitEnv });
   pushWithRetry(repo);
   console.log("[deploy-gh-pages] Live site updated on gh-pages.");
 }

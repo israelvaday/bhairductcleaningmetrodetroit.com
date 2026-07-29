@@ -2,14 +2,14 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.bhgaragedoormetrodetroit.com" }],
-      "destination": "https://bhgaragedoormetrodetroit.com/",
+      "has": [{ "type": "host", "value": "www.bhairductcleaningmetrodetroit.com" }],
+      "destination": "https://bhairductcleaningmetrodetroit.com/",
       "permanent": true
     },
     {
       "source": "/:path+",
-      "has": [{ "type": "host", "value": "www.bhgaragedoormetrodetroit.com" }],
-      "destination": "https://bhgaragedoormetrodetroit.com/:path+",
+      "has": [{ "type": "host", "value": "www.bhairductcleaningmetrodetroit.com" }],
+      "destination": "https://bhairductcleaningmetrodetroit.com/:path+",
       "permanent": true
     }
   ]

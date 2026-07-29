@@ -3,12 +3,12 @@ import Image from "next/image";
 import { cn } from "@/lib/cn";
 
 /**
- * BH Garage Door Metro Detroit brand mark.
- * Photographic brass shield logo served from /public/logo.png.
+ * BH Air Duct Cleaning Metro Detroit brand mark.
+ * Photographic brass badge logo served from /public/logo.png.
  */
 export function LogoMark({
   className,
-  title = "BH Garage Door Metro Detroit",
+  title = "BH Air Duct Cleaning Metro Detroit",
   priority = false,
 }: { className?: string; title?: string; priority?: boolean }) {
   return (
@@ -46,7 +46,7 @@ export function Logo({
             text
           )}
         >
-          BH Garage Door <span className="text-brass-400">Metro</span> Detroit
+          BH Air Duct <span className="text-brass-400">Metro</span> Detroit
         </span>
       )}
     </span>

@@ -42,7 +42,7 @@ export type DispatchService = {
 
 export function HomeDispatchTracker({ service }: { service?: DispatchService } = {}){
   const isEmergency = service?.slug === "emergency";
-  const svcLabel = service?.shortName ?? "garage door";
+  const svcLabel = service?.shortName ?? "air duct cleaning";
   const svcLabelLower = svcLabel.toLowerCase();
   const bulletSample = service?.bullets?.[0];
   const consoleLabel = service ? `${svcLabel} Dispatch` : "Metro Detroit Dispatch";
@@ -54,7 +54,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
     : <>Tech inbound to <span className="text-brass-gradient">{areaName}</span></>;
   const idleCopy = service
     ? (isEmergency
-        ? `We&rsquo;ll ping every Licensed & insured unit within 5 miles for an emergency garage door repair and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, fixed same-visit.` : "."}`
+        ? `We&rsquo;ll ping every Licensed & insured unit within 5 miles for same-day duct service and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, handled same-visit.` : "."}`
         : `Share your location and we&rsquo;ll match you with the nearest tech running ${svcLabelLower} jobs today${bulletSample ? ` — ready for ${bulletSample.toLowerCase()}.` : "."}`)
     : "Share your location and our dispatch console will ping every Licensed & insured unit within 5 miles and return a live ETA.";
   const buttonLabel = service

@@ -11,7 +11,7 @@ export function ServiceGrid({ city }: { city?: string }) {
         <div className="mb-10 flex flex-col items-center text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">What we do</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
-            Every door. Every spring. Every opener.
+            Every duct. Every vent. Every system.
           </h2>
           <p className="mt-3 max-w-2xl text-ink-300">
             Ten specialized service lines, one licensed team. Tap any card to see real jobs, pricing factors, and book a tech.

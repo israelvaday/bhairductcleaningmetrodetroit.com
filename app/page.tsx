@@ -12,12 +12,12 @@ import { Reveal } from "@/components/site/Reveal";
 import { LazyParallax, LazyFloatOnScroll } from "@/components/site/LazyScrollFx";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 import { BuyersGuide } from "@/components/site/BuyersGuide";
-import { GarageGlossary } from "@/components/site/GarageGlossary";
+import { DuctGlossary } from "@/components/site/DuctGlossary";
 
 export const metadata: Metadata = {
-  title: `Garage Door Repair & Installation — Metro Detroit`,
+  title: `Air Duct & Dryer Vent Cleaning — Metro Detroit`,
   description:
-    "BH Garage Door Metro Detroit — licensed & insured garage door company. Broken spring replacement, opener repair, new door installation, and commercial overhead doors. Serving all of Metro Detroit.",
+    "BH Air Duct Cleaning Metro Detroit — licensed & insured air duct cleaning company. Whole-home duct cleaning, dryer vent cleaning, furnace & coil cleaning, sanitizing, and commercial HVAC cleaning. Serving all of Metro Detroit.",
   alternates: { canonical: "/" },
 };
 
@@ -63,9 +63,9 @@ export default function HomePage() {
           </LazyParallax>
         </div>
       </section>
-      <LongFormFaq subject="Garage Door Service" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning Service" kind="service" />
       <BuyersGuide />
-      <GarageGlossary />
+      <DuctGlossary />
       <Reveal variant="zoom">
         <FinalCTA />
       </Reveal>

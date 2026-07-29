@@ -6,7 +6,7 @@ import { LongFormFaq } from "@/components/site/LongFormFaq";
 
 export const metadata: Metadata = {
   title: `Free Quote`,
-  description: "Get a free written garage door quote from BH Garage Door Metro Detroit. Picture-driven step-by-step. Upload photos of your door or opener. Licensed & Insured.",
+  description: "Get a free written air duct cleaning quote from BH Air Duct Cleaning Metro Detroit. Picture-driven step-by-step. Upload photos of your vents or dryer. Licensed & Insured.",
   alternates: { canonical: "/quote" },
 };
 
@@ -40,24 +40,24 @@ export default function QuotePage() {
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">How the quote works</h2>
             <p className="mt-3">
-              The picture-driven quote wizard above is the fastest way to get an accurate, written estimate from a real Metro Detroit garage door company. Instead of a long form, it shows you small images and chips — you just tap what matches your situation. Most people finish in under two minutes. There&apos;s nothing to download, no account to create, and no obligation to book.
+              The picture-driven quote wizard above is the fastest way to get an accurate, written estimate from a real Metro Detroit air duct cleaning company. Instead of a long form, it shows you small images and chips — you just tap what matches your situation. Most people finish in under two minutes. There&apos;s nothing to download, no account to create, and no obligation to book.
             </p>
             <p className="mt-3">
-              You can attach photos at any step — a picture of your door, the spring shaft above it, the opener unit on the ceiling, or the sticker on the back of the door. Photos let us identify the exact hardware, skip back-and-forth questions, and give you a tighter price range up front. If a photo isn&apos;t enough to be certain, we&apos;ll tell you in the reply rather than padding the quote with hedges.
+              You can attach photos at any step — a picture of a dusty register, your return grille, the furnace and its filter slot, or the dryer vent hood outside. Photos let us count your system correctly, skip back-and-forth questions, and give you a tighter price range up front. If a photo isn&apos;t enough to be certain, we&apos;ll tell you in the reply rather than padding the quote with hedges.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">What we quote</h2>
             <p className="mt-3">
-              We can quote every service we offer: 24-hour emergency repairs (stuck doors, off-track doors, snapped springs), torsion and extension spring replacement, opener installation and repair (LiftMaster, Chamberlain, Genie, and others), cable, roller, and track work, panel and section replacement, new door installation in steel, insulated, carriage-house, and glass styles, commercial rolling steel and sectional doors, preventive maintenance tune-ups, and smart opener and keypad installs. If you&apos;re not sure which category fits, pick the closest one — we&apos;ll route it internally.
+              We can quote every service we offer: whole-home air duct cleaning, dryer vent cleaning (including long condo runs and roof terminations), furnace and AC coil cleaning, duct sanitizing and deodorizing, camera duct inspections, HVAC restoration after smoke or water events, post-construction cleanups, commercial HVAC cleaning, and scheduled maintenance plans. If you&apos;re not sure which category fits, pick the closest one — we&apos;ll route it internally.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">Pricing & expectations</h2>
             <p className="mt-3">
-              Our quotes are flat-rate where possible (spring replacements, opener installs, cable and roller work, tune-ups) and clearly itemized where they need to be (new door installations, commercial doors, multi-door jobs). We don&apos;t use the bait-and-switch tactics you see in garage door ads — the number we write down is the number you pay. If something on-site changes the scope, we tell you before we touch a tool, and you can decline and walk away.
+              Our quotes are flat-rate where possible (whole-home duct cleaning, dryer vent cleaning, sanitizing add-ons, camera inspections) and clearly itemized where they need to be (multi-furnace homes, commercial buildings, restoration work). We don&apos;t use the &quot;$99 whole house&quot; bait-and-switch you see in duct cleaning ads — the number we write down is the number you pay. If something on-site changes the scope, we tell you before we touch a tool, and you can decline and walk away.
             </p>
             <p className="mt-3">
               You can also skip the wizard entirely and just text us a photo at {BIZ.phone}. Either path reaches the same dispatcher. Real human, {BIZ.bsis.toLowerCase()} company.
@@ -65,6 +65,6 @@ export default function QuotePage() {
           </div>
         </div>
       </section>
-      <LongFormFaq subject="Garage Door Quote" kind="service" />    </>
+      <LongFormFaq subject="Air Duct Cleaning Quote" kind="service" />    </>
   );
 }

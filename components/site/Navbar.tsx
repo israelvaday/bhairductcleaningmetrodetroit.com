@@ -96,7 +96,7 @@ export function Navbar() {
                 aria-label="Instagram"
                 className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300"
               >
-                <Instagram className="h-3.5 w-3.5" /> @bhgaragedoormetrodetroit
+                <Instagram className="h-3.5 w-3.5" /> @bhairductcleaningmetrodetroit
               </a>
             )}
           </div>

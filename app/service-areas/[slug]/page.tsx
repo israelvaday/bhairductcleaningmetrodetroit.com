@@ -32,10 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!a) return {};
   const info = INSIGHTS[slug];
   const desc = info?.tagline
-    ? `${info.tagline} ${BIZ.bsis} garage door dispatch — typical 15–30 min ETA in ${a.name}.`
-    : `Licensed & insured garage door repair and installation serving ${a.name}, Metro Detroit. Springs, openers, cables, panels, new doors.`;
+    ? `${info.tagline} ${BIZ.bsis} air duct cleaning dispatch — same-day slots in ${a.name}.`
+    : `Licensed & insured air duct and dryer vent cleaning serving ${a.name}, Metro Detroit. Whole-home duct cleaning, furnace & coil cleaning, sanitizing.`;
   return {
-    title: `Garage Door Repair in ${a.name}, MI`,
+    title: `Air Duct Cleaning in ${a.name}, MI`,
     description: desc,
     keywords: info?.keywords,
     alternates: { canonical: `/service-areas/${a.slug}` },
@@ -81,7 +81,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </span>
               </div>
               <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-                Garage Door Repair in <span className="text-brass-gradient">{a.name}</span>, MI
+                Air Duct Cleaning in <span className="text-brass-gradient">{a.name}</span>, MI
               </h1>
               {info.tagline && (
                 <p className="mt-3 text-lg font-medium text-brass-200 md:text-xl">{info.tagline}</p>
@@ -164,7 +164,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="mb-6">
             <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">Full service menu</p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-4xl">
-              Every garage door service — dispatched to {a.name}.
+              Every air duct cleaning service — dispatched to {a.name}.
             </h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -237,19 +237,19 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <section className="border-t border-ink-800 py-16">
         <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-ink-200 md:px-6 md:text-base">
           <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
-            What garage door work in {a.name} actually looks like
+            What air duct cleaning in {a.name} actually looks like
           </h2>
           <p>
-            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Garage Door Metro Detroit technician — not a call-center contractor — can be at your driveway or loading dock typically within 15 to 30 minutes when we&apos;re dispatching. Every job is performed by a background-checked tech from a licensed &amp; insured local company, with a written flat-rate quote agreed in advance and both federal safety systems tested before the truck leaves.
+            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Air Duct Cleaning Metro Detroit technician — not a call-center contractor — can be at your door with a fully equipped truck, often the same day you call. Every job is performed by a background-checked tech from a licensed &amp; insured local company, with a written flat-rate quote agreed in advance and before-and-after photos of your own ductwork delivered before the truck leaves.
           </p>
           <p>
-            The mix of work in {a.name} is what you&apos;d expect from this part of Metro Detroit. On the residential side it&apos;s snapped torsion springs discovered on cold mornings, openers that hum but won&apos;t lift, doors knocked off track by a bumper tap, frayed cables at the bottom brackets, dented panels, noisy roller and hinge sets, and full door replacements — insulated steel, carriage-house, and modern glass styles from Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor. We also handle smart opener installs and retrofits (myQ, Aladdin Connect), wireless keypads, and battery-backup upgrades for storm season.
+            The mix of work in {a.name} is what you&apos;d expect from this part of Metro Detroit. On the residential side it&apos;s whole-home duct cleanings in houses that have never had one, dryer vents so packed with lint the machine trips its thermal fuse, dust that reappears two days after cleaning the house, musty smells when the furnace kicks on, post-renovation drywall dust blowing out of every register, and furnace blower wheels so caked they move half their rated air. We also handle sanitizing treatments after pets, smoke, or rodents, camera inspections for buyers who want to see what they&apos;re inheriting, and evaporator coil cleanings that bring struggling AC systems back to life.
           </p>
           <p>
-            Commercial work in {a.name} is steady year-round — rolling steel service doors, insulated sectional doors on loading docks, high-cycle spring conversions for doors that cycle dozens of times a day, commercial operator installs and repairs, and planned-maintenance contracts for property managers and facility teams who would rather find a fatigued spring during an inspection than during a shift change.
+            Commercial work in {a.name} is steady year-round — rooftop unit and air handler cleanings for offices and retail, ceiling diffuser and VAV service, restaurant and medical-suite duct programs, multi-unit dryer vent cleaning for condos and apartments, and planned-maintenance contracts for property managers and facility teams who would rather find a clogged coil during an inspection than during a heat wave.
           </p>
           <p>
-            Pricing in {a.name} is flat-rate for the common jobs (spring replacements, opener installs, cable and roller work, tune-ups) and quoted in writing after a measure for new doors, with no trip-fee bait-and-switch. If you&apos;re comparing quotes against another company, ask for proof of insurance and a written estimate before the truck rolls — that single step eliminates the majority of garage door scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck.
+            Pricing in {a.name} is flat-rate for the common jobs (whole-home duct cleaning, dryer vent cleaning, sanitizing add-ons, camera inspections) and quoted in writing for larger scopes (multi-furnace homes, commercial buildings, restoration work), with no &quot;$99 whole house&quot; bait-and-switch. If you&apos;re comparing quotes against another company, ask for proof of insurance, a register-count-based price, and before-and-after photos — those three questions eliminate the majority of duct cleaning scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck.
           </p>
         </div>
       </section>
@@ -259,9 +259,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <section className="border-t border-ink-800 bg-aurora py-16 text-center">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="font-display text-3xl font-extrabold md:text-4xl">
-            Need garage door service in {a.name} now?
+            Need air duct or dryer vent cleaning in {a.name} now?
           </h2>
-          <p className="mt-3 text-ink-200">One tap reaches a real licensed &amp; insured garage door tech.</p>
+          <p className="mt-3 text-ink-200">One tap reaches a real licensed &amp; insured duct cleaning tech.</p>
           <div className="mt-6 flex justify-center">
             <ContactCTA size="lg" />
           </div>

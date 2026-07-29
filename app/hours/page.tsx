@@ -6,7 +6,7 @@ import { HoursSchedule } from "@/components/site/HoursSchedule";
 import { HoursStatusBanner } from "@/components/site/HoursStatusBanner";
 
 export const metadata: Metadata = {
-  title: "Hours — Garage Door Service Schedule",
+  title: "Hours — Air Duct Cleaning Service Schedule",
   description: `${BIZ.name} — ${BIZ.hoursSummary}. Eastern Time. Serving all of Metro Detroit, MI.`,
   alternates: { canonical: "/hours" },
 };
@@ -40,7 +40,7 @@ export default function HoursPage() {
 
         <p className="mt-8 inline-flex items-center gap-2 text-xs text-ink-400">
           <ShieldCheck className="h-3.5 w-3.5 text-brass-400" />
-          Michigan garage door company · {BIZ.bsis}
+          Michigan air duct cleaning company · {BIZ.bsis}
         </p>
       </div>
     </section>

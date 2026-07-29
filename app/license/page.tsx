@@ -4,8 +4,8 @@ import { BIZ } from "@/lib/business";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Licensed & Insured — BH Garage Door Metro Detroit",
-  description: `${BIZ.name} is a licensed and insured garage door company serving Metro Detroit. Credentials, insurance, and what to ask any garage door company before you hire.`,
+  title: "Licensed & Insured — BH Air Duct Cleaning Metro Detroit",
+  description: `${BIZ.name} is a licensed and insured air duct cleaning company serving Metro Detroit. Credentials, insurance, and what to ask any duct cleaning company before you hire.`,
   alternates: { canonical: `${BIZ.url}/license` },
 };
 
@@ -21,7 +21,7 @@ export default function LicensePage() {
           </h1>
           <p className="mt-3 font-mono text-brass-300">{BIZ.licenseId}</p>
           <p className="mx-auto mt-4 max-w-xl text-ink-200">
-            Every garage door service we provide across Metro Detroit is performed by
+            Every air duct cleaning service we provide across Metro Detroit is performed by
             background-checked technicians carrying general liability insurance and
             proper trade credentials. We quote in writing before work begins.
           </p>
@@ -33,7 +33,7 @@ export default function LicensePage() {
             <h2 className="font-display text-xl font-bold text-white">What we carry</h2>
             <ul className="mt-4 space-y-3 text-ink-200">
               {[
-                "Licensed garage door contracting in Michigan",
+                "Licensed & insured HVAC cleaning work in Michigan",
                 "General liability insurance for residential and commercial jobs",
                 "Background-checked technicians — no call-center middle layer",
                 "Written quotes before dispatch on standard jobs",
@@ -46,7 +46,7 @@ export default function LicensePage() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-ink-400">
-              Before you hire any garage door company in Metro Detroit, ask for proof of insurance,
+              Before you hire any air duct cleaning company in Metro Detroit, ask for proof of insurance,
               a company name that matches the invoice, and a written estimate. Bait-pricing
               dispatch operations are common in this trade — credentials matter.
             </p>

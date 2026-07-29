@@ -1,108 +1,12 @@
 [
   {
-    "id": "service-hero-emergency",
-    "src": "/photos/service-hero-emergency.png",
-    "alt": "emergency — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "id": "service-hero-residential",
+    "src": "/photos/service-hero-residential.png",
+    "alt": "residential — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "service-hero",
     "kind": "hero",
     "services": [
-      "emergency"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-repair",
-    "src": "/photos/service-hero-repair.png",
-    "alt": "repair — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "repair"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-installation",
-    "src": "/photos/service-hero-installation.png",
-    "alt": "installation — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "installation"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-springs",
-    "src": "/photos/service-hero-springs.png",
-    "alt": "springs — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "springs"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-openers",
-    "src": "/photos/service-hero-openers.png",
-    "alt": "openers — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "openers"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-cables-rollers",
-    "src": "/photos/service-hero-cables-rollers.png",
-    "alt": "cables rollers — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "cables-rollers"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "service-hero-panels",
-    "src": "/photos/service-hero-panels.png",
-    "alt": "panels — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "service-hero",
-    "kind": "hero",
-    "services": [
-      "panels"
+      "residential"
     ],
     "width": 1600,
     "height": 900,
@@ -114,7 +18,7 @@
   {
     "id": "service-hero-commercial",
     "src": "/photos/service-hero-commercial.png",
-    "alt": "commercial — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "alt": "commercial — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "service-hero",
     "kind": "hero",
     "services": [
@@ -128,9 +32,105 @@
     "source": "generated"
   },
   {
+    "id": "service-hero-dryer-vent",
+    "src": "/photos/service-hero-dryer-vent.png",
+    "alt": "dryer vent — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "dryer-vent"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "service-hero-hvac-restoration",
+    "src": "/photos/service-hero-hvac-restoration.png",
+    "alt": "hvac restoration — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "hvac-restoration"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "service-hero-furnace-coil",
+    "src": "/photos/service-hero-furnace-coil.png",
+    "alt": "furnace coil — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "furnace-coil"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "service-hero-sanitization",
+    "src": "/photos/service-hero-sanitization.png",
+    "alt": "sanitization — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "sanitization"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "service-hero-duct-inspection",
+    "src": "/photos/service-hero-duct-inspection.png",
+    "alt": "duct inspection — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "duct-inspection"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "service-hero-post-construction",
+    "src": "/photos/service-hero-post-construction.png",
+    "alt": "post construction — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "service-hero",
+    "kind": "hero",
+    "services": [
+      "post-construction"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
     "id": "service-hero-maintenance",
     "src": "/photos/service-hero-maintenance.png",
-    "alt": "maintenance — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "alt": "maintenance — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "service-hero",
     "kind": "hero",
     "services": [
@@ -144,13 +144,13 @@
     "source": "generated"
   },
   {
-    "id": "service-hero-smart-openers",
-    "src": "/photos/service-hero-smart-openers.png",
-    "alt": "smart openers — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "id": "service-hero-emergency",
+    "src": "/photos/service-hero-emergency.png",
+    "alt": "emergency — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "service-hero",
     "kind": "hero",
     "services": [
-      "smart-openers"
+      "emergency"
     ],
     "width": 1600,
     "height": 900,
@@ -162,7 +162,7 @@
   {
     "id": "logo-master-on-navy",
     "src": "/logo.png",
-    "alt": "BH Garage Door Metro Detroit logo",
+    "alt": "BH Air Duct Cleaning Metro Detroit logo",
     "category": "brand",
     "kind": "brand",
     "services": [
@@ -178,7 +178,7 @@
   {
     "id": "logo-icon-square",
     "src": "/logo.png",
-    "alt": "BH Garage Door Metro Detroit icon",
+    "alt": "BH Air Duct Cleaning Metro Detroit icon",
     "category": "brand",
     "kind": "brand",
     "services": [
@@ -193,12 +193,12 @@
   },
   {
     "id": "branding-hero-metro",
-    "src": "/photos/branding-generated--hero-garage-door-metro-detroit.png",
-    "alt": "BH Garage Door Metro Detroit technician installing a garage door at a Michigan home",
+    "src": "/photos/branding-generated--hero-air-duct-metro-detroit.png",
+    "alt": "BH Air Duct Cleaning Metro Detroit technician connecting a negative-pressure vacuum to home ductwork",
     "category": "branding-generated",
     "kind": "hero",
     "services": [
-      "installation",
+      "residential",
       "emergency"
     ],
     "width": 1600,
@@ -211,7 +211,7 @@
   {
     "id": "branding-map-metro",
     "src": "/photos/branding-generated--metro-detroit-map-mockup.png",
-    "alt": "BH Garage Door Metro Detroit Metro Detroit service area map",
+    "alt": "BH Air Duct Cleaning Metro Detroit Metro Detroit service area map",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -227,7 +227,7 @@
   {
     "id": "branding-generated-service-van-three-quarter-front",
     "src": "/photos/branding-generated--service-van-three-quarter-front.png",
-    "alt": "Service van, three-quarter front view — BH Garage Door Metro Detroit",
+    "alt": "Service van, three-quarter front view — BH Air Duct Cleaning Metro Detroit",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -243,7 +243,7 @@
   {
     "id": "branding-generated-service-van-side-magnet-daylight",
     "src": "/photos/branding-generated--service-van-side-magnet-daylight.png",
-    "alt": "Service van side profile in daylight — BH Garage Door Metro Detroit",
+    "alt": "Service van side profile in daylight — BH Air Duct Cleaning Metro Detroit",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -259,7 +259,7 @@
   {
     "id": "branding-generated-social-tile-services-grid-real",
     "src": "/photos/branding-generated--social-tile-services-grid-real.png",
-    "alt": "Garage door parts flat-lay — BH Garage Door Metro Detroit",
+    "alt": "Air duct cleaning tools flat-lay — BH Air Duct Cleaning Metro Detroit",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -275,7 +275,7 @@
   {
     "id": "branding-generated-social-tile-emergency-callout-real",
     "src": "/photos/branding-generated--social-tile-emergency-callout-real.png",
-    "alt": "Emergency garage door repair at dusk — BH Garage Door Metro Detroit",
+    "alt": "Same-day duct service at dusk — BH Air Duct Cleaning Metro Detroit",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -291,7 +291,7 @@
   {
     "id": "branding-generated-business-card-mockup-photo",
     "src": "/photos/branding-generated--business-card-mockup-photo.png",
-    "alt": "Business card mockup on workbench — BH Garage Door Metro Detroit",
+    "alt": "Business card mockup on workbench — BH Air Duct Cleaning Metro Detroit",
     "category": "branding-generated",
     "kind": "brand",
     "services": [
@@ -305,14 +305,13 @@
     "source": "generated"
   },
   {
-    "id": "gen--cable-repair",
-    "src": "/photos/gen--cable-repair.png",
-    "alt": "Garage door cable replacement — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "cables-rollers",
+    "id": "gen--camera-inspection",
+    "src": "/photos/gen--camera-inspection.png",
+    "alt": "Duct inspection camera monitor showing duct interior — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "duct-inspection",
     "kind": "work",
     "services": [
-      "cables-rollers",
-      "repair"
+      "duct-inspection"
     ],
     "width": 1600,
     "height": 900,
@@ -322,25 +321,9 @@
     "source": "generated"
   },
   {
-    "id": "gen--carriage-doors",
-    "src": "/photos/gen--carriage-doors.png",
-    "alt": "Carriage-style garage doors — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "installation",
-    "kind": "work",
-    "services": [
-      "installation"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen--commercial-rollup",
-    "src": "/photos/gen--commercial-rollup.png",
-    "alt": "Commercial rolling steel door — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "id": "gen--commercial-rtu",
+    "src": "/photos/gen--commercial-rtu.png",
+    "alt": "Rooftop HVAC unit service on a commercial building — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "commercial",
     "kind": "work",
     "services": [
@@ -354,14 +337,14 @@
     "source": "generated"
   },
   {
-    "id": "gen--keypad-entry",
-    "src": "/photos/gen--keypad-entry.png",
-    "alt": "Wireless garage door keypad — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "smart-openers",
+    "id": "gen--dryer-vent-brush",
+    "src": "/photos/gen--dryer-vent-brush.png",
+    "alt": "Rotary brush cleaning a dryer vent duct — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "dryer-vent",
     "kind": "work",
     "services": [
-      "smart-openers",
-      "openers"
+      "dryer-vent",
+      "emergency"
     ],
     "width": 1600,
     "height": 900,
@@ -371,79 +354,13 @@
     "source": "generated"
   },
   {
-    "id": "gen--modern-glass",
-    "src": "/photos/gen--modern-glass.png",
-    "alt": "Modern full-view glass garage door — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "installation",
+    "id": "gen--dryer-vent-exterior",
+    "src": "/photos/gen--dryer-vent-exterior.png",
+    "alt": "Exterior dryer vent hood being cleared of lint — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "dryer-vent",
     "kind": "work",
     "services": [
-      "installation"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen--new-installation",
-    "src": "/photos/gen--new-installation.png",
-    "alt": "New insulated garage door installation — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "installation",
-    "kind": "work",
-    "services": [
-      "installation"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen--opener-install",
-    "src": "/photos/gen--opener-install.png",
-    "alt": "Belt-drive garage door opener install — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "openers",
-    "kind": "work",
-    "services": [
-      "openers",
-      "installation"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen--panel-replacement",
-    "src": "/photos/gen--panel-replacement.png",
-    "alt": "Garage door panel replacement — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "panels",
-    "kind": "work",
-    "services": [
-      "panels",
-      "repair"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen--roller-replacement",
-    "src": "/photos/gen--roller-replacement.png",
-    "alt": "Quiet nylon roller replacement — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "cables-rollers",
-    "kind": "work",
-    "services": [
-      "cables-rollers",
+      "dryer-vent",
       "maintenance"
     ],
     "width": 1600,
@@ -454,14 +371,13 @@
     "source": "generated"
   },
   {
-    "id": "gen--torsion-spring",
-    "src": "/photos/gen--torsion-spring.png",
-    "alt": "Torsion spring replacement — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "springs",
+    "id": "gen--evaporator-coil",
+    "src": "/photos/gen--evaporator-coil.png",
+    "alt": "Evaporator coil foaming clean inside a furnace plenum — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "furnace-coil",
     "kind": "work",
     "services": [
-      "springs",
-      "repair"
+      "furnace-coil"
     ],
     "width": 1600,
     "height": 900,
@@ -471,14 +387,14 @@
     "source": "generated"
   },
   {
-    "id": "gen--track-alignment",
-    "src": "/photos/gen--track-alignment.png",
-    "alt": "Track alignment and repair — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "repair",
+    "id": "gen--furnace-blower-clean",
+    "src": "/photos/gen--furnace-blower-clean.png",
+    "alt": "Furnace blower wheel cleaning, half dusty half clean — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "furnace-coil",
     "kind": "work",
     "services": [
-      "repair",
-      "cables-rollers"
+      "furnace-coil",
+      "hvac-restoration"
     ],
     "width": 1600,
     "height": 900,
@@ -488,14 +404,179 @@
     "source": "generated"
   },
   {
-    "id": "gen--weather-seal",
-    "src": "/photos/gen--weather-seal.png",
-    "alt": "Bottom weather seal replacement — BH Garage Door Metro Detroit, Metro Detroit, MI",
+    "id": "gen--negative-pressure-setup",
+    "src": "/photos/gen--negative-pressure-setup.png",
+    "alt": "Negative-pressure duct cleaning vacuum connected to a furnace trunk line — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen--post-construction",
+    "src": "/photos/gen--post-construction.png",
+    "alt": "Post-construction drywall dust removal from floor ducts — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "post-construction",
+    "kind": "work",
+    "services": [
+      "post-construction"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen--register-detail-clean",
+    "src": "/photos/gen--register-detail-clean.png",
+    "alt": "Floor supply register and boot detail cleaning — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential",
+      "maintenance"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen--return-grille-clean",
+    "src": "/photos/gen--return-grille-clean.png",
+    "alt": "Return-air grille removed for cleaning — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen--rotary-brush-duct",
+    "src": "/photos/gen--rotary-brush-duct.png",
+    "alt": "Rotary brush agitating dust inside an air duct — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential",
+      "hvac-restoration"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen--sanitizing-fog",
+    "src": "/photos/gen--sanitizing-fog.png",
+    "alt": "Antimicrobial fog applied into a supply duct — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "sanitization",
+    "kind": "work",
+    "services": [
+      "sanitization"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen-v2--air-whip-tool",
+    "src": "/photos/gen-v2--air-whip-tool.png",
+    "alt": "Compressed-air whip tool inside a trunk duct — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential",
+      "hvac-restoration"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen-v2--basement-trunk",
+    "src": "/photos/gen-v2--basement-trunk.png",
+    "alt": "Clean sealed sheet-metal trunk duct in a basement — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential",
+      "maintenance"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen-v2--before-after-duct",
+    "src": "/photos/gen-v2--before-after-duct.png",
+    "alt": "Before and after view inside a cleaned air duct — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
+    "kind": "work",
+    "services": [
+      "residential",
+      "sanitization"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen-v2--commercial-office",
+    "src": "/photos/gen-v2--commercial-office.png",
+    "alt": "Ceiling diffuser cleaning in an office space — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "commercial",
+    "kind": "work",
+    "services": [
+      "commercial"
+    ],
+    "width": 1600,
+    "height": 900,
+    "ratio": 1.778,
+    "orientation": "landscape",
+    "bytes": 120000,
+    "source": "generated"
+  },
+  {
+    "id": "gen-v2--filter-comparison",
+    "src": "/photos/gen-v2--filter-comparison.png",
+    "alt": "Dirty furnace filter next to a new clean filter — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "maintenance",
     "kind": "work",
     "services": [
       "maintenance",
-      "installation"
+      "furnace-coil"
     ],
     "width": 1600,
     "height": 900,
@@ -505,14 +586,14 @@
     "source": "generated"
   },
   {
-    "id": "gen-v2--emergency-night",
-    "src": "/photos/gen-v2--emergency-night.png",
-    "alt": "Emergency garage door repair at night — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "emergency",
+    "id": "gen-v2--flex-duct-attic",
+    "src": "/photos/gen-v2--flex-duct-attic.png",
+    "alt": "Flexible ductwork inspection in an attic — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "duct-inspection",
     "kind": "work",
     "services": [
-      "emergency",
-      "repair"
+      "duct-inspection",
+      "hvac-restoration"
     ],
     "width": 1600,
     "height": 900,
@@ -522,12 +603,13 @@
     "source": "generated"
   },
   {
-    "id": "gen-v2--loading-dock",
-    "src": "/photos/gen-v2--loading-dock.png",
-    "alt": "Commercial loading dock doors — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "commercial",
+    "id": "gen-v2--tech-protective-gear",
+    "src": "/photos/gen-v2--tech-protective-gear.png",
+    "alt": "Duct cleaning technician setting up equipment — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
     "kind": "work",
     "services": [
+      "residential",
       "commercial"
     ],
     "width": 1600,
@@ -538,96 +620,14 @@
     "source": "generated"
   },
   {
-    "id": "gen-v2--off-track",
-    "src": "/photos/gen-v2--off-track.png",
-    "alt": "Off-track garage door repair — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "emergency",
+    "id": "gen-v2--truck-hose-run",
+    "src": "/photos/gen-v2--truck-hose-run.png",
+    "alt": "Duct cleaning vacuum hose running from truck into a home — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "category": "residential",
     "kind": "work",
     "services": [
-      "emergency",
-      "repair"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen-v2--opener-logic",
-    "src": "/photos/gen-v2--opener-logic.png",
-    "alt": "Opener logic board service — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "openers",
-    "kind": "work",
-    "services": [
-      "openers",
-      "repair"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen-v2--smart-opener",
-    "src": "/photos/gen-v2--smart-opener.png",
-    "alt": "Smart opener smartphone control — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "smart-openers",
-    "kind": "work",
-    "services": [
-      "smart-openers"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen-v2--spring-closeup",
-    "src": "/photos/gen-v2--spring-closeup.png",
-    "alt": "New torsion springs on shaft — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "springs",
-    "kind": "work",
-    "services": [
-      "springs"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen-v2--tuneup",
-    "src": "/photos/gen-v2--tuneup.png",
-    "alt": "Garage door tune-up and lubrication — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "maintenance",
-    "kind": "work",
-    "services": [
-      "maintenance"
-    ],
-    "width": 1600,
-    "height": 900,
-    "ratio": 1.778,
-    "orientation": "landscape",
-    "bytes": 120000,
-    "source": "generated"
-  },
-  {
-    "id": "gen-v2--wood-look",
-    "src": "/photos/gen-v2--wood-look.png",
-    "alt": "Wood-look steel garage door — BH Garage Door Metro Detroit, Metro Detroit, MI",
-    "category": "installation",
-    "kind": "work",
-    "services": [
-      "installation",
-      "panels"
+      "residential",
+      "emergency"
     ],
     "width": 1600,
     "height": 900,

@@ -17,24 +17,24 @@ export function generateStaticParams() {
 }
 
 const ICONS: Record<string, string> = {
-  emergency: "🚨",
-  repair: "🔧",
-  installation: "🏠",
-  springs: "🌀",
-  openers: "📡",
-  "cables-rollers": "⚙️",
-  panels: "🧱",
+  residential: "🏠",
   commercial: "🏢",
+  "dryer-vent": "🔥",
+  "hvac-restoration": "🌀",
+  "furnace-coil": "🌡️",
+  sanitization: "✨",
+  "duct-inspection": "🔍",
+  "post-construction": "👷",
   maintenance: "🛠️",
-  "smart-openers": "📱",
+  emergency: "🚨",
 };
 
 export default async function ServiceOg({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = SERVICES.find((x) => x.slug === slug);
-  const headline = s?.name ?? "Metro Detroit Garage Doors";
-  const tagline = s?.tagline ?? "Licensed & insured garage door company serving all of Metro Detroit.";
-  const icon = (s && ICONS[s.slug]) ?? "🚪";
+  const headline = s?.name ?? "Metro Detroit Air Duct Cleaning";
+  const tagline = s?.tagline ?? "Licensed & insured air duct cleaning company serving all of Metro Detroit.";
+  const icon = (s && ICONS[s.slug]) ?? "💨";
   const bullets = (s?.bullets ?? []).slice(0, 3);
 
   return new ImageResponse(
@@ -87,7 +87,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>
-                BH GARAGE DOOR METRO DETROIT
+                BH AIR DUCT CLEANING METRO DETROIT
               </div>
               <div style={{ fontSize: 15, color: "#C9A24A", marginTop: 4, letterSpacing: 2, fontWeight: 700 }}>
                 METRO DETROIT · Licensed & insured

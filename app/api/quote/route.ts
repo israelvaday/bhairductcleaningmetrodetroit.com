@@ -74,8 +74,8 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.QUOTE_TO_EMAIL || "service@bhgaragedoormetrodetroit.com";
-  const from = process.env.QUOTE_FROM_EMAIL || "BH Garage Door Metro Detroit <onboarding@resend.dev>";
+  const to = process.env.QUOTE_TO_EMAIL || "service@bhairductcleaningmetrodetroit.com";
+  const from = process.env.QUOTE_FROM_EMAIL || "BH Air Duct Cleaning Metro Detroit <onboarding@resend.dev>";
 
   if (!apiKey) {
     console.warn("[quote] RESEND_API_KEY not set — accepting quote without email.", {
@@ -127,7 +127,7 @@ function escapeHtml(s: string): string {
 
 function renderQuoteText(f: QuoteFields, count: number): string {
   return [
-    "New quote request — BH Garage Door Metro Detroit",
+    "New quote request — BH Air Duct Cleaning Metro Detroit",
     "",
     `Name:     ${f.name}`,
     `Phone:    ${f.phone}`,
@@ -195,7 +195,7 @@ function renderQuoteEmail(f: QuoteFields, attachmentCount: number): string {
                     <div style="display:inline-block;background:#0b1220;border:1.5px solid #b58a3a;border-radius:14px;padding:8px 12px;">
                       <span style="font-family:Georgia,serif;font-size:18px;font-weight:bold;color:#e6c266;letter-spacing:0.5px">BH</span>
                       <span style="display:inline-block;width:6px;height:6px;background:#e6c266;border-radius:50%;margin:0 6px;vertical-align:middle"></span>
-                      <span style="font-family:Georgia,serif;font-size:13px;font-weight:bold;color:#e6c266;letter-spacing:1.5px">Garage Door</span>
+                      <span style="font-family:Georgia,serif;font-size:13px;font-weight:bold;color:#e6c266;letter-spacing:1.5px">Air Duct Cleaning</span>
                     </div>
                   </td>
                   <td align="right" style="vertical-align:middle">
@@ -289,7 +289,7 @@ function renderQuoteEmail(f: QuoteFields, attachmentCount: number): string {
                   ${
                     email
                       ? `<td style="padding:0 6px">
-                          <a href="mailto:${email}?subject=Re:%20Your%20BH%20Garage%20Door%20quote" style="display:inline-block;background:transparent;color:#e6c266;text-decoration:none;font-weight:700;font-size:14px;padding:13px 20px;border-radius:12px;border:1.5px solid #e6c266">✉ Reply</a>
+                          <a href="mailto:${email}?subject=Re:%20Your%20BH%20Air%20Duct%20Cleaning%20quote" style="display:inline-block;background:transparent;color:#e6c266;text-decoration:none;font-weight:700;font-size:14px;padding:13px 20px;border-radius:12px;border:1.5px solid #e6c266">✉ Reply</a>
                         </td>`
                       : ""
                   }
@@ -304,9 +304,9 @@ function renderQuoteEmail(f: QuoteFields, attachmentCount: number): string {
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
                   <td style="font-size:11px;color:#6b7794;line-height:1.6">
-                    <b style="color:#9aa6c1">BH Garage Door Metro Detroit</b><br>
-                    Garage door installation &amp; repair • Licensed &amp; Insured • Metro Detroit, MI<br>
-                    <a href="https://bhgaragedoormetrodetroit.com" style="color:#b58a3a;text-decoration:none">bhgaragedoormetrodetroit.com</a>
+                    <b style="color:#9aa6c1">BH Air Duct Cleaning Metro Detroit</b><br>
+                    Air duct, dryer vent &amp; HVAC cleaning • Licensed &amp; Insured • Metro Detroit, MI<br>
+                    <a href="https://bhairductcleaningmetrodetroit.com" style="color:#b58a3a;text-decoration:none">bhairductcleaningmetrodetroit.com</a>
                   </td>
                 </tr>
               </table>

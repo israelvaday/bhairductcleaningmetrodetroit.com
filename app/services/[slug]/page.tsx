@@ -56,7 +56,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-ink-950/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brass-300 backdrop-blur">
               <LogoMark className="h-4 w-4" />
-              BH Garage Door Metro Detroit · Licensed & insured
+              BH Air Duct Cleaning Metro Detroit · Licensed & insured
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur">
               <Clock className="h-3.5 w-3.5" /> Mobile dispatch
@@ -122,7 +122,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <span className="text-sm font-semibold uppercase tracking-wider">Licensed & insured</span>
               </div>
               <p className="mt-2 text-sm text-ink-200">
-                Licensed &amp; insured Michigan garage door company. Every tech is background-checked.
+                Licensed &amp; insured Michigan air duct cleaning company. Every tech is background-checked.
               </p>
             </div>
             <div className="rounded-3xl border border-ink-800 bg-ink-900/50 p-5">
@@ -197,16 +197,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             More about {s.shortName.toLowerCase()} in Metro Detroit
           </h2>
           <p>
-            {s.description} Every {s.shortName.toLowerCase()} job is performed by a background-checked technician from a licensed &amp; insured local company, dispatched from a fully stocked truck. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who works on garage doors for a living.
+            {s.description} Every {s.shortName.toLowerCase()} job is performed by a background-checked technician from a licensed &amp; insured local company, dispatched from a fully equipped truck. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who cleans ductwork for a living.
           </p>
           <p>
             We cover every city and neighborhood in Metro Detroit for {s.shortName.toLowerCase()}: Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties. Typical on-site arrival is 15 to 30 minutes depending on traffic and your distance from the nearest mobile unit.
           </p>
           <p>
-            Pricing for {s.shortName.toLowerCase()} is transparent: flat-rate where the scope is predictable and clearly itemized where it isn&apos;t. You get a written quote before any tools come out, and the number we agree on is the number you pay — no surprise fees, no &quot;the spring turned out to be a special size&quot; games, and no high-pressure upsells. If something genuinely changes the scope on site, we explain it, give you a new written number, and you can decline without owing a cent.
+            Pricing for {s.shortName.toLowerCase()} is transparent: flat-rate where the scope is predictable and clearly itemized where it isn&apos;t. You get a written quote before any tools come out, and the number we agree on is the number you pay — no surprise fees, no &quot;your ducts turned out to have mold&quot; scare-quote games, and no high-pressure upsells. If something genuinely changes the scope on site, we explain it, give you a new written number, and you can decline without owing a cent.
           </p>
           <p>
-            We repair before we replace whenever the hardware allows it, use manufacturer-grade parts for permanent installs, and document the work so you have records for insurance, property managers, or HOA boards. When a job genuinely calls for replacement — a discontinued panel profile, a fatigued spring pair, an opener that predates modern safety standards — we tell you in advance, quote the hardware in writing, and complete the work in a single visit. Every repair ends with a door balance test and both federal safety checks. That&apos;s the difference between a real garage door company and a low-bid contractor with a magnetic sign.
+            We clean and verify before we recommend anything more, use professional negative-pressure equipment rather than shop-vac shortcuts, and document the work with before-and-after photos so you have records for insurance, property managers, or HOA boards. When a job genuinely calls for more — contaminated flex runs that need replacing, a system that needs restoration after smoke or water, a sanitizing treatment after rodents — we tell you in advance, quote it in writing, and complete the work in a single visit whenever possible. Every job ends with an airflow check and a photo walkthrough of your own ducts. That&apos;s the difference between a real air duct cleaning company and a coupon crew with a shop vac.
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h2 className="font-display text-3xl font-extrabold md:text-4xl">
               Need {s.shortName.toLowerCase()} service now?
             </h2>
-            <p className="mt-3 text-ink-200">A licensed &amp; insured garage door tech is one tap away.</p>
+            <p className="mt-3 text-ink-200">A licensed &amp; insured duct cleaning tech is one tap away.</p>
             <div className="mt-6 flex justify-center">
               <ContactCTA size="lg" />
             </div>

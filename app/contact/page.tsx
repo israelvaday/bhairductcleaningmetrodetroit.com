@@ -6,9 +6,9 @@ import { ContactCTA } from "@/components/site/ContactCTA";
 import { ServiceMap } from "@/components/site/ServiceMap";
 
 export const metadata: Metadata = {
-  title: `Contact — Metro Detroit Garage Door Company`,
+  title: `Contact — Metro Detroit Air Duct Cleaning Company`,
   description:
-    "Reach BH Garage Door Metro Detroit. Tap to call, WhatsApp, or request a free quote. Licensed & Insured — serving all of Metro Detroit, MI.",
+    "Reach BH Air Duct Cleaning Metro Detroit. Tap to call, WhatsApp, or request a free quote. Licensed & Insured — serving all of Metro Detroit, MI.",
   alternates: { canonical: "/contact" },
 };
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
             <Clock className="h-3.5 w-3.5" /> Call or text for a quote
           </div>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-            Get a <span className="text-brass-gradient">garage door tech</span>.
+            Get a <span className="text-brass-gradient">duct cleaning tech</span>.
           </h1>
           <p className="mt-4 text-ink-200">
             Skip the small talk. Tap a button — we&apos;ll dispatch a Licensed & insured technician anywhere in Metro Detroit.
@@ -41,7 +41,7 @@ export default function ContactPage() {
               <span className="text-sm font-semibold uppercase tracking-wider">Licensed</span>
             </div>
             <p className="mt-3 text-sm text-ink-200">
-              {BIZ.bsis} for garage door work in Michigan. Background-checked technicians.
+              {BIZ.bsis} for air duct cleaning work in Michigan. Background-checked technicians.
             </p>
           </div>
           <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/5 p-6">
@@ -84,13 +84,13 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">How to reach us</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-4xl">
-            Four fast ways to talk to a real Metro Detroit garage door tech.
+            Four fast ways to talk to a real Metro Detroit duct cleaning tech.
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
               <h3 className="font-display text-xl font-bold text-white">Call</h3>
               <p className="mt-2 text-sm text-ink-200">
-                The fastest way to reach a garage door tech in Metro Detroit. A real technician — not a call center — picks up day or night.
+                The fastest way to reach a duct cleaning tech in Metro Detroit. A real technician — not a call center — picks up day or night.
               </p>
               <a
                 href={BIZ.phoneHref}
@@ -102,7 +102,7 @@ export default function ContactPage() {
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
               <h3 className="font-display text-xl font-bold text-white">Text or WhatsApp</h3>
               <p className="mt-2 text-sm text-ink-200">
-                Prefer to type? Send a text or WhatsApp with a photo of the door, the spring shaft, or the opener — pictures speed up the quote dramatically.
+                Prefer to type? Send a text or WhatsApp with a photo of a dusty register, your furnace, or the dryer vent — pictures speed up the quote dramatically.
               </p>
               <div className="mt-auto flex flex-wrap gap-2 pt-4">
                 <a
@@ -149,7 +149,7 @@ export default function ContactPage() {
 
           <div className="mt-10 rounded-2xl border border-ink-800 bg-ink-900/40 p-6 text-sm text-ink-200">
             <p>
-              <strong className="text-white">What we cover.</strong> BH Garage Door Metro Detroit is a full-service garage door company for residential and commercial customers across all of Metro Detroit. That includes 24-hour emergency repairs, torsion and extension spring replacement, opener installation and repair, cable, roller, and track work, panel and section replacement, new door installation, commercial rolling steel and sectional doors, preventive maintenance tune-ups, and smart opener and keypad installs. Every technician is background-checked, and the company is {BIZ.bsis}.
+              <strong className="text-white">What we cover.</strong> BH Air Duct Cleaning Metro Detroit is a full-service air duct cleaning company for residential and commercial customers across all of Metro Detroit. That includes whole-home negative-pressure duct cleaning, dryer vent cleaning, furnace and AC coil cleaning, HVAC system restoration after smoke or water events, duct sanitizing and deodorizing, camera duct inspections, post-construction cleanups, and scheduled maintenance plans. Every technician is background-checked, and the company is {BIZ.bsis}.
             </p>
             <p className="mt-3">
               <strong className="text-white">Where we go.</strong> We serve every city and unincorporated neighborhood in Metro Detroit — Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties, and the dozens of neighborhoods inside them.
@@ -158,14 +158,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <LongFormFaq subject="Garage Door Service" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning Service" kind="service" />
 
       <section className="border-t border-ink-800 bg-aurora py-16 text-center">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="font-display text-3xl font-extrabold md:text-4xl">
             Ready when you are.
           </h2>
-          <p className="mt-3 text-ink-200">One tap reaches a real garage door tech.</p>
+          <p className="mt-3 text-ink-200">One tap reaches a real duct cleaning tech.</p>
           <div className="mt-6 flex justify-center">
             <ContactCTA size="lg" showEmail />
           </div>

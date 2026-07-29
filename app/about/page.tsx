@@ -9,8 +9,8 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 
 export const metadata: Metadata = {
-  title: "About — BH Garage Door Metro Detroit",
-  description: `Meet your local Metro Detroit garage door team. Licensed & insured, trusted for repairs and installations across Wayne, Oakland, and Macomb counties.`,
+  title: "About — BH Air Duct Cleaning Metro Detroit",
+  description: `Meet your local Metro Detroit air duct cleaning team. Licensed & insured, trusted for duct, dryer vent, and HVAC cleaning across Wayne, Oakland, and Macomb counties.`,
   alternates: { canonical: `${BIZ.url}/about` },
 };
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/about/about-hero.png"
-            alt="The BH Garage Door Metro Detroit crew with a service van in Detroit"
+            alt="The BH Air Duct Cleaning Metro Detroit crew with a service van in Detroit"
             fill
             sizes="100vw"
             className="object-cover"
@@ -34,11 +34,11 @@ export default function AboutPage() {
         <div className="relative mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-4 py-20 text-center md:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">About</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)] md:text-6xl">
-            A real <span className="text-brass-gradient">Metro Detroit</span> garage door company — not a call center.
+            A real <span className="text-brass-gradient">Metro Detroit</span> air duct cleaning company — not a call center.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ink-200">
-            BH Garage Door Metro Detroit is a small, owner-operated garage door team based in Detroit.
-            We answer our own phones, our trucks carry real springs and parts, and every job is done by a trained tech.
+            BH Air Duct Cleaning Metro Detroit is a small, owner-operated duct cleaning team based in Detroit.
+            We answer our own phones, our trucks carry real negative-pressure equipment, and every job is done by a trained tech.
           </p>
           <div className="mt-7">
             <ContactCTA size="lg" />
@@ -54,14 +54,14 @@ export default function AboutPage() {
               Built on trust, not call-center tricks.
             </h2>
             <p className="mt-4 text-ink-300">
-              Many &ldquo;garage door companies&rdquo; you find online are lead-gen call centers running bait
+              Many &ldquo;duct cleaning companies&rdquo; you find online are lead-gen call centers running bait
               pricing. We&apos;re the opposite — we&apos;re local, we&apos;re licensed &amp; insured, and you&apos;ll
               speak directly with the technician coming to your door.
             </p>
             <p className="mt-4 text-ink-300">
-              We work across Metro Detroit on broken spring replacements, opener installs and repairs,
-              cable and roller service, panel replacement, new door installations, and commercial
-              overhead doors.
+              We work across Metro Detroit on whole-home air duct cleaning, dryer vent cleaning,
+              furnace and coil cleaning, duct sanitizing, camera inspections, post-construction
+              cleanups, and commercial HVAC systems.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {[
@@ -93,7 +93,7 @@ export default function AboutPage() {
             <div className="col-span-2 overflow-hidden rounded-2xl border border-ink-800">
               <Image
                 src="/about/about-workshop.png"
-                alt="Inside the BH Garage Door Metro Detroit parts van — springs, rollers, and hardware"
+                alt="Inside the BH Air Duct Cleaning Metro Detroit equipment van — brush rods, air whips, and vacuum gear"
                 width={1536}
                 height={1024}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -127,9 +127,9 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: "Never bait & switch.", body: "The price we quote on the phone is the price on your invoice — not a $29 lure that becomes a $1,200 'rebuild' at your door." },
+              { title: "Never bait & switch.", body: "The price we quote on the phone is the price on your invoice — not a $99 'whole house' lure that becomes a $1,200 upsell at your door." },
               { title: "Never unmarked.", body: "Our trucks are branded, our uniforms have a name tag, and proof of insurance rides in every glovebox." },
-              { title: "Never replace what we can repair.", body: "A dented panel doesn't mean a new door, and a worn roller doesn't mean a new opener. We show you every failed part before we touch it." },
+              { title: "Never sell what you don't need.", body: "Clean ducts don't need cleaning, and sanitizer fogged over dirt is a gimmick. We put the camera in the duct and show you the screen before we quote anything." },
               { title: "Never anonymous.", body: "You'll know the dispatcher's name. You'll know the tech's name. You'll have a receipt with the warranty in writing." },
             ].map((v) => (
               <div key={v.title} className="rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
@@ -168,7 +168,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <LongFormFaq subject="Garage Door Team" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning Team" kind="service" />
       <FinalCTA />
     </>
   );

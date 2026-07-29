@@ -1,5 +1,5 @@
 /**
- * Rebuild content/photos.json for BH Garage Door — generated + branding assets only.
+ * Rebuild content/photos.json for BH Air Duct Cleaning — generated + branding assets only.
  */
 import { writeFileSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -8,43 +8,43 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const PHOTOS_DIR = join(ROOT, "public/photos");
 const OUT = join(ROOT, "content/photos.json");
-const BIZ = "BH Garage Door Metro Detroit";
+const BIZ = "BH Air Duct Cleaning Metro Detroit";
 const REGION = "Metro Detroit, MI";
 
 const SERVICE_SLUGS = [
-  "emergency",
-  "repair",
-  "installation",
-  "springs",
-  "openers",
-  "cables-rollers",
-  "panels",
+  "residential",
   "commercial",
+  "dryer-vent",
+  "hvac-restoration",
+  "furnace-coil",
+  "sanitization",
+  "duct-inspection",
+  "post-construction",
   "maintenance",
-  "smart-openers",
+  "emergency",
 ];
 
 const GEN_LABELS = {
-  "gen--new-installation.png": { cat: "installation", services: ["installation"], alt: "New insulated garage door installation" },
-  "gen--torsion-spring.png": { cat: "springs", services: ["springs", "repair"], alt: "Torsion spring replacement" },
-  "gen--opener-install.png": { cat: "openers", services: ["openers", "installation"], alt: "Belt-drive garage door opener install" },
-  "gen--cable-repair.png": { cat: "cables-rollers", services: ["cables-rollers", "repair"], alt: "Garage door cable replacement" },
-  "gen--roller-replacement.png": { cat: "cables-rollers", services: ["cables-rollers", "maintenance"], alt: "Quiet nylon roller replacement" },
-  "gen--panel-replacement.png": { cat: "panels", services: ["panels", "repair"], alt: "Garage door panel replacement" },
-  "gen--track-alignment.png": { cat: "repair", services: ["repair", "cables-rollers"], alt: "Track alignment and repair" },
-  "gen--weather-seal.png": { cat: "maintenance", services: ["maintenance", "installation"], alt: "Bottom weather seal replacement" },
-  "gen--commercial-rollup.png": { cat: "commercial", services: ["commercial"], alt: "Commercial rolling steel door" },
-  "gen--carriage-doors.png": { cat: "installation", services: ["installation"], alt: "Carriage-style garage doors" },
-  "gen--modern-glass.png": { cat: "installation", services: ["installation"], alt: "Modern full-view glass garage door" },
-  "gen--keypad-entry.png": { cat: "smart-openers", services: ["smart-openers", "openers"], alt: "Wireless garage door keypad" },
-  "gen-v2--emergency-night.png": { cat: "emergency", services: ["emergency", "repair"], alt: "Emergency garage door repair at night" },
-  "gen-v2--spring-closeup.png": { cat: "springs", services: ["springs"], alt: "New torsion springs on shaft" },
-  "gen-v2--opener-logic.png": { cat: "openers", services: ["openers", "repair"], alt: "Opener logic board service" },
-  "gen-v2--tuneup.png": { cat: "maintenance", services: ["maintenance"], alt: "Garage door tune-up and lubrication" },
-  "gen-v2--off-track.png": { cat: "emergency", services: ["emergency", "repair"], alt: "Off-track garage door repair" },
-  "gen-v2--smart-opener.png": { cat: "smart-openers", services: ["smart-openers"], alt: "Smart opener smartphone control" },
-  "gen-v2--wood-look.png": { cat: "installation", services: ["installation", "panels"], alt: "Wood-look steel garage door" },
-  "gen-v2--loading-dock.png": { cat: "commercial", services: ["commercial"], alt: "Commercial loading dock doors" },
+  "gen--negative-pressure-setup.png": { cat: "residential", services: ["residential"], alt: "Negative-pressure duct cleaning vacuum connected to a furnace trunk line" },
+  "gen--rotary-brush-duct.png": { cat: "residential", services: ["residential", "hvac-restoration"], alt: "Rotary brush agitating dust inside an air duct" },
+  "gen--register-detail-clean.png": { cat: "residential", services: ["residential", "maintenance"], alt: "Floor supply register and boot detail cleaning" },
+  "gen--return-grille-clean.png": { cat: "residential", services: ["residential"], alt: "Return-air grille removed for cleaning" },
+  "gen--dryer-vent-brush.png": { cat: "dryer-vent", services: ["dryer-vent", "emergency"], alt: "Rotary brush cleaning a dryer vent duct" },
+  "gen--dryer-vent-exterior.png": { cat: "dryer-vent", services: ["dryer-vent", "maintenance"], alt: "Exterior dryer vent hood being cleared of lint" },
+  "gen--furnace-blower-clean.png": { cat: "furnace-coil", services: ["furnace-coil", "hvac-restoration"], alt: "Furnace blower wheel cleaning, half dusty half clean" },
+  "gen--evaporator-coil.png": { cat: "furnace-coil", services: ["furnace-coil"], alt: "Evaporator coil foaming clean inside a furnace plenum" },
+  "gen--sanitizing-fog.png": { cat: "sanitization", services: ["sanitization"], alt: "Antimicrobial fog applied into a supply duct" },
+  "gen--camera-inspection.png": { cat: "duct-inspection", services: ["duct-inspection"], alt: "Duct inspection camera monitor showing duct interior" },
+  "gen--commercial-rtu.png": { cat: "commercial", services: ["commercial"], alt: "Rooftop HVAC unit service on a commercial building" },
+  "gen--post-construction.png": { cat: "post-construction", services: ["post-construction"], alt: "Post-construction drywall dust removal from floor ducts" },
+  "gen-v2--truck-hose-run.png": { cat: "residential", services: ["residential", "emergency"], alt: "Duct cleaning vacuum hose running from truck into a home" },
+  "gen-v2--before-after-duct.png": { cat: "residential", services: ["residential", "sanitization"], alt: "Before and after view inside a cleaned air duct" },
+  "gen-v2--air-whip-tool.png": { cat: "residential", services: ["residential", "hvac-restoration"], alt: "Compressed-air whip tool inside a trunk duct" },
+  "gen-v2--flex-duct-attic.png": { cat: "duct-inspection", services: ["duct-inspection", "hvac-restoration"], alt: "Flexible ductwork inspection in an attic" },
+  "gen-v2--filter-comparison.png": { cat: "maintenance", services: ["maintenance", "furnace-coil"], alt: "Dirty furnace filter next to a new clean filter" },
+  "gen-v2--basement-trunk.png": { cat: "residential", services: ["residential", "maintenance"], alt: "Clean sealed sheet-metal trunk duct in a basement" },
+  "gen-v2--tech-protective-gear.png": { cat: "residential", services: ["residential", "commercial"], alt: "Duct cleaning technician setting up equipment" },
+  "gen-v2--commercial-office.png": { cat: "commercial", services: ["commercial"], alt: "Ceiling diffuser cleaning in an office space" },
 };
 
 function meta(w = 1600, h = 900) {
@@ -62,8 +62,8 @@ function labelForFile(file) {
   if (GEN_LABELS[file]) return GEN_LABELS[file];
   const slug = file.replace(/^gen(-v2)?--/, "").replace(".png", "").replace(/-/g, " ");
   return {
-    cat: "repair",
-    services: ["repair"],
+    cat: "residential",
+    services: ["residential"],
     alt: slug.charAt(0).toUpperCase() + slug.slice(1),
   };
 }
@@ -105,15 +105,15 @@ if (existsSync(join(ROOT, "public/logo.png"))) {
   });
 }
 
-const heroBrand = join(PHOTOS_DIR, "branding-generated--hero-garage-door-metro-detroit.png");
+const heroBrand = join(PHOTOS_DIR, "branding-generated--hero-air-duct-metro-detroit.png");
 if (existsSync(heroBrand)) {
   photos.push({
     id: "branding-hero-metro",
-    src: "/photos/branding-generated--hero-garage-door-metro-detroit.png",
-    alt: `${BIZ} technician installing a garage door at a Michigan home`,
+    src: "/photos/branding-generated--hero-air-duct-metro-detroit.png",
+    alt: `${BIZ} technician connecting a negative-pressure vacuum to home ductwork`,
     category: "branding-generated",
     kind: "hero",
-    services: ["installation", "emergency"],
+    services: ["residential", "emergency"],
     ...meta(),
   });
 }
@@ -134,8 +134,8 @@ if (existsSync(mapBrand)) {
 const BRAND_EXTRA = [
   ["branding-generated--service-van-three-quarter-front.png", "Service van, three-quarter front view"],
   ["branding-generated--service-van-side-magnet-daylight.png", "Service van side profile in daylight"],
-  ["branding-generated--social-tile-services-grid-real.png", "Garage door parts flat-lay"],
-  ["branding-generated--social-tile-emergency-callout-real.png", "Emergency garage door repair at dusk"],
+  ["branding-generated--social-tile-services-grid-real.png", "Air duct cleaning tools flat-lay"],
+  ["branding-generated--social-tile-emergency-callout-real.png", "Same-day duct service at dusk"],
   ["branding-generated--business-card-mockup-photo.png", "Business card mockup on workbench"],
 ];
 for (const [file, alt] of BRAND_EXTRA) {

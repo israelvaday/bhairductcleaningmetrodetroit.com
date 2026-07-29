@@ -1,4 +1,4 @@
-// Blog post data + body content. Generated for BH Garage Door Metro Detroit — Metro Detroit, MI.
+// Blog post data + body content. Generated for BH Air Duct Cleaning Metro Detroit — Metro Detroit, MI.
 // Bodies use a very small markdown-ish dialect: lines starting with `## ` are H2, `### ` are H3,
 // lines starting with `- ` are list items, blank lines split paragraphs.
 
@@ -7,7 +7,7 @@ export type BlogPost = {
   title: string;
   metaTitle?: string;
   excerpt: string;
-  category: "Repair" | "Springs" | "Openers" | "Installation" | "Maintenance" | "Safety" | "Buying Guides";
+  category: "Air Ducts" | "Dryer Vents" | "HVAC" | "Air Quality" | "Cost Guides" | "Maintenance" | "Safety" | "Buying Guides";
   readMinutes: number;
   date: string; // ISO
   heroImage: string;      // /blog/<slug>-hero.png
@@ -19,524 +19,506 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "garage-door-wont-open-troubleshooting",
-    title: "Garage Door Won't Open? 8 Things to Check Before Calling a Pro",
-    metaTitle: "Garage Door Won't Open? 8 DIY Checks Before Calling for Repair",
+    slug: "how-often-should-air-ducts-be-cleaned",
+    title: "How Often Should Air Ducts Be Cleaned? The Honest Answer for Michigan Homes",
+    metaTitle: "How Often Should Air Ducts Be Cleaned? NADCA Guidance for Michigan",
     excerpt:
-      "Stuck in your Metro Detroit driveway with a door that won't budge? Before you assume the worst, run through these eight quick checks. Several of them fix the problem in under five minutes.",
-    category: "Repair",
+      "Every 3 to 5 years is the honest baseline — but pets, renovations, water damage, and Michigan's forced-air heating season can move that number. Here's how to figure out your home's real schedule.",
+    category: "Air Ducts",
     readMinutes: 8,
     date: "2026-03-04",
-    heroImage: "/blog/garage-door-wont-open-troubleshooting-hero.png",
-    heroAlt: "Homeowner pressing a garage door remote at a Michigan home while the door sits stuck half open.",
-    secondaryImage: "/blog/garage-door-wont-open-troubleshooting-secondary.png",
-    secondaryAlt: "Technician inspecting a garage door opener trolley and rail with a flashlight.",
+    heroImage: "/blog/how-often-should-air-ducts-be-cleaned-hero.png",
+    heroAlt: "Technician removing a floor register in a Michigan living room to inspect the supply duct below.",
+    secondaryImage: "/blog/how-often-should-air-ducts-be-cleaned-secondary.png",
+    secondaryAlt: "Inside view of a residential sheet-metal duct showing a layer of dust and debris before cleaning.",
     body: `
-It's 7:40 AM, you're already late, and the garage door just hums at you — or worse, does nothing at all. Before you panic and start rearranging your day, know this: a good share of "dead" garage doors in Metro Detroit are fixed by the homeowner in under five minutes. Run through this checklist in order, and if you land on one of the serious items at the end, BH Garage Door Metro Detroit can usually be there same-day.
+Ask ten companies how often you should clean your air ducts and you'll get ten answers — most of them suspiciously aligned with how often that company would like to sell you a cleaning. So let's start with the source that doesn't profit from the answer: NADCA, the National Air Duct Cleaners Association, recommends having your ductwork **inspected every two years** and **cleaned every three to five years** for a typical home. That's the honest baseline, and it's the one we quote to homeowners from Detroit to Rochester Hills, even when it means telling someone their ducts don't need us yet.
 
-## 1. Check the Wall Button First, Not the Remote
+But "typical home" is doing a lot of work in that sentence. Metro Detroit housing runs from 1920s Dearborn bungalows with original trunk lines to brand-new builds in Macomb Township, and the right interval for your house depends on how you live in it. Here's how to actually figure it out.
 
-If the wall button opens the door but the remote doesn't, the door is fine — your remote battery is dead or the remote lost its pairing. Swap the coin cell (usually a CR2032) before anything else. If neither works, keep reading.
+## The 3-to-5-Year Baseline (And Why It Exists)
 
-## 2. Is the Opener Even Getting Power?
+Every forced-air system recirculates the same household air dozens of times a day, all winter long. Your furnace filter catches most of what passes through, but "most" isn't "all" — dust, pet dander, skin cells, carpet fibers, and fine debris settle inside the supply and return ducts over time, especially in low-velocity spots like long branch runs and the bottoms of return trunks.
 
-Openers plug into a ceiling outlet that's often on the same circuit as garage receptacles. If the opener's light won't come on at all, check the breaker panel and, in older Detroit and Dearborn homes, the GFCI outlet the opener may be daisy-chained through. Press "reset" on any tripped GFCI in the garage or nearby laundry area.
+In three to five years, an average family home accumulates enough buildup that a proper source-removal cleaning makes a measurable difference: registers stop puffing dust when the furnace kicks on, return grilles stop matting over so quickly, and the system breathes a little easier. Clean it much more often than that and you're mostly paying to vacuum ducts that are already clean. Wait a decade or more and you're circulating air across a genuine dust reservoir.
 
-## 3. Look for the Blinking Photo-Eye Sensor
+## Triggers That Reset the Clock
 
-The two small sensors near the floor on either side of the door are the most common culprit when a door opens fine but *won't close*. If one is blinking, the beam is blocked or misaligned. Move the snow shovel, kick the leaves away, and gently nudge the sensor brackets until both LEDs are solid. Michigan winters are hard on these — road salt film on the lens is enough to break the beam, so give both lenses a wipe.
+The calendar is only half the answer. Any of these events justifies a cleaning regardless of when the last one happened:
 
-## 4. Was the Emergency Release Pulled?
+- **A renovation or remodel.** Drywall dust is the single worst thing that ever enters a duct system. It's fine enough to sail past cheap filters, and once it settles in the ducts, the furnace redistributes it through the house for months. If contractors cut, sanded, or demoed anything while the system was running, plan on a post-construction cleaning.
+- **Water damage or flooding.** A wet basement — a Michigan classic — can put moisture into basement ductwork and floor runs. Damp dust is how you get microbial growth inside ducts, and that's a clean-it-now situation, not a someday one.
+- **Rodents or pests.** Mice get into ductwork through crawlspaces and garage penetrations, and they leave droppings, nesting material, and worse. If you've had an infestation treated, the ducts need to be part of the cleanup.
+- **You just bought the house.** You have no idea what the previous owners did in there — smokers, dogs, a decade of deferred maintenance, a DIY drywall project. A cleaning (or at minimum a camera inspection) at move-in gives you a clean baseline and a look at the condition of the ductwork itself.
+- **Smokers or multiple pets in the home.** Both load the system faster than average. Two shedding dogs can realistically cut a 5-year interval to 2–3 years.
+- **Allergy or asthma symptoms that flare indoors.** Ducts aren't always the culprit — filters and humidity matter too — but if symptoms track with the furnace running, the ductwork deserves an inspection.
 
-That red cord hanging from the opener rail disengages the door from the motor. If someone pulled it (kids are famous for this), the opener will run but the door won't move. With the door fully CLOSED, pull the cord toward the door to re-engage, then run the opener — the trolley will click back in.
+## What "Inspected Every Two Years" Actually Means
 
-## 5. Check the Lock Mode on Your Wall Console
+An inspection doesn't have to be a big production. We run a camera into a few representative supply runs and the main return, look at the blower compartment, and show you exactly what's in there on a screen. It takes well under an hour, and it ends one of two ways: "you're fine, see you in a couple years," or "here's the buildup, here's a photo, here's a written price." We charge about $99 for a camera inspection and credit it toward a cleaning if you book one — so an honest look costs you nothing if the ducts actually need work.
 
-Multi-function wall consoles from LiftMaster and Chamberlain have a "lock" button that disables all remotes (a vacation feature). If remotes died all at once but the wall button works, hold the lock button for a few seconds to toggle it off.
+That inspect-first approach matters because the alternative — cleaning on a rigid schedule regardless of condition — wastes money in clean houses and under-serves dirty ones.
 
-## 6. Listen: Does It Hum, Grind, or Click?
+## Michigan-Specific Factors Worth Knowing
 
-- A hum with no movement often means a failed capacitor or a stripped main gear — very common on older chain-drive units.
-- Grinding usually means the trolley is jammed or the gear is chewed up.
-- A single click with nothing else often points to the logic board.
+A few things about Southeast Michigan make our duct timelines a little different from the national average:
 
-None of these are DIY-friendly, but knowing the sound helps our dispatcher quote you accurately on the phone.
+- **The heating season is long.** Your furnace runs hard from roughly November through April, which means five-plus months of continuous recirculation every year. Systems here simply move more air through their ducts annually than systems in milder climates.
+- **Basements and floor ducts.** Most Metro Detroit homes run supply ducts through the basement, and many older homes in Detroit, Dearborn, and Lincoln Park have floor registers that act like funnels for whatever hits the floor — pet hair, crumbs, construction grit, the occasional toy.
+- **Road salt dust.** It's real. Fine salt residue tracks in all winter, dries to powder, and joins the household dust load that eventually settles in returns.
+- **Older housing stock.** Pre-1960s homes in Wayne County often have ductwork that has literally never been cleaned. We've pulled decades of debris out of original trunk lines in Detroit and Dearborn — those first-ever cleanings are dramatic.
 
-## 7. Look at the Springs Above the Door
+## The Short Version
 
-Look at the shaft above the door (torsion system). If you see a clean two-inch gap in the coil, the spring has snapped — and this changes everything. Do NOT keep hitting the opener button, and do not try to lift the door by hand. A two-car steel door with a broken spring can weigh over 200 lbs. This is the most common serious failure we see across Metro Detroit, especially during the first hard freeze of the year.
+Inspect every two years, clean every three to five, and reset the clock immediately after renovations, water damage, rodents, or a home purchase. If you have heavy pets or smokers in the house, lean toward the short end. And if a company tells you ducts need cleaning every year — or every season — they're selling you a subscription, not a service.
 
-## 8. Is the Door Frozen to the Slab?
-
-A genuinely Michigan problem: meltwater refreezes overnight and glues the bottom seal to the concrete. The opener strains, then gives up (newer units detect the resistance and stop). Break the ice seal along the bottom edge with gentle pressure — never chip at the rubber with a screwdriver — and pour warm (not boiling) water along the seal if needed.
-
-## When It's Time to Call
-
-If you've reached this point and the door still won't move — or you found a snapped spring, frayed cable, or the door is crooked in its tracks — it's a job for a technician. Call BH Garage Door Metro Detroit at (313) 236-4558. We serve every city in Wayne, Oakland, and Macomb counties with same-day repair, we quote a flat rate before we dispatch, and our trucks carry springs, cables, rollers, and opener parts so nearly every repair is finished in one visit.
-
-For a fast written estimate, you can also [request a free quote](/quote) online.
+Not sure where your house falls? BH Air Duct Cleaning Metro Detroit will tell you straight, with camera footage to back it up. We serve all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Sterling Heights, Troy, Livonia, Farmington Hills, Canton, and everywhere between. Call (313) 236-4558 or [request a free quote](/quote) and we'll help you figure out your home's real schedule.
 `,
   },
 
   {
-    slug: "broken-garage-door-spring-what-to-do",
-    title: "Broken Garage Door Spring: What It Looks Like, Why It's Dangerous, and What To Do",
-    metaTitle: "Broken Garage Door Spring? What To Do (and Not Do) | Metro Detroit",
+    slug: "signs-your-air-ducts-need-cleaning",
+    title: "10 Signs Your Air Ducts Need Cleaning (And a Few That Don't Mean What You Think)",
+    metaTitle: "10 Signs Your Air Ducts Need Cleaning | Metro Detroit Guide",
     excerpt:
-      "That gunshot bang from the garage was probably your torsion spring letting go. Here's how to confirm it, why you should never open the door, and what a proper replacement involves in Metro Detroit.",
-    category: "Springs",
+      "Dust puffing from registers, a musty smell when the furnace kicks on, allergies that flare indoors — here are the ten signs that actually point to dirty ductwork, and how to check a few of them yourself.",
+    category: "Air Quality",
     readMinutes: 9,
     date: "2026-03-11",
-    heroImage: "/blog/broken-garage-door-spring-what-to-do-hero.png",
-    heroAlt: "Close-up of a snapped garage door torsion spring with a visible gap in the coil.",
-    secondaryImage: "/blog/broken-garage-door-spring-what-to-do-secondary.png",
-    secondaryAlt: "Technician winding a new torsion spring with winding bars above a garage door.",
+    heroImage: "/blog/signs-your-air-ducts-need-cleaning-hero.png",
+    heroAlt: "Close-up of a dusty supply register on a wall with visible dust streaks around the vent slats.",
+    secondaryImage: "/blog/signs-your-air-ducts-need-cleaning-secondary.png",
+    secondaryAlt: "Homeowner holding up a return air grille covered in matted gray dust.",
     body: `
-Most Metro Detroit homeowners meet their garage door spring for the first time on the day it breaks. Usually there's a story: a bang from the garage loud enough that neighbors ask about it, or a door that suddenly weighs a ton. Here's everything you need to know in the aftermath — including the mistakes that send people to the ER every winter.
+Your duct system doesn't have a warning light. It runs hidden inside floors, walls, and basement ceilings, quietly recirculating your home's air a couple dozen times a day — and when it gets dirty enough to matter, the signs show up in odd, easy-to-misread places. Here are the ten signs we actually trust after cleaning ducts across Metro Detroit, roughly in order of how strongly they point to the ductwork.
 
-## How to Confirm the Spring Is Broken
+## 1. Dust Puffs From the Registers When the Furnace Kicks On
 
-Look above the closed door. On most doors you'll see a steel shaft running across the header with one or two tightly wound springs on it. A healthy torsion spring is one continuous coil. A broken one has an unmistakable **two-inch gap** where the steel separated. Other tell-tale signs:
+This is the classic. The blower spins up, and for a second or two a visible puff of dust exits the supply registers — you'll notice it in low-angle sunlight, or as a dust film that keeps reappearing on furniture near a vent. The blast of airflow at startup scours loose debris off the duct walls and delivers it into the room. If you can see it, there's a lot more you can't.
 
-- The opener strains, lifts the door six inches, and gives up.
-- The top section bends inward when the opener tries to lift.
-- Lift cables on both sides suddenly look loose or have jumped off their drums.
-- The door slams shut much faster than normal (if the break happened mid-travel).
+## 2. The Return Grilles Are Matted With Dust
 
-## Why Springs Break — Especially in Michigan Winters
+Walk to your big return grille (usually a large slatted panel in a hallway wall or floor) and look at it. A fuzzy gray mat woven across the slats means the return side — the half of the system that pulls air back to the furnace — is loaded. The return side is always dirtier than the supply side, because air enters it unfiltered. A quick wipe test: if the grille re-mats within a couple of weeks of cleaning it, the duct behind it is the source.
 
-Springs are the counterweight of the whole system: they store the energy needed to lift a 150–300 lb door so the opener only has to do a fraction of the work. Every open/close is one "cycle," and standard springs are rated for about 10,000 cycles — roughly 7–10 years of average use.
+## 3. Airflow Is Noticeably Uneven Room to Room
 
-Cold weather is the accelerant. Steel gets more brittle as temperatures drop, which is why our spring-replacement calls in Warren, Sterling Heights, and Livonia spike during the first hard freeze and every polar-vortex snap. If your door is 8+ years old and shrieking or straining on cold mornings, the spring is telling you something.
+One bedroom roasts while another barely gets a breeze? Sometimes that's duct design, closed dampers, or a crushed flex run — but heavy debris accumulation in branch ducts absolutely restricts airflow, and it tends to hit the longest runs (usually the upstairs bedrooms farthest from the furnace) first. A camera inspection sorts out which cause you have before anyone sells you anything.
 
-## What NOT To Do With a Broken Spring
+## 4. A Musty Smell When the Heat Kicks On
 
-- **Do not keep pressing the opener button.** The opener isn't designed to lift the door's full weight; you'll strip the gear or bend the top section, turning a spring job into a spring-plus-opener-plus-panel job.
-- **Do not pull the red release cord and lift the door by hand** unless it's a genuine emergency. Without the counterbalance the door is dead weight, and if it slips it will not stop until it hits the floor — or whatever is under it.
-- **Do not attempt a DIY replacement.** Torsion springs are wound under extreme tension with winding bars. A slipped bar delivers the force of a swung baseball bat. Every garage door pro has stories; the ERs in Metro Detroit see these injuries every year.
+That "old basement" odor that rides the first blast of warm air is a red flag worth taking seriously. Dust alone smells faintly stale; a genuinely musty or earthy smell suggests moisture has been in the ducts at some point — common in Metro Detroit homes with damp basements, where sweating ductwork and humid summer air meet settled dust. Persistent musty odor is one of the few signs the EPA itself lists as a legitimate reason to clean ducts.
 
-## One Spring Broke — Should You Replace Both?
+## 5. Allergy Symptoms That Flare Indoors
 
-On a two-spring door: yes, almost always. Both springs have identical mileage. When one lets go, the other is living on borrowed time — typically it fails within months, and you pay a second service call for the same job. Replacing the pair restores an even balance and costs far less than two separate visits. We discount the second spring on every double replacement.
+If your sneezing, congestion, or itchy eyes get worse at home — especially when the furnace is running — and better when you leave, your air handling system is a suspect. Ducts are one possible source among several (filters, humidity, and bedding matter too), so we won't tell you a cleaning is a guaranteed allergy cure. But when ducts are visibly loaded with dander and dust, removing that reservoir removes a constant re-supply of irritants.
 
-## What a Professional Replacement Involves
+## 6. You Dust the House and It's Back in Two Days
 
-A proper spring job is more than swapping the coil. When BH Garage Door Metro Detroit replaces springs, the tech will:
+Dust regenerating unnaturally fast is a circulation problem, not a housekeeping problem. If flat surfaces need dusting again within a day or two — and the dust seems concentrated near supply vents — the system is redistributing an internal reservoir faster than you can wipe it up.
 
-- Measure the old spring (wire size, diameter, length) and weigh the door to spec the correct replacement — not just "close enough."
-- Install galvanized, high-cycle springs matched to your door's exact weight.
-- Inspect and usually replace the center bearing, and check the end-bearing plates.
-- Check lift cables for fraying (they usually go next) and reset them on the drums.
-- Rebalance the door so it floats at mid-height, and recalibrate the opener's force settings.
+## 7. You Just Finished a Renovation
 
-Most jobs take 45–60 minutes. In Metro Detroit, expect $180–$280 for a single spring and $260–$400 for a pair, quoted flat-rate on the phone before we roll a truck.
+Drywall sanding, tile cutting, floor refinishing, demolition — construction dust is fine, abrasive, and abundant, and it goes straight into any duct that was open or any return that ran during the work. This one isn't really a "sign" so much as a certainty: if you renovated with the HVAC running, the ducts have construction dust in them. Post-construction cleaning is one of the most common jobs we run in newer Macomb County builds and remodeled Royal Oak bungalows alike.
 
-## Consider a High-Cycle Upgrade
+## 8. Evidence of Rodents or Insects
 
-If you use the garage as your front door (like most of Metro Detroit does), you're putting 6–10 cycles a day on your springs, which burns through a standard 10,000-cycle set in 3–4 years. High-cycle springs (25,000–50,000 cycles) cost $50–$90 more per spring and routinely last 15–20 years. Best money you can spend on a garage door.
+Scratching sounds in floor ducts, droppings near registers, or a pest-control visit that confirmed mice: ductwork is a highway for rodents, and everything they leave behind gets aerosolized when the blower runs. After any confirmed infestation, the ducts should be cleaned and sanitized — this is also one of the few cases where an EPA-registered antimicrobial treatment after source removal genuinely earns its keep.
 
-## Same-Day Spring Replacement Across Metro Detroit
+## 9. A Moldy Smell — or Visible Growth
 
-A broken spring effectively disables your garage — and if your car is inside, your morning. We stock the full range of residential spring sizes on every truck and replace springs same-day across Detroit, Dearborn, Troy, Royal Oak, Farmington Hills, Canton, and the rest of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [request a quote](/quote) and we'll give you a flat price before we dispatch.
+Distinct from generally musty: if you can see suspect growth on register faces, on the coil housing, or inside a duct you've peeked into with a flashlight, stop and get it inspected. Real microbial growth in ducts usually traces to a moisture source — a sweating AC coil, a humidifier gone wrong, a flooded basement — and cleaning without fixing the moisture just schedules a rerun. We inspect with a camera, address the source, then clean and sanitize.
+
+## 10. The House Is Older and the Ducts Have Never Been Cleaned
+
+No drama, just math. If you're in a 1950s Livonia ranch or a 1940s Dearborn colonial and nobody has ever cleaned the original ductwork, there are decades of settled debris in the trunk lines. First-time cleanings on older Wayne County homes are the most satisfying before-and-after photos we take.
+
+## Signs That DON'T Necessarily Mean Dirty Ducts
+
+Honesty corner: a few symptoms get blamed on ducts that usually aren't the ducts.
+
+- **High energy bills** point first to the furnace filter, the blower wheel, and the AC coil — not the duct walls. (See our coil cleaning guide.)
+- **Whistling or noisy vents** are usually undersized returns or closed dampers.
+- **A dusty smell for the first hour of the heating season** is often just dust burning off the heat exchanger — normal in October, not normal in January.
+
+## Get Eyes Inside Before You Spend Money
+
+Every sign above gets stronger or weaker the moment you actually look inside the ducts — which is why we run a camera inspection (about $99, credited toward a cleaning) instead of asking you to take our word for it. If two or three of these signs sound like your house, it's worth a look.
+
+BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Troy, Southfield, Westland, Novi, St. Clair Shores, and beyond. Call (313) 236-4558 or [request a free quote](/quote) and we'll tell you honestly whether your ducts need cleaning — including when the answer is no.
 `,
   },
 
   {
-    slug: "garage-door-opener-buying-guide",
-    title: "Garage Door Opener Buying Guide: Belt vs. Chain vs. Wall-Mount (2026)",
-    metaTitle: "Garage Door Opener Buying Guide 2026: Belt vs Chain vs Jackshaft",
+    slug: "air-duct-cleaning-cost-metro-detroit",
+    title: "What Does Air Duct Cleaning Cost in Metro Detroit? (Real Numbers, No Bait)",
+    metaTitle: "Air Duct Cleaning Cost in Metro Detroit 2026 — Honest Price Guide",
     excerpt:
-      "Replacing your opener? Here's the honest breakdown of belt drives, chain drives, and wall-mount jackshaft units — plus horsepower, Wi-Fi, and battery backup — from techs who install them every day in Metro Detroit.",
-    category: "Buying Guides",
+      "Real prices for whole-home duct cleaning in Metro Detroit, what actually drives the number up or down, and a full anatomy of the $99 'whole house special' scam that both NADCA and the FTC warn about.",
+    category: "Cost Guides",
     readMinutes: 10,
     date: "2026-03-18",
-    heroImage: "/blog/garage-door-opener-buying-guide-hero.png",
-    heroAlt: "New belt-drive garage door opener mounted on the ceiling of a modern two-car garage.",
-    secondaryImage: "/blog/garage-door-opener-buying-guide-secondary.png",
-    secondaryAlt: "Garage door opener wall console and wireless keypad beside an interior door.",
+    heroImage: "/blog/air-duct-cleaning-cost-metro-detroit-hero.png",
+    heroAlt: "Air duct cleaning technician reviewing a written itemized estimate with a homeowner at their kitchen table.",
+    secondaryImage: "/blog/air-duct-cleaning-cost-metro-detroit-secondary.png",
+    secondaryAlt: "Negative-pressure duct cleaning vacuum unit connected to a furnace trunk line in a Michigan basement.",
     body: `
-Openers used to be a commodity: a motor, a chain, a lightbulb. Today the differences between a $220 big-box unit and a properly specced installation are real — noise, lifespan, security, and whether your door still opens when a storm knocks the power out in Macomb County. Here's the guide we wish every customer read before buying.
+Air duct cleaning has a pricing problem, and it's not that prices are high — it's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see $79 and $99 "whole house specials" stacked on top of each other, while legitimate companies quote three to six times that. The gap isn't greed. It's the difference between a real service and a bait ad. Here are the actual numbers, what drives them, and how the scam works so you can see it coming.
 
-## The Three Drive Types, Honestly Compared
+## What Legitimate Duct Cleaning Costs in Metro Detroit
 
-### Chain Drive — The Workhorse
+For a proper source-removal cleaning — negative-pressure truck or portable HEPA unit connected to the trunk line, every register agitated and cleaned, both supply and return sides, blower compartment included — expect:
 
-A metal chain drives the trolley. It's the cheapest, most tolerant of heavy doors, and lasts forever with occasional lubrication. The tradeoff is noise — a metallic rattle you'll hear through the floor. Right choice for: detached garages, rental properties, budget replacements. Installed cost in Metro Detroit: roughly $350–$500.
+- **Single-furnace home, average size (up to roughly 2,000 sq ft):** $350–$600. This covers most ranches and colonials in Livonia, Warren, Redford, and St. Clair Shores.
+- **Larger homes (2,500–4,000+ sq ft):** $550–$900, driven mostly by register count and duct footage. Common in Novi, Rochester Hills, and Washington Township.
+- **Second furnace/system:** typically adds $200–$400, since it's effectively a second setup and a second set of trunk connections. Many larger Oakland County homes run two systems.
+- **Add-ons:** dryer vent cleaning is $120–$200 standalone but usually discounted when bundled; sanitizing with an EPA-registered antimicrobial (only appropriate after source removal, and only when there's a reason) adds a modest line item; heavy contamination like post-flood or rodent cleanup is quoted after inspection.
+- **Camera inspection alone:** about $99, credited toward a cleaning if you book one.
 
-### Belt Drive — The Right Answer for Most Homes
-
-A steel-reinforced rubber belt replaces the chain. It's dramatically quieter — the loudest thing becomes the door itself — and modern belts carry lifetime warranties from LiftMaster. If your garage is attached, or there's a bedroom above it, this is what we recommend, full stop. Installed: roughly $450–$650.
-
-### Wall-Mount (Jackshaft) — The Premium Pick
-
-Instead of a ceiling rail, the unit mounts on the wall beside the door and turns the torsion shaft directly. Zero ceiling vibration, frees the ceiling for storage racks, and most models bundle battery backup and a deadbolt-style automatic lock. It needs a torsion-spring door with usable side clearance. Installed: roughly $750–$1,000.
-
-## Horsepower: Don't Overthink It
-
-- **1/2 HP** — fine for a single steel door.
-- **3/4 HP (or DC equivalent)** — the sweet spot for insulated two-car doors, which is most of Metro Detroit.
-- **1+ HP** — oversized wood doors and full-view glass doors.
-
-A note from the field: an opener straining isn't usually a horsepower problem — it's a door balance problem. If your door is heavy because a spring is fatigued, a bigger motor just masks it until something breaks. We always balance-test the door before an opener install.
-
-## Wi-Fi Is No Longer Optional
-
-Every opener we install includes smartphone control (myQ on LiftMaster/Chamberlain, Aladdin Connect on Genie). This isn't a gimmick:
-
-- Get an alert if the door is open after 10 PM.
-- Close it from your desk in downtown Detroit when you can't remember.
-- Grant one-time access for a delivery or a contractor.
-- Check the door's history — every open and close, timestamped.
-
-If your existing opener works fine, a retrofit hub adds all of this for a fraction of the cost of replacement. We install those too.
-
-## Battery Backup: Worth It in Michigan
-
-Southeast Michigan's storm outages are legendary — and an outage is exactly when you need the car. Battery-backup models give you 20+ cycles during an outage and are standard on the wall-mount units we install. If anyone in the house can't lift a door manually, treat backup power as essential, not optional.
-
-## Security Features Worth Having
-
-- **Rolling-code remotes** are standard on everything modern — the code changes with every press, so code-grabbing is a non-issue.
-- **Automatic locks** (on wall-mount models) throw a physical bolt into the track every time the door closes. Fishing attacks and forced lifts simply don't work.
-- **Motion-activated lighting** and integrated LED rings have effectively replaced the burned-out opener bulb problem.
-
-## What a Professional Install Includes (Ours, Anyway)
-
-- Removal and disposal of the old unit.
-- New rail, properly reinforced header bracket, and a balance check of the door itself.
-- Safety sensor installation at the correct height, with tested auto-reverse.
-- Force and travel-limit calibration.
-- Two remotes, one wireless keypad, HomeLink pairing in your cars, and app setup on your phones.
-
-## The Bottom Line
-
-For most Metro Detroit homes: a 3/4 HP-class belt drive with Wi-Fi and battery backup is the right buy. Detached garage on a budget: chain drive, no shame in it. Premium build or ceiling storage plans: wall-mount jackshaft.
-
-Want a flat-rate installed price? Call BH Garage Door Metro Detroit at (313) 236-4558 or [request a quote](/quote) — we'll quote LiftMaster, Chamberlain, and Genie options side by side.
-`,
-  },
-
-  {
-    slug: "new-garage-door-cost-michigan",
-    title: "What Does a New Garage Door Cost in Michigan? (Real 2026 Numbers)",
-    metaTitle: "New Garage Door Cost in Michigan 2026 — Real Installed Prices",
-    excerpt:
-      "From builder-grade steel to full-view glass: real installed prices for new garage doors in Metro Detroit, what drives the cost up or down, and why it's the best-ROI exterior project you can do.",
-    category: "Installation",
-    readMinutes: 9,
-    date: "2026-03-25",
-    heroImage: "/blog/new-garage-door-cost-michigan-hero.png",
-    heroAlt: "New carriage-style insulated garage doors on a brick Michigan colonial home.",
-    secondaryImage: "/blog/new-garage-door-cost-michigan-secondary.png",
-    secondaryAlt: "Installer leveling a new insulated garage door section on the tracks.",
-    body: `
-"What's a new garage door cost?" is the question we answer most at BH Garage Door Metro Detroit — and the internet's answers are usually national averages that don't survive contact with a Michigan winter or a Metro Detroit quote sheet. Here are the real numbers we install at, and what actually moves them.
-
-## Installed Prices in Metro Detroit (2026)
-
-- **Non-insulated steel, single-layer** — $850–$1,300 installed (two-car). Fine for detached garages; we rarely recommend it for attached ones.
-- **Insulated steel sandwich, R-9 to R-13** — $1,400–$2,200 installed. The Metro Detroit workhorse. Quieter, stiffer, warmer, more dent-resistant.
-- **Premium insulated, R-16 to R-18** — $2,000–$2,800 installed. For heated garages, workshops, and bedrooms-over-garage floor plans.
-- **Carriage-house / wood-look steel** — $2,500–$5,000 installed. The curb-appeal category: embossed wood grain, decorative hardware, window options.
-- **Full-view aluminum & glass** — $4,500–$8,000+ installed. The modern statement door. Frosted, clear, or tinted panels in anodized frames.
-
-Single-car doors run roughly 60–70% of the two-car price. All our installation quotes include haul-away of the old door, new track and springs, and reconnecting/calibrating your opener.
+A realistic whole-job range for most Metro Detroit households lands between $400 and $700. If your quote is dramatically below that, keep reading.
 
 ## What Actually Drives the Price
 
-### Insulation (and Why It Matters Here)
+Duct cleaning isn't priced by square footage alone. When we quote a job in Canton or Troy, we're pricing:
 
-Michigan is a two-layer-minimum state, in our opinion. An insulated door keeps an attached garage 10–20°F warmer in January, which your water heater, your car battery, and the room above the garage all notice. Insulated doors are also structurally stiffer — they dent less and stay quieter over their life.
+- **Number of systems.** Each furnace means a separate negative-pressure setup, separate trunk connections, and a separate blower compartment. This is the single biggest price variable.
+- **Number of vents and returns.** Every supply register and return grille gets opened, agitated, and cleaned individually. A 12-vent ranch and a 28-vent colonial are very different afternoons.
+- **Square footage and duct layout.** More footage means longer trunk lines and more branch runs. Finished basements with buried ductwork take longer than open-joist basements.
+- **Contamination level.** Routine dust is routine. Post-renovation drywall dust, rodent contamination, or water-damage cleanup involves more agitation passes, containment, and sometimes sanitizing — legitimately more work, legitimately more money.
+- **Access.** Older Detroit and Dearborn homes sometimes have trunk lines wrapped in finished ceilings, or original floor ducts with odd register sizes. Access difficulty adds time.
 
-### Springs: Cycle Rating
+## Anatomy of the $99 Scam
 
-Every new door includes new springs. Standard 10,000-cycle springs are included in the prices above; upgrading to 25,000-cycle springs adds $100–$180 and is the single best line-item upgrade on the sheet if you cycle the door daily.
+Both NADCA and the FTC have published warnings about the "whole house special," because the playbook is remarkably consistent nationwide, and Metro Detroit gets more than its share via door hangers, coupon mailers, and social media ads. Here's how it runs:
 
-### Windows
+- **The hook:** $79–$129 for a "whole house" cleaning. At that price, the visit cannot cover a trained tech, real equipment, and insurance — and it isn't meant to. The company's actual product is the upsell.
+- **The visit:** a crew arrives with a shop-vac or a small portable unit, vacuums a few inches into each register, and then discovers a crisis. Mold (diagnosed by eyeball in thirty seconds), "dangerous levels" of debris, or a system "so bad the special doesn't cover it."
+- **The squeeze:** the $99 becomes $600–$1,500 on the spot, often with scary language and same-day pressure. Homeowners who decline get a fifteen-minute fake cleaning that removes almost nothing — the industry calls these "blow-and-go" jobs.
+- **The tell:** no negative-pressure equipment, no camera footage, no itemized written scope, prices that change verbally in your hallway, and a company name you can't find two years of reviews for.
 
-A row of top-section windows adds $200–$600 depending on glass and grille style. Worth it for natural light; choose frosted or high placement if the garage stores anything valuable.
+The cruel part is that the scam poisons the well for the honest version of the service. Plenty of Metro Detroit homeowners have paid for a "duct cleaning" that did nothing, concluded the whole industry is fake, and never got the real thing.
 
-### Sizing and Framing
+## Questions to Ask Before You Book
 
-Standard sizes (8x7, 9x7, 16x7) install fastest. Odd-size openings in older Detroit, Ferndale, and Grosse Pointe garages may need custom ordering or light framing work — usually $150–$400 extra, quoted upfront after we measure.
+- Will you connect a negative-pressure vacuum to the trunk line, or just vacuum at each register?
+- Is the price in writing, and does it cover ALL supply vents, ALL returns, and the blower compartment — or is each of those an add-on?
+- Are you NADCA members, and do you follow the ACR standard?
+- Can I see before-and-after photos or camera footage of MY ducts?
+- Are you insured, and can you send a certificate?
 
-## The ROI Case (It's Not Even Close)
+Any legitimate company answers those five without flinching. We volunteer most of them before you ask.
 
-Cost-versus-value studies have ranked garage door replacement the **#1 ROI exterior remodeling project in America** for years running — typically recouping 100%+ of its cost at resale. No kitchen, bath, or deck project comes close. A dated, dented door drags an entire facade; a new one modernizes the whole front of the house for a four-figure spend.
+## What a Legit Quote Includes
 
-## Repair or Replace? Our Honest Rule of Thumb
+When BH Air Duct Cleaning Metro Detroit quotes a job, the written number includes: full source-removal cleaning of every supply and return run, trunk lines cleaned under negative pressure, register and grille cleaning, blower compartment cleaning, before-and-after photos, and a walkthrough at the end. No "per vent" surprise math, no hallway renegotiation.
 
-- **Repair** if the door is under ~12 years old with one problem: a broken spring, a dented panel, worn rollers. Panel replacement in particular can save a door that's cosmetically wounded but structurally fine.
-- **Replace** if the door is 15+ years old and showing multiple issues, is a non-insulated door on an attached garage, has rusting sections or delaminating skins, or predates modern safety standards. Pouring repair money into a door from the '90s rarely pencils out.
-
-We'll tell you which side of the line you're on — even when the answer is the cheaper one. It's why our reviews look the way they do.
-
-## How the Process Works With Us
-
-- **Free on-site measure and written quote** — we measure the opening, headroom, and side clearance, and check your opener's compatibility.
-- **Side-by-side options** — like-for-like quotes across at least two brands (we install Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor).
-- **Install day** — typically 3–5 hours: old door and track out, new door, track, and springs in, opener reconnected and calibrated, jobsite broom-clean.
-
-Ready for real numbers on your house? Call (313) 236-4558 or [request your free quote](/quote) — we serve every city in Wayne, Oakland, and Macomb counties.
+If you want a real number for your house, call (313) 236-4558 or [request a free quote](/quote). We quote flat and honest for every city in Wayne, Oakland, and Macomb counties — and if someone else's quote looks too good to be true, we're happy to tell you over the phone whether it is.
 `,
   },
 
   {
-    slug: "winter-garage-door-maintenance-michigan",
-    title: "The Michigan Winter Garage Door Survival Guide: 10-Point Maintenance Checklist",
-    metaTitle: "Winter Garage Door Maintenance Checklist for Michigan Homes",
+    slug: "dryer-vent-cleaning-fire-safety",
+    title: "Dryer Vent Cleaning: The Fire-Safety Chore Michigan Homeowners Skip",
+    metaTitle: "Dryer Vent Cleaning & Fire Safety in Michigan | Warning Signs",
     excerpt:
-      "Cold snaps break more springs, freeze more seals, and kill more openers than anything else we see. This 10-point checklist gets your door through a Metro Detroit winter without a 6 AM emergency call.",
-    category: "Maintenance",
-    readMinutes: 8,
-    date: "2026-04-01",
-    heroImage: "/blog/winter-garage-door-maintenance-michigan-hero.png",
-    heroAlt: "Snow-covered Michigan driveway leading to a frost-dusted garage door on a winter morning.",
-    secondaryImage: "/blog/winter-garage-door-maintenance-michigan-secondary.png",
-    secondaryAlt: "Technician lubricating garage door rollers and hinges on a sectional door track.",
-    body: `
-Every January, the first polar-vortex morning fills our dispatch board before sunrise: snapped springs in Sterling Heights, doors frozen to slabs in Livonia, openers straining in Troy. Cold is the single hardest thing on a garage door — steel gets brittle, grease thickens, rubber stiffens. The good news: an hour of fall maintenance prevents almost all of it. Here's the checklist our techs use.
-
-## 1. Lubricate Everything That Moves (With the Right Stuff)
-
-Use a lithium- or silicone-based garage door lubricant — never WD-40, which is a solvent that strips what little grease is left. Hit the spring coils (a light coat dampens corrosion and quiets winding noise), every hinge pivot, the roller bearings, and the opener's chain or screw per its manual. Wipe the excess. Twice a year: fall and spring.
-
-## 2. Test the Door's Balance
-
-Pull the red release cord with the door closed, then lift the door halfway by hand and let go. A balanced door floats in place. If it slams down or shoots up, spring tension is off — and an unbalanced door forces the opener to do work it wasn't built for all winter. Spring adjustment is a technician job (see our [spring guide](/blog/broken-garage-door-spring-what-to-do)).
-
-## 3. Inspect Springs for Rust and Gaps
-
-Rust pits create the stress points where cold snaps finish the job. Look for orange bloom, stretched or uneven coils, and of course any gap. If your springs are 7+ years old, budget for replacement on your terms — a scheduled morning appointment beats a 6 AM emergency with the car trapped inside.
-
-## 4. Check the Cables (Look, Don't Touch)
-
-Frayed strands at the bottom brackets mean the cable is dying. Cables are under the same tension as the springs, so never adjust them yourself — but a 10-second visual check twice a year catches nearly every failure before it happens.
-
-## 5. Replace the Bottom Seal Before It Freezes to the Floor
-
-A cracked, stiff bottom seal does two bad things in winter: it lets in snow, salt, and rodents, and it freezes to the slab overnight. If yours is stiff or visibly gapped, replace it in the fall ($80–$150 installed, including the retainer if needed). Pro tip for icy mornings: a strip of silicone spray along the rubber keeps it from bonding to the concrete.
-
-## 6. Seal the Perimeter
-
-Check the vinyl weatherstop along the sides and top of the door. Gaps here are why your garage has snowdrifts inside the door on a windy day, and they matter double if the garage is heated or has living space above.
-
-## 7. Test the Photo-Eye Sensors
-
-Wipe both lenses (salt film is a repeat offender here), confirm both LEDs are solid, and test: start the door closing and wave a broom through the beam. The door must reverse instantly. This is the system that protects kids, pets, and bumpers — don't skip it.
-
-## 8. Test the Auto-Reverse Force Setting
-
-Lay a 2x4 flat on the floor under the door and close it. The door must reverse when it touches the board. Cold thickens the opener's grease and stiffens the door, so a force setting that was fine in September can be dangerous — or cause phantom reversals — in January.
-
-## 9. Tighten the Hardware
-
-A door cycles 1,000+ times a year and vibration loosens everything. Snug (don't gorilla) the hinge screws, track brackets, and the opener's header and ceiling bracket bolts with a socket wrench.
-
-## 10. Listen to Your Door for 30 Seconds
-
-Run a full open/close and just listen. Grinding = dry or worn rollers. Popping = loose hinges or sections binding. Squealing = the springs want lubricant. Rattling = loose hardware or a stretched chain. Every winter failure we see announced itself weeks earlier in sound.
-
-## Or Let Us Do All Ten
-
-Our 25-point tune-up covers everything above plus spring balance adjustment, opener force calibration, roller inspection, and a written condition report — typically 45 minutes, and cheap insurance against a February emergency. It's the same inspection we run on commercial maintenance contracts, applied to your house.
-
-Book a fall tune-up anywhere in Metro Detroit: (313) 236-4558, or [request it online](/quote). Sun–Thu 24 hours, Friday until 6 PM.
-`,
-  },
-
-  {
-    slug: "insulated-vs-non-insulated-garage-doors",
-    title: "Insulated vs. Non-Insulated Garage Doors: What Michigan Homeowners Should Know",
-    metaTitle: "Insulated vs Non-Insulated Garage Doors in Michigan — Full Comparison",
-    excerpt:
-      "R-values, single vs. triple-layer construction, and real Michigan math: when an insulated garage door pays for itself and when you can honestly skip it.",
-    category: "Buying Guides",
-    readMinutes: 8,
-    date: "2026-04-08",
-    heroImage: "/blog/insulated-vs-non-insulated-garage-doors-hero.png",
-    heroAlt: "Cutaway of an insulated steel garage door panel showing the foam core between steel skins.",
-    secondaryImage: "/blog/insulated-vs-non-insulated-garage-doors-secondary.png",
-    secondaryAlt: "Warm heated garage workshop with an insulated garage door closed against winter.",
-    body: `
-If you're pricing a new garage door in Metro Detroit, the first fork in the road is insulation. The price gap between a bare steel door and a well-insulated one is real — so is the difference in how your garage (and the rooms around it) feel in February. Here's the honest breakdown.
-
-## The Three Types of Door Construction
-
-### Single-Layer (Non-Insulated)
-
-One skin of steel. Light, cheap, and every sound and temperature swing passes straight through. In winter the inside face of the door will be nearly the same temperature as the outside air.
-
-### Double-Layer (Vinyl-Backed Polystyrene)
-
-A steel skin plus a rigid foam board with a vinyl backer. R-values around 6–9. A meaningful step up in stiffness and quiet for a modest price bump.
-
-### Triple-Layer / Sandwich (Polystyrene or Polyurethane Core)
-
-Steel–foam–steel construction. Injected polyurethane doors reach R-13 to R-18 and are dramatically stiffer, quieter, and more dent-resistant. This is what we install most in Metro Detroit, and what we put on our own houses.
-
-## What R-Value Actually Buys You in Michigan
-
-An insulated door typically keeps an unheated attached garage **10–20°F warmer than outside** in winter. That gap is the difference between a garage that hovers near freezing and one that sits at 20°F when it's zero outside. Practical consequences:
-
-- **Cars start easier and batteries last longer.** Cold cranking at 0°F vs 25°F is a real difference.
-- **The rooms over and beside the garage stay warmer.** If you have a bonus room above the garage, the door is part of that room's thermal envelope whether you like it or not.
-- **Pipes and stored items are protected.** Paint, power tools with batteries, water softener salt, the fridge in the garage — all happier above freezing.
-- **Your furnace works less.** The garage acts as a thermal buffer against the house wall it shares.
-
-## The Noise Nobody Mentions
-
-Insulated doors are quieter twice over: the foam deadens road and neighborhood noise coming through the door, and the stiffer sandwich construction doesn't rattle and boom in the track the way single-skin doors do. On a busy street in Royal Oak or Dearborn, this alone sells the upgrade.
-
-## Durability: The Shopping-Cart Test
-
-A single-layer door skin is basically a drum head — it dents if you look at it wrong, and dents in a bare skin are forever. Sandwich doors resist dents dramatically better because the skin is bonded to a solid core. Given that panel damage is one of our most common repair calls, stiffness is a maintenance argument, not just a comfort one.
-
-## When You Can Honestly Skip Insulation
-
-We're not here to upsell foam you don't need:
-
-- **Detached, unheated garage used purely for parking** — a single or double-layer door is a rational choice. Take the savings.
-- **Planning to sell within a year or two** — a clean new non-insulated door still delivers the curb-appeal ROI.
-
-But if the garage is attached, heated, houses a workshop, or has living space above it — in this climate, insulated is the answer, and polyurethane sandwich construction is worth the stretch.
-
-## The Michigan Math
-
-Typical Metro Detroit price gap between builder-grade non-insulated and a quality R-13 sandwich door: **$500–$900 installed**. Between easier winters on your furnace, the car battery you don't replace, the dents you don't collect, and the resale bump of a premium door, the gap closes quietly over a handful of Michigan winters — and the comfort difference starts on day one.
-
-## See and Feel the Difference
-
-Spec sheets don't convey the thunk of a solid sandwich door closing versus the clatter of a single skin. We bring section samples to every [free installation quote](/quote) so you can feel it. Call BH Garage Door Metro Detroit at (313) 236-4558 — we install Clopay, Amarr, C.H.I., Wayne Dalton, and Raynor across all of Wayne, Oakland, and Macomb counties.
-`,
-  },
-
-  {
-    slug: "garage-door-safety-sensor-fix",
-    title: "Garage Door Won't Close? How to Fix Safety Sensor Problems in 10 Minutes",
-    metaTitle: "Garage Door Safety Sensor Fix: Door Won't Close Troubleshooting",
-    excerpt:
-      "If your door opens fine but refuses to close — or reverses and blinks its lights at you — the photo-eye sensors are the prime suspect. Here's the 10-minute fix, Michigan edition.",
-    category: "Safety",
-    readMinutes: 7,
-    date: "2026-04-15",
-    heroImage: "/blog/garage-door-safety-sensor-fix-hero.png",
-    heroAlt: "Close-up of a garage door photo-eye safety sensor with its indicator light glowing.",
-    secondaryImage: "/blog/garage-door-safety-sensor-fix-secondary.png",
-    secondaryAlt: "Technician aligning a pair of garage door safety sensors at the base of the tracks.",
-    body: `
-It's the most common "repair" call in the garage door business, and half the time the customer fixes it on the phone with our dispatcher: the door opens normally, but when you try to close it, it either refuses entirely or drops a foot and reverses while the opener light flashes. That flash is the opener telling you exactly what's wrong — the safety sensors.
-
-## What the Sensors Do (And Why You Can't Bypass Them)
-
-Since 1993, every opener sold in the US has photo-eye sensors: two small units mounted about six inches off the floor on either side of the door, shooting an invisible infrared beam across the opening. Anything breaking the beam — a kid, a dog, a bumper — makes a closing door reverse instantly.
-
-When the beam is interrupted or the sensors can't see each other, the opener refuses to power-close as a fail-safe. That's the behavior you're seeing. And no, they shouldn't be bypassed or unplugged — beyond the obvious safety issue, a door that closes blind will eventually meet a bumper or worse.
-
-## The 10-Minute Fix, In Order
-
-### 1. Read the LEDs
-
-Each sensor has an indicator light. Typically one is the sending unit (amber) and one is the receiving unit (green). **Solid lights on both = aligned and happy. A blinking or dark receiver = blocked, misaligned, or unpowered.** This tells you which end to work on.
-
-### 2. Clear the Beam Path
-
-Obvious, but it solves a third of these calls: the snow shovel, recycling bin, shop-vac hose, or drift of leaves sitting in the beam. In Michigan, snowbanks that creep into the door opening are a classic January culprit.
-
-### 3. Clean the Lenses
-
-Wipe both lenses with a soft dry cloth. Road-salt film, cobwebs, and grime scatter the beam — a Metro Detroit winter coats these lenses the same way it coats your windshield. Spiders love the warm LEDs, so clear webs behind the brackets too.
-
-### 4. Check Alignment
-
-Sensors get kicked, bumped by bikes, and knocked by trash cans. Loosen the wing nut, sight the two sensors at each other so both face squarely across the opening at the same height, and adjust gently until the receiving LED goes from blinking to **solid**. Retighten while watching the light stay steady.
-
-### 5. Check the Wires
-
-Follow the thin bell wire from each sensor up to the opener. Staples pop, wires get pinched by ladders, and rodents — a real thing in Michigan garages — chew insulation. A cut or short here shows the same symptoms as misalignment. Twist-repair a clean break temporarily; we'll rewire it properly on a service visit.
-
-### 6. Check for Sun Blindness
-
-A genuinely underrated cause: low winter sun shining directly into the receiving sensor around sunrise/sunset can wash out the beam. If your door only misbehaves at certain times of day and the door faces the sun, that's your clue. Sun shields (or swapping the send/receive sides) solves it.
-
-## Still Blinking? Here's What It Means
-
-If the lenses are clean, the path is clear, alignment is true, and the wiring is intact but the sensors still won't go solid, the sensor itself or the opener's logic board has failed. Sensors are inexpensive and we carry universal-compatible and OEM sets on every truck — it's a quick swap with a proper wire re-run, usually bundled with a full safety test.
-
-## The Test Every Garage Should Pass
-
-Once the door closes normally again, take 30 seconds to verify both safety systems:
-
-- **Beam test:** start the door closing and wave a broom handle through the beam — it must reverse instantly.
-- **Contact test:** lay a 2x4 flat under the door — the door must reverse when it touches.
-
-If either test fails, stop using the opener and call us at (313) 236-4558. BH Garage Door Metro Detroit runs same-day sensor and opener service across all of Metro Detroit — and every repair we do ends with both safety tests, every time.
-`,
-  },
-
-  {
-    slug: "hire-garage-door-company-michigan-checklist",
-    title: "How to Hire a Garage Door Company in Michigan Without Getting Scammed",
-    metaTitle: "Hiring a Garage Door Company in Michigan: Scam-Proof Checklist",
-    excerpt:
-      "The garage door industry has a scam problem — bait pricing, phantom 'lifetime' parts, and $900 spring jobs. Here's the checklist that protects Metro Detroit homeowners, from people inside the industry.",
+      "Clogged dryer vents cause roughly 2,900 house fires a year in the US. Here are the warning signs, the Michigan-specific problems (frozen vents, bird nests, long condo runs), and what professional cleaning involves.",
     category: "Safety",
     readMinutes: 9,
-    date: "2026-04-22",
-    heroImage: "/blog/hire-garage-door-company-michigan-checklist-hero.png",
-    heroAlt: "Garage door technician reviewing a written estimate with a homeowner in a Michigan driveway.",
-    secondaryImage: "/blog/hire-garage-door-company-michigan-checklist-secondary.png",
-    secondaryAlt: "Uniformed technician servicing a garage door torsion assembly from a ladder.",
+    date: "2026-03-25",
+    heroImage: "/blog/dryer-vent-cleaning-fire-safety-hero.png",
+    heroAlt: "Exterior dryer vent hood on a brick Michigan home with lint visibly built up around the flap.",
+    secondaryImage: "/blog/dryer-vent-cleaning-fire-safety-secondary.png",
+    secondaryAlt: "Technician holding a rotary brush and a pile of removed lint next to a disconnected dryer duct.",
     body: `
-We'll say the quiet part out loud: the garage door industry has a well-earned scam problem. Search "garage door repair near me" anywhere in Metro Detroit and the results mix honest local companies with lead-reselling websites and bait-price operators. The playbook is always the same — a $39 special gets a salesman (not a tech) into your garage, and the "diagnosis" is an $800–$1,500 rebuild of parts that were fine. Here's how to not be that story.
+Of everything we clean, dryer vents are the one with a genuine fire statistic attached. FEMA and the U.S. Fire Administration estimate around 2,900 dryer fires in American homes every year, causing deaths, injuries, and tens of millions in property damage — and the leading cause, by a wide margin, is failure to clean. Not faulty machines. Not bad wiring. Lint that was allowed to accumulate until the airflow died and the heat had nowhere to go.
+
+The lint screen in your dryer door catches maybe 60–75% of the lint a load produces. The rest rides the exhaust air into the vent duct, where it snags on joints, screws, ridges in flex duct, and the exterior hood flap. Every load adds a layer. Airflow drops, drying times stretch, the duct gets hotter, and the lint packed inside it is one of the most flammable materials in your house — it's literally what survivalists use as fire starter.
+
+## The Warning Signs, In Order
+
+- **Clothes take longer than one cycle to dry.** This is the number one sign and the one everyone rationalizes away ("the dryer's just getting old"). A healthy dryer dries a normal load in one cycle. Two cycles means the moist air isn't leaving.
+- **The top of the dryer is hot to the touch** and the laundry room feels humid or smells like exhaust while it runs. Heat and moisture that should be outside are backing up.
+- **A burning smell during a cycle.** Stop the dryer. That can be lint contacting the heating element. Don't run it again until the vent has been checked.
+- **The exterior flap barely moves.** Go outside while the dryer runs. The vent hood flap should be blown fully open with a strong, warm airflow. A weak dribble of air — or a flap crusted shut with lint — is a clogged run.
+- **The dryer shuts off mid-cycle or the thermal fuse keeps tripping.** Modern dryers kill power when they overheat. A tripped thermal fuse is the machine saving itself from a blocked vent; replacing the fuse without cleaning the vent just resets the countdown.
+- **Visible lint** around the exterior hood, behind the dryer, or at duct joints.
+
+## Why Michigan Makes This Worse
+
+A few local realities push Metro Detroit homes toward the risky end of the national statistics:
+
+- **Long vent runs in condos and townhouses.** Newer condo developments across Macomb and Oakland counties often put the laundry in the middle of the unit, with vent runs of 25–40 feet snaking through ceilings to reach an outside wall. Every foot and every elbow collects more lint, and these runs are impossible to clean with a leaf blower and hope.
+- **Winter condensation and freezing.** In January, hot moist dryer exhaust hits subzero duct sections in attics, crawlspaces, and exterior walls. Moisture condenses, soaks the lint, and can literally freeze — we've cleared vents in Sterling Heights and Troy that were blocked with frozen lint slush. Wet lint also mats into a much denser clog than dry lint.
+- **Bird nests in spring.** Uncapped or broken vent hoods are prime real estate for starlings and sparrows, who consider a warm, sheltered 4-inch tube an ideal nursery. Every spring we pull nests out of dryer vents from Dearborn to St. Clair Shores. A proper pest-resistant hood cover ends the cycle.
+- **Older homes with improvised venting.** Pre-code installations in older Detroit and Wayne County housing sometimes vent into crawlspaces, garages, or attics, or use vinyl flex duct that sags and traps lint. These setups need correcting, not just cleaning.
+
+## What Professional Cleaning Involves
+
+A real dryer vent cleaning is more than sticking a brush in the hole:
+
+- We disconnect the dryer and clean the transition duct behind it — the crushed, lint-packed flex section behind the machine is a clog hotspot everyone forgets.
+- A rotary brush sized to your duct runs the entire length of the vent, spinning against the walls while a vacuum captures what it dislodges — from the machine to the exterior hood, including every elbow.
+- We clean the exterior hood and flap, verify the flap swings freely, and recommend a guard if birds or rodents have been an issue.
+- We measure airflow before and after, so you can see the difference in numbers, not vibes.
+- We check the duct material and routing while we're in there. Vinyl flex duct, excessive length, or venting into an attic gets flagged with a photo — those are fire-code issues worth fixing.
+
+The whole visit typically takes under an hour. Standalone, dryer vent cleaning runs $120–$200 in Metro Detroit depending on run length and access; we discount it meaningfully as an add-on to an air duct cleaning, since the truck's already in your driveway.
+
+## How Often?
+
+Once a year for most households. Every six months if you have a big family doing daily loads, pets whose hair rides the laundry, or one of those long condo runs. And immediately if you're seeing any warning sign above — this is genuinely not a "get to it eventually" item, because the failure mode isn't inconvenience, it's fire.
+
+One free habit while you wait: clean the lint screen every single load, and once a month wash it with soap and water to strip the invisible film that fabric softener leaves (if water pools on the screen instead of draining through, it's coated).
+
+BH Air Duct Cleaning Metro Detroit cleans dryer vents across all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Livonia, Farmington Hills, Canton, Royal Oak, and everywhere between, with same-day appointments available most of the week. Call (313) 236-4558 or [request a free quote](/quote), and get this one off the list before the heating season stacks another year of lint on top.
+`,
+  },
+
+  {
+    slug: "air-duct-cleaning-process-what-to-expect",
+    title: "What to Expect During a Professional Air Duct Cleaning (Step by Step)",
+    metaTitle: "Air Duct Cleaning Process: What to Expect Step by Step | NADCA Method",
+    excerpt:
+      "A proper source-removal duct cleaning takes 2–4 hours and follows a specific sequence — negative pressure, register-by-register agitation, the return side, the blower. Here's the full walkthrough, plus the red flags of a blow-and-go job.",
+    category: "Air Ducts",
+    readMinutes: 10,
+    date: "2026-04-01",
+    heroImage: "/blog/air-duct-cleaning-process-what-to-expect-hero.png",
+    heroAlt: "Technician feeding a rotary brush line into an open supply register while a negative-pressure hose runs to the basement.",
+    secondaryImage: "/blog/air-duct-cleaning-process-what-to-expect-secondary.png",
+    secondaryAlt: "Before-and-after comparison photos of the inside of a residential air duct on a technician's tablet.",
+    body: `
+Most homeowners have never watched a duct cleaning happen, which is exactly why bad operators get away with fifteen-minute fake ones. The difference between a real source-removal cleaning and a "blow-and-go" isn't subtle once you know what to look for — it's the difference between a system-wide process under negative pressure and a guy waving a shop-vac at your registers. Here's the step-by-step of a proper job, the way NADCA's ACR standard lays it out and the way we run it in homes from Detroit to Novi.
+
+## Step 1: Walkthrough and Register Count
+
+Before any equipment comes off the truck, the tech walks the house with you. We count every supply register and return grille (this confirms the quote — no hallway renegotiation), locate the furnace and the trunk lines, and look at access. In a typical Livonia ranch that's an open basement ceiling; in a finished Rochester Hills colonial it might mean planning around drywalled soffits. We also ask about problem areas — the bedroom that's always dusty, the register that smells musty — so we can photograph those runs specifically.
+
+## Step 2: Protect the House
+
+Floor runners along the equipment path, corner guards where hoses turn, drop cloths under work areas. Duct cleaning done right is not a messy service — everything removed from the ducts leaves through a sealed hose into a contained collection system, not into your living room air.
+
+## Step 3: Connect Negative Pressure to the Trunk
+
+This is the heart of the method and the single clearest dividing line between real cleaning and fake. We cut a standard access opening into the main supply trunk near the furnace and connect a high-volume vacuum — a truck-mounted unit or a HEPA-filtered portable — that puts the entire duct system under **negative pressure**. From this point on, the system is essentially a giant vacuum cleaner pulling toward the collection unit. Anything dislodged anywhere in the ductwork gets pulled down the trunk and captured, instead of drifting out of registers into the house.
+
+Every register gets temporarily sealed (usually with adhesive covers) so the vacuum's suction concentrates run by run instead of leaking everywhere at once.
+
+## Step 4: Clean the Supply Side, Register by Register
+
+Now the actual removal. One register at a time, the tech opens the seal, removes the register cover, and runs agitation tools down the branch duct toward the trunk:
+
+- **Rotary brushes** — spinning nylon or poly brushes sized to the duct that scrub the walls as they advance.
+- **Air whips and skipper balls** — compressed-air tools that flail and blast debris off the duct surfaces, especially useful in flex duct and odd geometries where a brush can't conform.
+- **Compressed air wands** for corners, boots, and the register boxes themselves.
+
+The agitation knocks the buildup loose; the negative pressure carries it to the collection unit. The register covers themselves get cleaned before going back on. On a typical single-furnace home there are 10 to 20 supply runs, and each one gets this individual treatment — this is where most of the labor lives, and it's exactly the part a blow-and-go crew skips.
+
+## Step 5: The Return Side
+
+The return ducts — the ones pulling air back to the furnace — are always the dirtiest part of the system, because return air hasn't passed through the filter yet. Same process: negative pressure on the return trunk, agitation from each return grille down. Older Metro Detroit homes often use wall cavities and floor joist bays (panned joists) as return channels, and these accumulate decades of debris; we clean and photograph them, and we'll tell you if yours have gaps that are pulling in basement air.
+
+## Step 6: The Blower Compartment and Furnace Interface
+
+A duct cleaning that stops at the furnace is incomplete. We open the blower compartment and clean it out, vacuum the blower housing, and clean around (not into) the components that a coil-cleaning service handles in depth. If the blower wheel itself is caked — which strangles airflow more than dirty ducts do — we'll show you and quote it separately rather than pad the day's invoice. See our furnace and coil cleaning guide for why that part matters so much.
+
+## Step 7: Photos, Reseal, and Walkthrough
+
+The access openings in the trunk get sealed with proper metal plates and foil tape (never duct tape, despite the name). Registers go back on. Then you get the evidence: before-and-after photos or camera footage of your actual ducts — not stock photos — plus a verbal walkthrough of anything we found: disconnected runs, crushed flex duct, moisture staining, pest evidence. You should never have to take a duct cleaner's word for what happened inside your walls.
+
+## How Long Does It Take?
+
+A proper single-system cleaning takes **2 to 4 hours** with a two-tech crew — toward the short end for a compact ranch in Warren, toward the long end for a big two-story in Troy or a first-ever cleaning of a 1940s Dearborn home. A second furnace adds another hour or two. If a crew is packing up 45 minutes after they arrived, you did not get a source-removal cleaning, whatever the invoice says.
+
+## Red Flags of a Blow-and-Go Job
+
+- No negative-pressure connection to the trunk — just a vacuum hose poked into each register.
+- No register removal; cleaning "through the grille."
+- Nobody touches the return side or the blower compartment.
+- No before/after photos of your ducts.
+- In and out in under an hour, then a hard pitch for mold treatment or "sanitizing" a system they never actually cleaned.
+
+## See It Done Right
+
+If you want to watch every step of this in your own home, we're happy to have you look over our shoulders — homeowners who watch a real cleaning become our best word-of-mouth. BH Air Duct Cleaning Metro Detroit runs NADCA-standard source-removal cleanings across all of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [request a free quote](/quote) and we'll give you a flat written price, register count included.
+`,
+  },
+
+  {
+    slug: "indoor-air-quality-michigan-winter",
+    title: "Why Your Indoor Air Gets So Bad Every Michigan Winter (And What Actually Helps)",
+    metaTitle: "Indoor Air Quality in Michigan Winter: Causes & Fixes That Work",
+    excerpt:
+      "Five months of closed windows, a furnace running around the clock, dry air, and an attached garage: Michigan winters are hard on indoor air. Here's what actually helps, ranked — including when duct cleaning does and doesn't.",
+    category: "Air Quality",
+    readMinutes: 8,
+    date: "2026-04-08",
+    heroImage: "/blog/indoor-air-quality-michigan-winter-hero.png",
+    heroAlt: "Frost-covered windows of a Michigan home at dusk with warm light inside, furnace exhaust steaming outside.",
+    secondaryImage: "/blog/indoor-air-quality-michigan-winter-secondary.png",
+    secondaryAlt: "Hand replacing a clean pleated furnace filter in a basement furnace filter slot.",
+    body: `
+Every February, the same conversation happens in houses from Westland to Shelby Township: everyone's congested, the dust is relentless, the house smells stale, and somebody blames the ducts. Sometimes they're right. Often the real story is bigger than the ducts — it's the physics of living sealed inside a heated box for five months. Here's what actually happens to Michigan indoor air in winter, and the fixes that genuinely help, ranked by bang for the buck.
+
+## Why Winter Air Is Different Here
+
+- **The house is closed for five months.** From November through March, windows stay shut and the same indoor air recirculates with minimal fresh-air exchange. Everything generated indoors — cooking aerosols, dust, dander, VOCs from cleaning products and furniture — accumulates instead of ventilating away. The EPA has found indoor air is routinely 2 to 5 times more polluted than outdoor air, and winter is when that gap peaks.
+- **The furnace runs constantly.** A forced-air furnace in a Metro Detroit January cycles dozens of times a day, meaning your home's entire air volume passes through the filter, blower, and ductwork over and over. Whatever is in that pathway — a loaded filter, a caked blower wheel, dusty ducts — the whole house breathes it repeatedly.
+- **The air is bone dry.** Cold outdoor air holds little moisture, and heating it drops relative humidity indoors into the teens and twenties. Dry air dries out your sinuses (making you more susceptible to irritants and viruses), makes dust more airborne thanks to static, and is why winter dust feels so much worse than summer dust.
+- **The attached garage.** Warming up the car in an attached garage — a beloved Michigan ritual — pushes exhaust, including carbon monoxide and fine particulates, through the shared wall and door gaps into the house. Never idle in the garage, even with the door open.
+- **Road salt dust.** All that salt on Metro Detroit roads dries, pulverizes, and tracks in on boots, pets, and parked cars, becoming part of the fine dust your furnace circulates.
+
+## The Fixes, Ranked Honestly
+
+### 1. Get Serious About Filtration (Cheapest, Biggest Win)
+
+The furnace filter is the single highest-leverage item in this whole article. Skip the see-through fiberglass pads — they exist to protect the furnace, not your lungs. A pleated **MERV 8–11** filter captures the dust, dander, and pollen fractions that matter, without choking airflow on most residential systems. Go MERV 13 only if your system's blower and filter slot can handle it (ask us, or your HVAC tech — too restrictive a filter causes its own problems). Then actually change it: every 60–90 days, monthly during peak heating if you have pets. Set a phone reminder. This is the "floss daily" of indoor air.
+
+### 2. Fix the Humidity (30–40% Is the Target)
+
+Get a cheap hygrometer and aim for 30–40% relative humidity in winter. Below that, dust stays airborne longer and your airways suffer; much above 45% in a Michigan January and you'll get condensation on windows and, eventually, moisture problems. A furnace-mounted humidifier serves the whole house; room humidifiers work fine for bedrooms if you keep them clean (a dirty humidifier is its own air-quality problem).
+
+### 3. Ventilate on Purpose
+
+You can't leave windows open in January, but you can ventilate strategically: run the kitchen exhaust fan every time you cook (gas stoves especially), run the bath fan during and 20 minutes after showers, and on the occasional mild day, five minutes of cross-breeze does more than any gadget. Newer, tighter builds in Macomb County often have HRV/ERV ventilation systems — if yours does, make sure it's actually running and its filters are clean.
+
+### 4. Clean the Ducts — When It's Warranted
+
+Here's our honest lane: duct cleaning helps winter air quality **when the ducts are actually part of the problem** — visible buildup, dust puffing from registers, post-renovation debris, pest contamination, musty odors, or a system that's never been cleaned. Removing a real reservoir of dust and dander means the furnace stops re-distributing it 24/7, and in those homes the difference is noticeable.
+
+But we'll also tell you what the EPA says: duct cleaning has never been shown to *categorically* improve health outcomes in homes where ducts are already reasonably clean. If your ducts were cleaned two years ago and your problem is dry air and a fiberglass filter, we'd be taking your money to solve the wrong problem — and we won't. Get the camera inspection (about $99, credited toward a cleaning if needed) and decide from evidence.
+
+### 5. Manage the Sources
+
+Doormats at every entrance and a shoes-off habit intercept road salt and grit before they become airborne dust. Vacuum with a HEPA-filter machine. Groom pets regularly. Store solvents and paints in the detached shed or sealed containers, not the utility room next to the return duct.
+
+## When It Might Be More Than Dust
+
+Persistent headaches, symptoms that hit everyone in the house, or any soot staining around the furnace warrant a carbon monoxide check and a furnace inspection — CO detectors on every floor are non-negotiable in a Michigan winter. And a musty smell that arrives with the heat deserves a duct and coil inspection, since it can indicate moisture where moisture shouldn't be.
+
+## Breathe Easier This Winter
+
+If your winter air feels worse than it should, start with the filter and the humidity — and if the signs point to the ductwork, we'll confirm it with a camera before you spend a dime on cleaning. BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties, with duct cleaning, coil and blower service, dryer vent cleaning, and air quality checks. Call (313) 236-4558 or [request a free quote](/quote) — honest answers, Michigan winters included.
+`,
+  },
+
+  {
+    slug: "furnace-and-ac-coil-cleaning-guide",
+    title: "Furnace Blower & AC Coil Cleaning: The Half of the Job Most Duct Cleaners Skip",
+    metaTitle: "Furnace Blower Wheel & AC Evaporator Coil Cleaning Guide | Michigan",
+    excerpt:
+      "Your blower wheel and evaporator coil affect airflow, efficiency, and your utility bill more than the duct walls do. Here's why duct cleaning without equipment cleaning is half a job — and the symptoms of dirty coils.",
+    category: "HVAC",
+    readMinutes: 8,
+    date: "2026-04-15",
+    heroImage: "/blog/furnace-and-ac-coil-cleaning-guide-hero.png",
+    heroAlt: "Close-up of a furnace blower wheel with fins caked in gray dust before cleaning.",
+    secondaryImage: "/blog/furnace-and-ac-coil-cleaning-guide-secondary.png",
+    secondaryAlt: "Technician cleaning an evaporator coil above a furnace with a coil cleaning tool and light.",
+    body: `
+Here's a trade secret that will make you a smarter shopper: the dirtiest, most performance-killing surfaces in your HVAC system usually aren't the duct walls. They're the **blower wheel** that moves the air and the **evaporator coil** that cools it. A system can have moderately dusty ducts and run fine; a system with a caked blower wheel and a matted coil will cost you money every single day it runs, no matter how clean the ducts are. That's why we tell customers straight: duct cleaning without equipment cleaning is half a job.
+
+## Meet the Two Components That Matter Most
+
+### The Blower Wheel
+
+Inside your furnace sits a squirrel-cage blower — a drum of dozens of small curved fins that grabs air and flings it through your ducts. Those fins are engineered to a precise shape, and their performance lives or dies on that shape. As dust and dander build up on them (and they build up fast, because every cubic foot of house air passes over them thousands of times a season), the curve fills in, the fins get heavier and blunter, and the wheel moves dramatically less air while drawing the same or more electricity. A visibly caked blower wheel can lose a serious fraction of its rated airflow — it's the single most common cause of "weak heat upstairs" that gets misdiagnosed as a duct problem.
+
+### The Evaporator Coil
+
+If you have central air, the evaporator coil sits in the plenum above or beside your furnace — a dense array of thin aluminum fins, spaced about a millimeter apart, that house air must squeeze through to be cooled. That tight spacing makes it a world-class dust filter, which is exactly the problem: everything your furnace filter misses eventually mats onto the coil's intake face. And because the coil is wet with condensation all summer, that dust doesn't stay dust — it becomes a damp felt that blocks airflow, insulates the coil so it transfers heat poorly, and gives microbial growth a permanent humid home. That growth, incidentally, is a top source of the musty "dirty sock" smell people blame on their ducts.
+
+## The Symptoms of Dirty Equipment
+
+- **Weak airflow at the registers** — everywhere, not just one room. One weak room suggests a duct issue; a whole weak house suggests the blower or coil.
+- **Longer run cycles.** The furnace or AC runs longer to hit the same thermostat setting because less air is moving across the heat exchanger or coil each minute.
+- **Creeping utility bills** with no rate change and no lifestyle change. Restricted airflow makes both heating and cooling less efficient; the Department of Energy attributes double-digit efficiency losses to dirty coils.
+- **The AC icing up.** A starved evaporator coil gets too cold, condensation freezes on it, and the ice further blocks airflow in a runaway loop until the system shuts down or the coil becomes a block of ice. If you've had "low refrigerant" diagnosed twice, ask whether anyone actually looked at the coil face.
+- **Musty odor when the AC runs** — the dirty-coil smell described above.
+- **Dust downstream of the filter.** If the blower compartment and coil are dirty despite a decent filter, air is bypassing the filter through gaps — worth fixing while everything's open.
+
+## What Professional Cleaning Involves
+
+This is genuinely not a homeowner job beyond the filter — the coil fins bend if you look at them wrong, and the blower involves electrical disconnects and sometimes pulling the assembly. A proper equipment cleaning:
+
+- **Blower service:** power off, blower compartment opened, wheel cleaned fin by fin — in place when access allows, pulled from the housing when it's badly caked. The housing and compartment get vacuumed and wiped, and we check the wheel for balance and the motor area for dust choking its cooling.
+- **Evaporator coil service:** access panel opened, coil inspected with a light on both faces where possible, then cleaned with coil-safe foaming cleaner and rinsed so the residue drains through the condensate line — which we also check and clear, because a clogged condensate drain in a finished Farmington Hills basement is a water damage story waiting to happen.
+- **Documentation:** before-and-after photos, same as our duct work. You should see what you paid for.
+
+Depending on access and condition, equipment cleaning is typically a 1–2 hour add-on to a duct cleaning visit, and it's often the part of the job you'll actually *feel* — airflow at the registers noticeably improves when a caked blower wheel gets its fins back.
+
+## The Whole-System Logic
+
+Think of your HVAC system as one continuous air path: return grilles, return ducts, filter, blower, heat exchanger, coil, supply ducts, registers. Cleaning only the duct sections while leaving a filthy blower and coil in the middle is like detailing a car but skipping the engine air filter. Worse, a dirty blower re-contaminates freshly cleaned supply ducts. That's why NADCA's standard treats the air handler as part of the cleaning scope, and why our full-service jobs include the blower compartment — with coil and blower deep-cleaning quoted honestly when inspection shows they need it, not padded onto every invoice.
+
+## Get the Whole Job Done
+
+If your airflow is weak, your bills are creeping, or your AC has iced up more than once, the blower and coil deserve a look before anyone sells you anything bigger. BH Air Duct Cleaning Metro Detroit handles furnace blower wheel cleaning, evaporator coil cleaning, and full-system duct cleaning across all of Wayne, Oakland, and Macomb counties — Detroit, Southfield, Troy, Warren, Canton, Novi, and beyond. Call (313) 236-4558 or [request a free quote](/quote) and we'll tell you which half of the job your system actually needs.
+`,
+  },
+
+  {
+    slug: "hire-air-duct-cleaning-company-checklist",
+    title: "How to Hire an Air Duct Cleaning Company in Michigan Without Getting Burned",
+    metaTitle: "Hiring an Air Duct Cleaning Company in Michigan: Scam-Proof Checklist",
+    excerpt:
+      "The duct cleaning industry has a scam problem — door hangers, Groupon traps, and $99 specials that become $1,200 in your hallway. Here's the vetting checklist that protects Metro Detroit homeowners, from people inside the industry.",
+    category: "Buying Guides",
+    readMinutes: 9,
+    date: "2026-04-22",
+    heroImage: "/blog/hire-air-duct-cleaning-company-checklist-hero.png",
+    heroAlt: "Homeowner comparing two written duct cleaning estimates at a kitchen table with a laptop showing reviews.",
+    secondaryImage: "/blog/hire-air-duct-cleaning-company-checklist-secondary.png",
+    secondaryAlt: "Uniformed technician showing a homeowner before-and-after duct photos on a tablet next to professional equipment.",
+    body: `
+We'll say the quiet part out loud: air duct cleaning has one of the worst scam-to-service ratios of any home trade. NADCA and the FTC have both published consumer warnings about it, and the reason is structural — the work happens inside walls where you can't see it, most homeowners buy it once every few years, and the barrier to entry is a shop-vac and a Facebook ad. Metro Detroit gets the full treatment: door hangers in Dearborn Heights, coupon mailers in Warren, $89 Groupons that turn into $1,200 invoices in Troy. Here's the checklist that separates real companies from the rest, from people who compete against both.
 
 ## The Red Flags, In Order of Reliability
 
 ### 1. The Too-Cheap Hook
 
-"$29 service call! $99 any spring!" Real spring replacements involve a trained tech, a stocked truck, and quality steel — in Metro Detroit that's a $180–$400 job depending on the door. A price that can't cover costs exists to get a foot in the door, and the difference gets made up in your garage.
+"$99 whole house! Unlimited vents!" A legitimate source-removal cleaning takes a two-tech crew 2–4 hours with tens of thousands of dollars of equipment. In Metro Detroit that's a $350–$600 job for a typical single-furnace home. A $99 price cannot cover the visit — it exists to get a foot in your door, and the difference gets made up in your hallway via scare-tactic upsells, or you get a fifteen-minute fake cleaning. There is no third outcome at that price.
 
-### 2. No Local Address or Verifiable Identity
+### 2. Instant Mold Diagnosis
 
-Lead-gen sites clone themselves across every suburb with a different city name slapped in the title. Check: Is there a real local presence? Does the Google Business Profile have years of reviews, or 40 five-stars posted in the same month? Does the name on the truck match the name on the invoice?
+The signature move of the bait-and-switch crew: minutes into the visit, they've "found mold" — diagnosed by eyeball, no lab, no photos of your actual ducts — and the cure is a $400–$900 fogging treatment. Real microbial assessment involves looking for the moisture source, and legitimate sanitizing (an EPA-registered antimicrobial, applied only *after* source-removal cleaning, per label directions) is a modest line item with a specific justification like rodent contamination or flood cleanup — not a hallway crisis.
 
-### 3. The "Everything Is Dangerous" Diagnosis
+### 3. No Negative-Pressure Equipment
 
-You called about a noisy roller; the visit ends with a warning that your springs, cables, drums, bearings, and opener are all "about to fail" and only a full rebuild will keep your family safe. Real failures are specific: a snapped spring looks snapped, a frayed cable looks frayed. Ask to be shown every problem — a legitimate tech will happily point.
+Ask one question before booking: "Will you connect a vacuum collection unit to my trunk line and put the system under negative pressure?" That's the dividing line between source removal and theater. If the answer is vague, or the crew shows up with nothing but a shop-vac and a drill brush, you're getting register-mouth cleaning that leaves the actual ductwork untouched. Our process guide shows what the real method looks like step by step.
 
-### 4. Verbal-Only Pricing
+### 4. Verbal, Shape-Shifting Pricing
 
-If the number lives only in the salesman's mouth, it can grow on the invoice. Flat-rate, written or texted before work begins is the standard you should demand. It's what we do on every single job.
+The ad says one number, the phone says another, and the tech "discovers" a third. Demand an itemized written quote that specifies: number of systems covered, ALL supply registers and ALL returns included, trunk lines, and the blower compartment — with add-ons (dryer vent, sanitizing, coil cleaning) priced separately in writing. "Per vent" pricing sprung on-site is how a $99 special becomes $600.
 
-### 5. Pressure to Decide Right Now
+### 5. No Verifiable Local Identity
 
-"This price is only good today" is a sales tactic, not how repair pricing works. Any company confident in its quote will happily let you sleep on it — springs don't get more broken overnight.
+Lead-generation websites clone themselves across every suburb with the city name swapped in the title tag. Check: Does the Google Business Profile have years of reviews with consistent detail, or forty five-star reviews posted the same month? Does the name on the truck match the invoice? Can you find the company at all outside its own ads?
 
-## The Checklist Before You Book
+## The Vetting Checklist Before You Book
 
-- **Verify insurance.** Michigan doesn't license garage door work as a standalone trade, which makes proof of general liability and workers' comp insurance the meaningful credential. Any legitimate company produces a certificate on request without drama.
-- **Read reviews for patterns, not stars.** Skim the 3-star reviews specifically — they're where honest customers describe pricing behavior. Look for the same tech names and specific jobs across months and years.
-- **Get the flat rate on the phone.** A competent dispatcher can price a spring replacement, opener install, or off-track reset within a tight range from your description. Vagueness on the phone predicts surprises in the driveway.
-- **Ask what's included.** A real spring quote includes the springs, labor, rebalancing the door, and inspection of cables and bearings. A real opener quote includes rails, sensors, remotes, keypad, and haul-away of the old unit.
-- **Ask about warranty in writing.** Ours: 1 year on labor, manufacturer warranty on parts (3–10 years on springs by cycle rating, up to lifetime on some opener belts and motors). "Lifetime warranty" pitches that mysteriously cover only the part — with a fat labor charge per visit — are the industry's favorite fine print.
+- **NADCA membership and the ACR standard.** NADCA members must have certified technicians on staff, carry insurance, and agree to clean to the ACR standard — the industry's actual specification for source removal. Membership isn't a guarantee, but it's the strongest single filter available, and asking "do you follow ACR?" instantly sorts companies into those who know what it is and those who go quiet.
+- **Proof of insurance.** Michigan doesn't license duct cleaning as a standalone trade, so general liability and workers' comp certificates are the meaningful credential. A legitimate company produces them on request without drama.
+- **Before-and-after photos of YOUR ducts.** Not stock photos — footage from your actual system, standard on every job. If a company doesn't offer photo documentation, ask why the work can't survive being seen.
+- **Reviews read for patterns, not stars.** Skim the 3-star reviews specifically — that's where honest customers describe pricing behavior and upsell pressure. Look for specific jobs, specific tech names, and consistency across years.
+- **A real scope conversation on the phone.** A competent dispatcher can quote a tight range from your square footage, system count, and vent count. Vagueness on the phone predicts surprises in the driveway.
+- **Skip the door hangers and deal sites.** Companies with full schedules from reputation don't paper neighborhoods in Dearborn Heights or sell $89 vouchers at a loss. Deal-site duct cleaning is the bait-and-switch's natural habitat — the voucher price is designed to be "upgraded."
 
 ## Fair 2026 Price Ranges for Metro Detroit
 
-Use these as your sanity check (full breakdown in our [spring guide](/blog/broken-garage-door-spring-what-to-do) and [opener guide](/blog/garage-door-opener-buying-guide)):
+Use these as your sanity check (full breakdown in our cost guide):
 
-- Service call & diagnostic: $45–$75
-- Single torsion spring, installed: $180–$280
-- Spring pair, installed: $260–$400
-- Opener installed (belt drive): $450–$650
-- Cable pair replacement: $150–$250
-- Off-track reset with track repair: $150–$350
-- New insulated two-car door, installed: $1,400–$2,800
+- Camera duct inspection: about $99, credited toward a cleaning
+- Whole-home source-removal cleaning, single furnace: $350–$600
+- Larger homes / heavy contamination: $550–$900
+- Second system: add $200–$400
+- Dryer vent cleaning: $120–$200 standalone, discounted as an add-on
+- Sanitizing (when justified, after cleaning): modest add-on, never a $700 hallway emergency
 
-If you're quoted 2–3x these ranges — or the "diagnosis" lands within minutes and totals four figures — get a second opinion before signing anything. We give free second opinions over the phone every week, even when the answer is "that quote is actually fair."
+Quoted far below these ranges? That's the bait. Far above, with a same-day mold crisis attached? That's the switch. Either way, get a second opinion — we give them free over the phone every week, even when the verdict is "that quote is actually fair."
 
 ## Where We Stand
 
-BH Garage Door Metro Detroit is licensed & insured, staffs its own background-checked techs (no subcontractors), quotes flat rates before dispatch, and puts every warranty in writing on a digital invoice. That's the standard — from us or from whoever you hire. Call (313) 236-4558 or [request a quote](/quote), and keep this checklist handy either way.
+BH Air Duct Cleaning Metro Detroit does it the boring, verifiable way: NADCA-standard source removal with negative-pressure equipment, itemized written quotes before we dispatch, before-and-after photos on every job, insured techs, and no scare tactics — if your ducts don't need cleaning, we'll tell you and see you in two years. That's the standard, from us or from whoever you hire. Call (313) 236-4558 or [request a free quote](/quote), and keep this checklist handy either way. We serve every city in Wayne, Oakland, and Macomb counties.
 `,
   },
 ];

@@ -6,7 +6,7 @@ export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    additionalType: "https://en.wikipedia.org/wiki/Garage_door",
+    additionalType: "https://en.wikipedia.org/wiki/Duct_(flow)",
     "@id": `${BIZ.url}/#business`,
     name: BIZ.name,
     image: `${BIZ.url}/opengraph-image.png`,
@@ -49,7 +49,7 @@ export function localBusinessJsonLd() {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Michigan Licensed & Insured Garage Door Contractor",
+      name: "Michigan Licensed & Insured Air Duct Cleaning Company",
       identifier: BIZ.licenseId,
     },
     sameAs: Object.values(BIZ.social).filter(Boolean),

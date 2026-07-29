@@ -55,10 +55,10 @@ function videos() {
       out,
     ]);
 
-  zoom(1920, 1080, join(ROOT, "public/video/hero-garage.mp4"), 26);
-  console.log("wrote hero-garage.mp4");
-  zoom(960, 540, join(ROOT, "public/video/hero-garage-mobile.mp4"), 28);
-  console.log("wrote hero-garage-mobile.mp4");
+  zoom(1920, 1080, join(ROOT, "public/video/hero-air-duct.mp4"), 26);
+  console.log("wrote hero-air-duct.mp4");
+  zoom(960, 540, join(ROOT, "public/video/hero-air-duct-mobile.mp4"), 28);
+  console.log("wrote hero-air-duct-mobile.mp4");
 }
 
 await icons();

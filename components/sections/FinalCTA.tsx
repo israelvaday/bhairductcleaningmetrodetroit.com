@@ -11,7 +11,7 @@ export function FinalCTA() {
           <ShieldCheck className="h-3.5 w-3.5" /> Licensed & insured · Free Quotes
         </div>
         <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight md:text-5xl">
-          Need garage door service in Metro Detroit right now?
+          Need air duct or dryer vent cleaning in Metro Detroit right now?
         </h2>
         <p className="mt-4 text-ink-200">
           Tap a button — a Licensed & insured technician will be on the way.

@@ -10,24 +10,24 @@ export type DayHours = {
 };
 
 export const BIZ = {
-  name: "BH Garage Door Metro Detroit",
-  legalName: "BH Garage Door Metro Detroit",
-  tagline: "Licensed & Insured Garage Door Installation & Repair — Free Quotes Across Metro Detroit",
+  name: "BH Air Duct Cleaning Metro Detroit",
+  legalName: "BH Air Duct Cleaning Metro Detroit",
+  tagline: "Licensed & Insured Air Duct, Dryer Vent & HVAC Cleaning — Free Quotes Across Metro Detroit",
   phone: "(313) 236-4558",
   phoneE164: "+13132364558",
   phoneHref: "tel:+13132364558",
   smsHref: "sms:+13132364558",
   whatsappHref: "https://wa.me/13132364558",
-  email: "info@bhgaragedoormetrodetroit.com",
+  email: "info@bhairductcleaningmetrodetroit.com",
   emailHref:
-    "mailto:info@bhgaragedoormetrodetroit.com?subject=Garage%20door%20quote%20request%20%E2%80%94%20BH%20Garage%20Door%20Metro%20Detroit",
-  quotesEmail: "quotes@bhgaragedoormetrodetroit.com",
+    "mailto:info@bhairductcleaningmetrodetroit.com?subject=Air%20duct%20cleaning%20quote%20request%20%E2%80%94%20BH%20Air%20Duct%20Cleaning%20Metro%20Detroit",
+  quotesEmail: "quotes@bhairductcleaningmetrodetroit.com",
   quoteNotifyEmails: ["israelvaday97@gmail.com"],
   /** Shown in trust badges */
   licenseId: "Licensed & Insured",
   /** Legacy field name used in templates */
   bsis: "Licensed & Insured",
-  url: "https://bhgaragedoormetrodetroit.com",
+  url: "https://bhairductcleaningmetrodetroit.com",
   address: {
     street: "Metro Detroit Service Area",
     locality: "Detroit",

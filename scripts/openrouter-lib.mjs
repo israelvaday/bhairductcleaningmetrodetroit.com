@@ -1,5 +1,5 @@
 /**
- * Shared OpenRouter client for BH Garage Door Metro Detroit site generation.
+ * Shared OpenRouter client for BH Air Duct Cleaning Metro Detroit site generation.
  */
 import { readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -7,8 +7,8 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ENV_PATH = join(__dirname, "../.env.local");
-const SITE = "https://bhgaragedoormetrodetroit.com";
-const APP_TITLE = "BH Garage Door Metro Detroit";
+const SITE = "https://bhairductcleaningmetrodetroit.com";
+const APP_TITLE = "BH Air Duct Cleaning Metro Detroit";
 
 export function loadEnvLocal() {
   if (!existsSync(ENV_PATH)) return;

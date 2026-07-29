@@ -7,9 +7,9 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 
 export const metadata: Metadata = {
-  title: "Garage Door Services in Metro Detroit",
+  title: "Air Duct Cleaning Services in Metro Detroit",
   description:
-    "All garage door services from BH Garage Door Metro Detroit — repair, installation, springs, openers, cables & rollers, panels, commercial doors, and maintenance.",
+    "All air duct cleaning services from BH Air Duct Cleaning Metro Detroit — residential & commercial duct cleaning, dryer vents, furnace & coil cleaning, sanitizing, inspections, and maintenance.",
   alternates: { canonical: `${BIZ.url}/services` },
 };
 
@@ -21,7 +21,7 @@ export default function ServicesPage() {
         <div className="relative mx-auto max-w-5xl px-4 text-center md:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">Services</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-            Full-service <span className="text-brass-gradient">Metro Detroit</span> garage doors.
+            Full-service <span className="text-brass-gradient">Metro Detroit</span> air duct cleaning.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ink-200">
             Ten specialized service lines, one Licensed & insured team. Tap any card for details, pricing factors, and example jobs.
@@ -52,7 +52,7 @@ export default function ServicesPage() {
           })}
         </div>
       </section>
-      <LongFormFaq subject="Garage Door Services" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning Services" kind="service" />
       <FinalCTA />
     </>
   );

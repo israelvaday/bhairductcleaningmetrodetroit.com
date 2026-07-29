@@ -25,13 +25,13 @@ if (!KEY) {
 const URLS = process.argv.slice(2).length
   ? process.argv.slice(2)
   : [
-      "https://bhgaragedoormetrodetroit.com/",
-      "https://bhgaragedoormetrodetroit.com/services",
-      "https://bhgaragedoormetrodetroit.com/service-areas",
-      "https://bhgaragedoormetrodetroit.com/gallery",
-      "https://bhgaragedoormetrodetroit.com/blog",
-      "https://bhgaragedoormetrodetroit.com/contact",
-      "https://bhgaragedoormetrodetroit.com/quote",
+      "https://bhairductcleaningmetrodetroit.com/",
+      "https://bhairductcleaningmetrodetroit.com/services",
+      "https://bhairductcleaningmetrodetroit.com/service-areas",
+      "https://bhairductcleaningmetrodetroit.com/gallery",
+      "https://bhairductcleaningmetrodetroit.com/blog",
+      "https://bhairductcleaningmetrodetroit.com/contact",
+      "https://bhairductcleaningmetrodetroit.com/quote",
     ];
 const STRATEGIES = ["mobile", "desktop"];
 
@@ -129,7 +129,7 @@ lines.push("| URL | Strategy | Perf | A11y | BP | SEO | LCP | CLS | TBT | FCP | 
 lines.push("|---|---|---|---|---|---|---|---|---|---|---|");
 for (const r of results) {
   if (r.error) { lines.push(`| ${r.url} | ${r.strategy} | ERROR: ${r.error} | | | | | | | | |`); continue; }
-  lines.push(`| ${r.url.replace("https://bhgaragedoormetrodetroit.com", "") || "/"} | ${r.strategy} | ${r.perf} | ${r.a11y} | ${r.bp} | ${r.seo} | ${r.lcp} | ${r.cls} | ${r.tbt} | ${r.fcp} | ${r.si} |`);
+  lines.push(`| ${r.url.replace("https://bhairductcleaningmetrodetroit.com", "") || "/"} | ${r.strategy} | ${r.perf} | ${r.a11y} | ${r.bp} | ${r.seo} | ${r.lcp} | ${r.cls} | ${r.tbt} | ${r.fcp} | ${r.si} |`);
 }
 
 const issueAgg = new Map();
@@ -140,7 +140,7 @@ for (const r of results) {
     const a = issueAgg.get(f.id);
     a.totalSavings += f.savings || 0;
     a.count += 1;
-    a.pages.push(`${r.strategy} ${r.url.replace("https://bhgaragedoormetrodetroit.com", "") || "/"}${f.displayValue ? ` (${f.displayValue})` : ""}`);
+    a.pages.push(`${r.strategy} ${r.url.replace("https://bhairductcleaningmetrodetroit.com", "") || "/"}${f.displayValue ? ` (${f.displayValue})` : ""}`);
   }
 }
 const ranked = [...issueAgg.values()].sort((a, b) => b.totalSavings - a.totalSavings || b.count - a.count);

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { BIZ } from "@/lib/business";
 
 export const dynamic = "force-static";
-export const alt = `${BIZ.name} — Metro Detroit Garage Door Company (${BIZ.bsis})`;
+export const alt = `${BIZ.name} — Metro Detroit Air Duct Cleaning Company (${BIZ.bsis})`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -58,7 +58,7 @@ export default async function OgImage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>
-              BH GARAGE DOOR METRO DETROIT
+              BH AIR DUCT CLEANING METRO DETROIT
             </div>
             <div style={{ fontSize: 18, color: "#C9A24A", marginTop: 6, letterSpacing: 2, fontWeight: 700 }}>
               LICENSED & INSURED
@@ -80,10 +80,10 @@ export default async function OgImage() {
               display: "flex",
             }}
           >
-            Door stuck? We&apos;re 15 min away.
+            Dusty vents? Same-day service.
           </div>
           <div style={{ fontSize: 30, color: "#C8C4BB", maxWidth: 980, display: "flex" }}>
-            Licensed & insured garage door company. Springs · Openers · Installation · Commercial.
+            Licensed & insured air duct cleaning company. Air Ducts · Dryer Vents · Furnace & Coils · Commercial.
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export default async function OgImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <Chip>Licensed & insured</Chip>
           <Chip>{BIZ.phone}</Chip>
-          <Chip>bhgaragedoormetrodetroit.com</Chip>
+          <Chip>bhairductcleaningmetrodetroit.com</Chip>
           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ fontSize: 22, color: "#C8C4BB", letterSpacing: 1 }}>METRO DETROIT DISPATCH</div>
           </div>

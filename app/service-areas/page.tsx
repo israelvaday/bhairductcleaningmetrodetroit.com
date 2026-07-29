@@ -7,8 +7,8 @@ import { LongFormFaq } from "@/components/site/LongFormFaq";
 import { BuyersGuide } from "@/components/site/BuyersGuide";
 
 export const metadata: Metadata = {
-  title: "Service Areas — Metro Detroit Garage Door Company",
-  description: `Local garage door repair and installation across ${AREAS.length} Metro Detroit cities, communities, and neighborhoods. Search your area.`,
+  title: "Service Areas — Metro Detroit Air Duct Cleaning Company",
+  description: `Local air duct and dryer vent cleaning across ${AREAS.length} Metro Detroit cities, communities, and neighborhoods. Search your area.`,
   alternates: { canonical: `${BIZ.url}/service-areas` },
 };
 

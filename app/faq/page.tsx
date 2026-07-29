@@ -7,9 +7,9 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 
 export const metadata: Metadata = {
-  title: "FAQ — Metro Detroit Garage Door Questions Answered",
+  title: "FAQ — Metro Detroit Air Duct Cleaning Questions Answered",
   description:
-    "Honest answers about garage door pricing, spring replacement, openers, new door installation, warranties, and more from your licensed Metro Detroit garage door company.",
+    "Honest answers about air duct cleaning pricing, the process, dryer vents, sanitizing, indoor air quality, and more from your licensed Metro Detroit air duct cleaning company.",
   alternates: { canonical: `${BIZ.url}/faq` },
 };
 
@@ -35,10 +35,10 @@ export default function FAQPage() {
           <div className="text-center md:text-left">
             <p className="text-sm font-semibold uppercase tracking-wider text-brass-400">FAQ</p>
             <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-              <span className="text-brass-gradient">Real answers</span> from a real garage door tech.
+              <span className="text-brass-gradient">Real answers</span> from a real duct cleaning tech.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-ink-200 md:mx-0">
-              Pricing. Springs. Openers. New doors. Warranties. After-hours service. Everything Metro Detroit customers ask us, in one place.
+              Pricing. The process. Dryer vents. Sanitizing. Air quality. Everything Metro Detroit customers ask us, in one place.
             </p>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-brass-500/30">
@@ -91,7 +91,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <LongFormFaq subject="Garage Door FAQ" kind="service" />
+      <LongFormFaq subject="Air Duct Cleaning FAQ" kind="service" />
       <FinalCTA />
     </>
   );
