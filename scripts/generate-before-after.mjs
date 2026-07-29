@@ -8,7 +8,7 @@
  *
  * Usage: node scripts/generate-before-after.mjs
  */
-import { writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -72,6 +72,56 @@ const SCENES = [
     slug: "main-return-drop",
     aspect: "4:3",
     before: `Photo of the inside of a large open return air drop next to a basement furnace, panel cut open for cleaning access, interior surfaces coated in decades of grey dust, dirt and cobwebs, work light illumination, ${REALISM}`,
+  },
+  {
+    slug: "flex-duct-interior",
+    aspect: "3:4",
+    before: `Interior inspection photo looking down a silver insulated flexible air duct, spiral wire ridges holding thick rings of grey dust and debris along the whole run, inspection camera light illuminating the tunnel, ${REALISM}`,
+  },
+  {
+    slug: "supply-plenum",
+    aspect: "4:3",
+    before: `Photo of the inside of a sheet-metal supply plenum above a residential furnace, access panel removed, interior walls and evaporator coil housing dusted with a heavy grey coating and debris piled in the corners, flashlight lighting, ${REALISM}`,
+  },
+  {
+    slug: "wall-supply-register",
+    aspect: "3:4",
+    before: `Close-up photo of a white stamped-metal wall supply register in a bedroom, vanes furry with grey dust buildup and dark streaks fanning onto the painted drywall above it, soft daylight, ${REALISM}`,
+  },
+  {
+    slug: "bathroom-exhaust-fan",
+    aspect: "3:4",
+    before: `Photo looking up at a white plastic bathroom ceiling exhaust fan grille, completely matted over with thick grey dust and lint choking every slot, bathroom ceiling around it slightly stained, indoor light, ${REALISM}`,
+  },
+  {
+    slug: "cold-air-return-cavity",
+    aspect: "3:4",
+    before: `Photo of an open wall cold air return cavity with the grille removed and leaning against the baseboard, stud bay interior lined with years of grey dust, cobwebs and debris at the bottom plate, home interior lighting, ${REALISM}`,
+  },
+  {
+    slug: "branch-duct-boot",
+    aspect: "3:4",
+    before: `Photo looking into a round branch duct from an opened floor boot, takeoff and duct walls coated in heavy grey dust with drywall debris and pet hair collected at the elbow, work light beam, ${REALISM}`,
+  },
+  {
+    slug: "commercial-ceiling-diffuser",
+    aspect: "4:3",
+    before: `Photo of a white square lay-in ceiling air diffuser in a suspended T-bar office ceiling, black dust streaks radiating across the diffuser cone and staining the adjacent ceiling tiles, fluorescent office lighting, ${REALISM}`,
+  },
+  {
+    slug: "furnace-burner-compartment",
+    aspect: "4:3",
+    before: `Photo of an open residential furnace burner compartment, burners and heat exchanger inlets covered in grey dust, rust flakes and debris on the compartment floor, basement flashlight lighting, ${REALISM}`,
+  },
+  {
+    slug: "panned-joist-return",
+    aspect: "4:3",
+    before: `Interior photo of a panned floor joist return duct in an older Michigan basement, wood joists and sheet metal pan coated in decades of grey dust and cobwebs, inspection light illuminating the cavity, ${REALISM}`,
+  },
+  {
+    slug: "ac-condenser-coil",
+    aspect: "3:4",
+    before: `Close-up photo of an outdoor central air conditioner condenser unit beside a Michigan house, coil fins completely clogged with cottonwood fluff, grass clippings and grey dirt, overcast daylight, ${REALISM}`,
   },
 ];
 
@@ -138,6 +188,19 @@ async function main() {
 
   const pairs = [];
   for (const scene of SCENES) {
+    const beforePath = join(GALLERY_DIR, `ba-${scene.slug}-before.webp`);
+    const afterPath = join(GALLERY_DIR, `ba-${scene.slug}-after.webp`);
+    if (existsSync(beforePath) && existsSync(afterPath)) {
+      const meta = await sharp(afterPath).metadata();
+      pairs.push({
+        before: `/gallery/ba-${scene.slug}-before.webp`,
+        after: `/gallery/ba-${scene.slug}-after.webp`,
+        width: meta.width,
+        height: meta.height,
+      });
+      console.log(`Scene ${scene.slug} — exists, skipping`);
+      continue;
+    }
     console.log(`Scene ${scene.slug} — before…`);
     const beforePng = await withRetry(
       () => generateImage(key, scene.before, { aspect_ratio: scene.aspect }),
