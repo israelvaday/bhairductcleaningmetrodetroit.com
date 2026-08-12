@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Clock, ShieldCheck, Phone, MessageCircle, Mail, Smartphone } from "lucide-react";
+import { MapPin, Clock, ShieldCheck, Phone, Mail, Smartphone } from "lucide-react";
 import { BIZ } from "@/lib/business";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 import { ContactCTA } from "@/components/site/ContactCTA";
@@ -8,7 +8,7 @@ import { ServiceMap } from "@/components/site/ServiceMap";
 export const metadata: Metadata = {
   title: `Contact — Metro Detroit Air Duct Cleaning Company`,
   description:
-    "Reach BH Air Duct Cleaning Metro Detroit. Tap to call, WhatsApp, or request a free quote. Licensed & Insured — serving all of Metro Detroit, MI.",
+    "Reach BH Air Duct Cleaning Metro Detroit. Tap to call, text, or request a free quote. Licensed & Insured — serving all of Metro Detroit, MI.",
   alternates: { canonical: "/contact" },
 };
 
@@ -100,26 +100,16 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
-              <h3 className="font-display text-xl font-bold text-white">Text or WhatsApp</h3>
+              <h3 className="font-display text-xl font-bold text-white">Text</h3>
               <p className="mt-2 text-sm text-ink-200">
-                Prefer to type? Send a text or WhatsApp with a photo of a dusty register, your furnace, or the dryer vent — pictures speed up the quote dramatically.
+                Prefer to type? Send a text with a photo of a dusty register, your furnace, or the dryer vent — pictures speed up the quote dramatically.
               </p>
-              <div className="mt-auto flex flex-wrap gap-2 pt-4">
-                <a
-                  href={BIZ.whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20"
-                >
-                  <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
-                </a>
-                <a
-                  href={BIZ.smsHref}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300 hover:bg-brass-500/20"
-                >
-                  <Smartphone className="h-3.5 w-3.5" /> Text us
-                </a>
-              </div>
+              <a
+                href={BIZ.smsHref}
+                className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-brass-300 hover:text-brass-200"
+              >
+                <Smartphone className="h-4 w-4" /> Text us
+              </a>
             </div>
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
               <h3 className="font-display text-xl font-bold text-white">Email</h3>

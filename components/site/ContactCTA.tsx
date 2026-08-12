@@ -1,5 +1,5 @@
 "use client";
-import { Phone, MessageCircle, ClipboardList, Mail } from "lucide-react";
+import { Phone, Smartphone, ClipboardList, Mail } from "lucide-react";
 import { BIZ } from "@/lib/business";
 import { LinkButton } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
@@ -17,9 +17,9 @@ export function ContactCTA({
         <Phone className="h-5 w-5" />
         {showLabels && "Call Now"}
       </LinkButton>
-      <LinkButton href={BIZ.whatsappHref} variant="secondary" size={size} aria-label="Open WhatsApp chat">
-        <MessageCircle className="h-5 w-5" />
-        {showLabels && "WhatsApp"}
+      <LinkButton href={BIZ.smsHref} variant="secondary" size={size} aria-label="Send a text message">
+        <Smartphone className="h-5 w-5" />
+        {showLabels && "Text Us"}
       </LinkButton>
       <LinkButton href="/quote" variant="primary" size={size} aria-label="Request a free quote">
         <ClipboardList className="h-5 w-5" />

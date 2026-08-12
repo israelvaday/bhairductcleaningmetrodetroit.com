@@ -17,7 +17,6 @@ export const BIZ = {
   phoneE164: "+13132364558",
   phoneHref: "tel:+13132364558",
   smsHref: "sms:+13132364558",
-  whatsappHref: "https://wa.me/13132364558",
   email: "info@bhairductcleaningmetrodetroit.com",
   emailHref:
     "mailto:info@bhairductcleaningmetrodetroit.com?subject=Air%20duct%20cleaning%20quote%20request%20%E2%80%94%20BH%20Air%20Duct%20Cleaning%20Metro%20Detroit",
