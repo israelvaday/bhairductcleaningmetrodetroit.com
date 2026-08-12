@@ -72,7 +72,7 @@ export default async function AreaOg({ params }: { params: Promise<{ slug: strin
               fontSize: 36,
             }}
           >
-            🚪
+            💨
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>

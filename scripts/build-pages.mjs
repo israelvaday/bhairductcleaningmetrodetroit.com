@@ -10,7 +10,23 @@ const STASH = path.join(ROOT, "..", "_api_stash_build");
 
 function run(cmd) {
   console.log("[build:pages]", cmd);
-  execSync(cmd, { stdio: "inherit", env: { ...process.env, NEXT_EXPORT: "1", NEXT_PUBLIC_GH_PAGES: "1" } });
+  execSync(cmd, {
+    stdio: "inherit",
+    env: {
+      ...process.env,
+      NEXT_EXPORT: "1",
+      NEXT_PUBLIC_GH_PAGES: "1",
+      NEXT_PUBLIC_SITE_URL:
+        process.env.NEXT_PUBLIC_SITE_URL ||
+        "https://bhairductcleaningmetrodetroit.com",
+      NEXT_PUBLIC_QUOTE_API_URL:
+        process.env.NEXT_PUBLIC_QUOTE_API_URL ||
+        "https://bhairductcleaningmetrodetroit.com/api/quote",
+      NEXT_PUBLIC_ESTIMATE_API_URL:
+        process.env.NEXT_PUBLIC_ESTIMATE_API_URL ||
+        "https://bhairductcleaningmetrodetroit.com/api/estimate",
+    },
+  });
 }
 
 if (fs.existsSync(API)) {

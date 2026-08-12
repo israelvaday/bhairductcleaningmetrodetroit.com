@@ -54,7 +54,7 @@ export default async function OgImage() {
               boxShadow: "0 10px 30px rgba(201,162,74,0.35)",
             }}
           >
-            🚪
+            💨
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>

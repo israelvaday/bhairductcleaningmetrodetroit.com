@@ -83,7 +83,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
                 fontSize: 36,
               }}
             >
-              🚪
+              💨
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1 }}>

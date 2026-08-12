@@ -4,11 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ArrowLeft, ArrowRight, Check, Send, Upload, X, Image as ImageIcon,
+  ArrowLeft, ArrowRight, Check, Send,
   Zap, CalendarClock, Calendar, Phone, ShieldCheck, FileText,
 } from "lucide-react";
 import { toast } from "sonner";
 import { BIZ } from "@/lib/business";
+import { QUOTE_API_URL } from "@/lib/quote-api";
 import { Button } from "@/components/ui/Button";
 
 type ServiceKey =
@@ -46,11 +47,7 @@ const URGENCIES: { key: Urgency; label: string; sub: string; Icon: typeof Zap }[
   { key: "scheduling", label: "Just pricing", sub: "Quote only, no rush",    Icon: FileText },
 ];
 
-const STEP_LABELS = ["Service", "Property", "Urgency", "Details", "Photos", "Contact"] as const;
-
-const ACCEPT = "image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf";
-const MAX_FILES = 6;
-const MAX_FILE_BYTES = 8 * 1024 * 1024;
+const STEP_LABELS = ["Service", "Property", "Urgency", "Details", "Contact"] as const;
 
 export function QuoteWizard() {
   const [step, setStep] = useState(0);
@@ -58,7 +55,6 @@ export function QuoteWizard() {
   const [property, setProperty] = useState<PropertyKey | "">("");
   const [urgency, setUrgency] = useState<Urgency | "">("");
   const [message, setMessage] = useState("");
-  const [files, setFiles] = useState<File[]>([]);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -85,9 +81,8 @@ export function QuoteWizard() {
       case 0: return !!service;
       case 1: return !!property;
       case 2: return !!urgency;
-      case 3: return true; // optional message
-      case 4: return true; // optional files
-      case 5: return !!name && !!phone && !!location;
+      case 3: return true;
+      case 4: return !!name && !!phone && !!location;
       default: return false;
     }
   }, [step, service, property, urgency, name, phone, location]);
@@ -100,28 +95,6 @@ export function QuoteWizard() {
     if (step > 0) setStep((s) => s - 1);
   }
 
-  function addFiles(list: FileList | null) {
-    if (!list) return;
-    const incoming = Array.from(list);
-    const merged: File[] = [...files];
-    for (const f of incoming) {
-      if (merged.length >= MAX_FILES) {
-        toast.error(`Max ${MAX_FILES} files`);
-        break;
-      }
-      if (f.size > MAX_FILE_BYTES) {
-        toast.error(`${f.name} is over 8 MB`);
-        continue;
-      }
-      merged.push(f);
-    }
-    setFiles(merged);
-  }
-
-  function removeFile(idx: number) {
-    setFiles(files.filter((_, i) => i !== idx));
-  }
-
   async function submit() {
     if (!name || !phone || !service || !location) {
       toast.error("Please complete name, phone, location, and service.");
@@ -129,18 +102,22 @@ export function QuoteWizard() {
     }
     setSubmitting(true);
     try {
-      const fd = new FormData();
-      fd.set("name", name);
-      fd.set("phone", phone);
-      fd.set("email", email);
-      fd.set("location", location);
-      fd.set("service", SERVICES.find((s) => s.key === service)?.label || service);
-      fd.set("property", PROPERTIES.find((p) => p.key === property)?.label || property);
-      fd.set("urgency", URGENCIES.find((u) => u.key === urgency)?.label || urgency);
-      fd.set("message", message);
-      files.forEach((f) => fd.append("files", f, f.name));
+      const payload = {
+        name,
+        phone,
+        email,
+        location,
+        service: SERVICES.find((s) => s.key === service)?.label || service,
+        property: PROPERTIES.find((p) => p.key === property)?.label || property,
+        urgency: URGENCIES.find((u) => u.key === urgency)?.label || urgency,
+        message,
+      };
 
-      const res = await fetch("/api/quote", { method: "POST", body: fd });
+      const res = await fetch(QUOTE_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
       if (!res.ok) throw new Error("Server error");
       toast.success("Quote request sent — we will be in touch shortly.");
       window.location.href = "/thank-you";
@@ -305,44 +282,6 @@ export function QuoteWizard() {
 
             {step === 4 && (
               <>
-                <h2 className="font-display text-2xl font-extrabold md:text-3xl">Got a picture or document?</h2>
-                <p className="mt-1 text-sm text-ink-300">Upload photos of your registers, returns, dryer vent, or any quote / spec sheet. Optional (max {MAX_FILES} files, 8 MB each).</p>
-                <label className="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-brass-500/40 bg-ink-950/50 p-8 text-center hover:border-brass-400">
-                  <Upload className="h-7 w-7 text-brass-300" />
-                  <span className="font-display text-base font-bold text-ink-50">Tap to upload</span>
-                  <span className="text-xs text-ink-400">JPG · PNG · WEBP · HEIC · PDF</span>
-                  <input
-                    type="file"
-                    accept={ACCEPT}
-                    multiple
-                    className="hidden"
-                    onChange={(e) => { addFiles(e.target.files); e.currentTarget.value = ""; }}
-                  />
-                </label>
-                {files.length > 0 && (
-                  <ul className="mt-4 space-y-2">
-                    {files.map((f, i) => (
-                      <li key={i} className="flex items-center gap-3 rounded-xl border border-ink-800 bg-ink-950/70 p-2.5">
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-ink-800 text-brass-300">
-                          {f.type.startsWith("image/") ? <ImageIcon className="h-4 w-4" /> : <FileText className="h-4 w-4" />}
-                        </span>
-                        <div className="min-w-0 flex-1">
-                          <div className="truncate text-sm font-semibold text-ink-100">{f.name}</div>
-                          <div className="text-[11px] text-ink-400">{(f.size / 1024).toFixed(0)} KB · {f.type || "file"}</div>
-                        </div>
-                        <button type="button" onClick={() => removeFile(i)} aria-label="Remove file"
-                          className="inline-flex h-8 w-8 items-center justify-center rounded-full text-ink-400 hover:bg-ink-800 hover:text-ink-100">
-                          <X className="h-4 w-4" />
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </>
-            )}
-
-            {step === 5 && (
-              <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Where do we send the quote?</h2>
                 <p className="mt-1 text-sm text-ink-300">We&apos;ll text or call you back fast.</p>
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -358,7 +297,7 @@ export function QuoteWizard() {
                     <li><span className="text-ink-400">Service:</span> {SERVICES.find((s) => s.key === service)?.label || "—"}</li>
                     <li><span className="text-ink-400">Property:</span> {PROPERTIES.find((p) => p.key === property)?.label || "—"}</li>
                     <li><span className="text-ink-400">Urgency:</span> {URGENCIES.find((u) => u.key === urgency)?.label || "—"}</li>
-                    <li><span className="text-ink-400">Attachments:</span> {files.length}</li>
+                    <li><span className="text-ink-400">City:</span> {location || "—"}</li>
                   </ul>
                 </div>
               </>

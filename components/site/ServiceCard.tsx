@@ -4,6 +4,7 @@ import type { ComponentType, SVGProps } from "react";
 import { MapPin, ArrowUpRight } from "lucide-react";
 import { LogoMark } from "@/components/site/Logo";
 import { cn } from "@/lib/cn";
+import { BIZ } from "@/lib/business";
 
 export type ServiceCardProps = {
   slug: string;
@@ -45,7 +46,7 @@ export function ServiceCard({
         <div className="absolute left-3 top-3 flex items-center gap-2 rounded-xl border border-brass-500/40 bg-ink-950/70 px-2.5 py-1.5 backdrop-blur">
           <LogoMark className="h-5 w-5" />
           <span className="text-[10px] font-bold uppercase tracking-wider text-brass-300">
-            BH Air Duct Cleaning Metro Detroit
+            {BIZ.name}
           </span>
         </div>
 

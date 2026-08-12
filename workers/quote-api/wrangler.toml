@@ -1,0 +1,23 @@
+name = "bh-airduct-quote-api"
+main = "src/index.js"
+compatibility_date = "2024-08-01"
+account_id = "bf1930fdddc45c024e6db33190f46433"
+
+[vars]
+SITE_ORIGIN = "https://bhairductcleaningmetrodetroit.com"
+QUOTE_TO_PRIMARY = "israelvaday97@gmail.com"
+QUOTE_TO_SECONDARY = "oren.siyonov@gmail.com"
+FROM_EMAIL = "quotes@bhairductcleaningmetrodetroit.com"
+
+# Free tier: each binding may only send to its verified destination address.
+[[send_email]]
+name = "EMAIL_PRIMARY"
+destination_address = "israelvaday97@gmail.com"
+
+[[send_email]]
+name = "EMAIL_SECONDARY"
+destination_address = "oren.siyonov@gmail.com"
+
+[[routes]]
+pattern = "bhairductcleaningmetrodetroit.com/api/quote"
+zone_name = "bhairductcleaningmetrodetroit.com"

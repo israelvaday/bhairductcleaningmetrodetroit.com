@@ -7,6 +7,8 @@
     "build": "next build",
     "build:pages": "node scripts/build-pages.mjs",
     "deploy:pages": "node scripts/deploy-gh-pages.mjs",
+    "deploy:quote-worker": "node scripts/deploy-quote-worker.mjs",
+    "deploy:estimate-worker": "node scripts/deploy-estimate-worker.mjs",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "node scripts/inline-critical-css.mjs && node scripts/minify-html.mjs && next-sitemap"

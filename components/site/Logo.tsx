@@ -1,6 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { BIZ } from "@/lib/business";
 
 /**
  * BH Air Duct Cleaning Metro Detroit brand mark.
@@ -8,7 +9,7 @@ import { cn } from "@/lib/cn";
  */
 export function LogoMark({
   className,
-  title = "BH Air Duct Cleaning Metro Detroit",
+  title = BIZ.name,
   priority = false,
 }: { className?: string; title?: string; priority?: boolean }) {
   return (
@@ -46,7 +47,8 @@ export function Logo({
             text
           )}
         >
-          BH Air Duct <span className="text-brass-400">Metro</span> Detroit
+          {BIZ.name.replace(" Metro Detroit", "")}{" "}
+          <span className="text-brass-400">Metro Detroit</span>
         </span>
       )}
     </span>

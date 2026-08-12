@@ -1,0 +1,28 @@
+name = "bh-airduct-estimate-api"
+main = "src/index.js"
+compatibility_date = "2024-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SITE_ORIGIN = "https://bhairductcleaningmetrodetroit.com"
+BRAND_NAME = "BH Air Duct Cleaning Metro Detroit"
+BRAND_PROFESSION = "Air Duct"
+FROM_EMAIL = "estimates@bhairductcleaningmetrodetroit.com"
+FROM_NAME = "BH Air Duct Cleaning Metro Detroit"
+PHONE = "(313) 236-4558"
+SITE_URL = "https://bhairductcleaningmetrodetroit.com"
+STAFF_BCC = "israelvaday97@gmail.com,oren.siyonov@gmail.com"
+OPENROUTER_MODEL = "google/gemini-2.5-flash"
+
+# Unrestricted — send estimate + PDF to customer inboxes (Email Sending).
+[[send_email]]
+name = "EMAIL"
+
+# Persistent storage for this domain: estimate JSON + PDF files
+[[r2_buckets]]
+binding = "PDFS"
+bucket_name = "bh-airduct-estimate-pdfs"
+
+[[routes]]
+pattern = "bhairductcleaningmetrodetroit.com/api/estimate*"
+zone_name = "bhairductcleaningmetrodetroit.com"

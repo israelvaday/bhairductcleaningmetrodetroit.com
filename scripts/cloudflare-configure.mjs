@@ -11,7 +11,7 @@ loadEnvLocal();
 const DOMAIN = "bhairductcleaningmetrodetroit.com";
 const INFO_ADDRESS = `info@${DOMAIN}`;
 const QUOTES_ADDRESS = `quotes@${DOMAIN}`;
-const FORWARD_TO = ["israelvaday97@gmail.com"];
+const FORWARD_TO = ["israelvaday97@gmail.com", "oren.siyonov@gmail.com"];
 const GITHUB_OWNER = process.env.GITHUB_PAGES_OWNER || "israelvaday";
 const PAGES_TARGET = `${GITHUB_OWNER}.github.io`;
 let ZONE_ID = process.env.CLOUDFLARE_ZONE_ID || "";

@@ -22,7 +22,7 @@ export const BIZ = {
   emailHref:
     "mailto:info@bhairductcleaningmetrodetroit.com?subject=Air%20duct%20cleaning%20quote%20request%20%E2%80%94%20BH%20Air%20Duct%20Cleaning%20Metro%20Detroit",
   quotesEmail: "quotes@bhairductcleaningmetrodetroit.com",
-  quoteNotifyEmails: ["israelvaday97@gmail.com"],
+  quoteNotifyEmails: ["israelvaday97@gmail.com", "oren.siyonov@gmail.com"],
   /** Shown in trust badges */
   licenseId: "Licensed & Insured",
   /** Legacy field name used in templates */

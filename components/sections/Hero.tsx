@@ -121,7 +121,7 @@ export function Hero() {
       >
         <LogoMark className="h-7 w-7" />
         <div className="flex flex-col leading-tight">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brass-300">BH Air Duct Cleaning Metro Detroit</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brass-300">{BIZ.name}</span>
           <span className="font-mono text-[10px] text-ink-300">Licensed & insured</span>
         </div>
       </div>
@@ -159,7 +159,7 @@ export function Hero() {
           className="mt-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.4em] text-brass-300/90"
         >
           <span className="h-px w-10 bg-gradient-to-r from-transparent to-brass-500/60" />
-          BH Air Duct Cleaning Metro Detroit
+          {BIZ.name}
           <span className="h-px w-10 bg-gradient-to-l from-transparent to-brass-500/60" />
         </div>
 
