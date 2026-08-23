@@ -22,7 +22,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/about/about-hero.png"
+            src="/about/about-hero.jpg"
             alt="The BH Air Duct Cleaning Metro Detroit crew with a service van in Detroit"
             fill
             sizes="100vw"
@@ -92,7 +92,7 @@ export default function AboutPage() {
             )}
             <div className="col-span-2 overflow-hidden rounded-2xl border border-ink-800">
               <Image
-                src="/about/about-workshop.png"
+                src="/about/about-workshop.jpg"
                 alt="Inside the BH Air Duct Cleaning Metro Detroit equipment van — brush rods, air whips, and vacuum gear"
                 width={1536}
                 height={1024}

@@ -8,7 +8,7 @@ export type FAQSection = {
   items: FAQ[];
 };
 
-export const FAQ_HERO_IMAGE = "/faq/faq-hero.png";
+export const FAQ_HERO_IMAGE = "/faq/faq-hero.jpg";
 export const FAQ_HERO_ALT = "Air duct cleaning technician answering questions for a homeowner beside a furnace in a Metro Detroit basement";
 
 export const FAQ_SECTIONS: FAQSection[] = [

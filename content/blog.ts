@@ -27,9 +27,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Air Ducts",
     readMinutes: 8,
     date: "2026-03-04",
-    heroImage: "/blog/how-often-should-air-ducts-be-cleaned-hero.png",
+    heroImage: "/blog/how-often-should-air-ducts-be-cleaned-hero.jpg",
     heroAlt: "Technician removing a floor register in a Michigan living room to inspect the supply duct below.",
-    secondaryImage: "/blog/how-often-should-air-ducts-be-cleaned-secondary.png",
+    secondaryImage: "/blog/how-often-should-air-ducts-be-cleaned-secondary.jpg",
     secondaryAlt: "Inside view of a residential sheet-metal duct showing a layer of dust and debris before cleaning.",
     body: `
 Ask ten companies how often you should clean your air ducts and you'll get ten answers — most of them suspiciously aligned with how often that company would like to sell you a cleaning. So let's start with the source that doesn't profit from the answer: NADCA, the National Air Duct Cleaners Association, recommends having your ductwork **inspected every two years** and **cleaned every three to five years** for a typical home. That's the honest baseline, and it's the one we quote to homeowners from Detroit to Rochester Hills, even when it means telling someone their ducts don't need us yet.
@@ -85,9 +85,9 @@ Not sure where your house falls? BH Air Duct Cleaning Metro Detroit will tell yo
     category: "Air Quality",
     readMinutes: 9,
     date: "2026-03-11",
-    heroImage: "/blog/signs-your-air-ducts-need-cleaning-hero.png",
+    heroImage: "/blog/signs-your-air-ducts-need-cleaning-hero.jpg",
     heroAlt: "Close-up of a dusty supply register on a wall with visible dust streaks around the vent slats.",
-    secondaryImage: "/blog/signs-your-air-ducts-need-cleaning-secondary.png",
+    secondaryImage: "/blog/signs-your-air-ducts-need-cleaning-secondary.jpg",
     secondaryAlt: "Homeowner holding up a return air grille covered in matted gray dust.",
     body: `
 Your duct system doesn't have a warning light. It runs hidden inside floors, walls, and basement ceilings, quietly recirculating your home's air a couple dozen times a day — and when it gets dirty enough to matter, the signs show up in odd, easy-to-misread places. Here are the ten signs we actually trust after cleaning ducts across Metro Detroit, roughly in order of how strongly they point to the ductwork.
@@ -157,9 +157,9 @@ BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb coun
     category: "Cost Guides",
     readMinutes: 10,
     date: "2026-03-18",
-    heroImage: "/blog/air-duct-cleaning-cost-metro-detroit-hero.png",
+    heroImage: "/blog/air-duct-cleaning-cost-metro-detroit-hero.jpg",
     heroAlt: "Air duct cleaning technician reviewing a written itemized estimate with a homeowner at their kitchen table.",
-    secondaryImage: "/blog/air-duct-cleaning-cost-metro-detroit-secondary.png",
+    secondaryImage: "/blog/air-duct-cleaning-cost-metro-detroit-secondary.jpg",
     secondaryAlt: "Negative-pressure duct cleaning vacuum unit connected to a furnace trunk line in a Michigan basement.",
     body: `
 Air duct cleaning has a pricing problem, and it's not that prices are high — it's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see $79 and $99 "whole house specials" stacked on top of each other, while legitimate companies quote three to six times that. The gap isn't greed. It's the difference between a real service and a bait ad. Here are the actual numbers, what drives them, and how the scam works so you can see it coming.
@@ -224,9 +224,9 @@ If you want a real number for your house, call (313) 236-4558 or [request a free
     category: "Safety",
     readMinutes: 9,
     date: "2026-03-25",
-    heroImage: "/blog/dryer-vent-cleaning-fire-safety-hero.png",
+    heroImage: "/blog/dryer-vent-cleaning-fire-safety-hero.jpg",
     heroAlt: "Exterior dryer vent hood on a brick Michigan home with lint visibly built up around the flap.",
-    secondaryImage: "/blog/dryer-vent-cleaning-fire-safety-secondary.png",
+    secondaryImage: "/blog/dryer-vent-cleaning-fire-safety-secondary.jpg",
     secondaryAlt: "Technician holding a rotary brush and a pile of removed lint next to a disconnected dryer duct.",
     body: `
 Of everything we clean, dryer vents are the one with a genuine fire statistic attached. FEMA and the U.S. Fire Administration estimate around 2,900 dryer fires in American homes every year, causing deaths, injuries, and tens of millions in property damage — and the leading cause, by a wide margin, is failure to clean. Not faulty machines. Not bad wiring. Lint that was allowed to accumulate until the airflow died and the heat had nowhere to go.
@@ -282,9 +282,9 @@ BH Air Duct Cleaning Metro Detroit cleans dryer vents across all of Wayne, Oakla
     category: "Air Ducts",
     readMinutes: 10,
     date: "2026-04-01",
-    heroImage: "/blog/air-duct-cleaning-process-what-to-expect-hero.png",
+    heroImage: "/blog/air-duct-cleaning-process-what-to-expect-hero.jpg",
     heroAlt: "Technician feeding a rotary brush line into an open supply register while a negative-pressure hose runs to the basement.",
-    secondaryImage: "/blog/air-duct-cleaning-process-what-to-expect-secondary.png",
+    secondaryImage: "/blog/air-duct-cleaning-process-what-to-expect-secondary.jpg",
     secondaryAlt: "Before-and-after comparison photos of the inside of a residential air duct on a technician's tablet.",
     body: `
 Most homeowners have never watched a duct cleaning happen, which is exactly why bad operators get away with fifteen-minute fake ones. The difference between a real source-removal cleaning and a "blow-and-go" isn't subtle once you know what to look for — it's the difference between a system-wide process under negative pressure and a guy waving a shop-vac at your registers. Here's the step-by-step of a proper job, the way NADCA's ACR standard lays it out and the way we run it in homes from Detroit to Novi.
@@ -352,9 +352,9 @@ If you want to watch every step of this in your own home, we're happy to have yo
     category: "Air Quality",
     readMinutes: 8,
     date: "2026-04-08",
-    heroImage: "/blog/indoor-air-quality-michigan-winter-hero.png",
+    heroImage: "/blog/indoor-air-quality-michigan-winter-hero.jpg",
     heroAlt: "Frost-covered windows of a Michigan home at dusk with warm light inside, furnace exhaust steaming outside.",
-    secondaryImage: "/blog/indoor-air-quality-michigan-winter-secondary.png",
+    secondaryImage: "/blog/indoor-air-quality-michigan-winter-secondary.jpg",
     secondaryAlt: "Hand replacing a clean pleated furnace filter in a basement furnace filter slot.",
     body: `
 Every February, the same conversation happens in houses from Westland to Shelby Township: everyone's congested, the dust is relentless, the house smells stale, and somebody blames the ducts. Sometimes they're right. Often the real story is bigger than the ducts — it's the physics of living sealed inside a heated box for five months. Here's what actually happens to Michigan indoor air in winter, and the fixes that genuinely help, ranked by bang for the buck.
@@ -410,9 +410,9 @@ If your winter air feels worse than it should, start with the filter and the hum
     category: "HVAC",
     readMinutes: 8,
     date: "2026-04-15",
-    heroImage: "/blog/furnace-and-ac-coil-cleaning-guide-hero.png",
+    heroImage: "/blog/furnace-and-ac-coil-cleaning-guide-hero.jpg",
     heroAlt: "Close-up of a furnace blower wheel with fins caked in gray dust before cleaning.",
-    secondaryImage: "/blog/furnace-and-ac-coil-cleaning-guide-secondary.png",
+    secondaryImage: "/blog/furnace-and-ac-coil-cleaning-guide-secondary.jpg",
     secondaryAlt: "Technician cleaning an evaporator coil above a furnace with a coil cleaning tool and light.",
     body: `
 Here's a trade secret that will make you a smarter shopper: the dirtiest, most performance-killing surfaces in your HVAC system usually aren't the duct walls. They're the **blower wheel** that moves the air and the **evaporator coil** that cools it. A system can have moderately dusty ducts and run fine; a system with a caked blower wheel and a matted coil will cost you money every single day it runs, no matter how clean the ducts are. That's why we tell customers straight: duct cleaning without equipment cleaning is half a job.
@@ -465,9 +465,9 @@ If your airflow is weak, your bills are creeping, or your AC has iced up more th
     category: "Buying Guides",
     readMinutes: 9,
     date: "2026-04-22",
-    heroImage: "/blog/hire-air-duct-cleaning-company-checklist-hero.png",
+    heroImage: "/blog/hire-air-duct-cleaning-company-checklist-hero.jpg",
     heroAlt: "Homeowner comparing two written duct cleaning estimates at a kitchen table with a laptop showing reviews.",
-    secondaryImage: "/blog/hire-air-duct-cleaning-company-checklist-secondary.png",
+    secondaryImage: "/blog/hire-air-duct-cleaning-company-checklist-secondary.jpg",
     secondaryAlt: "Uniformed technician showing a homeowner before-and-after duct photos on a tablet next to professional equipment.",
     body: `
 We'll say the quiet part out loud: air duct cleaning has one of the worst scam-to-service ratios of any home trade. NADCA and the FTC have both published consumer warnings about it, and the reason is structural — the work happens inside walls where you can't see it, most homeowners buy it once every few years, and the barrier to entry is a shop-vac and a Facebook ad. Metro Detroit gets the full treatment: door hangers in Dearborn Heights, coupon mailers in Warren, $89 Groupons that turn into $1,200 invoices in Troy. Here's the checklist that separates real companies from the rest, from people who compete against both.

@@ -176,7 +176,7 @@ export function QuoteWizard() {
                     >
                       <div className="relative aspect-square w-full bg-ink-950">
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${s.key}.png`}
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${s.key}.jpg`}
                           alt={s.label}
                           fill
                           sizes="(max-width: 640px) 50vw, 33vw"
@@ -213,7 +213,7 @@ export function QuoteWizard() {
                     >
                       <div className="relative aspect-square w-full bg-ink-950">
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${p.key}.png`}
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${p.key}.jpg`}
                           alt={p.label}
                           fill
                           sizes="(max-width: 640px) 50vw, 25vw"

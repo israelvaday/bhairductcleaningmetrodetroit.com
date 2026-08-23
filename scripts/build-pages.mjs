@@ -37,11 +37,6 @@ if (fs.existsSync(API)) {
 try {
   run("npx next build");
   run("node scripts/sync-static-assets.mjs");
-  // Remove stale pre-rebrand sitemaps copied from public/ if present
-  for (const stale of ["sitemap-0.xml"]) {
-    const p = path.join(ROOT, "out", stale);
-    if (fs.existsSync(p)) fs.rmSync(p);
-  }
   // GitHub Pages custom domain
   fs.writeFileSync(path.join(ROOT, "out", "CNAME"), "bhairductcleaningmetrodetroit.com\n");
   // Disable Jekyll so GitHub Pages serves _next/ assets (CSS, JS)
