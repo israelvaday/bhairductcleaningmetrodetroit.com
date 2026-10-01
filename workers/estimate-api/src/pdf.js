@@ -34,7 +34,7 @@ export async function buildEstimatePdf(env, payload) {
 
   page.drawText(brand, { x: left, y, size: 16, font: fontBold, color: ink });
   y -= 16;
-  page.drawText(`${profession} estimate · Licensed & insured · Metro Detroit, MI`, {
+  page.drawText(`${profession} estimate · Metro Detroit, MI`, {
     x: left,
     y,
     size: 9,

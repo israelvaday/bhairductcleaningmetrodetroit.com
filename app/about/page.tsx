@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/about/about-hero.jpg"
-            alt="The BH Air Duct Cleaning Metro Detroit crew with a service van in Detroit"
+            alt="Two air duct cleaning technicians carrying vacuum hose and a rotary brush up to a Metro Detroit home"
             fill
             sizes="100vw"
             className="object-cover"

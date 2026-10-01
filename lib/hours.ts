@@ -27,6 +27,30 @@ function detroitParts(): { day: number; hours: number; minutes: number } {
   return { day: map[weekday] ?? 0, hours: hour, minutes: minute };
 }
 
+/**
+ * Temporary holiday closures in America/Detroit local time ("YYYY-MM-DDTHH:MM", end exclusive).
+ * While a window is active it overrides the weekly hours, so the header pill and /hours never
+ * say "Open now" while the homepage holiday notice says we are closed. Past windows are inert.
+ */
+const HOLIDAY_CLOSURES: ReadonlyArray<{ from: string; until: string; message: string }> = [
+  // Shemini Atzeret and Simchat Torah 2026: closed Sat 10-03 and Sun 10-04, back Mon 10-05 at 9:00 AM.
+  { from: "2026-10-03T00:00", until: "2026-10-05T09:00", message: "Closed for the holiday, back Monday at 9:00 AM" },
+];
+
+function detroitStamp(): string {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Detroit",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(new Date());
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "00";
+  return `${get("year")}-${get("month")}-${get("day")}T${get("hour")}:${get("minute")}`;
+}
+
 function toMinutes(t: string | null): number | null {
   if (!t) return null;
   const [h, m] = t.split(":").map(Number);
@@ -59,6 +83,10 @@ export function getHoursStatus(): HoursStatus {
   const now = hours * 60 + minutes;
   const today = BIZ.hours[day];
   const todayLabel = today.label;
+
+  const stamp = detroitStamp();
+  const closure = HOLIDAY_CLOSURES.find((c) => stamp >= c.from && stamp < c.until);
+  if (closure) return { isOpen: false, todayLabel, message: closure.message };
 
   if ("closed" in today && today.closed) {
     for (let i = 1; i <= 7; i++) {

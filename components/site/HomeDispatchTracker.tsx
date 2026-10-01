@@ -65,7 +65,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
         `Location confirmed — pinpointing ${areaName}, MI…`,
         `Filtering units stocked for ${svcLabelLower}…`,
         `Cross-referencing today&rsquo;s ${svcLabelLower} job queue + live traffic…`,
-        `Match found — Tech ${techId} (${techName}) • ${svcLabel} certified`,
+        `Match found — Tech ${techId} (${techName})`,
         bulletSample ? `Truck inventory confirmed: ${bulletSample.toLowerCase()}` : `Confirming on-truck inventory for the call…`,
         `ETA locked: ${eta} min • ${dist} mi from you`,
       ]

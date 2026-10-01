@@ -20,7 +20,7 @@ export default function ThankYouPage() {
           Got it — we&apos;ll be in touch.
         </h1>
         <p className="mx-auto mt-4 max-w-md text-ink-200">
-          Message sent. We will be in touch shortly.
+          Message sent. A technician will call or text you back shortly.
         </p>
         <div className="mt-7 flex flex-col items-center gap-4">
           <ContactCTA size="lg" />

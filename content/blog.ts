@@ -346,7 +346,7 @@ A proper single-system cleaning takes **2 to 4 hours** with a two-tech crew — 
 
 ## See It Done Right
 
-If you want to watch every step of this in your own home, we're happy to have you look over our shoulders — homeowners who watch a real cleaning become our best word-of-mouth. BH Air Duct Cleaning Metro Detroit runs NADCA-standard source-removal cleanings across all of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [send us a message](/quote) and we'll give you a written price, register count included.
+If you want to watch every step of this in your own home, we're happy to have you look over our shoulders — homeowners who watch a real cleaning become our best word-of-mouth. BH Air Duct Cleaning Metro Detroit runs NADCA-standard source-removal cleanings across all of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 for a price on your job, or [send us a message](/quote).
 `,
   },
 

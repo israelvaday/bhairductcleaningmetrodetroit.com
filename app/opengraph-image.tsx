@@ -61,7 +61,7 @@ export default async function OgImage() {
               BH AIR DUCT CLEANING METRO DETROIT
             </div>
             <div style={{ fontSize: 18, color: "#C9A24A", marginTop: 6, letterSpacing: 2, fontWeight: 700 }}>
-              LICENSED & INSURED
+              METRO DETROIT, MICHIGAN
             </div>
           </div>
         </div>

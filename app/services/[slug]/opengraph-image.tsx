@@ -109,7 +109,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
               letterSpacing: 1,
             }}
           >
-            {s?.intent === "emergency" ? "⚡ EMERGENCY DISPATCH" : "✓ LICENSED & INSURED"}
+            {s?.intent === "emergency" ? "⚡ EMERGENCY DISPATCH" : "METRO DETROIT, MICHIGAN"}
           </div>
         </div>
 

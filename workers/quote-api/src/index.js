@@ -181,7 +181,7 @@ function buildHtml(fields) {
             <td style="padding:18px 28px;border-top:1px solid #1f2a44;background:#0a1020">
               <p style="margin:0;font-size:11px;color:#6b7794;line-height:1.6">
                 <b style="color:#9aa6c1">${BIZ_NAME}</b><br>
-                Air duct, dryer vent &amp; HVAC cleaning • Licensed &amp; Insured • Metro Detroit, MI<br>
+                Air duct, dryer vent &amp; HVAC cleaning • Metro Detroit, MI<br>
                 <a href="${SITE_URL}" style="color:#b58a3a;text-decoration:none">bhairductcleaningmetrodetroit.com</a>
               </p>
             </td>
