@@ -63,8 +63,8 @@ export default function GalleryPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-ink-200">
             Drag the white handle on any photo below to compare the duct before and after cleaning.
-            These are {BEFORE_AFTER.length} unretouched comparisons from real jobs — the same
-            source-removal process we bring to every Metro Detroit home and business.
+            These {BEFORE_AFTER.length} comparisons show what source removal does inside a duct, the same
+            process we bring to every Metro Detroit home and business.
           </p>
           <div className="mt-6">
             <ContactCTA size="md" />
@@ -109,10 +109,10 @@ export default function GalleryPage() {
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">About this gallery</h2>
             <p className="mt-3">
-              The before-and-after sliders above are real supply and return ducts photographed on real jobs — matted dust, construction debris, pet hair, and decades of buildup on the left; bare, clean sheet metal on the right. No filters, no staging. It&apos;s the clearest way we know to show what negative-pressure source removal actually does inside a duct system, because the inside of your ductwork is the one part of your home you never get to see.
+              The before-and-after sliders above show supply and return ducts with matted dust, construction debris, pet hair, and decades of buildup on the left, and bare, clean sheet metal on the right. It&apos;s the clearest way we know to show what negative-pressure source removal actually does inside a duct system, because the inside of your ductwork is the one part of your home you never get to see.
             </p>
             <p className="mt-3">
-              We publish this gallery for the same reason we photograph every job we do: when you&apos;re hiring an air duct cleaning company, you should be able to see actual evidence of the work — not a stock photo of a shiny vent. Every BH Air Duct Cleaning Metro Detroit job ends with before-and-after photos of your own ducts, so you never have to take our word for it.
+              We publish this gallery for the same reason we photograph every job we do: when you&apos;re hiring an air duct cleaning company, you should be able to see what the work involves before anyone comes to your house. Every BH Air Duct Cleaning Metro Detroit job ends with before-and-after photos of your own ducts, so you never have to take our word for it.
             </p>
           </div>
 

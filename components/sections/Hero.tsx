@@ -207,7 +207,7 @@ export function Hero() {
           </li>
           <li className="flex items-center gap-1.5">
             <ShieldCheck className="h-4 w-4 text-brass-400" />
-            Background-checked techs
+            Local Metro Detroit crews
           </li>
           <li className="flex items-center gap-1.5">
             <Wrench className="h-4 w-4 text-brass-400" />

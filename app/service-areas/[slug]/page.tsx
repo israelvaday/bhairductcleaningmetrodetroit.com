@@ -71,7 +71,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-ink-950/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brass-300 backdrop-blur">
-                  <ShieldCheck className="h-3.5 w-3.5" /> Background-checked techs
+                  <ShieldCheck className="h-3.5 w-3.5" /> Local Metro Detroit crews
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur">
                   <Clock className="h-3.5 w-3.5" /> Mobile dispatch
@@ -249,7 +249,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             Commercial work in {a.name} is steady year-round — rooftop unit and air handler cleanings for offices and retail, ceiling diffuser and VAV service, restaurant and medical-suite duct programs, multi-unit dryer vent cleaning for condos and apartments, and planned-maintenance contracts for property managers and facility teams who would rather find a clogged coil during an inspection than during a heat wave.
           </p>
           <p>
-            What a job costs in {a.name} depends on the work: the size of the home, the number of vents and furnaces, how much buildup there is, and how easy the ductwork is to reach. Larger scopes (multi-furnace homes, commercial buildings, restoration work) are written up before work starts, and there is no teaser-price bait-and-switch. If you&apos;re comparing companies, ask each one for proof of insurance, a written scope based on your register count, and before-and-after photos. Those three questions eliminate the majority of duct cleaning scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck. Call {BIZ.phone} for a price on your job.
+            What a job costs in {a.name} depends on the work: the size of the home, the number of vents and furnaces, how much buildup there is, and how easy the ductwork is to reach. Larger scopes (multi-furnace homes, commercial buildings, restoration work) are written up before work starts, and there is no teaser-price bait-and-switch. If you&apos;re comparing companies, ask each one what standard they clean to, whether they will put a scope based on your register count in writing, and whether they take before-and-after photos. Those three questions eliminate the majority of duct cleaning scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck. Call {BIZ.phone} for a price on your job.
           </p>
         </div>
       </section>

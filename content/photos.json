@@ -152,11 +152,11 @@
     "services": [
       "emergency"
     ],
-    "width": 1920,
+    "width": 1255,
     "height": 1072,
-    "ratio": 1.791,
+    "ratio": 1.171,
     "orientation": "landscape",
-    "bytes": 390554,
+    "bytes": 254696,
     "source": "generated"
   },
   {
@@ -622,18 +622,18 @@
   {
     "id": "gen-v2--truck-hose-run",
     "src": "/photos/gen-v2--truck-hose-run.jpg",
-    "alt": "Duct cleaning vacuum hose running from truck into a home — BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
+    "alt": "Duct cleaning vacuum hose running through the front door into a home, BH Air Duct Cleaning Metro Detroit, Metro Detroit, MI",
     "category": "residential",
     "kind": "work",
     "services": [
       "residential",
       "emergency"
     ],
-    "width": 1920,
+    "width": 1080,
     "height": 1072,
-    "ratio": 1.791,
+    "ratio": 1.007,
     "orientation": "landscape",
-    "bytes": 382490,
+    "bytes": 196065,
     "source": "generated"
   }
 ]

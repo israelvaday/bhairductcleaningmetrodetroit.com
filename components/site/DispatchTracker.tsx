@@ -92,7 +92,7 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
           Live Dispatch
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3" /> Background-checked techs
+          <ShieldCheck className="h-3 w-3" /> Local Metro Detroit crews
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-950/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-200">
           <MapPin className="h-3 w-3 text-brass-400" /> {areaName}, MI

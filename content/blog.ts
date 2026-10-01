@@ -167,7 +167,7 @@ BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb coun
     secondaryImage: "/blog/air-duct-cleaning-cost-metro-detroit-secondary.jpg",
     secondaryAlt: "Negative-pressure duct cleaning vacuum unit connected to a furnace trunk line in a Michigan basement.",
     body: `
-Air duct cleaning has a pricing problem, and it's not that real cleanings cost too much. It's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see rock-bottom "whole house specials" stacked on top of each other, far below what a legitimate cleaning takes. The gap isn't greed. It's the difference between a real service and a bait ad. Here's what actually drives the cost of a real cleaning, and how the scam works so you can see it coming.
+Air duct cleaning has a pricing problem, and it's not that real cleanings cost too much. It's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see rock-bottom "whole house specials" stacked on top of each other, far too low to pay for a legitimate cleaning. The gap isn't greed. It's the difference between a real service and a bait ad. Here's what actually drives the cost of a real cleaning, and how the scam works so you can see it coming.
 
 ## What a Legitimate Cleaning Involves
 
@@ -176,7 +176,7 @@ A proper source-removal cleaning means a negative-pressure truck or portable HEP
 - **Single-furnace homes of average size** (up to roughly 2,000 sq ft) are the most straightforward jobs. This covers most ranches and colonials in Livonia, Warren, Redford, and St. Clair Shores.
 - **Larger homes** (2,500 to 4,000+ sq ft) take longer, driven mostly by register count and duct footage. Common in Novi, Rochester Hills, and Washington Township.
 - **A second furnace or system** is effectively a second setup and a second set of trunk connections. Many larger Oakland County homes run two systems.
-- **Add-ons:** dryer vent cleaning, and sanitizing with an EPA-registered antimicrobial (only appropriate after source removal, and only when there's a reason). Heavy contamination like post-flood or rodent cleanup is scoped after inspection.
+- **Add-ons** such as dryer vent cleaning and sanitizing with an EPA-registered antimicrobial (only appropriate after source removal, and only when there's a reason) are listed separately in the scope. Heavy contamination like post-flood or rodent cleanup is scoped after inspection.
 - **Camera inspection alone** is there for when you want to see inside your ducts before deciding anything.
 
 If a price you've been given sounds far too low for that much work, keep reading.
@@ -206,15 +206,15 @@ The cruel part is that the scam poisons the well for the honest version of the s
 
 - Will you connect a negative-pressure vacuum to the trunk line, or just vacuum at each register?
 - Is the price in writing, and does it cover ALL supply vents, ALL returns, and the blower compartment — or is each of those an add-on?
-- Are you NADCA members, and do you follow the ACR standard?
+- Do you follow NADCA's ACR cleaning standard?
 - Can I see before-and-after photos or camera footage of MY ducts?
-- Are you insured, and can you send a certificate?
+- How many technicians will come, and how long will the job take?
 
 Any legitimate company answers those five without flinching.
 
 ## What a Legit Written Scope Includes
 
-When BH Air Duct Cleaning Metro Detroit scopes a job, the written price covers: full source-removal cleaning of every supply and return run, trunk lines cleaned under negative pressure, register and grille cleaning, blower compartment cleaning, before-and-after photos, and a walkthrough at the end. No "per vent" surprise math, no hallway renegotiation.
+When BH Air Duct Cleaning Metro Detroit scopes a job, the written scope covers: full source-removal cleaning of every supply and return run, trunk lines cleaned under negative pressure, register and grille cleaning, blower compartment cleaning, before-and-after photos, and a walkthrough at the end. No "per vent" surprise math, no hallway renegotiation.
 
 If you want a real number for your house, call (313) 236-4558 for a price on your job, or [send us a message](/quote). We serve every city in Wayne, Oakland, and Macomb counties, and if someone else's price looks too good to be true, we're happy to tell you over the phone whether it is.
 `,
@@ -507,7 +507,6 @@ Lead-generation websites clone themselves across every suburb with the city name
 ## The Vetting Checklist Before You Book
 
 - **NADCA membership and the ACR standard.** NADCA members must have certified technicians on staff, carry insurance, and agree to clean to the ACR standard — the industry's actual specification for source removal. Membership isn't a guarantee, but it's the strongest single filter available, and asking "do you follow ACR?" instantly sorts companies into those who know what it is and those who go quiet.
-- **Proof of insurance.** Michigan doesn't license duct cleaning as a standalone trade, so general liability and workers' comp certificates are the meaningful credential. A legitimate company produces them on request without drama.
 - **Before-and-after photos of YOUR ducts.** Not stock photos — footage from your actual system, standard on every job. If a company doesn't offer photo documentation, ask why the work can't survive being seen.
 - **Reviews read for patterns, not stars.** Skim the 3-star reviews specifically — that's where honest customers describe pricing behavior and upsell pressure. Look for specific jobs, specific tech names, and consistency across years.
 - **A real scope conversation on the phone.** A competent dispatcher asks about your square footage, system count, and vent count before anyone comes out. Vagueness on the phone predicts surprises in the driveway.

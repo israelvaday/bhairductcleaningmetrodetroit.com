@@ -18,7 +18,7 @@ export function Footer() {
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/30 bg-brass-500/10 px-3 py-1.5 text-xs font-semibold text-brass-300">
-              <ShieldCheck className="h-3.5 w-3.5" /> Background-checked techs
+              <ShieldCheck className="h-3.5 w-3.5" /> Local Metro Detroit crews
             </span>
             <Link
               href="/hours"

@@ -65,7 +65,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {[
-                { Icon: ShieldCheck, label: "Technicians", value: "Background-checked" },
+                { Icon: ShieldCheck, label: "Method",      value: "Source removal" },
                 { Icon: Wrench,      label: "Mobile Stock", value: "Truck-ready" },
                 { Icon: Users,       label: "Local Team",  value: "Metro Detroit" },
               ].map(({ Icon, label, value }) => (

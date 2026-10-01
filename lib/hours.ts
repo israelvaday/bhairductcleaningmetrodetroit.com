@@ -96,7 +96,7 @@ export function getHoursStatus(): HoursStatus {
         return {
           isOpen: false,
           todayLabel,
-          message: `Closed — opens ${next.label} (${opensAt})`,
+          message: `Closed, opens ${next.label} (${opensAt})`,
         };
       }
     }
@@ -112,7 +112,7 @@ export function getHoursStatus(): HoursStatus {
       isOpen: true,
       todayLabel,
       message: is24HourDay(today)
-        ? "Open now — 24 hours today"
+        ? "Open now, 24 hours today"
         : `Open now until ${until}`,
     };
   }
@@ -124,7 +124,7 @@ export function getHoursStatus(): HoursStatus {
       return {
         isOpen: false,
         todayLabel,
-        message: `Closed — opens ${next.label} (${opensAt})`,
+        message: `Closed, opens ${next.label} (${opensAt})`,
       };
     }
   }

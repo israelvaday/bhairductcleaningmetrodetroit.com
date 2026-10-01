@@ -56,7 +56,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "What does an inspection visit cover?",
-        a: "An inspection visit covers the drive, a camera inspection of your ductwork, and a written scope of work, so you know exactly what the job involves before any cleaning starts. Nothing is added without your OK. Call (313) 236-4558 for a price on your job.",
+        a: "On an inspection visit we run a camera through your ductwork and write up a scope of work, so you know exactly what the job involves before any cleaning starts. Nothing is added without your OK. Call (313) 236-4558 for a price on your job.",
       },
       {
         q: "What affects the cost of dryer vent cleaning?",
@@ -197,10 +197,6 @@ export const FAQ_SECTIONS: FAQSection[] = [
       {
         q: "Do you follow NADCA standards?",
         a: "Yes. Our cleaning process follows the NADCA ACR standard — negative-pressure source removal, cleaning of the entire HVAC system rather than just the visible vents, and verification of the results. When you're comparing companies, asking whether they clean to the NADCA standard is the fastest way to separate real duct cleaners from van-and-shop-vac operations.",
-      },
-      {
-        q: "Are your technicians background-checked?",
-        a: "Yes. Every technician passes a background check before joining the team and arrives in uniform in a marked vehicle. We also do internal reference checks before anyone works inside a customer's home.",
       },
       {
         q: "What guarantee do you offer on the work?",

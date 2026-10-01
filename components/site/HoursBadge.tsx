@@ -3,11 +3,16 @@
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Clock } from "lucide-react";
-import { getHoursStatus } from "@/lib/hours";
+import { getHoursStatus, type HoursStatus } from "@/lib/hours";
 
-/** Shown in navbar only while open — never displays "Closed". */
+/**
+ * Shown in navbar only while open, never displays "Closed".
+ * The status is read only in the browser (after mount): the static HTML is built at one moment and
+ * served at another, so rendering it on the server made React throw hydration error #418 whenever
+ * the open/closed state had changed since the build (holiday window included).
+ */
 export function HoursBadge({ className }: { className?: string }) {
-  const [status, setStatus] = useState(() => getHoursStatus());
+  const [status, setStatus] = useState<HoursStatus | null>(null);
 
   useEffect(() => {
     setStatus(getHoursStatus());
@@ -15,7 +20,7 @@ export function HoursBadge({ className }: { className?: string }) {
     return () => window.clearInterval(id);
   }, []);
 
-  if (!status.isOpen) return null;
+  if (!status || !status.isOpen) return null;
 
   return (
     <Badge tone="open" className={className}>

@@ -13,6 +13,21 @@ import { HomeDispatchTracker } from "@/components/site/HomeDispatchTracker";
 import { LongFormFaq } from "@/components/site/LongFormFaq";
 import { Reveal, RevealItem, RevealStagger } from "@/components/site/Reveal";
 
+/** What each service's cost depends on, in plain words. No prices: the page sends visitors to the phone for one. */
+const DUCT_DRIVERS = "the size of the system, how many vents and returns it has, how much buildup there is, and how easy the ductwork is to reach";
+const COST_DRIVERS: Record<string, { noun: string; drivers: string }> = {
+  residential: { noun: "residential air duct cleaning", drivers: DUCT_DRIVERS },
+  commercial: { noun: "commercial air duct cleaning", drivers: "the size of the building, how many air handlers, diffusers and returns it has, how much buildup there is, and access and scheduling" },
+  "dryer-vent": { noun: "dryer vent cleaning", drivers: "the length and routing of the vent run, whether it ends at a wall or on the roof, and how much lint has packed in" },
+  "hvac-restoration": { noun: "HVAC system restoration", drivers: "the size of the system, what contaminated it, how far the contamination spread, and how easy the equipment is to reach" },
+  "furnace-coil": { noun: "furnace and AC coil cleaning", drivers: "the type of furnace and coil, how much buildup there is, and how easy the blower and coil are to reach" },
+  sanitization: { noun: "duct sanitizing and deodorizing", drivers: "the size of the system, how many vents and returns it has, and what caused the odor or contamination" },
+  "duct-inspection": { noun: "a camera duct inspection", drivers: "the size of the system and how many runs need to be checked" },
+  "post-construction": { noun: "post-construction duct cleaning", drivers: "the size of the system, how many vents and returns it has, how much construction dust got in, and how easy the ductwork is to reach" },
+  maintenance: { noun: "a maintenance plan", drivers: "how many systems and dryer vents it covers and how often they are serviced" },
+  emergency: { noun: "same-day and emergency duct service", drivers: DUCT_DRIVERS },
+};
+
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
@@ -33,6 +48,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const s = SERVICES.find((x) => x.slug === slug);
   if (!s) return notFound();
   const hero = serviceHero(s.slug);
+  const cost = COST_DRIVERS[s.slug] ?? { noun: s.name.toLowerCase(), drivers: DUCT_DRIVERS };
   const Icon = s.icon;
   const allShots = photosForService(s.slug).filter((p) => p.kind === "work").slice(0, 8);
 
@@ -119,10 +135,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="rounded-3xl border border-brass-500/30 bg-brass-500/5 p-5">
               <div className="flex items-center gap-2 text-brass-300">
                 <ShieldCheck className="h-5 w-5" />
-                <span className="text-sm font-semibold uppercase tracking-wider">Vetted techs</span>
+                <span className="text-sm font-semibold uppercase tracking-wider">Local crews</span>
               </div>
               <p className="mt-2 text-sm text-ink-200">
-                Local Michigan air duct cleaning company. Every tech is background-checked.
+                Local Metro Detroit air duct cleaning company serving Wayne, Oakland, and Macomb counties.
               </p>
             </div>
             <div className="rounded-3xl border border-ink-800 bg-ink-900/50 p-5">
@@ -197,13 +213,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             More about {s.shortName.toLowerCase()} in Metro Detroit
           </h2>
           <p>
-            {s.description} Every {s.shortName.toLowerCase()} job is performed by a background-checked technician from a local company, dispatched from a fully equipped truck. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who cleans ductwork for a living.
+            {s.description} Every {s.shortName.toLowerCase()} job is performed by a technician from a local company, dispatched from a fully equipped truck. There is no call-center middle layer between you and the technician — when you call or text, you talk to someone who cleans ductwork for a living.
           </p>
           <p>
             We cover every city and neighborhood in Metro Detroit for {s.shortName.toLowerCase()}: Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties. Typical on-site arrival is 15 to 30 minutes depending on traffic and your distance from the nearest mobile unit.
           </p>
           <p>
-            The cost of {s.shortName.toLowerCase().replace("hvac", "HVAC")} work depends on the job: the size of the system, how many vents and runs it has, how much buildup there is, and how easy it is to reach. You get a written scope before any tools come out, with no &quot;your ducts turned out to have mold&quot; scare tactics and no high-pressure upsells. If something genuinely changes the scope on site, we explain it before doing anything, and you can decline. Call {BIZ.phone} for a price on your job.
+            The cost of {cost.noun} depends on the job: {cost.drivers}. You get a written scope before any tools come out, with no &quot;your ducts turned out to have mold&quot; scare tactics and no high-pressure upsells. If something genuinely changes the scope on site, we explain it before doing anything, and you can decline. Call {BIZ.phone} for a price on your job.
           </p>
           <p>
             We clean and verify before we recommend anything more, use professional negative-pressure equipment rather than shop-vac shortcuts, and document the work with before-and-after photos so you have records for insurance, property managers, or HOA boards. When a job genuinely calls for more — contaminated flex runs that need replacing, a system that needs restoration after smoke or water, a sanitizing treatment after rodents — we tell you in advance, put it in writing, and complete the work in a single visit whenever possible. Every job ends with an airflow check and a photo walkthrough of your own ducts. That&apos;s the difference between a real air duct cleaning company and a coupon crew with a shop vac.

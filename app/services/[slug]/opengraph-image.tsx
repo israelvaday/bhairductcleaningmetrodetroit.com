@@ -6,11 +6,9 @@ export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export async function generateImageMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const s = SERVICES.find((x) => x.slug === slug);
-  return [{ id: slug, alt: s ? `${s.name} — ${BIZ.name}` : BIZ.name, size, contentType }];
-}
+// One image per page at /<route>/<slug>/opengraph-image. generateImageMetadata gave the image an id
+// segment (/opengraph-image/<slug>) that the static export never wrote, so every og:image here was a 404.
+export const alt = `${BIZ.name} service`;
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));

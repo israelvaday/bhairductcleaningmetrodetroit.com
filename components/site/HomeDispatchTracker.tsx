@@ -150,7 +150,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
           {consoleLabel}
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3"/> Background-checked techs
+          <ShieldCheck className="h-3 w-3"/> Local Metro Detroit crews
         </span>
       </div>
 

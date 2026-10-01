@@ -41,7 +41,7 @@ export default function ContactPage() {
               <span className="text-sm font-semibold uppercase tracking-wider">Technicians</span>
             </div>
             <p className="mt-3 text-sm text-ink-200">
-              Background-checked technicians on our own crews, with before-and-after photos on every job.
+              Local Metro Detroit crews, with before-and-after photos on every job.
             </p>
           </div>
           <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/5 p-6">
