@@ -240,7 +240,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             What air duct cleaning in {a.name} actually looks like
           </h2>
           <p>
-            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Air Duct Cleaning Metro Detroit technician — not a call-center contractor — can be at your door with a fully equipped truck, often the same day you call. Every job is performed by a background-checked tech from a local company, with a written scope agreed in advance and before-and-after photos of your own ductwork delivered before the truck leaves.
+            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Air Duct Cleaning Metro Detroit technician — not a call-center contractor — can be at your door with a fully equipped truck, often the same day you call. Every job is performed by a tech from a local company, with a written scope agreed in advance and before-and-after photos of your own ductwork delivered before the truck leaves.
           </p>
           <p>
             The mix of work in {a.name} is what you&apos;d expect from this part of Metro Detroit. On the residential side it&apos;s whole-home duct cleanings in houses that have never had one, dryer vents so packed with lint the machine trips its thermal fuse, dust that reappears two days after cleaning the house, musty smells when the furnace kicks on, post-renovation drywall dust blowing out of every register, and furnace blower wheels so caked they move half their rated air. We also handle sanitizing treatments after pets, smoke, or rodents, camera inspections for buyers who want to see what they&apos;re inheriting, and evaporator coil cleanings that bring struggling AC systems back to life.
