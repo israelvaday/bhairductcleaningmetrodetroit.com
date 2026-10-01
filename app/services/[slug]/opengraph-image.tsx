@@ -33,7 +33,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const s = SERVICES.find((x) => x.slug === slug);
   const headline = s?.name ?? "Metro Detroit Air Duct Cleaning";
-  const tagline = s?.tagline ?? "Licensed & insured air duct cleaning company serving all of Metro Detroit.";
+  const tagline = s?.tagline ?? "Air duct cleaning company serving all of Metro Detroit.";
   const icon = (s && ICONS[s.slug]) ?? "💨";
   const bullets = (s?.bullets ?? []).slice(0, 3);
 
@@ -90,7 +90,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
                 BH AIR DUCT CLEANING METRO DETROIT
               </div>
               <div style={{ fontSize: 15, color: "#C9A24A", marginTop: 4, letterSpacing: 2, fontWeight: 700 }}>
-                METRO DETROIT · Licensed & insured
+                METRO DETROIT · MICHIGAN
               </div>
             </div>
           </div>

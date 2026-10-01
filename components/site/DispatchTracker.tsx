@@ -36,8 +36,8 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const logs = [
-    `Pinging licensed technicians near ${areaName}, MI…`,
-    `Scanning Licensed & Insured-verified units within 5 miles…`,
+    `Pinging technicians near ${areaName}, MI…`,
+    `Scanning available units within 5 miles…`,
     `Cross-referencing live traffic + active job queue…`,
     `Match found — Tech ${techId} (${techName})`,
     `Calculating optimal route via current Metro Detroit traffic…`,
@@ -92,7 +92,7 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
           Live Dispatch
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3" /> Licensed & insured
+          <ShieldCheck className="h-3 w-3" /> Background-checked techs
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-950/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-200">
           <MapPin className="h-3 w-3 text-brass-400" /> {areaName}, MI
@@ -114,7 +114,7 @@ export function DispatchTracker({ areaName, areaSlug }: { areaName: string; area
       {phase === "idle" && (
         <>
           <p className="relative mt-2 text-sm text-ink-300 md:text-base">
-            Tap below — our dispatch console pings every Licensed & insured unit within
+            Tap below and our dispatch console pings every unit within
             5 miles and returns a live ETA in seconds.
           </p>
           <button

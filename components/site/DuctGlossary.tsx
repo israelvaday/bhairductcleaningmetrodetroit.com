@@ -27,11 +27,11 @@ export function DuctGlossary() {
           </summary>
           <div className="space-y-5 pt-7">
             <p className="text-ink-300">
-              The duct cleaning trade has its own vocabulary and most of it never makes it onto the invoice in a form a homeowner can understand. Here is a short, opinionated glossary of the terms we use most often on the phone and on the truck. If you are calling around for a quote, knowing these terms will make every conversation shorter and every estimate easier to compare.
+              The duct cleaning trade has its own vocabulary and most of it never makes it onto the invoice in a form a homeowner can understand. Here is a short, opinionated glossary of the terms we use most often on the phone and on the truck. If you are calling around to compare companies, knowing these terms will make every conversation shorter and every written scope easier to compare.
             </p>
 
         <p>
-          <strong className="text-white">Supply ducts</strong> &mdash; the half of your duct system that delivers conditioned air <em>to</em> the rooms: warm air in winter, cool air in summer. Supplies terminate at the registers in your floors, walls, or ceilings, and they run under positive pressure whenever the blower is on. Because air is always pushing outward through them, supplies tend to stay somewhat cleaner than returns &mdash; which is why a quote that only covers &quot;the vents&quot; may be cleaning the cleaner half of your system and skipping the dirty half.
+          <strong className="text-white">Supply ducts</strong> &mdash; the half of your duct system that delivers conditioned air <em>to</em> the rooms: warm air in winter, cool air in summer. Supplies terminate at the registers in your floors, walls, or ceilings, and they run under positive pressure whenever the blower is on. Because air is always pushing outward through them, supplies tend to stay somewhat cleaner than returns &mdash; which is why a scope that only covers &quot;the vents&quot; may be cleaning the cleaner half of your system and skipping the dirty half.
         </p>
 
         <p>
@@ -47,7 +47,7 @@ export function DuctGlossary() {
         </p>
 
         <p>
-          <strong className="text-white">Register vs. grille vs. diffuser</strong> &mdash; three words for the covers on your duct openings, and the distinction is practical. A <em>register</em> has an adjustable damper you can open and close; a <em>grille</em> is a fixed cover with no damper, standard on returns; a <em>diffuser</em> is the ceiling fitting that spreads air in a pattern, common in newer builds. Techs use the words interchangeably on the phone, but on an itemized quote the count of supplies and returns is what drives the price &mdash; so count your covers before you call.
+          <strong className="text-white">Register vs. grille vs. diffuser</strong> &mdash; three words for the covers on your duct openings, and the distinction is practical. A <em>register</em> has an adjustable damper you can open and close; a <em>grille</em> is a fixed cover with no damper, standard on returns; a <em>diffuser</em> is the ceiling fitting that spreads air in a pattern, common in newer builds. Techs use the words interchangeably on the phone, but on an itemized scope the count of supplies and returns is what drives the price &mdash; so count your covers before you call.
         </p>
 
         <p>
@@ -59,7 +59,7 @@ export function DuctGlossary() {
         </p>
 
         <p>
-          <strong className="text-white">Air handler</strong> &mdash; the umbrella term for the indoor unit that moves the air: in most Metro Detroit homes that is the furnace itself, whose blower serves both heating and cooling. The air handler contains the blower wheel, the motor, and the control board, with the evaporator coil mounted alongside or above. When a duct cleaning quote says it includes &quot;the air handler,&quot; pin down what that means &mdash; a proper job opens the blower compartment and cleans it, rather than treating the furnace as a sealed box between two clean ducts.
+          <strong className="text-white">Air handler</strong> &mdash; the umbrella term for the indoor unit that moves the air: in most Metro Detroit homes that is the furnace itself, whose blower serves both heating and cooling. The air handler contains the blower wheel, the motor, and the control board, with the evaporator coil mounted alongside or above. When a duct cleaning scope says it includes &quot;the air handler,&quot; pin down what that means &mdash; a proper job opens the blower compartment and cleans it, rather than treating the furnace as a sealed box between two clean ducts.
         </p>
 
         <p>
@@ -79,7 +79,7 @@ export function DuctGlossary() {
         </p>
 
         <p>
-          <strong className="text-white">Duct liner</strong> &mdash; fiberglass insulation bonded to the <em>inside</em> of some ducts, mostly for sound-deadening near the air handler and in commercial systems. Lined duct cannot be cleaned like bare metal: hard brushes shred the liner and send fibers into the airstream, so the ACR standard prescribes soft-bristle, non-aggressive methods for it. Liner that is wet, moldy, or deteriorating cannot be cleaned back to health at all &mdash; it gets replaced or the duct gets relined. A crew should identify liner before quoting, not discover it mid-job.
+          <strong className="text-white">Duct liner</strong> &mdash; fiberglass insulation bonded to the <em>inside</em> of some ducts, mostly for sound-deadening near the air handler and in commercial systems. Lined duct cannot be cleaned like bare metal: hard brushes shred the liner and send fibers into the airstream, so the ACR standard prescribes soft-bristle, non-aggressive methods for it. Liner that is wet, moldy, or deteriorating cannot be cleaned back to health at all &mdash; it gets replaced or the duct gets relined. A crew should identify liner before pricing the job, not discover it mid-job.
         </p>
 
         <p>
@@ -143,7 +143,7 @@ export function DuctGlossary() {
         </p>
 
         <p>
-          <strong className="text-white">Lint trap vs. dryer vent</strong> &mdash; the distinction behind most dryer-fire complacency. The lint screen you clean before every load catches maybe 60&ndash;75% of the lint; the rest travels into the vent duct behind the machine and builds up along the full run to the termination hood, where you never see it. &quot;I clean the lint trap every time&quot; and &quot;my dryer vent is clean&quot; are two different claims. The vent run is the one that causes fires, and it is an annual professional cleaning item, typically $120&ndash;$200 in Metro Detroit.
+          <strong className="text-white">Lint trap vs. dryer vent</strong> &mdash; the distinction behind most dryer-fire complacency. The lint screen you clean before every load catches maybe 60&ndash;75% of the lint; the rest travels into the vent duct behind the machine and builds up along the full run to the termination hood, where you never see it. &quot;I clean the lint trap every time&quot; and &quot;my dryer vent is clean&quot; are two different claims. The vent run is the one that causes fires, and it is an annual professional cleaning item.
         </p>
 
         <p>

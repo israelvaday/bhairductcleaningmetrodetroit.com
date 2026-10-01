@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!a) return {};
   const info = INSIGHTS[slug];
   const desc = info?.tagline
-    ? `${info.tagline} ${BIZ.bsis} air duct cleaning dispatch — same-day slots in ${a.name}.`
-    : `Licensed & insured air duct and dryer vent cleaning serving ${a.name}, Metro Detroit. Whole-home duct cleaning, furnace & coil cleaning, sanitizing.`;
+    ? `${info.tagline} Air duct cleaning dispatch with same-day slots in ${a.name}.`
+    : `Air duct and dryer vent cleaning serving ${a.name}, Metro Detroit. Whole-home duct cleaning, furnace & coil cleaning, sanitizing.`;
   return {
     title: `Air Duct Cleaning in ${a.name}, MI`,
     description: desc,
@@ -71,7 +71,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center gap-2 rounded-full border border-brass-500/40 bg-ink-950/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brass-300 backdrop-blur">
-                  <ShieldCheck className="h-3.5 w-3.5" /> Licensed & insured
+                  <ShieldCheck className="h-3.5 w-3.5" /> Background-checked techs
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur">
                   <Clock className="h-3.5 w-3.5" /> Mobile dispatch
@@ -240,7 +240,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             What air duct cleaning in {a.name} actually looks like
           </h2>
           <p>
-            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Air Duct Cleaning Metro Detroit technician — not a call-center contractor — can be at your door with a fully equipped truck, often the same day you call. Every job is performed by a background-checked tech from a licensed &amp; insured local company, with a written flat-rate quote agreed in advance and before-and-after photos of your own ductwork delivered before the truck leaves.
+            {a.name} sits inside our Metro Detroit dispatch zone, which means a real BH Air Duct Cleaning Metro Detroit technician — not a call-center contractor — can be at your door with a fully equipped truck, often the same day you call. Every job is performed by a background-checked tech from a local company, with a written scope agreed in advance and before-and-after photos of your own ductwork delivered before the truck leaves.
           </p>
           <p>
             The mix of work in {a.name} is what you&apos;d expect from this part of Metro Detroit. On the residential side it&apos;s whole-home duct cleanings in houses that have never had one, dryer vents so packed with lint the machine trips its thermal fuse, dust that reappears two days after cleaning the house, musty smells when the furnace kicks on, post-renovation drywall dust blowing out of every register, and furnace blower wheels so caked they move half their rated air. We also handle sanitizing treatments after pets, smoke, or rodents, camera inspections for buyers who want to see what they&apos;re inheriting, and evaporator coil cleanings that bring struggling AC systems back to life.
@@ -249,7 +249,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             Commercial work in {a.name} is steady year-round — rooftop unit and air handler cleanings for offices and retail, ceiling diffuser and VAV service, restaurant and medical-suite duct programs, multi-unit dryer vent cleaning for condos and apartments, and planned-maintenance contracts for property managers and facility teams who would rather find a clogged coil during an inspection than during a heat wave.
           </p>
           <p>
-            Pricing in {a.name} is flat-rate for the common jobs (whole-home duct cleaning, dryer vent cleaning, sanitizing add-ons, camera inspections) and quoted in writing for larger scopes (multi-furnace homes, commercial buildings, restoration work), with no &quot;$99 whole house&quot; bait-and-switch. If you&apos;re comparing quotes against another company, ask for proof of insurance, a register-count-based price, and before-and-after photos — those three questions eliminate the majority of duct cleaning scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck.
+            What a job costs in {a.name} depends on the work: the size of the home, the number of vents and furnaces, how much buildup there is, and how easy the ductwork is to reach. Larger scopes (multi-furnace homes, commercial buildings, restoration work) are written up before work starts, and there is no teaser-price bait-and-switch. If you&apos;re comparing companies, ask each one for proof of insurance, a written scope based on your register count, and before-and-after photos. Those three questions eliminate the majority of duct cleaning scams reported across Southeast Michigan. Our warranty terms are on every invoice, and our name is on the side of every truck. Call {BIZ.phone} for a price on your job.
           </p>
         </div>
       </section>
@@ -261,7 +261,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <h2 className="font-display text-3xl font-extrabold md:text-4xl">
             Need air duct or dryer vent cleaning in {a.name} now?
           </h2>
-          <p className="mt-3 text-ink-200">One tap reaches a real licensed &amp; insured duct cleaning tech.</p>
+          <p className="mt-3 text-ink-200">One tap reaches a real duct cleaning tech.</p>
           <div className="mt-6 flex justify-center">
             <ContactCTA size="lg" />
           </div>

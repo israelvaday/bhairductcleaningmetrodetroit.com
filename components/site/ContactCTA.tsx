@@ -21,9 +21,9 @@ export function ContactCTA({
         <Smartphone className="h-5 w-5" />
         {showLabels && "Text Us"}
       </LinkButton>
-      <LinkButton href="/quote" variant="primary" size={size} aria-label="Request a free quote">
+      <LinkButton href="/quote" variant="primary" size={size} aria-label="Contact us: send us a message">
         <ClipboardList className="h-5 w-5" />
-        {showLabels && "Free Quote"}
+        {showLabels && "Contact Us"}
       </LinkButton>
       {showEmail && (
         <LinkButton href={BIZ.emailHref} variant="secondary" size={size} aria-label={`Email ${BIZ.email}`}>

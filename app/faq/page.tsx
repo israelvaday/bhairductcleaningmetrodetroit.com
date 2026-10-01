@@ -9,7 +9,7 @@ import { LongFormFaq } from "@/components/site/LongFormFaq";
 export const metadata: Metadata = {
   title: "FAQ — Metro Detroit Air Duct Cleaning Questions Answered",
   description:
-    "Honest answers about air duct cleaning pricing, the process, dryer vents, sanitizing, indoor air quality, and more from your licensed Metro Detroit air duct cleaning company.",
+    "Honest answers about what drives air duct cleaning cost, the process, dryer vents, sanitizing, indoor air quality, and more from your Metro Detroit air duct cleaning company.",
   alternates: { canonical: `${BIZ.url}/faq` },
 };
 
@@ -38,7 +38,7 @@ export default function FAQPage() {
               <span className="text-brass-gradient">Real answers</span> from a real duct cleaning tech.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-ink-200 md:mx-0">
-              Pricing. The process. Dryer vents. Sanitizing. Air quality. Everything Metro Detroit customers ask us, in one place.
+              Cost. The process. Dryer vents. Sanitizing. Air quality. Everything Metro Detroit customers ask us, in one place.
             </p>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-brass-500/30">

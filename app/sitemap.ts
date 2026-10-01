@@ -11,7 +11,9 @@ export const dynamic = "force-static";
 // Bump this only when page copy, services, or area content actually changes.
 // A truthful <lastmod> is a crawl signal; stamping every build trains Google
 // to ignore it entirely.
-const LAST_CONTENT_UPDATE = new Date("2026-08-12");
+// 2026-10-01: owner rules for the BH brand sites (no prices, no licence claim, contact
+// forms only) rewrote copy in the main content of every page listed here.
+const LAST_CONTENT_UPDATE = new Date("2026-10-01");
 
 const abs = (src: string) => `${BIZ.url}${src}`;
 
@@ -58,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...BLOG_POSTS.map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      lastModified: new Date(p.date),
+      lastModified: new Date(p.updated ?? p.date),
       changeFrequency: "yearly" as const,
       priority: 0.7,
       images: [abs(p.heroImage)],

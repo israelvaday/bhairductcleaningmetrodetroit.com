@@ -17,7 +17,7 @@ import { DuctGlossary } from "@/components/site/DuctGlossary";
 export const metadata: Metadata = {
   title: `Air Duct & Dryer Vent Cleaning — Metro Detroit`,
   description:
-    "BH Air Duct Cleaning Metro Detroit — licensed & insured air duct cleaning company. Whole-home duct cleaning, dryer vent cleaning, furnace & coil cleaning, sanitizing, and commercial HVAC cleaning. Serving all of Metro Detroit.",
+    "BH Air Duct Cleaning Metro Detroit is a local air duct cleaning company. Whole-home duct cleaning, dryer vent cleaning, furnace & coil cleaning, sanitizing, and commercial HVAC cleaning. Serving all of Metro Detroit.",
   alternates: { canonical: "/" },
 };
 

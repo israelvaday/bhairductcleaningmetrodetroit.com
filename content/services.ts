@@ -47,7 +47,6 @@ export const SERVICES: Service[] = [
       "After-hours & weekend scheduling, zero downtime",
       "Photo documentation & compliance reports",
       "Multi-tenant & property-management programs",
-      "COI provided; licensed & insured crews",
     ],
     intent: "service",
     keywords: ["commercial air duct cleaning", "commercial hvac cleaning detroit", "office duct cleaning", "restaurant duct cleaning michigan"],
@@ -167,12 +166,12 @@ export const SERVICES: Service[] = [
     icon: CalendarCheck,
     tagline: "Scheduled cleanings that keep air quality high and energy bills low.",
     description:
-      "Air duct cleaning isn't a once-in-a-lifetime event — NADCA recommends inspection every two years and cleaning every three to five, with annual dryer vent service. Our maintenance plans put your home or building on a schedule: annual dryer vent cleaning, periodic duct inspections with camera verification, filter reminders matched to your system, and priority booking with plan-member pricing. Property managers get per-door pricing across entire portfolios.",
+      "Air duct cleaning isn't a once-in-a-lifetime event — NADCA recommends inspection every two years and cleaning every three to five, with annual dryer vent service. Our maintenance plans put your home or building on a schedule: annual dryer vent cleaning, periodic duct inspections with camera verification, filter reminders matched to your system, and priority booking. Property managers get one schedule across entire portfolios.",
     bullets: [
       "Annual dryer vent cleaning (the fire-safety non-negotiable)",
       "Camera inspection every 24 months",
       "Full duct cleaning on a 3–5 year cycle",
-      "Priority scheduling & plan-member pricing",
+      "Priority scheduling for plan members",
       "Multi-property & landlord portfolio programs",
     ],
     intent: "service",
@@ -185,7 +184,7 @@ export const SERVICES: Service[] = [
     icon: Siren,
     tagline: "Blocked dryer vent, dead airflow, or post-flood ducts? We dispatch fast.",
     description:
-      "Some duct problems can't wait for next week: a dryer vent so blocked the machine overheats and trips its thermal fuse, a furnace starved for return air in January, rodents in the ductwork, sewage or flood water in floor ducts, or a puff-back coating the system in soot. We hold same-day slots across Wayne, Oakland, and Macomb counties for exactly these calls — a real dispatcher answers, quotes a flat rate, and a stocked truck rolls the same day.",
+      "Some duct problems can't wait for next week: a dryer vent so blocked the machine overheats and trips its thermal fuse, a furnace starved for return air in January, rodents in the ductwork, sewage or flood water in floor ducts, or a puff-back coating the system in soot. We hold same-day slots across Wayne, Oakland, and Macomb counties for exactly these calls — a real dispatcher answers, talks through the job, and a stocked truck rolls the same day.",
     bullets: [
       "Same-day dispatch across Metro Detroit",
       "Overheating dryer & blocked vent emergencies",

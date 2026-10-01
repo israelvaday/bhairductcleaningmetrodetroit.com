@@ -119,7 +119,7 @@ export default function GalleryPage() {
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">How we work on site</h2>
             <p className="mt-3">
-              Every job starts the same way: a walkthrough and register count, a flat-rate price confirmed before any equipment comes off the truck, floor and corner protection down, and then a full source-removal cleaning — negative-pressure vacuum sealed to your trunk line, every supply and return run agitated with rotary brushes and compressed-air whips, and the blower compartment detailed before we button the system back up.
+              Every job starts the same way: a walkthrough and register count, a written scope confirmed before any equipment comes off the truck, floor and corner protection down, and then a full source-removal cleaning — negative-pressure vacuum sealed to your trunk line, every supply and return run agitated with rotary brushes and compressed-air whips, and the blower compartment detailed before we button the system back up.
             </p>
             <p className="mt-3">
               If your ducts look like one of the &quot;before&quot; photos above, tap a button and we&apos;ll get you scheduled. Not sure? Ask about a camera inspection — if your ducts are clean, we&apos;ll tell you to keep your money, and show you the screen to prove it.

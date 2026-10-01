@@ -8,7 +8,7 @@ import { ServiceMap } from "@/components/site/ServiceMap";
 export const metadata: Metadata = {
   title: `Contact — Metro Detroit Air Duct Cleaning Company`,
   description:
-    "Reach BH Air Duct Cleaning Metro Detroit. Tap to call, text, or request a free quote. Licensed & Insured — serving all of Metro Detroit, MI.",
+    "Reach BH Air Duct Cleaning Metro Detroit. Tap to call, text, or send us a message. Serving all of Metro Detroit, MI.",
   alternates: { canonical: "/contact" },
 };
 
@@ -19,13 +19,13 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-4xl px-4 text-center md:px-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300">
-            <Clock className="h-3.5 w-3.5" /> Call or text for a quote
+            <Clock className="h-3.5 w-3.5" /> Call, text or send us a message
           </div>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             Get a <span className="text-brass-gradient">duct cleaning tech</span>.
           </h1>
           <p className="mt-4 text-ink-200">
-            Skip the small talk. Tap a button — we&apos;ll dispatch a Licensed & insured technician anywhere in Metro Detroit.
+            Skip the small talk. Tap a button and we&apos;ll dispatch a technician anywhere in Metro Detroit.
           </p>
           <div className="mt-7 flex justify-center">
             <ContactCTA size="lg" showEmail />
@@ -38,10 +38,10 @@ export default function ContactPage() {
           <div className="rounded-3xl border border-brass-500/30 bg-brass-500/5 p-6">
             <div className="flex items-center gap-2 text-brass-300">
               <ShieldCheck className="h-5 w-5" />
-              <span className="text-sm font-semibold uppercase tracking-wider">Licensed</span>
+              <span className="text-sm font-semibold uppercase tracking-wider">Technicians</span>
             </div>
             <p className="mt-3 text-sm text-ink-200">
-              {BIZ.bsis} for air duct cleaning work in Michigan. Background-checked technicians.
+              Background-checked technicians on our own crews, with before-and-after photos on every job.
             </p>
           </div>
           <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/5 p-6">
@@ -102,7 +102,7 @@ export default function ContactPage() {
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
               <h3 className="font-display text-xl font-bold text-white">Text</h3>
               <p className="mt-2 text-sm text-ink-200">
-                Prefer to type? Send a text with a photo of a dusty register, your furnace, or the dryer vent — pictures speed up the quote dramatically.
+                Prefer to type? Send a text with a photo of a dusty register, your furnace, or the dryer vent. Pictures help us understand the job faster.
               </p>
               <a
                 href={BIZ.smsHref}
@@ -124,22 +124,22 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="flex flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
-              <h3 className="font-display text-xl font-bold text-white">Free written quote</h3>
+              <h3 className="font-display text-xl font-bold text-white">Send us a message</h3>
               <p className="mt-2 text-sm text-ink-200">
-                Want everything in writing first? Use our picture-driven quote tool — clear written quote back, no hidden trip fees, no obligation.
+                Prefer to write it out? Use our picture-driven contact form: tap what matches your job, leave your details, and we&apos;ll call or text you back.
               </p>
               <a
                 href="/quote"
                 className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-brass-300 hover:text-brass-200"
               >
-                Start the quote →
+                Send a message →
               </a>
             </div>
           </div>
 
           <div className="mt-10 rounded-2xl border border-ink-800 bg-ink-900/40 p-6 text-sm text-ink-200">
             <p>
-              <strong className="text-white">What we cover.</strong> BH Air Duct Cleaning Metro Detroit is a full-service air duct cleaning company for residential and commercial customers across all of Metro Detroit. That includes whole-home negative-pressure duct cleaning, dryer vent cleaning, furnace and AC coil cleaning, HVAC system restoration after smoke or water events, duct sanitizing and deodorizing, camera duct inspections, post-construction cleanups, and scheduled maintenance plans. Every technician is background-checked, and the company is {BIZ.bsis}.
+              <strong className="text-white">What we cover.</strong> BH Air Duct Cleaning Metro Detroit is a full-service air duct cleaning company for residential and commercial customers across all of Metro Detroit. That includes whole-home negative-pressure duct cleaning, dryer vent cleaning, furnace and AC coil cleaning, HVAC system restoration after smoke or water events, duct sanitizing and deodorizing, camera duct inspections, post-construction cleanups, and scheduled maintenance plans. Every technician is background-checked.
             </p>
             <p className="mt-3">
               <strong className="text-white">Where we go.</strong> We serve every city and unincorporated neighborhood in Metro Detroit — Detroit, Warren, Sterling Heights, Troy, Dearborn, Livonia, Royal Oak, Southfield, Farmington Hills, Pontiac, Canton, Westland, Taylor, Redford, Allen Park, Lincoln Park, Wyandotte, Ferndale, Birmingham, Rochester Hills, Shelby Township, Clinton Township, Macomb, St. Clair Shores, Novi, Northville, Plymouth, Ann Arbor, and every city in Wayne, Oakland, and Macomb counties, and the dozens of neighborhoods inside them.

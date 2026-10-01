@@ -10,6 +10,8 @@ export type BlogPost = {
   category: "Air Ducts" | "Dryer Vents" | "HVAC" | "Air Quality" | "Cost Guides" | "Maintenance" | "Safety" | "Buying Guides";
   readMinutes: number;
   date: string; // ISO
+  /** ISO date of the last main-content change; the sitemap uses updated ?? date. */
+  updated?: string;
   heroImage: string;      // /blog/<slug>-hero.png
   heroAlt: string;
   secondaryImage: string; // /blog/<slug>-secondary.png
@@ -27,12 +29,13 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Air Ducts",
     readMinutes: 8,
     date: "2026-03-04",
+    updated: "2026-10-01",
     heroImage: "/blog/how-often-should-air-ducts-be-cleaned-hero.jpg",
     heroAlt: "Technician removing a floor register in a Michigan living room to inspect the supply duct below.",
     secondaryImage: "/blog/how-often-should-air-ducts-be-cleaned-secondary.jpg",
     secondaryAlt: "Inside view of a residential sheet-metal duct showing a layer of dust and debris before cleaning.",
     body: `
-Ask ten companies how often you should clean your air ducts and you'll get ten answers — most of them suspiciously aligned with how often that company would like to sell you a cleaning. So let's start with the source that doesn't profit from the answer: NADCA, the National Air Duct Cleaners Association, recommends having your ductwork **inspected every two years** and **cleaned every three to five years** for a typical home. That's the honest baseline, and it's the one we quote to homeowners from Detroit to Rochester Hills, even when it means telling someone their ducts don't need us yet.
+Ask ten companies how often you should clean your air ducts and you'll get ten answers — most of them suspiciously aligned with how often that company would like to sell you a cleaning. So let's start with the source that doesn't profit from the answer: NADCA, the National Air Duct Cleaners Association, recommends having your ductwork **inspected every two years** and **cleaned every three to five years** for a typical home. That's the honest baseline, and it's the one we give homeowners from Detroit to Rochester Hills, even when it means telling someone their ducts don't need us yet.
 
 But "typical home" is doing a lot of work in that sentence. Metro Detroit housing runs from 1920s Dearborn bungalows with original trunk lines to brand-new builds in Macomb Township, and the right interval for your house depends on how you live in it. Here's how to actually figure it out.
 
@@ -55,7 +58,7 @@ The calendar is only half the answer. Any of these events justifies a cleaning r
 
 ## What "Inspected Every Two Years" Actually Means
 
-An inspection doesn't have to be a big production. We run a camera into a few representative supply runs and the main return, look at the blower compartment, and show you exactly what's in there on a screen. It takes well under an hour, and it ends one of two ways: "you're fine, see you in a couple years," or "here's the buildup, here's a photo, here's a written price." We charge about $99 for a camera inspection and credit it toward a cleaning if you book one — so an honest look costs you nothing if the ducts actually need work.
+An inspection doesn't have to be a big production. We run a camera into a few representative supply runs and the main return, look at the blower compartment, and show you exactly what's in there on a screen. It takes well under an hour, and it ends one of two ways: "you're fine, see you in a couple years," or "here's the buildup, here's a photo, here's a written scope." Either way, you see what's inside before you decide anything.
 
 That inspect-first approach matters because the alternative — cleaning on a rigid schedule regardless of condition — wastes money in clean houses and under-serves dirty ones.
 
@@ -72,7 +75,7 @@ A few things about Southeast Michigan make our duct timelines a little different
 
 Inspect every two years, clean every three to five, and reset the clock immediately after renovations, water damage, rodents, or a home purchase. If you have heavy pets or smokers in the house, lean toward the short end. And if a company tells you ducts need cleaning every year — or every season — they're selling you a subscription, not a service.
 
-Not sure where your house falls? BH Air Duct Cleaning Metro Detroit will tell you straight, with camera footage to back it up. We serve all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Sterling Heights, Troy, Livonia, Farmington Hills, Canton, and everywhere between. Call (313) 236-4558 or [request a free quote](/quote) and we'll help you figure out your home's real schedule.
+Not sure where your house falls? BH Air Duct Cleaning Metro Detroit will tell you straight, with camera footage to back it up. We serve all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Sterling Heights, Troy, Livonia, Farmington Hills, Canton, and everywhere between. Call (313) 236-4558 or [send us a message](/quote) and we'll help you figure out your home's real schedule.
 `,
   },
 
@@ -85,6 +88,7 @@ Not sure where your house falls? BH Air Duct Cleaning Metro Detroit will tell yo
     category: "Air Quality",
     readMinutes: 9,
     date: "2026-03-11",
+    updated: "2026-10-01",
     heroImage: "/blog/signs-your-air-ducts-need-cleaning-hero.jpg",
     heroAlt: "Close-up of a dusty supply register on a wall with visible dust streaks around the vent slats.",
     secondaryImage: "/blog/signs-your-air-ducts-need-cleaning-secondary.jpg",
@@ -142,43 +146,44 @@ Honesty corner: a few symptoms get blamed on ducts that usually aren't the ducts
 
 ## Get Eyes Inside Before You Spend Money
 
-Every sign above gets stronger or weaker the moment you actually look inside the ducts — which is why we run a camera inspection (about $99, credited toward a cleaning) instead of asking you to take our word for it. If two or three of these signs sound like your house, it's worth a look.
+Every sign above gets stronger or weaker the moment you actually look inside the ducts — which is why we run a camera inspection instead of asking you to take our word for it. If two or three of these signs sound like your house, it's worth a look.
 
-BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Troy, Southfield, Westland, Novi, St. Clair Shores, and beyond. Call (313) 236-4558 or [request a free quote](/quote) and we'll tell you honestly whether your ducts need cleaning — including when the answer is no.
+BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Troy, Southfield, Westland, Novi, St. Clair Shores, and beyond. Call (313) 236-4558 or [send us a message](/quote) and we'll tell you honestly whether your ducts need cleaning — including when the answer is no.
 `,
   },
 
   {
     slug: "air-duct-cleaning-cost-metro-detroit",
-    title: "What Does Air Duct Cleaning Cost in Metro Detroit? (Real Numbers, No Bait)",
-    metaTitle: "Air Duct Cleaning Cost in Metro Detroit 2026 — Honest Price Guide",
+    title: "What Drives the Cost of Air Duct Cleaning in Metro Detroit? (No Bait, No Teasers)",
+    metaTitle: "What Drives Air Duct Cleaning Cost in Metro Detroit | 2026 Guide",
     excerpt:
-      "Real prices for whole-home duct cleaning in Metro Detroit, what actually drives the number up or down, and a full anatomy of the $99 'whole house special' scam that both NADCA and the FTC warn about.",
+      "What actually drives the cost of whole-home duct cleaning in Metro Detroit, and a full anatomy of the teaser 'whole house special' scam that both NADCA and the FTC warn about.",
     category: "Cost Guides",
     readMinutes: 10,
     date: "2026-03-18",
+    updated: "2026-10-01",
     heroImage: "/blog/air-duct-cleaning-cost-metro-detroit-hero.jpg",
-    heroAlt: "Air duct cleaning technician reviewing a written itemized estimate with a homeowner at their kitchen table.",
+    heroAlt: "Air duct cleaning technician reviewing a written itemized scope with a homeowner at their kitchen table.",
     secondaryImage: "/blog/air-duct-cleaning-cost-metro-detroit-secondary.jpg",
     secondaryAlt: "Negative-pressure duct cleaning vacuum unit connected to a furnace trunk line in a Michigan basement.",
     body: `
-Air duct cleaning has a pricing problem, and it's not that prices are high — it's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see $79 and $99 "whole house specials" stacked on top of each other, while legitimate companies quote three to six times that. The gap isn't greed. It's the difference between a real service and a bait ad. Here are the actual numbers, what drives them, and how the scam works so you can see it coming.
+Air duct cleaning has a pricing problem, and it's not that real cleanings cost too much. It's that the advertised prices are fake. Search "duct cleaning near me" anywhere in Metro Detroit and you'll see rock-bottom "whole house specials" stacked on top of each other, far below what a legitimate cleaning takes. The gap isn't greed. It's the difference between a real service and a bait ad. Here's what actually drives the cost of a real cleaning, and how the scam works so you can see it coming.
 
-## What Legitimate Duct Cleaning Costs in Metro Detroit
+## What a Legitimate Cleaning Involves
 
-For a proper source-removal cleaning — negative-pressure truck or portable HEPA unit connected to the trunk line, every register agitated and cleaned, both supply and return sides, blower compartment included — expect:
+A proper source-removal cleaning means a negative-pressure truck or portable HEPA unit connected to the trunk line, every register agitated and cleaned, both supply and return sides, and the blower compartment included. That takes a trained two-person crew, real equipment and several hours, and that work is what you are paying for. A few local patterns:
 
-- **Single-furnace home, average size (up to roughly 2,000 sq ft):** $350–$600. This covers most ranches and colonials in Livonia, Warren, Redford, and St. Clair Shores.
-- **Larger homes (2,500–4,000+ sq ft):** $550–$900, driven mostly by register count and duct footage. Common in Novi, Rochester Hills, and Washington Township.
-- **Second furnace/system:** typically adds $200–$400, since it's effectively a second setup and a second set of trunk connections. Many larger Oakland County homes run two systems.
-- **Add-ons:** dryer vent cleaning is $120–$200 standalone but usually discounted when bundled; sanitizing with an EPA-registered antimicrobial (only appropriate after source removal, and only when there's a reason) adds a modest line item; heavy contamination like post-flood or rodent cleanup is quoted after inspection.
-- **Camera inspection alone:** about $99, credited toward a cleaning if you book one.
+- **Single-furnace homes of average size** (up to roughly 2,000 sq ft) are the most straightforward jobs. This covers most ranches and colonials in Livonia, Warren, Redford, and St. Clair Shores.
+- **Larger homes** (2,500 to 4,000+ sq ft) take longer, driven mostly by register count and duct footage. Common in Novi, Rochester Hills, and Washington Township.
+- **A second furnace or system** is effectively a second setup and a second set of trunk connections. Many larger Oakland County homes run two systems.
+- **Add-ons:** dryer vent cleaning, and sanitizing with an EPA-registered antimicrobial (only appropriate after source removal, and only when there's a reason). Heavy contamination like post-flood or rodent cleanup is scoped after inspection.
+- **Camera inspection alone** is there for when you want to see inside your ducts before deciding anything.
 
-A realistic whole-job range for most Metro Detroit households lands between $400 and $700. If your quote is dramatically below that, keep reading.
+If a price you've been given sounds far too low for that much work, keep reading.
 
-## What Actually Drives the Price
+## What Actually Drives the Cost
 
-Duct cleaning isn't priced by square footage alone. When we quote a job in Canton or Troy, we're pricing:
+Duct cleaning isn't priced by square footage alone. When we look at a job in Canton or Troy, these are the factors:
 
 - **Number of systems.** Each furnace means a separate negative-pressure setup, separate trunk connections, and a separate blower compartment. This is the single biggest price variable.
 - **Number of vents and returns.** Every supply register and return grille gets opened, agitated, and cleaned individually. A 12-vent ranch and a 28-vent colonial are very different afternoons.
@@ -186,13 +191,13 @@ Duct cleaning isn't priced by square footage alone. When we quote a job in Canto
 - **Contamination level.** Routine dust is routine. Post-renovation drywall dust, rodent contamination, or water-damage cleanup involves more agitation passes, containment, and sometimes sanitizing — legitimately more work, legitimately more money.
 - **Access.** Older Detroit and Dearborn homes sometimes have trunk lines wrapped in finished ceilings, or original floor ducts with odd register sizes. Access difficulty adds time.
 
-## Anatomy of the $99 Scam
+## Anatomy of the Teaser-Price Scam
 
 Both NADCA and the FTC have published warnings about the "whole house special," because the playbook is remarkably consistent nationwide, and Metro Detroit gets more than its share via door hangers, coupon mailers, and social media ads. Here's how it runs:
 
-- **The hook:** $79–$129 for a "whole house" cleaning. At that price, the visit cannot cover a trained tech, real equipment, and insurance — and it isn't meant to. The company's actual product is the upsell.
+- **The hook:** a rock-bottom price for a "whole house" cleaning. At that price, the visit cannot cover a trained tech and real equipment, and it isn't meant to. The company's actual product is the upsell.
 - **The visit:** a crew arrives with a shop-vac or a small portable unit, vacuums a few inches into each register, and then discovers a crisis. Mold (diagnosed by eyeball in thirty seconds), "dangerous levels" of debris, or a system "so bad the special doesn't cover it."
-- **The squeeze:** the $99 becomes $600–$1,500 on the spot, often with scary language and same-day pressure. Homeowners who decline get a fifteen-minute fake cleaning that removes almost nothing — the industry calls these "blow-and-go" jobs.
+- **The squeeze:** the teaser price balloons on the spot, often many times over, with scary language and same-day pressure. Homeowners who decline get a fifteen-minute fake cleaning that removes almost nothing; the industry calls these "blow-and-go" jobs.
 - **The tell:** no negative-pressure equipment, no camera footage, no itemized written scope, prices that change verbally in your hallway, and a company name you can't find two years of reviews for.
 
 The cruel part is that the scam poisons the well for the honest version of the service. Plenty of Metro Detroit homeowners have paid for a "duct cleaning" that did nothing, concluded the whole industry is fake, and never got the real thing.
@@ -205,13 +210,13 @@ The cruel part is that the scam poisons the well for the honest version of the s
 - Can I see before-and-after photos or camera footage of MY ducts?
 - Are you insured, and can you send a certificate?
 
-Any legitimate company answers those five without flinching. We volunteer most of them before you ask.
+Any legitimate company answers those five without flinching.
 
-## What a Legit Quote Includes
+## What a Legit Written Scope Includes
 
-When BH Air Duct Cleaning Metro Detroit quotes a job, the written number includes: full source-removal cleaning of every supply and return run, trunk lines cleaned under negative pressure, register and grille cleaning, blower compartment cleaning, before-and-after photos, and a walkthrough at the end. No "per vent" surprise math, no hallway renegotiation.
+When BH Air Duct Cleaning Metro Detroit scopes a job, the written price covers: full source-removal cleaning of every supply and return run, trunk lines cleaned under negative pressure, register and grille cleaning, blower compartment cleaning, before-and-after photos, and a walkthrough at the end. No "per vent" surprise math, no hallway renegotiation.
 
-If you want a real number for your house, call (313) 236-4558 or [request a free quote](/quote). We quote flat and honest for every city in Wayne, Oakland, and Macomb counties — and if someone else's quote looks too good to be true, we're happy to tell you over the phone whether it is.
+If you want a real number for your house, call (313) 236-4558 for a price on your job, or [send us a message](/quote). We serve every city in Wayne, Oakland, and Macomb counties, and if someone else's price looks too good to be true, we're happy to tell you over the phone whether it is.
 `,
   },
 
@@ -224,6 +229,7 @@ If you want a real number for your house, call (313) 236-4558 or [request a free
     category: "Safety",
     readMinutes: 9,
     date: "2026-03-25",
+    updated: "2026-10-01",
     heroImage: "/blog/dryer-vent-cleaning-fire-safety-hero.jpg",
     heroAlt: "Exterior dryer vent hood on a brick Michigan home with lint visibly built up around the flap.",
     secondaryImage: "/blog/dryer-vent-cleaning-fire-safety-secondary.jpg",
@@ -261,15 +267,15 @@ A real dryer vent cleaning is more than sticking a brush in the hole:
 - We measure airflow before and after, so you can see the difference in numbers, not vibes.
 - We check the duct material and routing while we're in there. Vinyl flex duct, excessive length, or venting into an attic gets flagged with a photo — those are fire-code issues worth fixing.
 
-The whole visit typically takes under an hour. Standalone, dryer vent cleaning runs $120–$200 in Metro Detroit depending on run length and access; we discount it meaningfully as an add-on to an air duct cleaning, since the truck's already in your driveway.
+The whole visit typically takes under an hour. What it costs depends on run length and access, and adding it to an air duct cleaning saves a separate trip, since the truck's already in your driveway. Call (313) 236-4558 for a price on your job.
 
 ## How Often?
 
 Once a year for most households. Every six months if you have a big family doing daily loads, pets whose hair rides the laundry, or one of those long condo runs. And immediately if you're seeing any warning sign above — this is genuinely not a "get to it eventually" item, because the failure mode isn't inconvenience, it's fire.
 
-One free habit while you wait: clean the lint screen every single load, and once a month wash it with soap and water to strip the invisible film that fabric softener leaves (if water pools on the screen instead of draining through, it's coated).
+One easy habit while you wait: clean the lint screen every single load, and once a month wash it with soap and water to strip the invisible film that fabric softener leaves (if water pools on the screen instead of draining through, it's coated).
 
-BH Air Duct Cleaning Metro Detroit cleans dryer vents across all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Livonia, Farmington Hills, Canton, Royal Oak, and everywhere between, with same-day appointments available most of the week. Call (313) 236-4558 or [request a free quote](/quote), and get this one off the list before the heating season stacks another year of lint on top.
+BH Air Duct Cleaning Metro Detroit cleans dryer vents across all of Wayne, Oakland, and Macomb counties — Detroit, Warren, Livonia, Farmington Hills, Canton, Royal Oak, and everywhere between, with same-day appointments available most of the week. Call (313) 236-4558 or [send us a message](/quote), and get this one off the list before the heating season stacks another year of lint on top.
 `,
   },
 
@@ -282,6 +288,7 @@ BH Air Duct Cleaning Metro Detroit cleans dryer vents across all of Wayne, Oakla
     category: "Air Ducts",
     readMinutes: 10,
     date: "2026-04-01",
+    updated: "2026-10-01",
     heroImage: "/blog/air-duct-cleaning-process-what-to-expect-hero.jpg",
     heroAlt: "Technician feeding a rotary brush line into an open supply register while a negative-pressure hose runs to the basement.",
     secondaryImage: "/blog/air-duct-cleaning-process-what-to-expect-secondary.jpg",
@@ -291,7 +298,7 @@ Most homeowners have never watched a duct cleaning happen, which is exactly why 
 
 ## Step 1: Walkthrough and Register Count
 
-Before any equipment comes off the truck, the tech walks the house with you. We count every supply register and return grille (this confirms the quote — no hallway renegotiation), locate the furnace and the trunk lines, and look at access. In a typical Livonia ranch that's an open basement ceiling; in a finished Rochester Hills colonial it might mean planning around drywalled soffits. We also ask about problem areas — the bedroom that's always dusty, the register that smells musty — so we can photograph those runs specifically.
+Before any equipment comes off the truck, the tech walks the house with you. We count every supply register and return grille (this confirms the written scope, with no hallway renegotiation), locate the furnace and the trunk lines, and look at access. In a typical Livonia ranch that's an open basement ceiling; in a finished Rochester Hills colonial it might mean planning around drywalled soffits. We also ask about problem areas — the bedroom that's always dusty, the register that smells musty — so we can photograph those runs specifically.
 
 ## Step 2: Protect the House
 
@@ -319,7 +326,7 @@ The return ducts — the ones pulling air back to the furnace — are always the
 
 ## Step 6: The Blower Compartment and Furnace Interface
 
-A duct cleaning that stops at the furnace is incomplete. We open the blower compartment and clean it out, vacuum the blower housing, and clean around (not into) the components that a coil-cleaning service handles in depth. If the blower wheel itself is caked — which strangles airflow more than dirty ducts do — we'll show you and quote it separately rather than pad the day's invoice. See our furnace and coil cleaning guide for why that part matters so much.
+A duct cleaning that stops at the furnace is incomplete. We open the blower compartment and clean it out, vacuum the blower housing, and clean around (not into) the components that a coil-cleaning service handles in depth. If the blower wheel itself is caked — which strangles airflow more than dirty ducts do — we'll show you and price it separately rather than pad the day's invoice. See our furnace and coil cleaning guide for why that part matters so much.
 
 ## Step 7: Photos, Reseal, and Walkthrough
 
@@ -339,7 +346,7 @@ A proper single-system cleaning takes **2 to 4 hours** with a two-tech crew — 
 
 ## See It Done Right
 
-If you want to watch every step of this in your own home, we're happy to have you look over our shoulders — homeowners who watch a real cleaning become our best word-of-mouth. BH Air Duct Cleaning Metro Detroit runs NADCA-standard source-removal cleanings across all of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [request a free quote](/quote) and we'll give you a flat written price, register count included.
+If you want to watch every step of this in your own home, we're happy to have you look over our shoulders — homeowners who watch a real cleaning become our best word-of-mouth. BH Air Duct Cleaning Metro Detroit runs NADCA-standard source-removal cleanings across all of Wayne, Oakland, and Macomb counties. Call (313) 236-4558 or [send us a message](/quote) and we'll give you a written price, register count included.
 `,
   },
 
@@ -352,6 +359,7 @@ If you want to watch every step of this in your own home, we're happy to have yo
     category: "Air Quality",
     readMinutes: 8,
     date: "2026-04-08",
+    updated: "2026-10-01",
     heroImage: "/blog/indoor-air-quality-michigan-winter-hero.jpg",
     heroAlt: "Frost-covered windows of a Michigan home at dusk with warm light inside, furnace exhaust steaming outside.",
     secondaryImage: "/blog/indoor-air-quality-michigan-winter-secondary.jpg",
@@ -383,9 +391,9 @@ You can't leave windows open in January, but you can ventilate strategically: ru
 
 ### 4. Clean the Ducts — When It's Warranted
 
-Here's our honest lane: duct cleaning helps winter air quality **when the ducts are actually part of the problem** — visible buildup, dust puffing from registers, post-renovation debris, pest contamination, musty odors, or a system that's never been cleaned. Removing a real reservoir of dust and dander means the furnace stops re-distributing it 24/7, and in those homes the difference is noticeable.
+Here's our honest lane: duct cleaning helps winter air quality **when the ducts are actually part of the problem** — visible buildup, dust puffing from registers, post-renovation debris, pest contamination, musty odors, or a system that's never been cleaned. Removing a real reservoir of dust and dander means the furnace stops re-distributing it all day, every day, and in those homes the difference is noticeable.
 
-But we'll also tell you what the EPA says: duct cleaning has never been shown to *categorically* improve health outcomes in homes where ducts are already reasonably clean. If your ducts were cleaned two years ago and your problem is dry air and a fiberglass filter, we'd be taking your money to solve the wrong problem — and we won't. Get the camera inspection (about $99, credited toward a cleaning if needed) and decide from evidence.
+But we'll also tell you what the EPA says: duct cleaning has never been shown to *categorically* improve health outcomes in homes where ducts are already reasonably clean. If your ducts were cleaned two years ago and your problem is dry air and a fiberglass filter, we'd be taking your money to solve the wrong problem — and we won't. Get a camera inspection and decide from evidence.
 
 ### 5. Manage the Sources
 
@@ -397,7 +405,7 @@ Persistent headaches, symptoms that hit everyone in the house, or any soot stain
 
 ## Breathe Easier This Winter
 
-If your winter air feels worse than it should, start with the filter and the humidity — and if the signs point to the ductwork, we'll confirm it with a camera before you spend a dime on cleaning. BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties, with duct cleaning, coil and blower service, dryer vent cleaning, and air quality checks. Call (313) 236-4558 or [request a free quote](/quote) — honest answers, Michigan winters included.
+If your winter air feels worse than it should, start with the filter and the humidity — and if the signs point to the ductwork, we'll confirm it with a camera before you spend a dime on cleaning. BH Air Duct Cleaning Metro Detroit serves all of Wayne, Oakland, and Macomb counties, with duct cleaning, coil and blower service, dryer vent cleaning, and air quality checks. Call (313) 236-4558 or [send us a message](/quote) for honest answers, Michigan winters included.
 `,
   },
 
@@ -410,6 +418,7 @@ If your winter air feels worse than it should, start with the filter and the hum
     category: "HVAC",
     readMinutes: 8,
     date: "2026-04-15",
+    updated: "2026-10-01",
     heroImage: "/blog/furnace-and-ac-coil-cleaning-guide-hero.jpg",
     heroAlt: "Close-up of a furnace blower wheel with fins caked in gray dust before cleaning.",
     secondaryImage: "/blog/furnace-and-ac-coil-cleaning-guide-secondary.jpg",
@@ -448,11 +457,11 @@ Depending on access and condition, equipment cleaning is typically a 1–2 hour 
 
 ## The Whole-System Logic
 
-Think of your HVAC system as one continuous air path: return grilles, return ducts, filter, blower, heat exchanger, coil, supply ducts, registers. Cleaning only the duct sections while leaving a filthy blower and coil in the middle is like detailing a car but skipping the engine air filter. Worse, a dirty blower re-contaminates freshly cleaned supply ducts. That's why NADCA's standard treats the air handler as part of the cleaning scope, and why our full-service jobs include the blower compartment — with coil and blower deep-cleaning quoted honestly when inspection shows they need it, not padded onto every invoice.
+Think of your HVAC system as one continuous air path: return grilles, return ducts, filter, blower, heat exchanger, coil, supply ducts, registers. Cleaning only the duct sections while leaving a filthy blower and coil in the middle is like detailing a car but skipping the engine air filter. Worse, a dirty blower re-contaminates freshly cleaned supply ducts. That's why NADCA's standard treats the air handler as part of the cleaning scope, and why our full-service jobs include the blower compartment — with coil and blower deep-cleaning recommended honestly when inspection shows they need it, not padded onto every invoice.
 
 ## Get the Whole Job Done
 
-If your airflow is weak, your bills are creeping, or your AC has iced up more than once, the blower and coil deserve a look before anyone sells you anything bigger. BH Air Duct Cleaning Metro Detroit handles furnace blower wheel cleaning, evaporator coil cleaning, and full-system duct cleaning across all of Wayne, Oakland, and Macomb counties — Detroit, Southfield, Troy, Warren, Canton, Novi, and beyond. Call (313) 236-4558 or [request a free quote](/quote) and we'll tell you which half of the job your system actually needs.
+If your airflow is weak, your bills are creeping, or your AC has iced up more than once, the blower and coil deserve a look before anyone sells you anything bigger. BH Air Duct Cleaning Metro Detroit handles furnace blower wheel cleaning, evaporator coil cleaning, and full-system duct cleaning across all of Wayne, Oakland, and Macomb counties — Detroit, Southfield, Troy, Warren, Canton, Novi, and beyond. Call (313) 236-4558 or [send us a message](/quote) and we'll tell you which half of the job your system actually needs.
 `,
   },
 
@@ -461,26 +470,27 @@ If your airflow is weak, your bills are creeping, or your AC has iced up more th
     title: "How to Hire an Air Duct Cleaning Company in Michigan Without Getting Burned",
     metaTitle: "Hiring an Air Duct Cleaning Company in Michigan: Scam-Proof Checklist",
     excerpt:
-      "The duct cleaning industry has a scam problem — door hangers, Groupon traps, and $99 specials that become $1,200 in your hallway. Here's the vetting checklist that protects Metro Detroit homeowners, from people inside the industry.",
+      "The duct cleaning industry has a scam problem: door hangers, Groupon traps, and teaser specials that balloon in your hallway. Here's the vetting checklist that protects Metro Detroit homeowners, from people inside the industry.",
     category: "Buying Guides",
     readMinutes: 9,
     date: "2026-04-22",
+    updated: "2026-10-01",
     heroImage: "/blog/hire-air-duct-cleaning-company-checklist-hero.jpg",
-    heroAlt: "Homeowner comparing two written duct cleaning estimates at a kitchen table with a laptop showing reviews.",
+    heroAlt: "Homeowner comparing two written duct cleaning offers at a kitchen table with a laptop showing reviews.",
     secondaryImage: "/blog/hire-air-duct-cleaning-company-checklist-secondary.jpg",
     secondaryAlt: "Uniformed technician showing a homeowner before-and-after duct photos on a tablet next to professional equipment.",
     body: `
-We'll say the quiet part out loud: air duct cleaning has one of the worst scam-to-service ratios of any home trade. NADCA and the FTC have both published consumer warnings about it, and the reason is structural — the work happens inside walls where you can't see it, most homeowners buy it once every few years, and the barrier to entry is a shop-vac and a Facebook ad. Metro Detroit gets the full treatment: door hangers in Dearborn Heights, coupon mailers in Warren, $89 Groupons that turn into $1,200 invoices in Troy. Here's the checklist that separates real companies from the rest, from people who compete against both.
+We'll say the quiet part out loud: air duct cleaning has one of the worst scam-to-service ratios of any home trade. NADCA and the FTC have both published consumer warnings about it, and the reason is structural — the work happens inside walls where you can't see it, most homeowners buy it once every few years, and the barrier to entry is a shop-vac and a Facebook ad. Metro Detroit gets the full treatment: door hangers in Dearborn Heights, coupon mailers in Warren, deal-site vouchers that turn into inflated invoices in Troy. Here's the checklist that separates real companies from the rest, from people who compete against both.
 
 ## The Red Flags, In Order of Reliability
 
 ### 1. The Too-Cheap Hook
 
-"$99 whole house! Unlimited vents!" A legitimate source-removal cleaning takes a two-tech crew 2–4 hours with tens of thousands of dollars of equipment. In Metro Detroit that's a $350–$600 job for a typical single-furnace home. A $99 price cannot cover the visit — it exists to get a foot in your door, and the difference gets made up in your hallway via scare-tactic upsells, or you get a fifteen-minute fake cleaning. There is no third outcome at that price.
+"Whole house special! Unlimited vents!" A legitimate source-removal cleaning takes a two-tech crew two to four hours with serious professional equipment. A teaser price cannot cover that visit. It exists to get a foot in your door, and the difference gets made up in your hallway via scare-tactic upsells, or you get a fifteen-minute fake cleaning. There is no third outcome at that price.
 
 ### 2. Instant Mold Diagnosis
 
-The signature move of the bait-and-switch crew: minutes into the visit, they've "found mold" — diagnosed by eyeball, no lab, no photos of your actual ducts — and the cure is a $400–$900 fogging treatment. Real microbial assessment involves looking for the moisture source, and legitimate sanitizing (an EPA-registered antimicrobial, applied only *after* source-removal cleaning, per label directions) is a modest line item with a specific justification like rodent contamination or flood cleanup — not a hallway crisis.
+The signature move of the bait-and-switch crew: minutes into the visit, they've "found mold" — diagnosed by eyeball, no lab, no photos of your actual ducts — and the cure is an expensive fogging treatment. Real microbial assessment involves looking for the moisture source, and legitimate sanitizing (an EPA-registered antimicrobial, applied only *after* source-removal cleaning, per label directions) is a modest line item with a specific justification like rodent contamination or flood cleanup — not a hallway crisis.
 
 ### 3. No Negative-Pressure Equipment
 
@@ -488,7 +498,7 @@ Ask one question before booking: "Will you connect a vacuum collection unit to m
 
 ### 4. Verbal, Shape-Shifting Pricing
 
-The ad says one number, the phone says another, and the tech "discovers" a third. Demand an itemized written quote that specifies: number of systems covered, ALL supply registers and ALL returns included, trunk lines, and the blower compartment — with add-ons (dryer vent, sanitizing, coil cleaning) priced separately in writing. "Per vent" pricing sprung on-site is how a $99 special becomes $600.
+The ad says one number, the phone says another, and the tech "discovers" a third. Demand an itemized written scope that specifies: number of systems covered, ALL supply registers and ALL returns included, trunk lines, and the blower compartment — with add-ons (dryer vent, sanitizing, coil cleaning) priced separately in writing. "Per vent" pricing sprung on-site is how a teaser special multiplies.
 
 ### 5. No Verifiable Local Identity
 
@@ -500,25 +510,25 @@ Lead-generation websites clone themselves across every suburb with the city name
 - **Proof of insurance.** Michigan doesn't license duct cleaning as a standalone trade, so general liability and workers' comp certificates are the meaningful credential. A legitimate company produces them on request without drama.
 - **Before-and-after photos of YOUR ducts.** Not stock photos — footage from your actual system, standard on every job. If a company doesn't offer photo documentation, ask why the work can't survive being seen.
 - **Reviews read for patterns, not stars.** Skim the 3-star reviews specifically — that's where honest customers describe pricing behavior and upsell pressure. Look for specific jobs, specific tech names, and consistency across years.
-- **A real scope conversation on the phone.** A competent dispatcher can quote a tight range from your square footage, system count, and vent count. Vagueness on the phone predicts surprises in the driveway.
-- **Skip the door hangers and deal sites.** Companies with full schedules from reputation don't paper neighborhoods in Dearborn Heights or sell $89 vouchers at a loss. Deal-site duct cleaning is the bait-and-switch's natural habitat — the voucher price is designed to be "upgraded."
+- **A real scope conversation on the phone.** A competent dispatcher asks about your square footage, system count, and vent count before anyone comes out. Vagueness on the phone predicts surprises in the driveway.
+- **Skip the door hangers and deal sites.** Companies with full schedules from reputation don't paper neighborhoods in Dearborn Heights or sell deep-discount vouchers at a loss. Deal-site duct cleaning is the bait-and-switch's natural habitat — the voucher price is designed to be "upgraded."
 
-## Fair 2026 Price Ranges for Metro Detroit
+## What a Fair Price Depends On
 
-Use these as your sanity check (full breakdown in our cost guide):
+Use these as your sanity check (more detail in our guide to what drives the cost):
 
-- Camera duct inspection: about $99, credited toward a cleaning
-- Whole-home source-removal cleaning, single furnace: $350–$600
-- Larger homes / heavy contamination: $550–$900
-- Second system: add $200–$400
-- Dryer vent cleaning: $120–$200 standalone, discounted as an add-on
-- Sanitizing (when justified, after cleaning): modest add-on, never a $700 hallway emergency
+- Camera duct inspection: the right first step when you're not sure the ducts need cleaning
+- Whole-home source-removal cleaning: priced by systems, vents and returns, and contamination, never by a coupon
+- Larger homes or heavy contamination: more time and more passes, so more cost
+- Second system: effectively a second setup
+- Dryer vent cleaning: driven by run length and termination, and easy to add to a duct cleaning visit
+- Sanitizing (when justified, after cleaning): a modest add-on, never a hallway emergency
 
-Quoted far below these ranges? That's the bait. Far above, with a same-day mold crisis attached? That's the switch. Either way, get a second opinion — we give them free over the phone every week, even when the verdict is "that quote is actually fair."
+A rock-bottom teaser? That's the bait. A huge number with a same-day mold crisis attached? That's the switch. Either way, get a second opinion. We give them over the phone every week, even when the verdict is "that price is actually fair."
 
 ## Where We Stand
 
-BH Air Duct Cleaning Metro Detroit does it the boring, verifiable way: NADCA-standard source removal with negative-pressure equipment, itemized written quotes before we dispatch, before-and-after photos on every job, insured techs, and no scare tactics — if your ducts don't need cleaning, we'll tell you and see you in two years. That's the standard, from us or from whoever you hire. Call (313) 236-4558 or [request a free quote](/quote), and keep this checklist handy either way. We serve every city in Wayne, Oakland, and Macomb counties.
+BH Air Duct Cleaning Metro Detroit does it the boring, verifiable way: NADCA-standard source removal with negative-pressure equipment, itemized written scopes before we dispatch, before-and-after photos on every job, and no scare tactics — if your ducts don't need cleaning, we'll tell you and see you in two years. That's the standard, from us or from whoever you hire. Call (313) 236-4558 or [send us a message](/quote), and keep this checklist handy either way. We serve every city in Wayne, Oakland, and Macomb counties.
 `,
   },
 ];

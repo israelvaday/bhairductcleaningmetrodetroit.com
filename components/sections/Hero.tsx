@@ -122,7 +122,7 @@ export function Hero() {
         <LogoMark className="h-7 w-7" />
         <div className="flex flex-col leading-tight">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brass-300">{BIZ.name}</span>
-          <span className="font-mono text-[10px] text-ink-300">Licensed & insured</span>
+          <span className="font-mono text-[10px] text-ink-300">Metro Detroit, MI</span>
         </div>
       </div>
 
@@ -140,10 +140,6 @@ export function Hero() {
         <div
           className="flex flex-wrap items-center justify-center gap-2"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-brass-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-brass-300 backdrop-blur">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            Licensed & Insured
-          </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300 backdrop-blur">
             <Wrench className="h-3.5 w-3.5" />
             Mobile dispatch

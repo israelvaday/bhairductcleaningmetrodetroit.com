@@ -10,7 +10,7 @@ import { LongFormFaq } from "@/components/site/LongFormFaq";
 export const metadata: Metadata = {
   title: { absolute: "Air Duct Cleaning Blog — Tips & Guides for Metro Detroit" },
   description:
-    "Practical air duct and dryer vent guides from a licensed Metro Detroit team — cleaning costs, fire safety, indoor air quality, furnace care, and hiring guides.",
+    "Practical air duct and dryer vent guides from a Metro Detroit team: what drives cleaning costs, fire safety, indoor air quality, furnace care, and hiring guides.",
   alternates: { canonical: `${BIZ.url}/blog` },
 };
 
@@ -33,7 +33,7 @@ export default function BlogIndex() {
             <span className="text-brass-gradient">Clean air</span> wisdom for Metro Detroit.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ink-200">
-            Real-world guides from our licensed &amp; insured team — duct cleaning costs, dryer vent fire safety, indoor air quality, furnace care, and how to spot a scam.
+            Real-world guides from our team: what drives duct cleaning costs, dryer vent fire safety, indoor air quality, furnace care, and how to spot a scam.
           </p>
         </div>
       </section>

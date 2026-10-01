@@ -28,7 +28,7 @@ export function BrandShowcase() {
             A real, local air duct cleaning company — not a call-center middleman.
           </h2>
           <p className="mt-3 max-w-2xl text-ink-300">
-            Branded vans, a real Detroit base, and a licensed & insured crew you can actually meet.
+            Branded vans, a real Detroit base, and a crew you can actually meet.
           </p>
         </div>
 

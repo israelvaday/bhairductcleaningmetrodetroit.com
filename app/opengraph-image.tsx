@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { BIZ } from "@/lib/business";
 
 export const dynamic = "force-static";
-export const alt = `${BIZ.name} — Metro Detroit Air Duct Cleaning Company (${BIZ.bsis})`;
+export const alt = `${BIZ.name} — Metro Detroit Air Duct Cleaning Company`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -83,13 +83,12 @@ export default async function OgImage() {
             Dusty vents? Same-day service.
           </div>
           <div style={{ fontSize: 30, color: "#C8C4BB", maxWidth: 980, display: "flex" }}>
-            Licensed & insured air duct cleaning company. Air Ducts · Dryer Vents · Furnace & Coils · Commercial.
+            Local air duct cleaning company. Air Ducts · Dryer Vents · Furnace & Coils · Commercial.
           </div>
         </div>
 
         {/* footer chips */}
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <Chip>Licensed & insured</Chip>
           <Chip>{BIZ.phone}</Chip>
           <Chip>bhairductcleaningmetrodetroit.com</Chip>
           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 }}>

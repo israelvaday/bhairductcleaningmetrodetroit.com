@@ -20,7 +20,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
     items: [
       {
         q: "Are you a real local air duct cleaning company or a call center?",
-        a: "We're a real, licensed & insured air duct cleaning company based in Detroit. You speak with the same dispatcher every time, and the technician who shows up is on our payroll — no subcontractors, no anonymous national call centers reselling your job to whoever bids lowest.",
+        a: "We're a real air duct cleaning company based in Detroit. You speak with the same dispatcher every time, and the technician who shows up is on our payroll — no subcontractors, no anonymous national call centers reselling your job to whoever bids lowest.",
       },
       {
         q: "What areas of Metro Detroit do you serve?",
@@ -42,33 +42,33 @@ export const FAQ_SECTIONS: FAQSection[] = [
   },
   {
     id: "pricing",
-    title: "Pricing",
+    title: "Cost",
     emoji: "💰",
-    description: "Honest, flat-rate quotes — no bait-and-switch.",
+    description: "What drives the cost of a job, with no bait-and-switch.",
     items: [
       {
         q: "How much does whole-home air duct cleaning cost in Metro Detroit?",
-        a: "For a single-furnace home, a proper negative-pressure source-removal cleaning typically runs $350–$600 depending on home size, vent count, and how dirty the system is. A second furnace or system adds $150–$250. We quote a flat rate before any work starts — never an hourly meter, never a driveway surprise.",
+        a: "It depends on the home. The main drivers are the size of the house, how many supply and return vents it has, how many furnaces or systems it runs, how much debris has built up, and how easy the trunk lines are to reach. A proper negative-pressure source-removal cleaning takes a two-person crew several hours, so be wary of any price that sounds too good to be true. Call (313) 236-4558 for a price on your job.",
       },
       {
-        q: "Why should I avoid the '$99 whole house' duct cleaning ads?",
-        a: "Because real source-removal cleaning takes a two-person crew, a truck-mounted or gas-powered negative-pressure vacuum, and several hours — no legitimate company can do that for $99. The $99 ads are bait: the crew shows up, waves a shop-vac at a few registers, then 'discovers' mold and pressures you into a $1,500+ upsell. It's the most common scam in this industry, and it's the reason we publish our real price ranges up front.",
+        q: "Why should I avoid the cheap 'whole house' duct cleaning ads?",
+        a: "Because real source-removal cleaning takes a two-person crew, a truck-mounted or gas-powered negative-pressure vacuum, and several hours, and no legitimate company can do that for a teaser price. Those ads are bait: the crew shows up, waves a shop-vac at a few registers, then 'discovers' mold and pressures you into an expensive upsell. It's the most common scam in this industry.",
       },
       {
-        q: "Do you charge a service-call or inspection fee?",
-        a: "A service/inspection call is about $99, and it's credited toward the job if you go ahead with the cleaning. It covers the drive, a camera inspection of your ductwork, and a written flat-rate quote. If you decline the quote, you owe only the inspection fee — never a surprise labor charge.",
+        q: "What does an inspection visit cover?",
+        a: "An inspection visit covers the drive, a camera inspection of your ductwork, and a written scope of work, so you know exactly what the job involves before any cleaning starts. Nothing is added without your OK. Call (313) 236-4558 for a price on your job.",
       },
       {
-        q: "How much is dryer vent cleaning?",
-        a: "As a standalone visit, dryer vent cleaning runs $120–$200 depending on the length and routing of the vent — condos and second-floor laundry rooms with long runs sit at the top of the range. Bundled with a duct cleaning, it's discounted since we're already set up at your home. It's the cheapest fire prevention you can buy.",
+        q: "What affects the cost of dryer vent cleaning?",
+        a: "Mostly the length and routing of the vent. A short run through an exterior wall is the simplest job; condos and second-floor laundry rooms with long runs, several elbows or a roof termination take more time. Adding it to a duct cleaning visit saves a separate trip, since we're already set up at your home. Call (313) 236-4558 for a price on your job.",
       },
       {
-        q: "What does duct sanitizing cost, and do I need it?",
-        a: "Our sanitizing and deodorizing add-on runs $75–$150 using an EPA-registered antimicrobial, applied only after the ducts have been physically cleaned — fogging chemicals over dirt does nothing. It makes sense after smoke damage, pest issues, visible microbial growth, or persistent odors. If your system doesn't need it, we'll tell you so; we don't sell it on every job.",
+        q: "Do I need duct sanitizing?",
+        a: "Sanitizing and deodorizing uses an EPA-registered antimicrobial, applied only after the ducts have been physically cleaned, because fogging chemicals over dirt does nothing. It makes sense after smoke damage, pest issues, visible microbial growth, or persistent odors. If your system doesn't need it, we'll tell you so; we don't sell it on every job.",
       },
       {
-        q: "Are there hidden fees?",
-        a: "No. The flat rate we quote is the price you pay. If we find something on-site that genuinely changes the scope — say, a second furnace the customer forgot to mention, or a crushed duct that needs repair — we explain it and re-quote before touching anything, and you can decline.",
+        q: "What if the job turns out bigger than expected?",
+        a: "We tell you before touching anything. If we find something on-site that genuinely changes the scope, such as a second furnace nobody mentioned or a crushed duct that needs repair, we walk you through it and agree the change with you first, and you can decline.",
       },
     ],
   },
@@ -88,7 +88,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "My dryer takes two or three cycles to dry clothes. Is that urgent?",
-        a: "Treat it as urgent. Long dry times almost always mean a lint-restricted vent, and a restricted vent is the leading cause of dryer fires — U.S. fire departments respond to thousands of them every year. It's also silently costing you money on every load. Stop using the dryer for anything unattended and get the vent cleaned; it's a quick, inexpensive visit.",
+        a: "Treat it as urgent. Long dry times almost always mean a lint-restricted vent, and a restricted vent is the leading cause of dryer fires — U.S. fire departments respond to thousands of them every year. It's also silently costing you money on every load. Stop using the dryer for anything unattended and get the vent cleaned; it's a quick visit.",
       },
       {
         q: "We just had flood or sewage water in the basement. Do the ducts need attention?",
@@ -176,7 +176,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "I was told I have mold in my ducts. Should I panic?",
-        a: "No — and be skeptical of whoever told you, especially if they diagnosed it in thirty seconds during a $99 special. Genuine microbial growth in ducts is real but far less common than scare-tactic salesmen claim; what's usually called 'mold' is ordinary dust and dirt. We show you camera footage of your actual ducts, and if growth is genuinely present we clean it at the source and apply an EPA-registered antimicrobial only after physical cleaning.",
+        a: "No — and be skeptical of whoever told you, especially if they diagnosed it in thirty seconds during a teaser-price special. Genuine microbial growth in ducts is real but far less common than scare-tactic salesmen claim; what's usually called 'mold' is ordinary dust and dirt. We show you camera footage of your actual ducts, and if growth is genuinely present we clean it at the source and apply an EPA-registered antimicrobial only after physical cleaning.",
       },
       {
         q: "Does Michigan's climate make duct contamination worse?",
@@ -184,7 +184,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "Do you do air-quality checks or duct inspections without a full cleaning?",
-        a: "Yes. Our camera duct inspection and air-quality check (~$99, credited toward any job you book) shows you the actual condition of your ductwork before you spend anything on cleaning. Sometimes the honest answer after an inspection is that your ducts don't need cleaning yet — we'll tell you that, and you'll know exactly where you stand for the future.",
+        a: "Yes. Our camera duct inspection and air-quality check shows you the actual condition of your ductwork before you spend anything on cleaning. Sometimes the honest answer after an inspection is that your ducts don't need cleaning yet — we'll tell you that, and you'll know exactly where you stand for the future.",
       },
     ],
   },
@@ -195,10 +195,6 @@ export const FAQ_SECTIONS: FAQSection[] = [
     description: "How to verify we're legitimate — and how we stand behind work.",
     items: [
       {
-        q: "Are you licensed and insured?",
-        a: "Yes — BH Air Duct Cleaning Metro Detroit is licensed & insured for residential and commercial air duct work in Michigan. We carry general liability and workers' comp insurance, and provide a certificate of insurance on request for commercial clients and property managers.",
-      },
-      {
         q: "Do you follow NADCA standards?",
         a: "Yes. Our cleaning process follows the NADCA ACR standard — negative-pressure source removal, cleaning of the entire HVAC system rather than just the visible vents, and verification of the results. When you're comparing companies, asking whether they clean to the NADCA standard is the fastest way to separate real duct cleaners from van-and-shop-vac operations.",
       },
@@ -208,7 +204,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "What guarantee do you offer on the work?",
-        a: "We stand behind every cleaning with before-and-after photo documentation and a workmanship guarantee: if we missed a section of ductwork, we come back and make it right at no charge. Dryer vent cleanings include an airflow verification at the exterior termination so you can see the vent is genuinely clear before we leave.",
+        a: "We stand behind every cleaning with before-and-after photo documentation and a workmanship guarantee: if we missed a section of ductwork, we come back and make it right. Dryer vent cleanings include an airflow verification at the exterior termination so you can see the vent is genuinely clear before we leave.",
       },
       {
         q: "Will I get a receipt?",

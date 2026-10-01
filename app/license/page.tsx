@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Building2, Phone, Mail } from "lucide-react";
 import { BIZ } from "@/lib/business";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Licensed & Insured — BH Air Duct Cleaning Metro Detroit",
-  description: `${BIZ.name} is a licensed and insured air duct cleaning company serving Metro Detroit. Credentials, insurance, and what to ask any duct cleaning company before you hire.`,
+  title: "Business Details",
+  description: `Questions about ${BIZ.name} as a business? Call, text or email us and we will answer them directly.`,
+  robots: { index: false, follow: true },
   alternates: { canonical: `${BIZ.url}/license` },
 };
 
@@ -15,40 +16,43 @@ export default function LicensePage() {
       <section className="relative bg-aurora py-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-3xl px-4 text-center md:px-6">
-          <ShieldCheck className="mx-auto h-10 w-10 text-brass-400" />
+          <Building2 className="mx-auto h-10 w-10 text-brass-400" />
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
-            Licensed & Insured
+            Business details
           </h1>
-          <p className="mt-3 font-mono text-brass-300">{BIZ.licenseId}</p>
           <p className="mx-auto mt-4 max-w-xl text-ink-200">
-            Every air duct cleaning service we provide across Metro Detroit is performed by
-            background-checked technicians carrying general liability insurance and
-            proper trade credentials. We quote in writing before work begins.
+            Have a question about {BIZ.name} as a business? Ask us for the details you need and we
+            will answer you directly.
           </p>
         </div>
       </section>
       <section className="py-12">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <div className="rounded-2xl border border-brass-500/30 bg-ink-900/50 p-8">
-            <h2 className="font-display text-xl font-bold text-white">What we carry</h2>
+            <h2 className="font-display text-xl font-bold text-white">How to ask us</h2>
             <ul className="mt-4 space-y-3 text-ink-200">
-              {[
-                "Licensed & insured HVAC cleaning work in Michigan",
-                "General liability insurance for residential and commercial jobs",
-                "Background-checked technicians — no call-center middle layer",
-                "Written quotes before dispatch on standard jobs",
-                "Repair-first diagnostics — we never replace what we can fix",
-              ].map((line) => (
-                <li key={line} className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
-                  {line}
-                </li>
-              ))}
+              <li className="flex items-start gap-2">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
+                <span>
+                  Call or text{" "}
+                  <a href={BIZ.phoneHref} className="text-brass-300 hover:text-brass-200">
+                    {BIZ.phone}
+                  </a>
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brass-400" />
+                <span>
+                  Email{" "}
+                  <a href={BIZ.emailHref} className="break-all text-brass-300 hover:text-brass-200">
+                    {BIZ.email}
+                  </a>
+                </span>
+              </li>
             </ul>
             <p className="mt-6 text-sm text-ink-400">
-              Before you hire any air duct cleaning company in Metro Detroit, ask for proof of insurance,
-              a company name that matches the invoice, and a written estimate. Bait-pricing
-              dispatch operations are common in this trade — credentials matter.
+              Before you hire any air duct cleaning company in Metro Detroit, ask for a company name
+              that matches the invoice and a written scope of the work.
             </p>
           </div>
         </div>

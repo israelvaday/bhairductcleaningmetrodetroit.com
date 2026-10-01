@@ -24,7 +24,7 @@ export default function ServicesPage() {
             Full-service <span className="text-brass-gradient">Metro Detroit</span> air duct cleaning.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ink-200">
-            Ten specialized service lines, one Licensed & insured team. Tap any card for details, pricing factors, and example jobs.
+            Ten specialized service lines, one team. Tap any card for details, what drives the cost, and example jobs.
           </p>
         </div>
       </section>

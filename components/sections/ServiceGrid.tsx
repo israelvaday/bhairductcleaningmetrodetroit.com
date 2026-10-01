@@ -14,7 +14,7 @@ export function ServiceGrid({ city }: { city?: string }) {
             Every duct. Every vent. Every system.
           </h2>
           <p className="mt-3 max-w-2xl text-ink-300">
-            Ten specialized service lines, one licensed team. Tap any card to see real jobs, pricing factors, and book a tech.
+            Ten specialized service lines, one team. Tap any card to see real jobs, what drives the cost, and book a tech.
           </p>
           <Link href="/services" className="mt-4 text-sm font-semibold text-brass-400 hover:text-brass-300">
             View all services →

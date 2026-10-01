@@ -14,7 +14,6 @@ export function localBusinessJsonLd() {
     telephone: BIZ.phoneE164,
     email: BIZ.email,
     url: BIZ.url,
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: BIZ.address.street,
@@ -46,12 +45,6 @@ export function localBusinessJsonLd() {
         closes: "18:00",
       },
     ],
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "license",
-      name: "Michigan Licensed & Insured Air Duct Cleaning Company",
-      identifier: BIZ.licenseId,
-    },
     sameAs: Object.values(BIZ.social).filter(Boolean),
   };
 }

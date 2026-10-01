@@ -54,16 +54,16 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
     : <>Tech inbound to <span className="text-brass-gradient">{areaName}</span></>;
   const idleCopy = service
     ? (isEmergency
-        ? `We&rsquo;ll ping every Licensed & insured unit within 5 miles for same-day duct service and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, handled same-visit.` : "."}`
+        ? `We&rsquo;ll ping every unit within 5 miles for same-day duct service and return a live ETA${bulletSample ? ` — ${bulletSample.toLowerCase()}, handled same-visit.` : "."}`
         : `Share your location and we&rsquo;ll match you with the nearest tech running ${svcLabelLower} jobs today${bulletSample ? ` — ready for ${bulletSample.toLowerCase()}.` : "."}`)
-    : "Share your location and our dispatch console will ping every Licensed & insured unit within 5 miles and return a live ETA.";
+    : "Share your location and our dispatch console will ping every unit within 5 miles and return a live ETA.";
   const buttonLabel = service
     ? (isEmergency ? "Dispatch nearest emergency tech" : `Find nearest ${svcLabelLower} tech`)
     : "Click to find nearest tech";
   const buildLogs = (areaName:string, techId:string, techName:string, eta:number, dist:string) => service
     ? [
         `Location confirmed — pinpointing ${areaName}, MI…`,
-        `Filtering Licensed & insured units stocked for ${svcLabelLower}…`,
+        `Filtering units stocked for ${svcLabelLower}…`,
         `Cross-referencing today&rsquo;s ${svcLabelLower} job queue + live traffic…`,
         `Match found — Tech ${techId} (${techName}) • ${svcLabel} certified`,
         bulletSample ? `Truck inventory confirmed: ${bulletSample.toLowerCase()}` : `Confirming on-truck inventory for the call…`,
@@ -71,7 +71,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
       ]
     : [
         `Location confirmed — pinpointing ${areaName}, MI…`,
-        `Pinging Licensed & insured units within 5 miles…`,
+        `Pinging units within 5 miles…`,
         `Cross-referencing live traffic + active job queue…`,
         `Match found — Tech ${techId} (${techName})`,
         `Calculating optimal route via current Metro Detroit traffic…`,
@@ -150,7 +150,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
           {consoleLabel}
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-brass-500/40 bg-ink-950/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brass-300">
-          <ShieldCheck className="h-3 w-3"/> Licensed & insured
+          <ShieldCheck className="h-3 w-3"/> Background-checked techs
         </span>
       </div>
 
@@ -198,7 +198,7 @@ export function HomeDispatchTracker({ service }: { service?: DispatchService } =
             <AlertTriangle className="h-4 w-4"/> Outside our Metro Detroit service zone
           </div>
           <p className="mt-1 text-xs text-ink-300">
-            We dispatch Licensed & insured techs across Metro Detroit only. For an exact ETA in your area, give dispatch a quick call and we&apos;ll confirm coverage and timing.
+            We dispatch techs across Metro Detroit only. For an exact ETA in your area, give dispatch a quick call and we&apos;ll confirm coverage and timing.
           </p>
           <a href={BIZ.phoneHref} className="mt-3 inline-flex items-center gap-2 rounded-full bg-brass-500 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink-950 hover:bg-brass-400">
             <Phone className="h-3.5 w-3.5"/> Call for ETA — {BIZ.phone}

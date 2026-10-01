@@ -79,7 +79,7 @@ export default async function AreaOg({ params }: { params: Promise<{ slug: strin
               BH AIR DUCT CLEANING METRO DETROIT
             </div>
             <div style={{ fontSize: 15, color: "#C9A24A", marginTop: 4, letterSpacing: 2, fontWeight: 700 }}>
-              Licensed & insured · METRO DETROIT
+              METRO DETROIT · MICHIGAN
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default async function AreaOg({ params }: { params: Promise<{ slug: strin
             {name}
           </div>
           <div style={{ fontSize: 28, color: "#C8C4BB", display: "flex" }}>
-            Licensed air duct cleaning techs dispatching to {sub} · Same-day slots
+            Air duct cleaning techs dispatching to {sub} · Same-day slots
           </div>
         </div>
 
