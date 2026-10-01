@@ -168,7 +168,7 @@ export default async function ServiceOg({ params }: { params: Promise<{ slug: st
                   fontWeight: 600,
                 }}
               >
-                ✓ {b}
+                • {b}
               </div>
             ))}
           </div>
