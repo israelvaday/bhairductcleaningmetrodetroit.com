@@ -74,7 +74,7 @@ export function is24HourDay(entry: DayHours): boolean {
 export function formatDayHours(entry: DayHours): string {
   if (!entry.open || ("closed" in entry && entry.closed)) return "Closed";
   if (is24HourDay(entry)) return "24 hrs";
-  if (entry.close) return `Until ${fmtTime(entry.close)}`;
+  if (entry.close) return `${fmtTime(entry.open)}–${fmtTime(entry.close)}`;
   return "Open";
 }
 
