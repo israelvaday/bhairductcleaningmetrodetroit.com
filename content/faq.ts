@@ -20,7 +20,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
     items: [
       {
         q: "Are you a real local air duct cleaning company or a call center?",
-        a: "We're a real air duct cleaning company based in Detroit. You speak with the same dispatcher every time, and the technician who shows up is on our payroll — no subcontractors, no anonymous national call centers reselling your job to whoever bids lowest.",
+        a: "We're a real air duct cleaning company based in Detroit. You speak with the same dispatcher every time — no anonymous national call centers reselling your job to whoever bids lowest.",
       },
       {
         q: "What areas of Metro Detroit do you serve?",
@@ -28,7 +28,7 @@ export const FAQ_SECTIONS: FAQSection[] = [
       },
       {
         q: "What are your hours?",
-        a: "We're open 24 hours Sunday through Thursday (Eastern Time). Friday we close at 6:00 PM. Saturday we're closed. During open hours a real dispatcher answers — no call center, no robocall.",
+        a: "We're open Sunday through Thursday 9 AM to 5 PM and Friday 9 AM to 12 PM (Eastern Time). Saturday we're closed. During open hours a real dispatcher answers — no call center, no robocall.",
       },
       {
         q: "How long does a whole-home duct cleaning take?",

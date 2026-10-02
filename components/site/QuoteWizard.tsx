@@ -87,9 +87,13 @@ export function QuoteWizard() {
     }
   }, [step, service, property, urgency, name, phone, location]);
 
-  function next() {
-    if (!canAdvance) return;
-    if (step < STEP_LABELS.length - 1) setStep((s) => s + 1);
+  // A tile tap calls next(true) from a timeout. That closure still holds the canAdvance of the
+  // render before the tap, so it never advanced; the tap itself is the selection, so skip the
+  // check and advance only from the step the tap happened on (a double tap cannot skip a step).
+  function next(fromTile?: unknown) {
+    if (fromTile !== true && !canAdvance) return;
+    const from = step;
+    setStep((s) => (s === from && s < STEP_LABELS.length - 1 ? s + 1 : s));
   }
   function back() {
     if (step > 0) setStep((s) => s - 1);
@@ -171,7 +175,7 @@ export function QuoteWizard() {
                     <button
                       key={s.key}
                       type="button"
-                      onClick={() => { setService(s.key); setTimeout(next, 150); }}
+                      onClick={() => { setService(s.key); setTimeout(() => next(true), 150); }}
                       className={`group relative overflow-hidden rounded-2xl border text-left transition focus:outline-none ${service === s.key ? "border-brass-400 ring-2 ring-brass-500/40" : "border-ink-800 hover:border-brass-500/50"}`}
                     >
                       <div className="relative aspect-square w-full bg-ink-950">
@@ -208,7 +212,7 @@ export function QuoteWizard() {
                     <button
                       key={p.key}
                       type="button"
-                      onClick={() => { setProperty(p.key); setTimeout(next, 150); }}
+                      onClick={() => { setProperty(p.key); setTimeout(() => next(true), 150); }}
                       className={`group relative overflow-hidden rounded-2xl border text-left transition focus:outline-none ${property === p.key ? "border-brass-400 ring-2 ring-brass-500/40" : "border-ink-800 hover:border-brass-500/50"}`}
                     >
                       <div className="relative aspect-square w-full bg-ink-950">
@@ -248,7 +252,7 @@ export function QuoteWizard() {
                       <button
                         key={u.key}
                         type="button"
-                        onClick={() => { setUrgency(u.key); setTimeout(next, 150); }}
+                        onClick={() => { setUrgency(u.key); setTimeout(() => next(true), 150); }}
                         className={`flex items-start gap-3 rounded-2xl border p-4 text-left transition ${active ? "border-brass-400 bg-brass-500/10 ring-2 ring-brass-500/40" : "border-ink-800 hover:border-brass-500/50"}`}
                       >
                         <span className={`mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full ${active ? "bg-brass-500 text-ink-950" : "bg-ink-800 text-brass-300"}`}>

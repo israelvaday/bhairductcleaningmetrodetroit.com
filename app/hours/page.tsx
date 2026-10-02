@@ -31,7 +31,7 @@ export default function HoursPage() {
         </div>
 
         <p className="mt-6 text-sm text-ink-400">
-          Friday we close at 6:00 PM. Saturday we are closed. Every other day we are open around the clock.
+          Sunday through Thursday we are open 9 AM to 5 PM, and Friday 9 AM to 12 PM. Saturday we are closed.
         </p>
 
         <div className="mt-10 flex justify-center">

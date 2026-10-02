@@ -41,10 +41,10 @@ export const SERVICES: Service[] = [
     icon: Building2,
     tagline: "Offices, retail, medical, restaurants & industrial — after-hours scheduling.",
     description:
-      "Dirty ductwork in a commercial building means higher energy bills, tenant complaints, failed inspections, and sick-building symptoms. We clean HVAC systems for Metro Detroit offices, retail spaces, medical and dental suites, restaurants, schools, and light-industrial facilities — rooftop units, VAV boxes, main trunks, and branch runs — working nights and weekends so your business never skips a beat. Documentation and photo reports are provided for property managers and compliance files.",
+      "Dirty ductwork in a commercial building means higher energy bills, tenant complaints, failed inspections, and sick-building symptoms. We clean HVAC systems for Metro Detroit offices, retail spaces, medical and dental suites, restaurants, schools, and light-industrial facilities — rooftop units, VAV boxes, main trunks, and branch runs — scheduled around your business hours so it never skips a beat. Documentation and photo reports are provided for property managers and compliance files.",
     bullets: [
       "RTU, air handler, VAV & full duct-network cleaning",
-      "After-hours & weekend scheduling, zero downtime",
+      "After-hours & Sunday scheduling, zero downtime",
       "Photo documentation & compliance reports",
       "Multi-tenant & property-management programs",
     ],

@@ -35,14 +35,14 @@ export function localBusinessJsonLd() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "09:00",
+        closes: "17:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Friday",
-        opens: "00:00",
-        closes: "18:00",
+        opens: "09:00",
+        closes: "12:00",
       },
     ],
     sameAs: Object.values(BIZ.social).filter(Boolean),

@@ -102,7 +102,7 @@ export function BuyersGuide() {
         </p>
 
         <p>
-          Worth mentioning one more time: our phone is {BIZ.phone}. Our crews work Wayne, Oakland, and Macomb counties every day, every technician represents BH Air Duct Cleaning Metro Detroit directly — not a subcontractor booked through a call center — and every job gets a written scope up front and photos at the end. Whether or not you end up hiring us, we hope you take this guide with you. The next time you need duct or dryer vent work in Metro Detroit, ask the questions above. The trade has good people in it; you just have to know how to find them.
+          Worth mentioning one more time: our phone is {BIZ.phone}. Our crews work Wayne, Oakland, and Macomb counties, and every job gets a written scope up front and photos at the end. Whether or not you end up hiring us, we hope you take this guide with you. The next time you need duct or dryer vent work in Metro Detroit, ask the questions above. The trade has good people in it; you just have to know how to find them.
         </p>
           </div>
         </details>
